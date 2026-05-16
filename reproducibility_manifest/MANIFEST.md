@@ -1,6 +1,6 @@
 # Reproducibility Manifest
 
-Generated at: `2026-05-16T06:23:42+00:00`
+Generated at: `2026-05-16T07:22:26+00:00`
 Run directory: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/streamed_fullfield_20260511_205252`
 
 This manifest is intended for reviewers. It records checksums for the layouts, terrain/weather inputs, SolarPILOT numerical-check tables, aiming-proxy tables, reduced SolTrace custom-aimpoint outputs, and manuscript-facing figures used in the current draft.
@@ -61,14 +61,14 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/figures/fig_v11_soltrace_convergence_audit.png` | 236120 | `1af98cf7d3fe4c2dffba03b83a18b215e057926b27f1071f8c85fd7c9399ef2f` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/figures/fig_v9_highsample_confirmation.png` | 129216 | `17e5b215de408deaf29e1561b258ad7c6a957917b95fd5d222239d120bb21ae0` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/figures/monthly_dni_sensitivity.png` | 108824 | `f1e38f2fa67cb9f6b63523e4d631792a42688b2663cfc36c3d08ba1cf3f9fe52` |
-| `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/main.pdf` | 28796022 | `d8f39e5e7bafdbfd3ba728f91b84e8da0f3d156c58cb1b3851d957654bb65615` |
-| `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/main.tex` | 117219 | `0b5baef6a3cf1f66354d9b3221114d06d8403b2b62a3ad6c92ac7f739a83b877` |
+| `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/main.pdf` | 28796454 | `d789f733f39b0d515cabefec70c7991f9c5644bc1aed4c9dca3fb58ff21f0661` |
+| `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/main.tex` | 117262 | `495d0c9142ff55cac90754a254e269c4db03c5955093e80151850ad5e7b10273` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/output/LATEX_BUILD_REPORT.md` | 4082 | `c41cf448cbe68b7a1b932afd26a9895f5b127048e1ab5f54fd81134e4ecf7b86` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/papers/paper_notes.jsonl` | 21398 | `f1a7b9b89ef96e2f1db538da24da148ac767809b5fbf0ed77f9d02d57276c9ea` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/README.md` | 812 | `6028ace6b96fbf5614481773a0012760208599c0d5aa6500c5043615b6f3404c` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/author_contributions_credit.md` | 499 | `d1183406d85c5b76e97fbc71216ef5fd451b727b56929c9164f4235134cf8578` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/cover_letter.md` | 2685 | `975d01e624d85bf8ea727e00889c503b140ae0284db5f6f3e2ecd61afe2d0f71` |
-| `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/data_availability_statement.md` | 1324 | `b59a5bdb7837d77bee6d97cd790cd6613985a17f3d123e127cfd8b0ca1d85f14` |
+| `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/data_availability_statement.md` | 1290 | `22c47b452f1400cd470b96f00237d2e542455ba8a3217559fe8a364b923d0bb0` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/declaration_of_interests.md` | 200 | `7639dca922a42ee7c2a7b8d23189c3b995537cef2b8cd3bd035c591cddcbb8a4` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/funding_statement.md` | 481 | `8cc2e0336324edc9e21aa089d651c4855cd8414cedef73497f7c72ed92776a98` |
 | `paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/submission_materials/graphical_abstract.png` | 3700769 | `ce71e09ce7d037dc457ea42ea9169ed9f38628be8e02a178dca48a5bc4112751` |
