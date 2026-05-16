@@ -14,7 +14,7 @@ This is the strengthened submission workspace for the Dunhuang heliostat full-fi
 - `supplementary_data/`: key layout, SolarPILOT, aiming, weather, and all-phase SolTrace CSV tables for review.
 - `supplementary_data/soltrace_v10_seed_replicate_tables/`: V10 independent-seed stability audit tables and report.
 - `supplementary_data/soltrace_v11_convergence_tables/`: consolidated V8/V9/V10 reduced PySolTrace convergence and uncertainty audit tables.
-- `VERSION_RESTORATION_AUDIT_20260514.md`: audit explaining why the 17-page v6 short draft was over-pruned and why this 34-page v7 package is the active full manuscript.
+- `VERSION_RESTORATION_AUDIT_20260514.md`: audit explaining why the 17-page v6 short draft was over-pruned and why this 35-page v7 package is the active full manuscript.
 - `archive/superseded_v7_soltrace_20260512/`: old 270-case SolTrace figures and tables moved out of the active result set.
 - `output/LATEX_BUILD_REPORT.md`: build and QA report.
 - `reproducibility_manifest/`: SHA-256 manifest covering the audited run and active submission package.
@@ -44,10 +44,11 @@ What changed in the current revision:
 - Upgraded aiming-proxy sensitivity to 81 grouping, spot-width, and staggered-phase assumptions so the custom-aimpoint queue is not supported by one arbitrary proxy discretization.
 - Updated data/code availability language so the checksum manifest covers layouts, weather, terrain, SolarPILOT tables, proxy tables, sensitivity outputs, figures, and scripts.
 - Added a 2026-05-16 response pass: point-by-point P0/P1 review response, receiver-flux normalization and thermal-safety interpretation, DOI/release blocker wording, and a light prose polish pass to reduce repetitive defensive phrasing while preserving the claim boundary.
+- Added a final 2026-05-16 author-voice pass: tightened several abstract, introduction, results, discussion, and appendix sentences so the manuscript reads less like a defensive revision memo while keeping the same scientific claim boundary.
 
 Current submission stance:
 
 - Submit as an algorithmic benchmark and numerical-checking workflow, not as a final Dunhuang redesign.
 - Treat the all-phase reduced PySolTrace matrix as direct but reduced custom-aimpoint evidence.
 - Treat full-field annual custom-aimpoint verification with receiver thermal constraints as the next scientific upgrade rather than as a hidden completed claim.
-- Use this 34-page v7 package as the current author-review manuscript. If a shorter Solar Energy main text is later required, first prepare an explicit main-text versus Supplementary Information transfer table; do not silently prune the workload, figures, or evidence chain back to the 17-page v6 short draft.
+- Use this 35-page v7 package as the current author-review manuscript. If a shorter Solar Energy main text is later required, first prepare an explicit main-text versus Supplementary Information transfer table; do not silently prune the workload, figures, or evidence chain back to the 17-page v6 short draft.

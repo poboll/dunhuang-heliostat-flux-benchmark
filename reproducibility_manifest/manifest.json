@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T07:22:26+00:00",
+  "generated_at": "2026-05-16T07:33:21+00:00",
   "run_directory": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/streamed_fullfield_20260511_205252",
   "submission_package": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v7_balanced_full_submission",
   "project_root": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server",
@@ -82,8 +82,8 @@
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/README.md",
-      "bytes": 6297,
-      "sha256": "205e6291e91a9b059ca541cb6008855e61f7d6fddfa51758743961967041d1e5"
+      "bytes": 6539,
+      "sha256": "3b6b4e297ef179df41c73d6a56e1692158f672ee8e815b932e8f464505e7225f"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/SUBMISSION_STRATEGY_AND_REVIEWER_AUDIT_20260512.md",
@@ -277,18 +277,18 @@
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/main.pdf",
-      "bytes": 28796454,
-      "sha256": "d789f733f39b0d515cabefec70c7991f9c5644bc1aed4c9dca3fb58ff21f0661"
+      "bytes": 28796158,
+      "sha256": "62f604853ef6ae58b0e2dbad6b574679b42a900142fdb3005814d9ab45fc03d6"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/latex/main.tex",
-      "bytes": 117262,
-      "sha256": "495d0c9142ff55cac90754a254e269c4db03c5955093e80151850ad5e7b10273"
+      "bytes": 116720,
+      "sha256": "c338e8d5209d76edd4a1023f2e1a70c380c7396e898a67434c23809bc8d4c8a0"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/output/LATEX_BUILD_REPORT.md",
-      "bytes": 4082,
-      "sha256": "c41cf448cbe68b7a1b932afd26a9895f5b127048e1ab5f54fd81134e4ecf7b86"
+      "bytes": 4657,
+      "sha256": "e050b34a035b116615c71206dcf19f3e425f319fd157ac9080fbb5f22f91eecb"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v7_balanced_full_submission/papers/paper_notes.jsonl",

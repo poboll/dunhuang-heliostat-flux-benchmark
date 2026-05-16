@@ -35,3 +35,9 @@ The package remains a local release candidate until the authors create a public 
 - Softened the AI declaration wording from `reviewer-risk checklist` to `revision-risk checklist` while preserving the Elsevier-style author-responsibility statement.
 - Rewrote Data and Code Availability to state that the 2026 package must be publicly archived before final submission; no DOI was fabricated.
 - Added `POINT_BY_POINT_REVIEW_RESPONSE_20260516.md` and updated `/Users/Apple/Developer/Pycharm/q/定日镜场修改请按点核对.md` with P0/P1 completion status.
+
+## 2026-05-16 final author-voice pass
+
+- Recompiled after a light prose pass that reduced repeated defensive phrasing in the abstract, introduction, results, discussion, and appendix.
+- The edit does not change the scientific boundary: the paper remains a reproducible full-field numerical benchmark and receiver-flux screening workflow, not a certified commercial redesign.
+- Verification after the pass: `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` succeeded with 35 pages; `conda run --no-capture-output -n uu python -m pytest -q` returned `4 passed`.
