@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# LaTeX intermediate files; keep main.tex, main.bbl, main.pdf, and figures.
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.fls
+latex/*.fdb_latexmk
+latex/*.blg
+latex/*.synctex.gz
+
+# Local runtime artifacts.
+*.tmp
+*.bak
+*.swp
+*.zip

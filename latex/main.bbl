@@ -1,0 +1,533 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{huang2024dunhuang}
+W.~Huang, J.~Xiao, F.~Liu, Z.~Qi,
+  \href{https://doi.org/10.52825/solarpaces.v2i.771}{Development, construction,
+  operation and maintenance of shouhang dunhuang 100 mw molten salt solar power
+  tower plant}, SolarPACES Conference Proceedings 2 (2024).
+\newblock \href {https://doi.org/10.52825/solarpaces.v2i.771}
+  {\path{doi:10.52825/solarpaces.v2i.771}}.
+\newline\urlprefix\url{https://doi.org/10.52825/solarpaces.v2i.771}
+
+\bibitem{wagner2018solarpilot}
+M.~J. Wagner, T.~Wendelin,
+  \href{https://doi.org/10.1016/j.solener.2018.06.063}{Solarpilot: A power
+  tower solar field layout and characterization tool}, Solar Energy 171 (2018)
+  185--196.
+\newblock \href {https://doi.org/10.1016/j.solener.2018.06.063}
+  {\path{doi:10.1016/j.solener.2018.06.063}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2018.06.063}
+
+\bibitem{nrel2025solarpilotdocs}
+N.~R.~E. Laboratory, \href{https://www.nrel.gov/csp/solarpilot}{Solar power
+  tower integrated layout and optimization tool}, accessed 2026-05-11 (2025).
+\newline\urlprefix\url{https://www.nrel.gov/csp/solarpilot}
+
+\bibitem{hamilton2022copilot}
+W.~T. Hamilton, M.~J. Wagner, A.~J. Zolan,
+  \href{https://doi.org/10.1115/1.4053973}{Demonstrating {SolarPILOT}'s python
+  application programmable interface through heliostat optimal aimpoint
+  strategy use case}, Journal of Solar Energy Engineering 144 (2022) 030906.
+\newblock \href {https://doi.org/10.1115/1.4053973}
+  {\path{doi:10.1115/1.4053973}}.
+\newline\urlprefix\url{https://doi.org/10.1115/1.4053973}
+
+\bibitem{mitchell2025roundrobin}
+R.~Mitchell, Y.~Wang, M.~Izygon, J.~Pye, G.~Zhu,
+  \href{https://doi.org/10.1016/j.solener.2025.113785}{Modeling receiver flux
+  of commercial power tower concentrating solar power plants using ray tracing:
+  a round-robin comparison of soltrace, solstice, and tiesol}, Solar Energy 300
+  (2025) 113785.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.113785}
+  {\path{doi:10.1016/j.solener.2025.113785}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113785}
+
+\bibitem{sanchez2024experimental}
+A.~Sánchez-González, M.~Kontopyrgos, K.~Milidonis, M.~C. Georgiou,
+  \href{https://doi.org/10.1016/j.renene.2024.121406}{Heliostat field aiming
+  strategy based on deterministic optimization: An experimental validation},
+  Renewable Energy 236 (2024) 121406.
+\newblock \href {https://doi.org/10.1016/j.renene.2024.121406}
+  {\path{doi:10.1016/j.renene.2024.121406}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2024.121406}
+
+\bibitem{acosta2021fluxfeedback}
+D.~Acosta, J.~Garcia, M.~Sanjuan, L.~Oberkirsch, P.~Schwarzbözl,
+  \href{https://doi.org/10.1016/j.solener.2020.12.028}{Flux-feedback as a fast
+  alternative to control groups of aiming points in molten salt power towers},
+  Solar Energy 215 (2021) 12--25.
+\newblock \href {https://doi.org/10.1016/j.solener.2020.12.028}
+  {\path{doi:10.1016/j.solener.2020.12.028}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2020.12.028}
+
+\bibitem{oberkirsch2023closedloop}
+L.~Oberkirsch, D.~Zanger, B.~Hoffschmidt,
+  \href{https://doi.org/10.1016/j.solener.2023.111951}{Validation of a
+  closed-loop aim point management system at the jülich solar tower}, Solar
+  Energy 264 (2023) 111951.
+\newblock \href {https://doi.org/10.1016/j.solener.2023.111951}
+  {\path{doi:10.1016/j.solener.2023.111951}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2023.111951}
+
+\bibitem{cruz2022rl}
+Z.~Zeng, D.~Ni, G.~Xiao,
+  \href{https://doi.org/10.1016/j.apenergy.2021.118224}{Real-time heliostat
+  field aiming strategy optimization based on reinforcement learning}, Applied
+  Energy 307 (2022) 118224.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2021.118224}
+  {\path{doi:10.1016/j.apenergy.2021.118224}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2021.118224}
+
+\bibitem{carballo2025rl}
+J.~Carballo, J.~Bonilla, N.~Cruz, J.~Fernández-Reche, J.~Álvarez,
+  A.~Avila-Marin, M.~Berenguel,
+  \href{https://doi.org/10.1016/j.apenergy.2024.124574}{Reinforcement learning
+  for heliostat aiming: Improving the performance of solar tower plants},
+  Applied Energy 377 (2025) 124574.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2024.124574}
+  {\path{doi:10.1016/j.apenergy.2024.124574}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2024.124574}
+
+\bibitem{alcantara2025nn}
+A.~Alcántara, P.~Diaz-Cachinero, A.~Sánchez-González, C.~Ruiz,
+  \href{https://doi.org/10.1016/j.egyai.2025.100520}{Leveraging neural networks
+  to optimize heliostat field aiming strategies in concentrating solar power
+  tower plants}, Energy and AI 21 (2025) 100520.
+\newblock \href {https://doi.org/10.1016/j.egyai.2025.100520}
+  {\path{doi:10.1016/j.egyai.2025.100520}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.egyai.2025.100520}
+
+\bibitem{wu2026mlmpc}
+J.~Wu, X.~Wang, C.~Pan, N.~Liu, W.~Wu,
+  \href{https://doi.org/10.1016/j.solener.2025.114258}{Machine learning based
+  model predictive control of heliostat aiming strategy under cloud variation},
+  Solar Energy 305 (2026) 114258.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.114258}
+  {\path{doi:10.1016/j.solener.2025.114258}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.114258}
+
+\bibitem{zheng2025diffneg}
+C.~Zheng, X.~Lin, D.~Li, Y.~Zhao, J.~Feng,
+  \href{https://doi.org/10.1111/cgf.70166}{Diffneg: A differentiable
+  rasterization framework for online aiming optimization in solar power tower
+  systems}, Computer Graphics Forum 44 (2025) e70166.
+\newblock \href {https://doi.org/10.1111/cgf.70166}
+  {\path{doi:10.1111/cgf.70166}}.
+\newline\urlprefix\url{https://doi.org/10.1111/cgf.70166}
+
+\bibitem{lin2025dmcrt}
+X.~Lin, C.~Zheng, W.~Huang, Y.~Zhao, J.~Feng,
+  \href{https://doi.org/10.1016/j.apenergy.2025.125640}{A novel heliostat
+  aiming optimization framework via differentiable monte carlo ray tracing for
+  solar power tower systems}, Applied Energy 388 (2025) 125640.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.125640}
+  {\path{doi:10.1016/j.apenergy.2025.125640}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2025.125640}
+
+\bibitem{nrel2025pysam}
+N.~R.~E. Laboratory, \href{https://nrel-pysam.readthedocs.io/}{Pysam: Python
+  wrapper for the system advisor model}, accessed 2026-05-11 (2025).
+\newline\urlprefix\url{https://nrel-pysam.readthedocs.io/}
+
+\bibitem{wang2020sunshape}
+Y.~Wang, D.~Potter, C.-A. Asselineau, C.~Corsi, M.~Wagner, C.~Caliot, B.~Piaud,
+  M.~Blanco, J.-S. Kim, J.~Pye,
+  \href{https://doi.org/10.1016/j.solener.2019.11.035}{Verification of optical
+  modelling of sunshape and surface slope error for concentrating solar power
+  systems}, Solar Energy 195 (2020) 461--474.
+\newblock \href {https://doi.org/10.1016/j.solener.2019.11.035}
+  {\path{doi:10.1016/j.solener.2019.11.035}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2019.11.035}
+
+\bibitem{salome2013themis}
+A.~Salomé, F.~Chhel, G.~Flamant, A.~Ferrière, F.~Thiery,
+  \href{https://doi.org/10.1016/j.solener.2013.02.025}{Control of the flux
+  distribution on a solar tower receiver using an optimized aiming point
+  strategy: Application to themis solar tower}, Solar Energy 94 (2013)
+  352--366.
+\newblock \href {https://doi.org/10.1016/j.solener.2013.02.025}
+  {\path{doi:10.1016/j.solener.2013.02.025}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2013.02.025}
+
+\bibitem{besarati2014uniform}
+S.~M. Besarati, D.~Y. Goswami, E.~K. Stefanakos,
+  \href{https://doi.org/10.1016/j.enconman.2014.04.030}{Optimal heliostat
+  aiming strategy for uniform distribution of heat flux on the receiver of a
+  solar power tower plant}, Energy Conversion and Management 84 (2014)
+  234--243.
+\newblock \href {https://doi.org/10.1016/j.enconman.2014.04.030}
+  {\path{doi:10.1016/j.enconman.2014.04.030}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.enconman.2014.04.030}
+
+\bibitem{wang2017nsga}
+K.~Wang, Y.-L. He, X.-D. Xue, B.-C. Du,
+  \href{https://doi.org/10.1016/j.apenergy.2017.07.096}{Multi-objective
+  optimization of the aiming strategy for the solar power tower with a cavity
+  receiver by using the non-dominated sorting genetic algorithm}, Applied
+  Energy 205 (2017) 399--416.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2017.07.096}
+  {\path{doi:10.1016/j.apenergy.2017.07.096}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2017.07.096}
+
+\bibitem{yu2014multifocal}
+Q.~Yu, Z.~Wang, E.~Xu,
+  \href{https://doi.org/10.1016/j.apenergy.2014.09.008}{Analysis and
+  improvement of solar flux distribution inside a cavity receiver based on
+  multi-focal points of heliostat field}, Applied Energy 136 (2014) 417--430.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2014.09.008}
+  {\path{doi:10.1016/j.apenergy.2014.09.008}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2014.09.008}
+
+\bibitem{astolfi2017external}
+M.~Astolfi, M.~Binotti, S.~Mazzola, L.~Zanellato, G.~Manzolini,
+  \href{https://doi.org/10.1016/j.solener.2016.03.042}{Heliostat aiming point
+  optimization for external tower receiver}, Solar Energy 157 (2017)
+  1114--1129.
+\newblock \href {https://doi.org/10.1016/j.solener.2016.03.042}
+  {\path{doi:10.1016/j.solener.2016.03.042}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2016.03.042}
+
+\bibitem{belhomme2014ant}
+B.~Belhomme, R.~Pitz-Paal, P.~Schwarzbözl,
+  \href{https://doi.org/10.1115/1.4024738}{Optimization of heliostat aim point
+  selection for central receiver systems based on the ant colony optimization
+  metaheuristic}, Journal of Solar Energy Engineering 136 (2014) 011005.
+\newblock \href {https://doi.org/10.1115/1.4024738}
+  {\path{doi:10.1115/1.4024738}}.
+\newline\urlprefix\url{https://doi.org/10.1115/1.4024738}
+
+\bibitem{sanchez2017towards}
+R.~Flesch, C.~Frantz, D.~M. Quinto, P.~Schwarzbözl,
+  \href{https://doi.org/10.1016/j.solener.2017.07.067}{Towards an optimal
+  aiming for molten salt power towers}, Solar Energy 155 (2017) 1273--1281.
+\newblock \href {https://doi.org/10.1016/j.solener.2017.07.067}
+  {\path{doi:10.1016/j.solener.2017.07.067}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2017.07.067}
+
+\bibitem{sanchez2017allowable}
+A.~Sánchez-González, M.~R. Rodríguez-Sánchez, D.~Santana,
+  \href{https://doi.org/10.1016/j.solener.2015.12.055}{Aiming strategy model
+  based on allowable flux densities for molten salt central receivers}, Solar
+  Energy 157 (2017) 1130--1144.
+\newblock \href {https://doi.org/10.1016/j.solener.2015.12.055}
+  {\path{doi:10.1016/j.solener.2015.12.055}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2015.12.055}
+
+\bibitem{sanchez2020allowable}
+A.~Sánchez-González, M.~R. Rodríguez-Sánchez, D.~Santana,
+  \href{https://doi.org/10.1016/j.rineng.2019.100074}{Allowable solar flux
+  densities for molten-salt receivers: Input to the aiming strategy}, Results
+  in Engineering 5 (2020) 100074.
+\newblock \href {https://doi.org/10.1016/j.rineng.2019.100074}
+  {\path{doi:10.1016/j.rineng.2019.100074}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.rineng.2019.100074}
+
+\bibitem{li2026aimingreview}
+T.~Arrif, S.~Hassani, A.~Sánchez-González, A.~Belaid, M.~Guermoui,
+  F.~Melgani, \href{https://doi.org/10.1016/j.rser.2025.116489}{Heliostat
+  aiming strategies in concentrated solar power towers: A review}, Renewable
+  and Sustainable Energy Reviews 227 (2026) 116489.
+\newblock \href {https://doi.org/10.1016/j.rser.2025.116489}
+  {\path{doi:10.1016/j.rser.2025.116489}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.rser.2025.116489}
+
+\bibitem{oberkirsch2021gpu}
+L.~Oberkirsch, D.~M. Quinto, P.~Schwarzbözl, B.~Hoffschmidt,
+  \href{https://doi.org/10.1016/j.solener.2020.11.053}{Gpu-based aim point
+  optimization for solar tower power plants}, Solar Energy 220 (2021)
+  1089--1098.
+\newblock \href {https://doi.org/10.1016/j.solener.2020.11.053}
+  {\path{doi:10.1016/j.solener.2020.11.053}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2020.11.053}
+
+\bibitem{richter2021dynamic}
+N.~Speetzen, P.~Richter,
+  \href{https://doi.org/10.1016/j.renene.2021.08.060}{Dynamic aiming strategy
+  for central receiver systems}, Renewable Energy 180 (2021) 55--67.
+\newblock \href {https://doi.org/10.1016/j.renene.2021.08.060}
+  {\path{doi:10.1016/j.renene.2021.08.060}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2021.08.060}
+
+\bibitem{zhu2023mpc}
+R.~Zhu, D.~Ni, \href{https://doi.org/10.3390/en16072997}{A model predictive
+  control approach for heliostat field power regulatory aiming strategy under
+  varying cloud shadowing conditions}, Energies 16 (2023) 2997.
+\newblock \href {https://doi.org/10.3390/en16072997}
+  {\path{doi:10.3390/en16072997}}.
+\newline\urlprefix\url{https://doi.org/10.3390/en16072997}
+
+\bibitem{zhu2024swarm}
+Y.~Wang, Z.~Wu, D.~Ni, \href{https://doi.org/10.3390/app14010416}{Real-time
+  optimization of heliostat field aiming strategy via an improved swarm
+  intelligence algorithm}, Applied Sciences 14 (2024) 416.
+\newblock \href {https://doi.org/10.3390/app14010416}
+  {\path{doi:10.3390/app14010416}}.
+\newline\urlprefix\url{https://doi.org/10.3390/app14010416}
+
+\bibitem{grange2025canting}
+Y.~Yuan, X.~Lin, X.~Mi, J.~Feng, Y.~Zhao,
+  \href{https://doi.org/10.1016/j.solener.2025.113901}{The optimization of
+  heliostat paraboloid canting via differentiable ray tracing}, Solar Energy
+  301 (2025) 113901.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.113901}
+  {\path{doi:10.1016/j.solener.2025.113901}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113901}
+
+\bibitem{schiricke2025fluxprediction}
+M.~Kuhl, M.~Pargmann, D.~M. Quinto, R.~Pitz-Paal,
+  \href{https://doi.org/10.1016/j.solener.2025.113631}{Accurate and scalable
+  receiver-level flux prediction: A fully data-driven solution}, Solar Energy
+  299 (2025) 113631.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.113631}
+  {\path{doi:10.1016/j.solener.2025.113631}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113631}
+
+\bibitem{collado2009surrounding}
+F.~J. Collado, \href{https://doi.org/10.1016/j.renene.2008.09.003}{Preliminary
+  design of surrounding heliostat fields}, Renewable Energy 34 (2009)
+  1359--1363.
+\newblock \href {https://doi.org/10.1016/j.renene.2008.09.003}
+  {\path{doi:10.1016/j.renene.2008.09.003}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2008.09.003}
+
+\bibitem{collado2012campo}
+F.~J. Collado, J.~Guallar,
+  \href{https://doi.org/10.1016/j.renene.2012.03.011}{Campo: Generation of
+  regular heliostat fields}, Renewable Energy 46 (2012) 49--59.
+\newblock \href {https://doi.org/10.1016/j.renene.2012.03.011}
+  {\path{doi:10.1016/j.renene.2012.03.011}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2012.03.011}
+
+\bibitem{noone2011thermochemical}
+R.~Pitz-Paal, N.~B. Botero, A.~Steinfeld,
+  \href{https://doi.org/10.1016/j.solener.2010.11.018}{Heliostat field layout
+  optimization for high-temperature solar thermochemical processing}, Solar
+  Energy 85 (2011) 334--343.
+\newblock \href {https://doi.org/10.1016/j.solener.2010.11.018}
+  {\path{doi:10.1016/j.solener.2010.11.018}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2010.11.018}
+
+\bibitem{noone2019quick}
+F.~J. Collado, J.~Guallar,
+  \href{https://doi.org/10.1016/j.energy.2019.04.117}{Quick design of regular
+  heliostat fields for commercial solar tower power plants}, Energy 178 (2019)
+  115--125.
+\newblock \href {https://doi.org/10.1016/j.energy.2019.04.117}
+  {\path{doi:10.1016/j.energy.2019.04.117}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.energy.2019.04.117}
+
+\bibitem{ghirardi2021loadfollowing}
+E.~Ghirardi, G.~Brumana, G.~Franchini, A.~Perdichizzi,
+  \href{https://doi.org/10.1016/j.renene.2020.12.066}{Heliostat layout
+  optimization for load-following solar tower plants}, Renewable Energy 168
+  (2021) 393--405.
+\newblock \href {https://doi.org/10.1016/j.renene.2020.12.066}
+  {\path{doi:10.1016/j.renene.2020.12.066}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2020.12.066}
+
+\bibitem{derbal2023noblocking}
+D.~Derbal, A.~Abderrezak, S.~E. Chehaidia, M.~T. Amin, M.~I. Mosaad, T.~A.
+  Abdul-Fattah, \href{https://doi.org/10.3390/en16134943}{Parametric study and
+  optimization of no-blocking heliostat field layout}, Energies 16 (2023) 4943.
+\newblock \href {https://doi.org/10.3390/en16134943}
+  {\path{doi:10.3390/en16134943}}.
+\newline\urlprefix\url{https://doi.org/10.3390/en16134943}
+
+\bibitem{guo2020multiobjective}
+A.~B. Awan, K.~V.~C. Mouli, M.~Zubair,
+  \href{https://doi.org/10.1016/j.enconman.2020.113378}{Performance enhancement
+  of solar tower power plant: A multi-objective optimization approach}, Energy
+  Conversion and Management 225 (2020) 113378.
+\newblock \href {https://doi.org/10.1016/j.enconman.2020.113378}
+  {\path{doi:10.1016/j.enconman.2020.113378}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.enconman.2020.113378}
+
+\bibitem{li2022robust}
+Y.~Luo, Z.~Wang, J.~Zhu, T.~Lu, G.~Xiao, F.~Chu, R.~Wang,
+  \href{https://doi.org/10.1016/j.energy.2021.121716}{Multi-objective robust
+  optimization of a solar power tower plant under uncertainty}, Energy 238
+  (2022) 121716.
+\newblock \href {https://doi.org/10.1016/j.energy.2021.121716}
+  {\path{doi:10.1016/j.energy.2021.121716}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.energy.2021.121716}
+
+\bibitem{chen2020shapes}
+A.~Belaid, A.~Filali, A.~Gama, B.~Bezza, T.~Arrif, M.~Bouakba,
+  \href{https://doi.org/10.1002/er.5772}{Design optimization of a solar tower
+  power plant heliostat field by considering different heliostat shapes},
+  International Journal of Energy Research 44 (2020) 11524--11541.
+\newblock \href {https://doi.org/10.1002/er.5772} {\path{doi:10.1002/er.5772}}.
+\newline\urlprefix\url{https://doi.org/10.1002/er.5772}
+
+\bibitem{yang2024otm}
+S.-Y. Yang, Y.-K. Leng, Z.-D. Cheng, W.-Q. Wang, Y.-L. He,
+  \href{https://doi.org/10.1016/j.solener.2024.112604}{Optical-thermal–mechanical
+  comprehensive performance of the concentrating and collecting subsystem for
+  the next-generation solar power tower based on heliostat field layouts
+  optimization}, Solar Energy 275 (2024) 112604.
+\newblock \href {https://doi.org/10.1016/j.solener.2024.112604}
+  {\path{doi:10.1016/j.solener.2024.112604}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2024.112604}
+
+\bibitem{tang2025petal}
+X.-Y. Tang, W.-W. Yang, J.-C. Li, L.-X. Liang, Y.-W. Lin, Y.-L. He,
+  \href{https://doi.org/10.1016/j.renene.2025.122612}{A new heliostat field
+  optimal design strategy for deformable petal hybrid layout of concentrated
+  solar power via multi-algorithm filtering}, Renewable Energy 243 (2025)
+  122612.
+\newblock \href {https://doi.org/10.1016/j.renene.2025.122612}
+  {\path{doi:10.1016/j.renene.2025.122612}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2025.122612}
+
+\bibitem{ghazanfari2025hefaal}
+M.~Raj, J.~Bhattacharya,
+  \href{https://doi.org/10.1016/j.solener.2025.113915}{Hefaal: A tool to
+  design, analyze and optimize a solar heliostat field layout on a flat as well
+  as uneven terrain}, Solar Energy 301 (2025) 113915.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.113915}
+  {\path{doi:10.1016/j.solener.2025.113915}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113915}
+
+\bibitem{yu2026slopedterrain}
+M.~Yu, L.~Zhao, Z.~Xia, J.~Gong, G.~Li, P.~Hou, Z.~Chen, J.~Wu,
+  \href{https://doi.org/10.1016/j.solener.2026.114549}{Spatiotemporal
+  optimization of heliostat field layout on sloped terrain in solar power tower
+  plants}, Solar Energy 311 (2026) 114549.
+\newblock \href {https://doi.org/10.1016/j.solener.2026.114549}
+  {\path{doi:10.1016/j.solener.2026.114549}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2026.114549}
+
+\bibitem{adam2026heliosliders}
+P.~Schöttl, J.~K. Ishola, C.~Ganzer, M.~F. Eceiza, G.~Bern,
+  \href{https://doi.org/10.1016/j.solener.2026.114596}{Heliosliders: Novel
+  heliostat field design approach based on collision analysis of shadow
+  projections}, Solar Energy 313 (2026) 114596.
+\newblock \href {https://doi.org/10.1016/j.solener.2026.114596}
+  {\path{doi:10.1016/j.solener.2026.114596}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2026.114596}
+
+\bibitem{biencinto2025hefesto}
+M.~Biencinto, J.~Fernández-Reche, A.~L. Ávila Marín,
+  \href{https://doi.org/10.1016/j.renene.2025.122736}{Hefesto: A novel tool for
+  fast calculation and preliminary design of heliostat fields}, Renewable
+  Energy 245 (2025) 122736.
+\newblock \href {https://doi.org/10.1016/j.renene.2025.122736}
+  {\path{doi:10.1016/j.renene.2025.122736}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2025.122736}
+
+\bibitem{liu2026fastannual}
+Z.~Liu, Y.~Zhao, J.~Feng,
+  \href{https://doi.org/10.1016/j.renene.2026.125243}{Fast annual energy
+  estimation for solar tower power systems based on heliostat grouping and
+  solar position sampling}, Renewable Energy 261 (2026) 125243.
+\newblock \href {https://doi.org/10.1016/j.renene.2026.125243}
+  {\path{doi:10.1016/j.renene.2026.125243}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2026.125243}
+
+\bibitem{pfahl2017progress}
+A.~Pfahl, J.~Coventry, M.~Röger, F.~Wolfertstetter, J.~F. Vásquez-Arango,
+  F.~Gross, M.~Arjomandi, P.~Schwarzbözl, M.~Geiger, P.~Liedke,
+  \href{https://doi.org/10.1016/j.solener.2017.03.029}{Progress in heliostat
+  development}, Solar Energy 152 (2017) 3--37.
+\newblock \href {https://doi.org/10.1016/j.solener.2017.03.029}
+  {\path{doi:10.1016/j.solener.2017.03.029}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2017.03.029}
+
+\bibitem{zhu2022roadmap}
+G.~Zhu, C.~Augustine, R.~Mitchell, M.~Muller, P.~Kurup, A.~Zolan,
+  S.~Yellapantula, R.~Brost, K.~Armijo, J.~Sment, R.~Schaller, M.~Gordon,
+  et~al., \href{https://www.osti.gov/biblio/1888029}{Roadmap to advance
+  heliostat technologies for concentrating solar-thermal power} (2022).
+\newblock \href {https://doi.org/10.2172/1888029} {\path{doi:10.2172/1888029}}.
+\newline\urlprefix\url{https://www.osti.gov/biblio/1888029}
+
+\bibitem{zhu2023heliocon}
+G.~Zhu, C.~Augustine, R.~Mitchell, M.~Muller, P.~Kurup, A.~Zolan,
+  S.~Yellapantula, R.~Brost, K.~Armijo, J.~Sment, R.~Schaller, M.~Gordon,
+  et~al., \href{https://doi.org/10.1016/j.solener.2023.111917}{Heliocon: A
+  roadmap for advanced heliostat technologies for concentrating solar power},
+  Solar Energy 264 (2023) 111917.
+\newblock \href {https://doi.org/10.1016/j.solener.2023.111917}
+  {\path{doi:10.1016/j.solener.2023.111917}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2023.111917}
+
+\bibitem{zhu2024helioconannual}
+G.~Zhu, J.~Sment, C.~Turchi, M.~Gordon, R.~Brost, R.~Mitchell, D.~Kesseli,
+  T.~Farrell, M.~Muller, K.~Armijo, M.~Cholette, M.~Emes, et~al.,
+  \href{https://doi.org/10.2172/2475372}{Heliostat consortium annual report:
+  2024} (2024).
+\newblock \href {https://doi.org/10.2172/2475372} {\path{doi:10.2172/2475372}}.
+\newline\urlprefix\url{https://doi.org/10.2172/2475372}
+
+\bibitem{turchi2021gen3}
+C.~Turchi, S.~Gage, J.~Martinek, S.~Jape, K.~Armijo, J.~Coventry, J.~Pye, C.-A.
+  Asselineau, F.~Venn, W.~Logie, A.~Fontalvo, S.~Wang, et~al.,
+  \href{https://www.osti.gov/biblio/1807668}{Csp gen3: Liquid-phase pathway to
+  sunshot} (2021).
+\newblock \href {https://doi.org/10.2172/1807668} {\path{doi:10.2172/1807668}}.
+\newline\urlprefix\url{https://www.osti.gov/biblio/1807668}
+
+\bibitem{zoller2022solarfuels}
+S.~Zoller, E.~Koepf, D.~Nizamian, M.~Stephan, A.~Patané, P.~Haueter,
+  M.~Romero, J.~González-Aguilar, D.~Lieftink, E.~de~Wit, S.~Brendelberger,
+  A.~Sizmann, et~al., \href{https://doi.org/10.1016/j.joule.2022.06.012}{A
+  solar tower fuel plant for the thermochemical production of kerosene from h2o
+  and co2}, Joule 6 (2022) 1606--1616.
+\newblock \href {https://doi.org/10.1016/j.joule.2022.06.012}
+  {\path{doi:10.1016/j.joule.2022.06.012}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.joule.2022.06.012}
+
+\bibitem{freeman2025tiltroll}
+J.~Freeman, W.~Sampath, K.~Achuthan,
+  \href{https://doi.org/10.3390/en18020426}{Tilt–roll heliostats and non-flat
+  heliostat field topographies for compact, energy-dense rooftop-scale and
+  urban central receiver solar thermal systems for sustainable industrial
+  process heat}, Energies 18 (2025) 426.
+\newblock \href {https://doi.org/10.3390/en18020426}
+  {\path{doi:10.3390/en18020426}}.
+\newline\urlprefix\url{https://doi.org/10.3390/en18020426}
+
+\bibitem{li2026windslope}
+X.-L. Fan, M.-J. Li, Z.-T. Wang, Y.-L. He, Z.-W. Xi, H.-L. Shan,
+  \href{https://doi.org/10.1016/j.solener.2025.114186}{Wind-induced slope error
+  analysis and rapid prediction for heliostats in solar power tower systems},
+  Solar Energy 304 (2026) 114186.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.114186}
+  {\path{doi:10.1016/j.solener.2025.114186}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.114186}
+
+\bibitem{nasa2023power}
+N.~L.~R. Center, \href{https://power.larc.nasa.gov/}{Nasa power data access
+  viewer and api}, weather source used for the reproducible SAM file (2023).
+\newline\urlprefix\url{https://power.larc.nasa.gov/}
+
+\bibitem{usgs2015srtm}
+U.~G. Survey, \href{https://doi.org/10.5066/F7PR7TFT}{Shuttle radar topography
+  mission 1 arc-second global}, terrain source used for the public elevation
+  layer (2015).
+\newline\urlprefix\url{https://doi.org/10.5066/F7PR7TFT}
+
+\bibitem{kuhnke2020robust}
+S.~Kuhnke, P.~Richter, F.~Kepp, J.~Cumpston, A.~M. Koster, C.~Büsing,
+  \href{https://doi.org/10.1016/j.renene.2019.11.118}{Robust optimal aiming
+  strategies in central receiver systems}, Renewable Energy 152 (2020)
+  198--207.
+\newblock \href {https://doi.org/10.1016/j.renene.2019.11.118}
+  {\path{doi:10.1016/j.renene.2019.11.118}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2019.11.118}
+
+\bibitem{zaihu2025dunhuangdataset}
+{Zaihu},
+  \href{https://doi.org/10.5281/zenodo.16957381}{poboll/{Dunhuang\_Heliostat\_Benchmark\_Dataset}:
+  1.0.0}, mIT-licensed coordinate and figure-generation package used as a
+  source coordinate archive after audit (2025).
+\newblock \href {https://doi.org/10.5281/zenodo.16957381}
+  {\path{doi:10.5281/zenodo.16957381}}.
+\newline\urlprefix\url{https://doi.org/10.5281/zenodo.16957381}
+
+\end{thebibliography}

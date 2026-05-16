@@ -1,0 +1,69 @@
+{
+  "project": {
+    "name": "dunhuang-heliostat-rebuild-server-full",
+    "seed": 20260511
+  },
+  "plant": {
+    "latitude_deg": 40.063,
+    "longitude_deg": 94.426,
+    "timezone": 8,
+    "tower_height_m": 260.0,
+    "tower_total_height_m": 260.0,
+    "receiver_center_height_m": 229.3,
+    "receiver_height_m": 18.6,
+    "receiver_diameter_m": 15.13,
+    "receiver_panel_count": 14,
+    "receiver_rated_input_mw": 630.0,
+    "heliostat_mirror_area_m2": 115.72,
+    "heliostat_width_m": 11.42,
+    "heliostat_height_m": 10.42,
+    "heliostat_facets": 35,
+    "heliostat_facet_x": 5,
+    "heliostat_facet_y": 7,
+    "heliostat_reflectivity_clean": 0.94,
+    "heliostat_tracking_accuracy_mrad": 2.0,
+    "reference_heliostat_count": 11935,
+    "reference_land_area_km2": 7.2,
+    "reference_total_reflective_area_m2": 1381118,
+    "reference_farthest_heliostat_km": 1.57,
+    "rated_power_mw": 100.0
+  },
+  "data": {
+    "layout_a": "data/raw/layout_A.csv",
+    "layout_b": "data/raw/layout_B.csv",
+    "performance_summary_a": "data/raw/performance_summary_A.csv",
+    "performance_summary_b": "data/raw/performance_summary_B.csv",
+    "terrain_grid": "data/terrain/dunhuang_srtm90m_grid.csv"
+  },
+  "solar_sampling": {
+    "day_step": 3,
+    "hours": [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "dni_exponent": 1.35,
+    "airmass_attenuation": 0.00008
+  },
+  "candidate_generation": {
+    "random_candidates": 5000,
+    "keep_fraction_min": 0.62,
+    "keep_fraction_max": 1.0,
+    "deterministic_keep_fractions": [1.0, 0.96, 0.92, 0.88, 0.84, 0.8, 0.76, 0.72, 0.68, 0.64],
+    "representative_count": 10
+  },
+  "realism_constraints": {
+    "publishable_min_heliostats": 9300,
+    "publishable_max_heliostats": 12100,
+    "min_layout_quality_score": 0.78,
+    "max_terrain_slope_p95_pct": 3.0,
+    "max_terrain_elevation_range_m": 80.0
+  },
+  "economics": {
+    "layout_a_annual_energy_gwh": 448.202656,
+    "layout_b_annual_energy_gwh": 356.48224,
+    "layout_a_capex_musd": 843.621568,
+    "layout_b_capex_musd": 767.580288,
+    "layout_a_npv_musd": 28.017356,
+    "layout_b_npv_musd": -54.51362,
+    "layout_a_lcoe_cent_kwh": 15.24,
+    "layout_b_lcoe_cent_kwh": 17.17,
+    "ppa_cent_kwh": 15.80
+  }
+}
