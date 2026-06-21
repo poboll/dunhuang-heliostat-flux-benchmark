@@ -1,0 +1,4 @@
+layout_id,label,role_name,strategy,strategy_short,cases,mean_delta_peak_pct,median_delta_peak_pct,p10_delta_peak_pct,p90_delta_peak_pct,share_lower_peak,median_delta_intercept_pctpt
+joint_g02_0333,$J_{bal}$,no-energy-loss balance,staggered_levels:9:0.380:2,S9-p2,27,-1.981780958087683,-0.5296007214523998,-13.269524863750615,19.835260933442967,0.7037037037037037,0.2283333333333304
+joint_g02_0303,$J_{gain}$,energy-gated receiver candidate,staggered_levels:9:0.380:3,S9-p3,27,2.5756712548593956,0.3528886056290903,-11.699839867558454,14.442562891779714,0.48148148148148145,0.6433333333333291
+joint_g04_0478,$J_{flux}$,receiver-risk boundary,staggered_levels:9:0.380:5,S9-p5,27,-4.063301372127869,-7.621988709547595,-10.16817564184879,3.905401552503403,0.7407407407407407,-0.6149999999999989

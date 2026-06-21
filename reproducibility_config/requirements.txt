@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+scipy>=1.11
+tqdm>=4.66
+NREL-PySAM>=7.1.0
+pytest>=8.0

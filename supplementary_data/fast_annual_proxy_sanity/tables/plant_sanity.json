@@ -1,0 +1,10 @@
+{
+  "weather_annual_dni_kwh_m2": 1842.4083600000001,
+  "reported_corrected_tmy_dni_kwh_m2": 1883.0,
+  "dni_scale_factor": 1.0220318366336547,
+  "baseline_annual_thermal_proxy_mwh_reported_tmy_scaled": 945884.1565608721,
+  "public_reference_annual_generation_mwh": 351600.0,
+  "calibrated_net_electric_conversion_factor": 0.37171570911852236,
+  "public_design_capacity_factor_pct": 40.136986301369866,
+  "reference_source_key": "huang2024dunhuang_design_generation"
+}

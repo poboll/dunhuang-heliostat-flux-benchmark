@@ -1,0 +1,9 @@
+{
+  "writeback_recommendation": "write_short_flux_day_sampling_sentence",
+  "max_abs_peak_ratio_delta_shift_pctpt": 0.007913202468090574,
+  "max_abs_p99_ratio_delta_shift_pctpt": 0.07318870451269444,
+  "shift_threshold_pctpt": 1.5,
+  "lopt_still_flux_penalty": true,
+  "receiver_rows_not_optical_headline": true,
+  "interpretation": "The enlarged SolarPILOT flux-day sample preserves the manuscript's default-flux role interpretation."
+}

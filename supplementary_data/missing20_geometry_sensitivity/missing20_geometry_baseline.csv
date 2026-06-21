@@ -1,0 +1,2 @@
+count,mean_radius_m,median_radius_m,p05_radius_m,p95_radius_m,min_radius_m,max_radius_m,x_span_m,y_span_m,axis_ratio_x_over_y,mean_z_m,z_range_m,sector_coverage_frac,min_sector_count,annular_coverage_frac,min_annular_count
+11915.0,1020.5589918611257,1012.3916140753043,296.93540351403027,1785.918570773819,171.97435638199087,1988.054150591477,3530.44,3503.9300000000003,1.0075657904124797,-2.2579935985693527,35.19410000000016,1.0,242.0,1.0,352.0

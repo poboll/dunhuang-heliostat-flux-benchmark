@@ -7,12 +7,14 @@
 \usepackage{amsmath,amssymb}
 \usepackage{siunitx}
 \usepackage{hyperref}
+\hypersetup{hidelinks}
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{url}
 \usepackage{placeins}
 \usepackage{float}
+\usepackage{lineno}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,positioning,shapes.geometric,fit,backgrounds}
 
@@ -43,7 +45,7 @@
 
 \begin{frontmatter}
 
-\title{A Terrain-Screened Full-Field Heliostat Layout Deformation and Receiver-Flux Screening Benchmark for the Dunhuang 100 MW Solar Tower}
+\title{A Receiver-Flux-Aware Reproducible Layout--Aiming Benchmark for the Dunhuang 100 MW Solar Tower}
 
 \author[aff1]{Changlong Li}
 \author[aff1]{Zengye Su}
@@ -52,32 +54,21 @@
 \address[aff1]{Guangzhou College of Commerce, Guangzhou, China}
 
 \begin{abstract}
-Large solar tower fields require optical-efficiency assessment, receiver-flux risk control, and reproducible numerical evidence under the same plant-scale constraints. This paper develops a terrain-screened full-field layout-deformation benchmark for the Shouhang Dunhuang 100 MW molten-salt solar tower. The method preserves the available 11,915-heliostat coordinate pool, rather than deleting mirrors, and anchors all candidates to public plant parameters: 11,935 reported heliostats, 115.72 m\textsuperscript{2} per heliostat, 1.381 million m\textsuperscript{2} of reflective area, a 260 m tower, a 229.3 m receiver-center optical height, and a 15.13 m by 18.6 m cylindrical receiver. A streamed run screened 1,841 conservative full-field candidates and exported eight representatives. PySAM/SolarPILOT numerical verification of five key layouts under common default-aiming settings reveals the central trade-off: the optical-upper candidate improves mean optical efficiency by 3.15\% but increases peak-to-active-mean receiver-flux concentration by 4.69\%. A fast aiming proxy and an 81-assumption proxy-sensitivity sweep are then used to form a receiver-risk candidate queue. Reduced PySolTrace direct-ray checks with verified reflector-to-receiver stage ordering test direct custom aimpoints for selected layout--strategy pairs; the all-phase matrix covers 1,485 cases over 27 solar conditions and 11 aiming strategies, followed by high-sample and independent-seed audits. These reduced checks preserve the role-level queue but change the exact best aiming rows: the receiver-risk candidates keep negative best-row mean peak-to-mean changes, whereas matched-strategy sign consistency is only 45--50\% across audit layers. The resulting package is a reproducible full-field numerical benchmark and receiver-flux screening queue for future layout--aiming co-design studies; it is not a certified commercial redesign of the operating Dunhuang plant.
+Large solar-tower layout studies need public plant-scale test cases in which optical gain, receiver-flux risk, and reproducibility are evaluated under common assumptions. This paper develops a receiver-flux-aware layout--aiming benchmark for the Shouhang Dunhuang 100 MW molten-salt solar tower by preserving the available 11,915-heliostat coordinate pool and anchoring all candidates to public plant parameters. A terrain-screened sector/petal deformation workflow screened 1,841 conservative full-field candidates, while PySAM/SolarPILOT, relative AFD-style flux metrics, reduced PySolTrace direct tracing, and paired statistics formed an evidence ladder for representative layouts. A geometry-explainability audit shows that the selected rows are local count-preserving deformations rather than mirror-deletion layouts: the optical stress case has a p95 displacement of 107.5 m, while the receiver-pressure strong-baseline rows remain at 36.9--45.4 m. The optical-upper candidate improves mean SolarPILOT optical efficiency by 3.15\%, but also increases peak-to-active-mean receiver-flux concentration by 4.68\% and the active p99 hotspot-area proxy by 0.38 percentage points. Same-condition controls and a same-anchor pressure test show that stronger local baselines explain part of the response: the best hybrid approximation gives +1.74\% SolarPILOT optical efficiency and -4.44\% aiming-proxy receiver concentration. A fast annual proxy interpolates the SolarPILOT optical-efficiency tables over public weather years, preserves the optical ranking signal across 2020--2025 NASA POWER files and five interpolation choices, and places the baseline proxy on the same order as the 351.6 GWh public Dunhuang design-generation reference. Receiver-grid and flux-day sampling gates preserve the default-flux role labels: the 36 by 36 receiver-bin rerun shifts peak-ratio deltas by less than 0.43 percentage points, and the 12-flux-day rerun shifts peak and p99 deltas by at most 0.008 and 0.073 percentage points. A joint layout--aiming screening layer then evaluates 489 full-field candidates with 23 aiming strategies per candidate. Its reduced direct promotion audit supports the receiver-boundary joint candidate ($\Delta R=-4.06\%$, 95\% CI $[-6.99,-0.94]\%$), while no row clears the stricter -1\% practical-threshold criterion for final engineering superiority. The resulting package is a reproducible full-field numerical benchmark and direct-promotion queue for future layout--aiming co-design studies, rather than a certified commercial redesign or bankable annual-yield estimate for the operating Dunhuang plant.
 \end{abstract}
 
 \begin{keyword}
-heliostat field \sep solar tower \sep layout optimization \sep receiver flux \sep aiming strategy \sep SolarPILOT
+heliostat field \sep solar tower \sep layout--aiming benchmark \sep receiver flux \sep aiming strategy \sep SolarPILOT
 \end{keyword}
 
 \end{frontmatter}
 
-\section{Nomenclature and Abbreviations}
-\begin{longtable}{p{0.18\textwidth}p{0.74\textwidth}}
-\toprule
-Symbol or term & Meaning \\
-\midrule
-CSP & Concentrating solar power. \\
-DNI & Direct normal irradiance. \\
-SPT & Solar power tower. \\
-SAM & NREL System Advisor Model. \\
-SolarPILOT & NREL Solar Power Tower Integrated Layout and Optimization Tool. \\
-CoPylot & Python API for SolarPILOT. \\
-$\eta_{opt}$ & Mean optical efficiency reported by SolarPILOT optical-efficiency table. \\
-$R_{flux}$ & Peak-to-active-mean receiver-flux ratio used as the default-aiming flux-risk metric. \\
-$z_m$ & Public-terrain-relative elevation assigned to each heliostat coordinate. \\
-TS-FPDA & Terrain-screened full-field petal deformation algorithm proposed in this manuscript. \\
-\bottomrule
-\end{longtable}
+\section{Nomenclature}
+\noindent\textbf{Abbreviations.}
+CSP, concentrating solar power; DNI, direct normal irradiance; SPT, solar power tower; SAM, NREL System Advisor Model; SolarPILOT, NREL Solar Power Tower Integrated Layout and Optimization Tool; CoPylot, Python API for SolarPILOT; TS-FPDA, terrain-screened full-field petal deformation workflow.
+
+\noindent\textbf{Symbols and manuscript-specific terms.}
+$\eta_{opt}$ denotes the mean optical efficiency reported by the SolarPILOT optical-efficiency table. $R_{flux}$ denotes the peak-to-active-mean receiver-flux ratio used as the default-aiming flux-risk metric. $z_m$ is the public-terrain-relative elevation assigned to each heliostat coordinate. The AFD-style proxy is a relative allowable-flux-density-style screening metric based on high-percentile receiver loading and hotspot-area exceedance; it is not an absolute receiver thermal limit. A strong-baseline approximation denotes a literature-inspired same-anchor pressure-test family and is not a complete reproduction of a named external optimizer.
 
 \section{Introduction}
 Commercial solar tower fields are engineered optical systems, not simple point clouds. Heliostat placement interacts with receiver dimensions, terrain, optical errors, canting, cleaning access, land boundaries, aiming strategies, and receiver thermal limits. A useful layout perturbation must therefore remain field-complete, plant-realistic, receiver-aware, and reproducible enough for independent numerical checking.
@@ -103,6 +94,7 @@ Receiver center optical height & 229.3 m & Used in optical proxy and SolarPILOT 
 Cylindrical receiver size & 15.13 m diameter by 18.6 m height & Used to interpret flux concentration and receiver-map resolution. \\
 Thermal storage & 11 h & Reminds the reader that layout changes cannot be interpreted without plant-scale dispatch context. \\
 Corrected annual DNI & 1883 kWh m\textsuperscript{-2} y\textsuperscript{-1} & Anchors the NASA POWER weather input via uniform DNI scaling. \\
+Design annual generation & 351.6 GWh & Used only as a plant-scale sanity reference for the fast annual proxy; not used as measured validation. \\
 Natural site slope & about 0.8\% & Baseline realism check for public-terrain screening. \\
 \bottomrule
 \end{tabular}
@@ -115,29 +107,52 @@ This matters for Dunhuang because the plant is a large surround-field system rat
 
 The Shouhang Dunhuang 100 MW molten-salt solar tower has enough public information to serve as a useful benchmark. The published plant report gives 11,935 heliostats, 115.72 m\textsuperscript{2} per heliostat, a total reflective area of approximately 1.381 million m\textsuperscript{2}, a 7.2 km\textsuperscript{2} field, a receiver-center height of 229.3 m, a 260 m tower, a cylindrical receiver 15.13 m in diameter and 18.6 m high, 11 h of storage, corrected TMY DNI of 1883 kWh m\textsuperscript{-2} y\textsuperscript{-1}, and a natural site slope of approximately 0.8\% \cite{huang2024dunhuang}. These numbers give the case much stronger physical meaning than a generic SAM export. They also create obligations: a benchmark must disclose the coordinate count, explain the missing records, avoid synthetic field completion, and keep receiver-flux evidence visible.
 
-Descriptor-only comparisons of a baseline field and a mirror-reduced field are not sufficient for a credible plant-scale layout study. A commercial 100 MW plant cannot be ``improved'' by deleting thousands of heliostats unless the receiver, tower, dispatch, land, and economics are redesigned together. The present paper therefore treats the problem as a layout algorithm and numerical-verification benchmark. The algorithm preserves the full available coordinate pool and applies bounded sector/petal deformations to search realistic full-field variants. The verification package then tests whether optical gains are accompanied by receiver-flux penalties.
+Descriptor-only comparisons of a baseline field and a mirror-reduced field are not sufficient for a credible plant-scale layout study. A commercial 100 MW plant cannot be ``improved'' by deleting thousands of heliostats unless the receiver, tower, dispatch, land, and economics are redesigned together. The present paper therefore treats the problem as a plant-anchored benchmark and numerical-verification workflow. The candidate-generation layer preserves the full available coordinate pool and applies bounded sector/petal deformations to search realistic full-field variants. The verification package then tests whether optical gains are accompanied by receiver-flux penalties.
 
 The central premise follows current research. SolarPILOT remains a standard tool for solar tower field characterization \cite{wagner2018solarpilot,nrel2025solarpilotdocs}, while CoPylot exposes SolarPILOT functionality through a Python API for detailed aimpoint studies \cite{hamilton2022copilot}. Round-robin receiver-flux comparisons with SolTrace, Solstice, and TieSOL show that commercial-scale flux maps require explicit treatment of heliostat geometry, aiming, canting, and focusing \cite{mitchell2025roundrobin}. Recent aiming research includes deterministic experimental verification, flux feedback, closed-loop control, reinforcement learning, neural surrogates, cloud-aware model-predictive control, differentiable rasterization, and differentiable Monte Carlo ray tracing \cite{sanchez2024experimental,acosta2021fluxfeedback,oberkirsch2023closedloop,cruz2022rl,carballo2025rl,alcantara2025nn,wu2026mlmpc,zheng2025diffneg,lin2025dmcrt}. This context motivates a Dunhuang benchmark that couples full-field layout generation with receiver-flux-aware numerical checking instead of treating the coordinate set as an isolated geometry artifact.
 
-This paper makes four contributions. First, it audits the source Dunhuang coordinate package and discloses that the available non-origin coordinate pool contains 11,915 heliostats, 20 fewer than the reported plant count. Second, it defines a terrain-screened full-field sector/petal deformation algorithm that preserves that coordinate pool while filtering geometry and public-terrain outliers. Third, it constructs a candidate-queue formulation that separates proxy screening, SolarPILOT default-aiming numerical verification, and reduced PySolTrace direct-aimpoint checks. Fourth, it packages layouts, scripts, tables, figures, and checksums so that later studies can repeat or enlarge the layout--aiming verification campaign.
+This paper makes five contributions. First, it audits the source Dunhuang coordinate package and discloses that the available non-origin coordinate pool contains 11,915 heliostats, 20 fewer than the reported plant count. Second, it defines a terrain-screened full-field sector/petal candidate-generation workflow that preserves that coordinate pool while filtering geometry and public-terrain outliers. Third, it constructs a candidate-queue formulation that separates proxy screening, SolarPILOT default-aiming numerical checking, and reduced PySolTrace direct-aimpoint checks. Fourth, it adds a joint layout--aiming screening layer in which deformation parameters and receiver-aiming strategies are selected together, followed by a reduced direct promotion audit and formal paired statistics for the joint representatives. Fifth, it packages layouts, scripts, tables, figures, and checksums so that later studies can repeat or enlarge the layout--aiming verification campaign.
+
+Table~\ref{tab:nearest-work-positioning} states this positioning against the closest literature streams. It is included to make the novelty claim deliberately narrow: the paper does not claim the first petal field, the first terrain tool, or the first aiming method. It contributes a public plant-anchored benchmark that links those streams under one reproducible layout--aiming evidence ladder.
+
+\begin{table}[t]
+\centering
+\caption{Nearest-work positioning matrix. The table defines the manuscript's contribution boundary rather than ranking prior work.}
+\label{tab:nearest-work-positioning}
+\small
+\begin{tabular}{p{0.26\textwidth}p{0.30\textwidth}p{0.34\textwidth}}
+\toprule
+Closest stream & Central emphasis & Gap addressed here \\
+\midrule
+SolarPILOT/CoPylot tool papers \cite{wagner2018solarpilot,hamilton2022copilot} & Optical-engine workflow and Python/SAM tool access. & Tool papers do not by themselves provide a Dunhuang-scale layout--aiming benchmark with disclosed coordinate provenance. \\
+Round-robin receiver-flux verification \cite{mitchell2025roundrobin} & Cross-code receiver-flux sensitivity and verification practice. & Portable full-field cases and checksum-style packages are still needed for independent comparisons. \\
+Classical and robust layout optimization \cite{collado2009surrounding,noone2019quick,li2022robust} & Field geometry, blocking/cosine trade-offs, robust objective design. & These studies usually do not combine a public commercial coordinate anchor with a receiver-risk queue. \\
+Recent petal, hybrid, and terrain layout studies \cite{tang2025petal,ghazanfari2025hefaal,yu2026slopedterrain} & Search-family design, uneven-terrain feasibility, and terrain-aware candidate generation. & They motivate the deformation family, but petal deformation alone is not treated here as sufficient novelty. \\
+Modern aiming, learning, and differentiable-flux methods \cite{sanchez2024experimental,schiricke2025fluxprediction,lin2025dmcrt,zheng2025diffneg} & Flux control, data-driven receiver prediction, and gradient-aware optical models. & These methods need realistic large-field benchmarks to test transfer beyond small or synthetic fields. \\
+This manuscript & Public Dunhuang field anchoring, bounded full-field variants, terrain gates, receiver-flux queueing, and auditable reduced direct checks. & Provides a reproducible layout--aiming benchmark and claim-boundary template rather than a final plant redesign. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Engineering Validity of the Full-Field Surround Layout}
 Before defining the algorithm, the field morphology must be checked against solar-tower practice. A full ring or ellipse-like surround field is plausible for this case, provided that it is not presented as a surveyed redesign. Large central-receiver plants frequently use surround or near-surround fields when the tower and receiver are sized for high thermal input. The field may be north-biased in the northern hemisphere because cosine efficiency is more favorable for northern heliostats, but high-power plants can still require extensive east, west, and south sectors to supply the receiver across the day and year. A 100 MW molten-salt tower with more than one million square metres of mirror area should therefore resemble a large annular or elliptical surround field rather than a collapsed local cluster.
 
 The current layout is more credible than the deleted-mirror alternative for four reasons. First, every representative candidate preserves the available 11,915 heliostats. Second, sector coverage and annular coverage remain complete in the exported representative set. Third, the field envelope remains visually close to the Dunhuang-scale surround field, with only bounded deformation rather than structural collapse. Fourth, receiver-flux risk is evaluated alongside optical efficiency, so the algorithm is not rewarded for unrealistic local densification near the tower.
 
-This morphology check does not turn the layout into a final plant design. The source coordinate pool still lacks 20 reported heliostats. SRTM90m terrain is not a civil survey. PySAM/SolarPILOT imports the x/y coordinates used here, but the current bridge does not pass custom terrain-relative z values or custom aimpoints into SolarPILOT. The reduced SolTrace layer tests direct aimpoints only on stratified field samples and representative solar conditions. These limitations set the interpretation of the algorithm: it is a candidate generator and numerical-checking workflow, not an industrial redesign recommendation.
+This morphology check does not turn the layout into a final plant design. The source coordinate pool still lacks 20 reported heliostats. SRTM90m terrain is not a civil survey. PySAM/SolarPILOT imports the x/y coordinates used here, but the current bridge does not pass custom terrain-relative z values or custom aimpoints into SolarPILOT. The reduced SolTrace layer tests direct aimpoints only on stratified field samples and representative solar conditions. These limitations set the interpretation of the workflow: it is a candidate generator and numerical-checking benchmark, not an industrial redesign recommendation.
 
-Figure~\ref{fig:layout-realism} separates site context from geometry audit. The upper photograph is a real aerial photograph of the Dunhuang heliostat field taken by co-author Zengye Su using a DJI Mavic 3 Pro drone, and it is shown at its original full-frame aspect ratio. For LaTeX compatibility, the source WebP is also exported as a PNG with no crop, annotation, colour adjustment, or resampling; the original WebP is retained in the figure package. The photograph is used only as qualitative site context, not as a quantitative coordinate, DNI, or performance measurement. The enlarged locator panel identifies the site within China, and the geometry panel overlays the audited baseline coordinate pool and representative full-field candidates under common axis limits. The red triangle marks the tower, while the outline markers are diagnostic samples of representative deformations.
+Figure~\ref{fig:layout-realism} separates site context from geometry audit. The upper photograph is a real aerial photograph of the Dunhuang heliostat field taken by co-author Zengye Su using a DJI Mavic 3 Pro drone, and it is shown at its original full-frame aspect ratio. For LaTeX compatibility, the source WebP is also exported as a PNG with no crop, annotation, colour adjustment, or resampling; the original WebP is retained in the figure package. The photograph is used only as qualitative site context, not as a quantitative coordinate, DNI, or performance measurement. The enlarged locator panel identifies the site within China with Taiwan, Hainan, Hong Kong, Macau, and a South China Sea island inset retained for map completeness. The geometry panel overlays the audited baseline coordinate pool and representative full-field candidates under common axis limits. The red triangle marks the tower, while the outline markers are diagnostic samples of representative deformations.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/fig1_author_aerial_fullframe.png}\\[0.25em]
-\includegraphics[width=0.92\textwidth]{figures/fig1_locator_geometry_audit.png}
-\caption{Field context and full-field geometry audit. The upper image is a real Dunhuang heliostat-field aerial photograph taken by co-author Zengye Su using a DJI Mavic 3 Pro drone and is used as qualitative site context only. Panel (b) gives a China-wide projected locator with Gansu highlighted and the Dunhuang site marked. Panel (c) overlays the available 11,915-coordinate heliostat pool and diagnostic samples from representative full-field candidates.}
+\includegraphics[width=0.96\textwidth]{figures/fig1_author_aerial_fullframe.png}\\[0.25em]
+\includegraphics[width=0.98\textwidth]{figures/fig1_locator_geometry_audit.png}
+\caption{Field context and full-field geometry audit. The upper image is a real Dunhuang heliostat-field aerial photograph taken by co-author Zengye Su using a DJI Mavic 3 Pro drone and is used as qualitative site context only. Panel (b) gives a China-wide projected locator with Gansu highlighted, the Dunhuang site marked, and the main island outlines retained. Panel (c) overlays the available 11,915-coordinate heliostat pool and diagnostic samples from representative full-field candidates.}
 \label{fig:layout-realism}
 \end{figure}
 \FloatBarrier
+
+The preview in Fig.~\ref{fig:layout-realism} is intentionally not the main evidence that the deformations are realistic. A separate geometry-explainability audit, reported later in Fig.~\ref{fig:geometry-advantage}, quantifies radial redistribution, nearest-neighbour spacing, movement directions, and constrained advantage roles. This separation keeps the field photograph and locator map from becoming a quantitative claim while still answering the practical question of how the full-field layouts actually move.
 
 \section{Related Work and Research Gap}
 \subsection{Solar tower field modeling and verification tools}
@@ -151,6 +166,8 @@ Learning-based and differentiable methods are now changing the expectations for 
 
 \subsection{Layout generation and terrain-screened field design}
 Classical field layout studies include preliminary surround-field design, regular field generation, thermochemical-field optimization, quick design of commercial regular fields, load-following layout optimization, no-blocking layouts, multi-objective plant enhancement, robust solar tower optimization under uncertainty, and heliostat-shape-aware field design \cite{collado2009surrounding,collado2012campo,noone2011thermochemical,noone2019quick,ghirardi2021loadfollowing,derbal2023noblocking,guo2020multiobjective,li2022robust,chen2020shapes}. Recent studies add optical-thermal-mechanical coupling, deformable petal hybrid layouts, uneven-terrain layout tooling, sloped-terrain spatiotemporal optimization, collision-analysis-based field design, fast preliminary design tools, and fast annual-energy estimation through heliostat grouping and solar-position sampling \cite{yang2024otm,tang2025petal,ghazanfari2025hefaal,yu2026slopedterrain,adam2026heliosliders,biencinto2025hefesto,liu2026fastannual}. This literature justifies sector/petal deformation as a search family, but it also makes it difficult to claim novelty from petal deformation alone. The research gap for the present manuscript is therefore more specific: a plant-anchored, full-field, terrain-audited, receiver-flux-aware candidate-generation benchmark for a public 100 MW surround field.
+
+The same literature also motivated an explicit strong-baseline pressure test in the revised experiment. The pressure test does not claim to reproduce HelioSliders, HeFAAL, modified artificial-bee-colony, or other named optimizers; doing so would require their full original objective functions, constraints, and implementation details. Instead, it constructs four same-anchor approximation families that capture the type of design freedom emphasized by recent work: low-frequency pattern-free sector/ring deformations, slider-like ringwise azimuthal shifts, terrain-relief-aware redistribution, and hybrid petal/slider pressure layouts. All candidates preserve the 11,915 heliostats and pass through the same SolarPILOT default-aiming and aiming-proxy pipeline. This makes the comparison useful as a pressure test while keeping the method claim conservative.
 
 \subsection{Plant realism, heliostat technology, and benchmark need}
 The broader CSP context also matters. Heliostat development roadmaps and HelioCon reports emphasize cost reduction, optical quality, calibration, and field performance as system-level challenges \cite{pfahl2017progress,zhu2022roadmap,zhu2023heliocon,zhu2024helioconannual}. Gen3 CSP and solar-fuel work indicate that receiver thermal input and flux control remain central to high-temperature solar tower applications \cite{turchi2021gen3,zoller2022solarfuels}. New heliostat concepts and wind-induced slope-error studies remind us that layout interacts with structural and terrain effects \cite{freeman2025tiltroll,li2026windslope}. The Dunhuang plant report provides the public anchor for this benchmark \cite{huang2024dunhuang}, while NASA POWER and SRTM provide reproducible but imperfect public weather and terrain layers \cite{nasa2023power,usgs2015srtm}.
@@ -174,7 +191,7 @@ Plant realism and technology context & \cite{huang2024dunhuang,pfahl2017progress
 \end{table}
 
 \section{Problem Definition}
-The design task is to generate full-field Dunhuang-scale candidate layouts that remain physically plausible while revealing whether small geometric changes can improve optical performance without worsening receiver-flux concentration. Let the baseline coordinate set be $\mathcal{H} = \{(x_i,y_i,z_i)\}_{i=1}^N$ with $N=11915$. The coordinate pool is derived from the MIT-licensed author-curated Dunhuang benchmark archive \cite{zaihu2025dunhuangdataset}, specifically the baseline \path{layout_A.csv} file, after removing an origin placeholder and retaining all non-origin coordinate records. It is not claimed to be the official as-built survey of the operating plant. The public plant report gives $11935$ heliostats \cite{huang2024dunhuang}; the missing 20 coordinates are disclosed, not synthetically completed. The missing fraction is 0.17\%, and all candidate comparisons, imported coordinate files, and percentage changes are therefore normalized to the same available $N=11915$ pool. SRTM90m terrain is then interpolated to the coordinates and stored as tower-relative $z_m$ for public-terrain screening. Each candidate is a transformation $T_\theta(\mathcal{H})$ parameterized by a vector $\theta$ containing bounded radial, azimuthal, scale, twist, and petal terms.
+The design task is to generate full-field Dunhuang-scale candidate layouts that remain physically plausible while revealing whether small geometric changes can improve optical performance without worsening receiver-flux concentration. Let the baseline coordinate set be $\mathcal{H} = \{(x_i,y_i,z_i)\}_{i=1}^N$ with $N=11915$. The coordinate pool is derived from the MIT-licensed author-curated Dunhuang benchmark archive \cite{zaihu2025dunhuangdataset}, specifically the baseline \path{layout_A.csv} file, after removing an origin placeholder and retaining all non-origin coordinate records. It is not claimed to be the official as-built survey of the operating plant. The public plant report gives $11935$ heliostats \cite{huang2024dunhuang}; the missing 20 coordinates are disclosed, not synthetically completed. The missing fraction is 0.17\%, and all candidate comparisons, imported coordinate files, and percentage changes are therefore normalized to the same available $N=11915$ pool. A random-omission geometry audit, reported in the supplementary package, removes 20 heliostats from the available field over 2000 seeded replicates; the 95th-percentile absolute change in mean field radius is 0.33 m and sector/annular coverage remains complete. This supports the stability of the available coordinate pool for geometry benchmarking, while preserving the boundary that the unavailable records are not reconstructed. SRTM90m terrain is then interpolated to the coordinates and stored as tower-relative $z_m$ for public-terrain screening. Each candidate is a transformation $T_\theta(\mathcal{H})$ parameterized by a vector $\theta$ containing bounded radial, azimuthal, scale, twist, and petal terms.
 
 The algorithm has three design constraints. Field-completeness requires $|T_\theta(\mathcal{H})|=N$. Geometry realism requires complete sector and annular coverage, stable nearest-neighbor spacing, bounded axis ratio, and a field envelope visually consistent with the reference surround field. Public-terrain screening requires that the transformed field remain within conservative SRTM90m elevation-range and p95-slope bounds. Receiver safety requires that candidate ranking consider a receiver-flux-risk metric rather than optical efficiency alone.
 
@@ -198,11 +215,11 @@ Here $\Delta \eta_{opt}$ is the SolarPILOT mean optical-efficiency change, $\Del
 \small
 \begin{tabular}{p{0.25\textwidth}p{0.29\textwidth}p{0.34\textwidth}}
 \toprule
-Dimension & Descriptor-only comparison & Revised algorithm-benchmark logic \\
+Dimension & Descriptor-only comparison & Revised benchmark logic \\
 \midrule
-Primary object & Two exported layouts & A full-field candidate-generation and verification pipeline \\
+Primary object & Two exported layouts & A plant-scale candidate-generation and verification pipeline \\
 Field scale & One baseline and one mirror-reduced case & All representatives preserve the available 11,915-coordinate field \\
-Novelty claim & Dataset reuse value & Algorithmic workflow plus receiver-flux-aware benchmark \\
+Novelty claim & Dataset reuse value & Public plant anchor, receiver-flux evidence ladder, and reproducible candidate queue \\
 Physical realism & Weak because mirror deletion changes plant scale & Stronger because count, envelope, coverage, terrain, and receiver metrics are audited \\
 Verification & Annual SAM comparison only & PySAM/SolarPILOT layout verification plus custom-aimpoint queue \\
 Claim risk & Looks like default software output & Becomes an auditable, bounded engineering method with clear next-stage verification \\
@@ -212,9 +229,9 @@ Claim risk & Looks like default software output & Becomes an auditable, bounded 
 
 The formulation treats layout and aiming as coupled plant-scale decisions. A layout that slightly improves cosine efficiency may concentrate more heliostats onto a receiver zone under default aiming, while a layout that looks safer in receiver flux may lose field efficiency. The practical output is therefore a queue of candidates and evidence about why each candidate is interesting, not a single coordinate file declared optimal.
 
-\section{Terrain-Screened Full-Field Petal Deformation Algorithm}
+\section{Terrain-Screened Full-Field Candidate Generation}
 \subsection{Inputs and constraints}
-The TS-FPDA input consists of the baseline coordinates, audited plant parameters, a public terrain grid, a weather file, and bounds on deformation parameters. The field transformation preserves heliostat identity and count. This is essential because mirror deletion changes the plant scale and confounds optical, economic, and receiver comparisons.
+The TS-FPDA input consists of the baseline coordinates, audited plant parameters, a public terrain grid, a weather file, and bounds on deformation parameters. In this paper TS-FPDA is used as a conservative candidate-generation workflow, not as a claim of global field optimality. The field transformation preserves heliostat identity and count. This is essential because mirror deletion changes the plant scale and confounds optical, economic, and receiver comparisons.
 
 \subsection{Coordinate transformation family}
 The candidate transformation combines bounded global scaling, radial scaling, radial wave perturbation, angular twist, azimuthal wave perturbation, north-south bias, and petal deformation. A candidate point $(x_i,y_i)$ is first converted to tower-centred polar coordinates $(r_i,\phi_i)$, with $\rho_i=r_i/r_{\max}$. The implementation uses $\phi_i=\arctan2(x_i,y_i)$ so that north-south bias is applied consistently with the plant coordinate convention. For a petal order $k_p>0$, define $p_i=\cos[k_p(\phi_i-\psi_p)]$; otherwise $p_i=0$. The transformed point is:
@@ -230,7 +247,7 @@ The coefficient bounds are listed in Table~\ref{tab:param-envelope}. Petal defor
 Table~\ref{alg:tfpda} gives the reproducible version of the workflow. The implementation uses the same logic but stores intermediate tables so that every exported layout can be traced back to its parameter vector, proxy metrics, verification settings, and checksum. This audit trail is essential because modest layout improvements are credible only when the method is transparent enough to reproduce.
 
 \begin{longtable}{p{0.08\textwidth}p{0.82\textwidth}}
-\caption{TS-FPDA: terrain-screened full-field petal deformation algorithm.}
+\caption{TS-FPDA: terrain-screened full-field candidate-generation workflow.}
 \label{alg:tfpda}\\
 \toprule
 Step & Operation \\
@@ -251,22 +268,25 @@ Step & Operation \\
 \subsection{Parameter envelope}
 Table~\ref{tab:param-envelope} summarizes the parameter envelope. These are not universal design limits; they are local-search limits chosen to keep the generated candidates near the audited Dunhuang field. A larger search envelope could find stronger apparent gains, but it would also increase the risk of creating a field that no longer resembles the public plant.
 
-\begin{longtable}{p{0.20\textwidth}p{0.26\textwidth}p{0.42\textwidth}}
-\caption{Deformation parameters and their manuscript role. Numeric values are interpreted as conservative local-search amplitudes around the audited field.} \label{tab:param-envelope}\\
+\begin{table}[t]
+\centering
+\caption{Deformation parameters and their manuscript role. Numeric values are interpreted as conservative local-search amplitudes around the audited field.}
+\label{tab:param-envelope}
+\small
+\begin{tabular}{p{0.23\textwidth}p{0.29\textwidth}p{0.36\textwidth}}
 \toprule
 Parameter family & Typical range or role & Rationale \\
 \midrule
 Global x/y scale, $s_x,s_y$ & Deterministic grid: 0.97, 0.99, 1.01, 1.03; random range: 0.965--1.035 & Allows mild anisotropic expansion or compression while keeping the field elliptical. \\
-Radial scale, $s_r$ & Random range: -0.025--0.025 & Captures global inward/outward redistribution without changing heliostat count. \\
-Radial wave, $a_r$ & Random range: -0.018--0.018 with $\cos(2\phi)\rho$ & Allows sector-dependent ring spacing changes similar to petal-like field families. \\
-Angular twist, $\omega$ & Random range: -0.035--0.035 rad with $\rho^{1.25}$ & Represents smooth rotational deformation rather than random point movement. \\
-Azimuthal wave, $a_\phi$ & Random range: -0.020--0.020 rad with $\sin(2\phi)\rho$ & Tests whether sector staggering affects blocking and receiver concentration. \\
-Petal amplitude/order, $a_p,k_p$ & Deterministic $k_p=4,6,8$ with $a_p=\pm0.012,\pm0.020$; random $a_p=-0.026$--0.026 and $k_p\in\{0,4,6,8\}$ & Connects to recent petal and hybrid layout ideas while avoiding decorative overfitting. \\
-Petal phase/twist, $\psi_p,\omega_p$ & Deterministic phases 0 and $\pi/k_p$; random phase $-\pi$--$\pi$; random $\omega_p=-0.012$--0.012 rad & Prevents the petal family from being tied to one arbitrary sector alignment. \\
+Radial redistribution, $s_r,a_r$ & $s_r=-0.025$--0.025; $a_r=-0.018$--0.018 with $\cos(2\phi)\rho$ & Allows inward/outward and sector-dependent ring changes without changing heliostat count. \\
+Azimuthal deformation, $\omega,a_\phi$ & $\omega=-0.035$--0.035 rad; $a_\phi=-0.020$--0.020 rad & Represents smooth twist and stagger-like movement rather than random point displacement. \\
+Petal family, $a_p,k_p,\psi_p,\omega_p$ & $k_p\in\{0,4,6,8\}$; $a_p=-0.026$--0.026; bounded phase and petal-twist terms & Connects to recent petal and hybrid layout ideas while avoiding decorative overfitting. \\
 North bias, $b_n$ & Random range: -0.012--0.012 multiplied by $\cos(\phi)\rho$ & Allows the northern-hemisphere cosine-bias effect to appear without converting the field into a north-only design. \\
 Terrain assignment & SRTM-derived tower-relative elevation & Adds reproducible terrain screening while remaining honest about resolution limits. \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{table}
+\FloatBarrier
 
 \subsection{Feasibility filters}
 Each candidate is filtered by count, coverage, spacing, axis ratio, terrain range, terrain slope, and publishable-geometry flags. The sector coverage and annular coverage constraints prevent field collapse. The nearest-neighbor constraint discourages unrealistic local crowding. The axis-ratio constraint keeps the field envelope elliptical rather than fragmented.
@@ -294,6 +314,30 @@ SolarPILOT importability & Coordinates rejected or simulation instability & Ensu
 
 The gates also provide an engineering interpretation of the visual layout preview. A complete annular or ellipse-like field is not suspicious for this plant; it is the expected outcome after the algorithm forbids mirror deletion and sector loss. What would be suspicious is a candidate with large holes, radial collapse, disconnected islands, or an unexplained reduction in heliostat count. The current candidates are kept conservative so that the search stays inside a credible local design neighbourhood.
 
+\subsection{Benchmark settings and traceability}
+Earlier versions of the workflow left too many numerical defaults embedded only in scripts. For the journal manuscript, the detailed registry is moved to the reproducibility package, while Table~\ref{tab:parameter-registry} keeps the settings needed to interpret the results without turning the paper into a directory listing. The complete configuration, environment files, and checksums are supplied in the review package.
+
+\begin{table}[t]
+\centering
+\caption{Core benchmark settings used for the manuscript-facing run. The full parameter registry and checksums are supplied in the reproducibility package.}
+\label{tab:parameter-registry}
+\small
+\begin{tabular}{p{0.27\textwidth}p{0.28\textwidth}p{0.35\textwidth}}
+\toprule
+Layer & Setting used here & Interpretation boundary \\
+\midrule
+Site and weather & 40.063$^\circ$N, 94.426$^\circ$E; NASA POWER 2023 point weather, uniformly compared with the reported 1883 kWh m\textsuperscript{-2} y\textsuperscript{-1} TMY DNI & Public weather anchor for relative comparison; not measured annual operation. \\
+Coordinate pool & 11,935 reported heliostats and 11,915 available non-origin records & The available pool is invariant; the 20-record gap is disclosed rather than filled synthetically. \\
+Plant geometry & 115.72 m\textsuperscript{2} heliostat area, 260 m tower, 229.3 m receiver-center height, 15.13 m by 18.6 m receiver & Public plant-scale anchor for a benchmark, not a complete as-built survey. \\
+Candidate search & Seeded bounded deformation; 1,841 conservative full-field candidates screened & Generates a reproducible queue, not a claim of global plant optimality. \\
+Geometry gates & Count preservation, 36 sectors, 12 annuli, nearest-neighbour spacing, field extent, terrain range, and p95 slope & Prevents mirror deletion, sector collapse, and public-terrain outliers. \\
+Aiming proxy & 48 sectors, 8 annuli, receiver-map proxy, and 81-assumption sensitivity gate & Used for queueing and robustness checks below the optical-engine claim layer. \\
+SolarPILOT bridge & Common PySAM/SolarPILOT default-aiming settings for imported x/y layouts; 24 by 24 receiver maps and 8 flux days in the main run & Tests layout effects under common default aiming; terrain-relative $z_m$ and custom aimpoints are outside this bridge. \\
+Reduced direct ray tracing & 27 paired solar conditions; sampled full-field heliostats; all-phase, high-sample, independent-seed, and 240k-ray follow-up layers & Supports direct-promotion diagnostics, not full-field annual custom-aimpoint certification. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{Proxy screening}
 Proxy annual optical contribution, a cost-normalized screening score, and flux-risk metrics are used only for candidate triage. The optical proxy estimates relative field contribution under a simplified solar-position and loss model. The cost-normalized score is not an LCOE model: it does not include tower redesign, receiver redesign, O\&M, storage dispatch, financing, or discounted annual energy. It is retained only to keep the representative queue from ignoring plant-scale cost intuition while all candidate layouts preserve the same heliostat count. The flux-risk proxy identifies angular concentration patterns that may become receiver hot spots under aiming.
 
@@ -309,37 +353,35 @@ where $E_{proxy}$ is the simplified optical-contribution proxy, $C_{proxy}$ is t
 Representatives are selected to cover the candidate frontier: baseline, maximum proxy energy, cost-normalized screening case, minimum proxy flux risk, balanced layouts, and additional balanced candidates. This selection prevents the paper from depending on one cherry-picked result. It also creates controls for reduced and enlarged custom-aimpoint checks.
 
 \subsection{Implementation traceability}
-The implementation is written so that tables, figures, and quantitative claims are generated from the same audited run directory. Candidate generation writes \path{fullfield_candidates.csv} and \path{fullfield_representatives.csv}. Aiming proxy screening writes \path{best_aiming_by_layout.csv}. SolarPILOT numerical checking writes optical-efficiency tables, flux tables, and a summary table for each verification run. The publication script copies the selected journal figures and generates \path{ref.bib}, \path{verified.jsonl}, and the Elsevier source. This structure reduces the risk that manuscript text, figures, and verification tables drift apart during revision.
+The implementation is written so that tables, figures, and quantitative claims are generated from the same audited run directory. Candidate generation, proxy screening, SolarPILOT numerical checking, reduced PySolTrace direct checks, figure generation, and checksum construction are all represented by separate scripts in the released package. The main text does not reproduce a file-by-file script inventory; instead, the package manifest links each claim family to its source tables and checksums. This structure reduces the risk that manuscript text, figures, and verification tables drift apart during revision.
 
 The runtime design separates fast screening from slower verification. The deformation layer can screen hundreds of conservative candidates, while SolarPILOT is reserved for representative layouts. This division is a practical compromise: the proxy cannot establish final optimality, but ray-tracing every small local deformation is also inefficient. The result is a reproducible screening-to-checking funnel, a common pattern in engineering optimization studies.
 
-Viewed as an optimization system, the workflow has a deliberate closed loop. Candidate generation proposes bounded full-field perturbations; feasibility gates reject geometrically or terrain-wise implausible variants; proxy metrics choose a small and diverse screening queue; SolarPILOT exposes whether optical gains create default receiver-flux penalties; and reduced direct ray tracing tests whether aimpoint redistribution can change the receiver-risk ranking. When a verification layer contradicts an earlier proxy, the manuscript does not hide the contradiction. It uses the mismatch to refine the claim boundary and the next screening queue. This is the main reason the paper is framed as a benchmark and workflow contribution rather than as a one-shot optimizer.
+Viewed as a benchmark system, the workflow has a deliberate closed loop. Candidate generation proposes bounded full-field perturbations; feasibility gates reject geometrically or terrain-wise implausible variants; proxy metrics choose a small and diverse screening queue; SolarPILOT exposes whether optical gains create default receiver-flux penalties; and reduced direct ray tracing tests whether aimpoint redistribution can change the receiver-risk ranking. When a verification layer contradicts an earlier proxy, the mismatch is used to refine the evidence boundary and the next screening queue. This is the main reason the paper is framed as a benchmark and workflow contribution rather than as a one-shot optimizer.
 
 \begin{table}[t]
 \centering
-\caption{Implementation details that make the algorithm auditable rather than a manually adjusted layout.}
+\caption{Evidence groups used to audit the benchmark workflow. File-level names and SHA-256 checksums are kept in the supplementary manifest.}
 \label{tab:implementation-details}
 \small
-\begin{tabular}{p{0.25\textwidth}p{0.30\textwidth}p{0.35\textwidth}}
+\begin{tabular}{p{0.25\textwidth}p{0.29\textwidth}p{0.34\textwidth}}
 \toprule
-Layer & Main artifact or script & Audit check \\
+Layer & Evidence retained in package & Audit check \\
 \midrule
-Coordinate audit & \path{baseline_full.csv}; origin filtering in the data-loading layer & Available count is fixed at 11,915 and the 20-heliostat gap is disclosed rather than filled synthetically. \\
-Candidate generation & \path{run_fullfield_deformation.py} & Every exported \path{deform_*.csv} preserves the full coordinate pool and passes sector, annular, spacing, extent, and public-terrain gates. \\
-Proxy screening & \path{run_aiming_proxy.py}; \path{run_aiming_sensitivity.py} & Aiming candidates are treated as a queue; sensitivity tests show whether the proxy ranking is stable. \\
-SolarPILOT numerical check & \path{run_solarpilot_verification.py} & The same weather file, receiver geometry, heliostat area, and default-aiming settings are used for all representative layouts. \\
-Direct aimpoint check & \path{run_soltrace_aimpoint_pilot.py}; \path{run_soltrace_sensitivity_matrix.py} & The heliostat reflector stage is traced before the receiver stage; intercept ratios are bounded rather than exactly unity. \\
-Figure generation & \path{build_journal_white_figures_v8.py} & All active manuscript figures are rebuilt from tables under a white-background, common-font style guide. \\
-Reproducibility audit & \path{build_reproducibility_manifest.py} & Layouts, weather, terrain, tables, figures, and scripts are checksum-recorded for package review. \\
+Coordinate audit & Baseline pool, origin filtering record, and missing-20 sensitivity summary & Fixes the 11,915-coordinate benchmark and discloses provenance limits. \\
+Candidate generation & Full candidate table, representative queue, and geometry-gate summaries & Shows that selected layouts are count-preserving full-field candidates. \\
+Proxy and aiming screen & Best-aiming tables and sensitivity summaries & Separates fast screening roles from optical-engine or direct-ray claims. \\
+SolarPILOT checks & Optical-efficiency tables, receiver-flux tables, and default-aiming summaries & Applies common plant settings to all representative layouts. \\
+Reduced direct checks & All-phase, high-sample, independent-seed, baseline-control, hold-out, joint, and strong-baseline direct tables & Tests whether screening rows survive sampled custom-aimpoint ray tracing. \\
+Publication layer & Figure-generation scripts, source tables, and checksum manifest & Keeps figure panels, captions, and numerical claims tied to the same data package. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Computational workload and audit scale}
-Table~\ref{tab:workload} summarizes the workload that is directly tied to the current manuscript claims. The important point is not that the reduced ray-tracing matrix is exhaustive; it is that the matrix is large enough to test the proxy queue under direct custom aimpoints while remaining small enough to reproduce and audit. The enlarged PySolTrace table records runtime for every case. Across the 1,485 traced layout--strategy--condition cases, the mean recorded runtime is 6.24 s per case, the maximum is 11.05 s, and the total recorded case runtime is 9267.79 s, or 154.46 min. These values are implementation evidence, not a performance benchmark for other machines.
+Table~\ref{tab:workload} summarizes the workload that is directly tied to the current manuscript claims. The important point is not that the reduced ray-tracing matrix is exhaustive; it is that the matrix is large enough to test the proxy queue under direct custom aimpoints while remaining small enough to reproduce and audit. The enlarged PySolTrace table records runtime for every case. Across the 1,485 traced layout--strategy--condition cases, the mean recorded runtime is 6.24 s per case, the maximum is 11.05 s, and the total recorded case runtime is 9267.79 s, or 154.46 min. A second direct baseline-control audit adds 1,512 layout--strategy--condition rows for the baseline, three simple controls, and four TS-FPDA representatives. The joint system adds a SolarPILOT default-aiming bridge for eight joint layouts and a 540-row direct promotion audit for the baseline and three joint candidates. These values are implementation evidence, not a performance benchmark for other machines.
 
 \begin{table}[t]
-\centering
 \caption{Computational workload for the manuscript-facing numerical-verification package. Runtime is recorded for the all-phase reduced PySolTrace matrix and is reported only to make the run auditable.}
 \label{tab:workload}
 \scriptsize
@@ -348,8 +390,14 @@ Table~\ref{tab:workload} summarizes the workload that is directly tied to the cu
 Layer & Scale used in this draft & Audit meaning \\
 \midrule
 Full-field candidate generation & 1,841 screened candidates; eight exported representatives & Confirms that the reported layouts come from a queue rather than from manual point editing. \\
+Joint layout--aiming screening & 489 full-field candidates; 23 aiming strategies per candidate; 121 joint Pareto candidates & Adds an active integrated screening layer that selects layout deformation and aiming strategy together before direct checks. \\
+Joint SolarPILOT default-aiming bridge & Baseline plus seven joint layouts; eight flux days; 24 by 24 receiver bins & Tests whether the joint candidates remain optically plausible under the same default-aiming bridge before direct custom-aimpoint promotion. \\
+Joint direct promotion audit & Three joint representatives, five aiming strategies, 27 solar conditions, 540 direct rows & Tests whether the integrated proxy queue survives a reduced PySolTrace direct-ray promotion layer. \\
 High-resolution SolarPILOT numerical check & Five layouts; 86 receiver-flux maps per layout; 24 receiver bins and eight flux days & Provides the headline default-aiming optical and receiver-flux comparison. \\
 Aiming-proxy sensitivity & Four representative deformations; 81 grouping, spot-width, and staggered-phase assumptions & Tests whether the proxy receiver-risk queue depends on one discretization choice. \\
+Same-condition baseline controls & Six simple full-field controls plus four TS-FPDA representatives & Tests whether the claimed behaviour is explained by simple radial, ellipse, north-bias, wave, or stagger transformations. \\
+Reduced direct baseline audit & Eight layouts, seven aiming strategies, 27 solar conditions, 1,512 cases & Compares the strongest simple controls and TS-FPDA representatives under identical sampled direct-ray settings. \\
+Leave-one-day-out direct audit & Seven non-baseline layouts; nine held-out days; 27 held-out condition rows per layout & Selects aiming strategies on eight representative days and reports performance on the held-out day to reduce selection bias. \\
 All-phase reduced PySolTrace matrix & Five layouts, 11 strategies, 27 solar conditions, 1,485 cases & Provides direct custom-aimpoint evidence while keeping the claim below full-field annual verification. \\
 High-sample PySolTrace confirmation & Five layouts, five verification-relevant strategies, 27 solar conditions, 675 cases & Tests whether the all-phase candidate queue survives higher sampling and a finer receiver discretization. \\
 PySolTrace sampling per case & All-phase layer: 6,000 stratified heliostats and 60,000 requested first-stage ray hits; confirmation layer: 9,000 and 180,000 & Keeps the field sample large enough to compare candidate roles and stage-order sanity. \\
@@ -384,7 +432,26 @@ Best strategy label & Strategy family, spread, and phase identifier & Makes the 
 \end{tabular}
 \end{table}
 
-The proxy is intentionally positioned below the SolarPILOT numerical-checking layer. It is useful because it can scan aiming families quickly, but it omits detailed heliostat images, canting, sunshape, slope error, and receiver geometry handled by higher-fidelity tools. The paper therefore uses proxy results as a triage system. The manuscript separates claims checked by SolarPILOT from claims explicitly deferred to the next optical-engine run.
+The proxy is intentionally positioned below the SolarPILOT numerical-checking layer. It is useful because it can scan aiming families quickly, but it omits detailed heliostat images, canting, sunshape, slope error, and receiver geometry handled by higher-fidelity tools. The paper therefore uses proxy results as a triage system. The manuscript separates claims checked by SolarPILOT from claims promoted to reduced direct ray tracing, and keeps both below full-field annual certification.
+
+\section{Joint Layout--Aiming Screening Layer}
+The strict-review strengthening exposed a limitation in the first workflow: layout generation and aiming selection were mostly sequential. The deformation algorithm generated full-field candidates, and the aiming proxy then searched strategies for a small representative queue. That structure is useful for auditing, but it is not yet a complete layout--aiming optimization system. A joint screening layer was therefore added after the baseline-control audits. It preserves the same 11,915-heliostat coordinate pool and the same geometry gates, but evaluates layout deformation parameters and receiver-aiming strategies inside one loop.
+
+For each candidate $\theta$, the joint layer computes the same geometry, terrain, and optical-proxy descriptors as TS-FPDA, then searches a fixed aiming set $\mathcal{A}$ containing visible-equator, five-point, S9 staggered phases, and balanced spread strategies. The best strategy is selected by the screening objective
+\begin{equation}
+a^*(\theta)=\arg\min_{a\in\mathcal{A}}\left[
+R_{aim}(\theta,a)+0.75\,CV_{active}(\theta,a)+7.0\,S_{spill}(\theta,a)
+\right],
+\end{equation}
+where $R_{aim}$ is the proxy peak-to-active-mean receiver ratio, $CV_{active}$ is the active-zone coefficient of variation, and $S_{spill}$ is the proxy spillage fraction. Candidate ranking then uses a scalarized loss
+\begin{equation}
+\mathcal{L}_{joint}(\theta)=100\left(\frac{R_{aim}(\theta,a^*)}{R_{aim}(0,a_0^*)}-1\right)
+-55\left(\frac{E_{proxy}(\theta)}{E_{proxy}(0)}-1\right)
+\Pi_{spill}+\Pi_{geom},
+\end{equation}
+where $\Pi_{spill}$ and $\Pi_{geom}$ penalize extra spillage, reduced layout quality, crowding, and terrain outliers. The coefficients intentionally favour receiver-risk reduction only when geometry remains publishable and optical loss is small. They are not universal design weights; they define a reproducible screening queue for this Dunhuang benchmark.
+
+The search is seeded from the earlier full-field candidate table and from additional bounded random deformations, followed by elite mutation over four generations. The manuscript-facing run evaluates 489 candidates, tests 23 aiming strategies for each candidate, and exports all candidate rows, Pareto rows, representative layouts, convergence plots, and layout overlays. This joint layer is still below direct ray tracing in the evidence ladder. Its purpose is to produce more coherent layout--aiming hypotheses for SolarPILOT, CoPylot, SolTrace, or Solstice checks, not to certify annual plant operation.
 
 \section{PySAM/SolarPILOT Numerical Verification}
 Representative layouts are imported into PySAM/SolarPILOT through \path{helio_positions_in}. The numerical check uses audited heliostat, tower, receiver, and cost parameters and a SAM-compatible NASA POWER weather file. The high-resolution run evaluates five layouts in total---the baseline plus four representative deformations---with \path{flux-days = 8}, \path{flux-bins = 24}, and 86 flux maps per layout. Terrain-relative $z_m$ and custom aimpoint coordinates are not represented in the current PySAM bridge, so this layer is a default-aiming layout-level check.
@@ -407,7 +474,7 @@ Reported metric & $\eta_{opt}$, peak-to-active-mean flux, active-zone CV & Captu
 
 This protocol is intended for reproducible algorithmic benchmarking rather than final industrial design certification. Its value comes from making the verification layer explicit: imported layouts are tested under the same SolarPILOT settings, while terrain-relative elevation and custom aimpoints remain outside the current PySAM bridge.
 
-A second, reduced direct-check layer is added for custom aiming. PySolTrace was built from the NREL SolTrace source with the native \path{coretrace_api.so} backend and used to trace stratified samples of the full field. The implementation verifies that the heliostat reflector stage precedes the receiver absorber stage, so rays are reflected by the sampled field before being binned on the receiver. The cylindrical receiver is approximated by flat absorber panels with the public 15.13 m diameter and 18.6 m height. The enlarged all-phase matrix uses 6,000 sampled heliostats per layout, 60,000 requested first-stage ray hits per case, 27 solar conditions, visible-equator aiming, five-point aiming, and all nine S9 staggered phases on an 18-panel receiver approximation. Receiver intercept ratios in this all-phase matrix range from approximately 0.639 to 0.748, providing a simple stage-order sanity check. A separate high-sample confirmation matrix then repeats the same 27 solar conditions for five verification-relevant strategies using 9,000 sampled heliostats, 180,000 requested first-stage ray hits, 24 receiver panels, and a 24 by 72 receiver grid. An independent-seed replicate repeats the high-sample scale with a fresh stratified sample. Across the consolidated reduced direct-check layers, receiver intercept ratios span approximately 0.636--0.748. These layers are reported as reduced direct checks because they use sampled heliostats and representative solar conditions rather than a full-field annual ray-tracing campaign.
+A second, reduced direct-check layer is added for custom aiming. PySolTrace was built from the NREL SolTrace source with the native \path{coretrace_api.so} backend and used to trace stratified samples of the full field. The implementation verifies that the heliostat reflector stage precedes the receiver absorber stage, so rays are reflected by the sampled field before being binned on the receiver. The cylindrical receiver is approximated by flat absorber panels with the public 15.13 m diameter and 18.6 m height. The enlarged all-phase matrix uses 6,000 sampled heliostats per layout, 60,000 requested first-stage ray hits per case, 27 solar conditions, visible-equator aiming, five-point aiming, and all nine S9 staggered phases on an 18-panel receiver approximation. Receiver intercept ratios in this all-phase matrix range from approximately 0.639 to 0.748, providing a simple stage-order sanity check. A separate high-sample confirmation matrix then repeats the same 27 solar conditions for five verification-relevant strategies using 9,000 sampled heliostats, 180,000 requested first-stage ray hits, 24 receiver panels, and a 24 by 72 receiver grid. An independent-seed replicate repeats the high-sample scale with a fresh stratified sample. A final V12 follow-up keeps the same five layouts, five verification-relevant strategies, and 27 solar conditions, but increases the requested first-stage ray hits to 240,000 per case. Across the consolidated reduced direct-check layers, receiver intercept ratios span approximately 0.636--0.748. These layers are reported as reduced direct checks because they use sampled heliostats and representative solar conditions rather than a full-field annual ray-tracing campaign.
 
 A schematic summary of this funnel is shown in Fig.~\ref{fig:workflow}. The diagram separates the input audits, bounded full-field candidate generation, candidate queueing, and three verification layers. This distinction matters because the manuscript's strongest claim is not that one deformation is universally optimal, but that the evidence layers can reorder the candidate queue in a reproducible way.
 
@@ -453,12 +520,12 @@ A schematic summary of this funnel is shown in Fig.~\ref{fig:workflow}. The diag
 \node[font=\scriptsize,text=DHFMuted,anchor=south west] at ($(verifybox.north west)+(0.1,0.03)$) {verification layers};
 \end{tikzpicture}%
 }
-\caption{Algorithm and numerical-checking workflow as a native TikZ vector schematic. Public plant anchors, coordinate auditing, and terrain/geometry gates feed the bounded TS-FPDA candidate generator. The candidate queue is then checked through fast aiming-proxy triage, SolarPILOT default-aiming numerical verification, and reduced PySolTrace direct-aimpoint checks before the claim boundary is set. The feedback arrow records that later evidence can reorder the queue, so the output is a reproducible benchmark and screening queue rather than a final commercial redesign.}
+\caption{Benchmark and numerical-checking workflow as a native TikZ vector schematic. Public plant anchors, coordinate auditing, and terrain/geometry gates feed the bounded TS-FPDA candidate generator. The candidate queue is then checked through fast aiming-proxy triage, SolarPILOT default-aiming numerical verification, and reduced PySolTrace direct-aimpoint checks before the claim boundary is set. The feedback arrow records that later evidence can reorder the queue, so the output is a reproducible benchmark and screening queue rather than a final commercial redesign.}
 \label{fig:workflow}
 \end{figure}
 
 \section{Results}
-The results are organized as an optimization-system narrative rather than as a sequence of isolated outputs. The first layer asks whether the algorithm can generate plant-scale alternatives without changing the commercial field size or damaging the surround-field envelope. The second layer asks whether the apparently better optical candidates remain acceptable when receiver-flux concentration is made visible. The third layer uses a fast aiming proxy to form a screening queue. The fourth layer then tests that queue with reduced direct PySolTrace matrices and reports where the answer is unstable. This staged interpretation separates screening evidence from numerical checks and prevents proxy-level results from being interpreted as final design claims.
+The results are organized as a benchmark-system narrative rather than as a sequence of isolated outputs. The first layer asks whether the workflow can generate plant-scale alternatives without changing the commercial field size or damaging the surround-field envelope. A new same-condition control layer then asks whether the reported behaviour can be explained by simple global transformations alone. The next layer asks whether the apparently better optical candidates remain acceptable when receiver-flux concentration is made visible. The aiming layer uses a fast proxy to form a screening queue, and the reduced direct-ray layer tests where that queue is stable or unstable. This staged interpretation separates controls, screening evidence, numerical checks, and future verification needs.
 
 \subsection{Full-field screening}
 The streamed server run evaluated 1,841 conservative full-field candidates and exported eight representatives. All representatives preserve 11,915 heliostats. Terrain elevation ranges remain approximately 33.3--35.2 m for the key high-resolution verification set, and p95 terrain slope remains approximately 1.275--1.280\%. The proxy energy spread is intentionally narrow because no candidate is allowed to delete mirrors or radically distort the field.
@@ -484,24 +551,253 @@ Balanced extra & Additional non-dominated or near-balanced candidates & Tests ro
 \end{tabular}
 \end{table}
 
+\subsection{Same-condition baseline controls}
+A useful control question is whether the proposed representatives only reproduce simple radial scaling or field stretching. To test that possibility, six low-complexity controls were added and checked under the same public terrain layer, the same 11,915-heliostat coordinate pool, the same PySAM/SolarPILOT default-aiming bridge, and the same aiming-proxy search as the TS-FPDA representatives. The controls are uniform radial compaction, uniform radial expansion, simple anisotropic ellipse scaling, a smooth north/south bias, a two-lobe radial wave, and a pure azimuthal stagger. They are not literature reimplementations and should not be presented as state-of-the-art baselines. Their purpose is narrower: they test whether a simple one- or two-parameter geometric effect is already enough to explain the observed trade-off.
+
+Table~\ref{tab:baseline-controls} and Fig.~\ref{fig:baseline-controls} show that the answer is mixed in a useful way. The simple controls are not trivial. Radial compaction gives a +0.89\% SolarPILOT optical-efficiency gain, but it also raises the default peak-to-active-mean flux ratio by +1.07\%. Radial expansion has the opposite sign, reducing the default flux ratio by -1.04\% but losing -0.89\% optical efficiency. The best simple aiming-proxy control, the two-lobe radial wave, reduces the proxy peak-to-mean ratio by -2.38\% with essentially neutral SolarPILOT optical change. These controls therefore explain part of the field-geometry sensitivity and prevent the manuscript from claiming that every positive signal comes uniquely from TS-FPDA.
+
+At the same time, the controls do not remove the value of the representative queue. The optical-upper TS-FPDA layout $L_{opt}$ still gives the largest SolarPILOT optical gain (+3.15\%), but with the largest default flux-ratio penalty (+4.68\%). The nominal and receiver-risk representatives give larger aiming-proxy reductions than all simple controls: $L_{nom}$ gives -6.22\%, $L_{opt}$ gives -5.48\%, and $L_{rob}$ gives -5.34\%. The correct interpretation is therefore bounded. The method is not a globally superior optimizer, but the role-based queue is stronger than a set of simple radial, ellipse, north-bias, wave, and stagger controls under the same numerical assumptions.
+
+\begin{table}[t]
+\centering
+\caption{Same-condition low-complexity baseline controls and TS-FPDA representatives. All layouts preserve the available 11,915-heliostat coordinate pool. Optical and default-flux changes are from PySAM/SolarPILOT; aiming changes are from the proxy search and remain screening-level evidence.}
+\label{tab:baseline-controls}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrp{0.28\textwidth}@{}}
+\toprule
+Layout & Type & $\Delta\eta_{opt}$ (\%) & $\Delta R_{flux}$ (\%) & $\Delta R_{aim}$ (\%) & Interpretation \\
+\midrule
+$C_{\mathrm{rad}-}$ & radial compact & +0.89 & +1.07 & -0.11 & Optical gain from simple compaction, but default flux worsens. \\
+$C_{\mathrm{rad}+}$ & radial expand & -0.89 & -1.04 & +0.10 & Flux relief from simple expansion, but optical efficiency falls. \\
+$C_{\mathrm{ell}}$ & ellipse scale & +0.02 & +0.48 & +2.31 & Simple anisotropic scaling is not a receiver-risk improvement. \\
+$C_{\mathrm{nb}}$ & north bias & -0.09 & -0.07 & -0.23 & Nearly neutral control. \\
+$C_{\mathrm{wave}}$ & radial wave & -0.01 & +0.15 & -2.38 & Strongest simple aiming-proxy control. \\
+$C_{\mathrm{stag}}$ & azimuth stagger & -0.03 & +0.27 & -1.38 & Modest proxy improvement with no optical gain. \\
+\midrule
+$L_{opt}$ & TS-FPDA & +3.15 & +4.68 & -5.48 & Optical upper case; useful stress test, not receiver-safe optimum. \\
+$L_{nom}$ & TS-FPDA & +0.24 & +1.40 & -6.22 & Strongest nominal aiming-proxy reduction. \\
+$L_{rob}$ & TS-FPDA & +0.71 & +2.38 & -5.34 & Receiver-risk representative from the screening queue. \\
+$L_{ctrl}$ & TS-FPDA & +0.51 & +0.90 & -3.33 & Conservative default-flux-control representative. \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig_baseline_controls_summary.png}
+\caption{Same-condition baseline-control comparison. Gold marks low-complexity controls, blue marks TS-FPDA representatives, and grey marks the baseline. Panel (a) shows the SolarPILOT default-aiming optical-efficiency and receiver-flux trade-off. Panel (b) compares the best searched aiming-proxy peak-to-mean change. Panel (c) summarizes all three relative metrics against the same $L_0$ baseline.}
+\label{fig:baseline-controls}
+\end{figure}
+
+\subsection{Same-anchor strong-baseline pressure test}
+The low-complexity controls above answer only a limited question: whether one- or two-parameter radial, ellipse, wave, or stagger effects can explain the observed queue. They are not strong enough to address the current layout-optimization literature. A second same-anchor pressure test was therefore added. It generates four literature-inspired approximation families under the same Dunhuang coordinate anchor: a pattern-free approximation with low-frequency sector/ring deformations, a slider-like approximation with ringwise azimuthal shifts, a terrain-aware approximation that responds to public DEM slope/elevation, and a hybrid petal/slider approximation. These families are deliberately labelled as approximations. They are stronger than the simple controls, but they are not complete reproductions of HelioSliders, HeFAAL, modified ABC, or any other named external optimizer.
+
+The pressure test sampled 168 full-field approximation candidates, selected nine representative pressure rows, and then evaluated those rows together with $L_0$, $L_{opt}$, $L_{nom}$, $L_{rob}$, $C_{rad+}$, $J_{bal}$, and $J_{flux}$ using the same SolarPILOT default-aiming bridge and the same aiming-proxy search. This comparison changes the interpretation in a useful way. The TS-FPDA optical upper row remains the strongest default-bridge optical case in the test (+3.15\% SolarPILOT mean optical efficiency), but a hybrid pressure approximation is close enough to matter: $B_{hy,E}$ gives +1.74\% SolarPILOT optical efficiency and -4.44\% best aiming-proxy receiver concentration, while increasing default flux concentration by +1.65\%. Pattern-free and slider-like pressure rows also produce meaningful receiver-proxy reductions: $B_{pf,R}$ gives -5.45\% and $B_{hs,R}$ gives -6.67\% best aiming-proxy changes, but both lose SolarPILOT optical efficiency in this local anchor. The strongest joint row in this same pressure test remains $J_{bal}$ for aiming-proxy reduction (-8.16\%), but its default SolarPILOT flux ratio increases by +1.78\%.
+
+The pressure test changes the interpretation from method superiority to benchmark discrimination. Stronger local baselines can approach or explain parts of the response, especially the hybrid and slider-like rows, so TS-FPDA should not be read as uniquely discovering all useful geometries. At the same time, the same-anchor test does not erase the role-based queue: $L_{opt}$ remains the optical stress case, $J_{bal}$ and $J_{flux}$ remain joint layout--aiming hypotheses, and the strong-baseline rows become additional candidates for direct promotion. A conservative promotion gate was added after the pressure test to prevent over-writing these screening rows. The gate merges multi-year annual proxy, interpolation robustness, 36-bin SolarPILOT default flux, 12-flux-day sampling, aiming proxy, geometry, and reduced-direct confidence intervals. A completed 27-condition same-run reduced direct follow-up did not promote any new strong-baseline row to a headline direct-supported result: the proxy-selected direct rows for $B_{hy,E}$, $B_{pf,R}$, and $B_{hs,R}$ were adverse or uncertain under the pre-set bootstrap gate, so they remain screening or boundary evidence in the supplementary package. This bounded benchmark claim is the interpretation supported by the current evidence.
+
+\begin{table}[t]
+\centering
+\caption{Same-anchor strong-baseline pressure test. The baseline families are literature-inspired local approximations under the Dunhuang coordinate anchor, not complete reimplementations of named external optimizers. SolarPILOT values use the common default-aiming bridge; aiming values use the common proxy search.}
+\label{tab:strong-baselines}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrp{0.24\textwidth}@{}}
+\toprule
+Label & Family & Role & $\Delta\eta_{opt}$ (\%) & $\Delta R_{flux}$ (\%) & $\Delta R_{aim}$ (\%) & Interpretation \\
+\midrule
+$L_{opt}$ & TS-FPDA & optical stress case & +3.15 & +4.68 & -5.48 & Strongest default optical gain; not receiver-safe. \\
+$B_{hy,E}$ & hybrid approximation & energy pressure & +1.74 & +1.65 & -4.44 & Strong local baseline; reduces uniqueness of the TS-FPDA optical story. \\
+$B_{pf,E}$ & pattern-free approximation & energy pressure & +0.66 & +0.06 & -3.16 & Low flux penalty, moderate proxy benefit. \\
+$B_{ta,E}$ & terrain-aware approximation & energy pressure & +1.04 & +1.09 & -0.46 & Terrain-aware pressure row; mainly optical. \\
+$B_{hs,E}$ & slider-like approximation & energy pressure & +0.47 & +0.37 & -4.79 & Slider-like baseline with useful proxy response. \\
+$J_{bal}$ & joint representative & balance hypothesis & +0.92 & +1.78 & -8.16 & Strongest proxy relief in this table; still needs direct promotion. \\
+$B_{hs,R}$ & slider-like approximation & receiver pressure & -0.80 & -0.18 & -6.67 & Receiver-proxy relief with optical loss. \\
+$B_{pf,R}$ & pattern-free approximation & receiver pressure & -0.82 & -0.54 & -5.45 & Receiver-proxy relief with optical loss. \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig_same_anchor_strong_baselines.png}
+\caption{Same-anchor strong-baseline pressure test. Panel (a) compares SolarPILOT default-aiming optical-efficiency change with default receiver-flux concentration change. Panel (b) ranks the strongest best-aiming-proxy rows. Panel (c) shows the top pressure-score rows under the same Dunhuang coordinate anchor. Diamond markers are literature-inspired approximation families; circles are existing TS-FPDA, joint, or control rows.}
+\label{fig:strong-baselines}
+\end{figure}
+
+\subsection{Geometry explainability and constrained advantage audit}
+The strong-baseline pressure test still leaves one practical question: what geometric change is being compared? A visual layout preview can miss small but systematic movement, while a performance table can hide whether a row is a local deformation or a different field concept. A geometry-explainability audit was therefore added for $L_0$, $L_{opt}$, $L_{nom}$, $L_{rob}$, $C_{rad+}$, $J_{bal}$, $J_{flux}$, the hybrid energy row $B_{hy,E}$, and the receiver-pressure rows $B_{pf,R}$ and $B_{hs,R}$. The audit reports radial population shifts, azimuth-sector changes, nearest-neighbour spacing distributions, per-heliostat displacement statistics, and a constrained evidence table that combines fast annual proxy, SolarPILOT default flux, aiming-proxy, AFD-style hotspot-area proxy, and reduced-direct confidence intervals.
+
+The geometry audit supports three bounded conclusions. First, the rows are local count-preserving full-field deformations, not mirror-deletion layouts. $L_{opt}$ has the largest movement scale in the selected set, with mean displacement 58.1 m and p95 displacement 107.5 m, while the receiver-pressure strong-baseline rows move less: $B_{pf,R}$ has p95 displacement 45.4 m and $B_{hs,R}$ has 36.9 m. All selected rows keep nearest-neighbour p05 spacing near or above 16.8 m, and the azimuth-sector L1 population shift remains small, 0.0--2.6\% of the field. Second, the geometry evidence explains why $L_{opt}$ should not be written as a final winner. It is the strongest fast annual optical stress case (+3.36\%) but also has the largest movement scale, default-flux penalty, and AFD-style p99 hotspot-area increase. Third, the constrained table separates evidence roles more clearly than a single ranking can. $L_{nom}$, $L_{rob}$, and $J_{flux}$ are the current direct-supported receiver-risk boundary rows; $J_{bal}$ is an annual-positive balance hypothesis with directional direct support; $B_{hy,E}$ is an annual-positive strong-baseline screening row; and $B_{pf,R}$ and $B_{hs,R}$ are receiver-pressure screening rows whose completed same-run direct follow-up did not clear the promotion gate.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.96\textwidth]{figures/fig_geometry_explainability_advantage.png}
+\caption{Geometry explainability and constrained advantage audit. Panel (a) shows radial population-share changes relative to the baseline. Panel (b) compares nearest-neighbour spacing distributions. Panel (c) reports count-preserving displacement scales for selected rows. Panel (d) shows movement-direction rose curves weighted by displacement magnitude. Panel (e) compares fast annual optical-proxy change with best aiming-proxy receiver concentration; point colour gives the SolarPILOT default-flux penalty. Panel (f) summarizes favourable normalized evidence scores; grey cells mark rows without completed reduced-direct evidence. The figure explains candidate roles and constraints, not a SOTA ranking.}
+\label{fig:geometry-advantage}
+\end{figure}
+
+\subsection{Reduced direct baseline-control audit}
+The same-condition controls were also checked with a reduced PySolTrace direct-ray audit, because a proxy-only baseline comparison would still leave the strongest reviewer objection unresolved. This audit uses the baseline, the three most informative simple controls ($C_{rad-}$, $C_{rad+}$, and $C_{wave}$), and the four TS-FPDA representatives. Each layout is traced over the same 27 representative solar conditions with visible-equator aiming, five-point aiming, and five S9 staggered phases. The sampled field size is 6,000 heliostats per layout, with 60,000 requested first-stage ray hits per case, an 18-panel receiver approximation, and 20 by 60 bins per panel. The run contains 1,512 layout--strategy--condition rows and is reported as a reduced direct audit, not as full-field annual certification.
+
+Table~\ref{tab:baseline-direct} gives the useful full-matrix result. The simple controls remain meaningful: $C_{rad+}$ gives a -2.43\% best-direct mean peak-to-active-mean change, and $C_{wave}$ gives -2.30\%. These rows make the evidence more honest by showing that low-complexity geometry already explains part of the receiver-risk response. The TS-FPDA queue is still not redundant, however. $L_{rob}$ gives the strongest direct best-row reduction (-3.61\%) and is the only row in this full-matrix audit whose bootstrap confidence interval remains below zero. $L_{nom}$ is close (-3.49\%) but its interval touches zero. In contrast, the proxy-selected rows are weaker and sometimes adverse: $L_{nom}$ and $L_{opt}$ have positive proxy-selected mean changes in this direct audit. The conclusion is therefore sharper than before. TS-FPDA should be described as a role-level benchmark generator whose candidates require direct checking; it should not be described as a uniformly superior optimizer.
+
+\begin{table}[t]
+\centering
+\caption{Reduced direct PySolTrace baseline-control audit. Negative values indicate lower peak-to-active-mean receiver concentration than the paired baseline under the same condition and aiming strategy. Bootstrap confidence intervals resample the 27 condition-level deltas.}
+\label{tab:baseline-direct}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llllrrrr@{}}
+\toprule
+Layout & Family & Best strategy & Cases & Mean $\Delta R$ (\%) & 95\% CI (\%) & Lower frac. & Proxy-selected mean (\%) \\
+\midrule
+$C_{rad-}$ & control & S9-p5 & 27 & -1.44 & [-5.03, +2.15] & 0.67 & -0.64 \\
+$C_{rad+}$ & control & visible & 27 & -2.43 & [-6.61, +1.70] & 0.56 & -1.20 \\
+$C_{wave}$ & control & five-point & 27 & -2.30 & [-5.80, +1.20] & 0.56 & +1.33 \\
+$L_{opt}$ & TS-FPDA & five-point & 27 & -1.20 & [-5.80, +3.65] & 0.74 & +1.62 \\
+$L_{nom}$ & TS-FPDA & S9-p0 & 27 & -3.49 & [-7.15, +0.09] & 0.52 & +2.11 \\
+$L_{rob}$ & TS-FPDA & S9-p2 & 27 & -3.61 & [-6.17, -0.97] & 0.59 & -0.40 \\
+$L_{ctrl}$ & TS-FPDA & five-point & 27 & -0.88 & [-4.47, +2.71] & 0.44 & -0.73 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig_baseline_direct_soltrace_controls.png}
+\caption{Reduced direct PySolTrace baseline-control audit. Panel (a) reports each layout's best direct row among the tested strategies. Panel (b) reports the proxy-selected row under the same direct audit. Panel (c) shows condition-level spread for the best direct row, making clear that several reductions remain condition-dependent.}
+\label{fig:baseline-direct}
+\end{figure}
+
+The strictest objection to Table~\ref{tab:baseline-direct} is that it selects and reports the best strategy on the same 27-condition matrix. To expose that optimism, a leave-one-day-out audit was added. For each non-baseline layout, one representative day is held out, the best aiming strategy is selected from the other eight days, and the selected strategy is evaluated only on the three held-out hourly conditions. Table~\ref{tab:baseline-direct-holdout} reports the day-level mean changes. The result is narrower and more credible than the full-matrix best-row view: $L_{rob}$ and $L_{nom}$ remain negative with day-bootstrap intervals below zero, while $C_{rad+}$ becomes directional but uncertain and $C_{rad-}$, $C_{wave}$, $L_{opt}$, and $L_{ctrl}$ lose the apparent full-matrix benefit. This audit is not a substitute for annual custom aiming, but it directly reduces the selection-bias risk in the reduced direct layer.
+
+\begin{table}[t]
+\centering
+\caption{Leave-one-day-out direct-ray strategy-selection audit. For each layout, the best aiming strategy is selected on eight representative days and then evaluated on the held-out day. Confidence intervals bootstrap the nine held-out day means. Negative values indicate lower peak-to-active-mean concentration than the paired baseline.}
+\label{tab:baseline-direct-holdout}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+Layout & Modal selected strategy & Held-out mean $\Delta R$ (\%) & 95\% CI (\%) & Lower-day frac. & Optimism gap (pct-pt) & Modal share \\
+\midrule
+$C_{rad-}$ & S9-p5 & +2.08 & [-0.26, +4.75] & 0.33 & +3.52 & 0.78 \\
+$C_{rad+}$ & visible & -1.07 & [-4.61, +1.93] & 0.67 & +1.37 & 0.89 \\
+$C_{wave}$ & five-point & +1.62 & [-0.45, +4.18] & 0.33 & +3.93 & 0.67 \\
+$L_{opt}$ & five-point & +2.41 & [-1.01, +6.21] & 0.44 & +3.61 & 0.78 \\
+$L_{nom}$ & S9-p0 & -3.49 & [-5.77, -1.38] & 0.78 & +0.00 & 1.00 \\
+$L_{rob}$ & S9-p2 & -3.61 & [-5.19, -1.89] & 0.89 & +0.00 & 1.00 \\
+$L_{ctrl}$ & five-point & +3.75 & [+1.23, +6.96] & 0.11 & +4.62 & 0.56 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\subsection{Joint layout--aiming screening}
+The baseline-control and hold-out audits make the paper more defensible, but by themselves they are still diagnostic. A further joint layout--aiming screening run was therefore added to test whether the system can actively search for candidates that balance optical contribution and receiver concentration before entering the direct-ray queue. The run evaluated 489 full-field candidates, preserved all 11,915 heliostats in every candidate, tested 23 aiming strategies per candidate, and retained 121 joint Pareto candidates. All candidates passed the publishable-geometry gates.
+
+Table~\ref{tab:joint-optimizer} reports the representative queue selected from this joint layer. The strongest receiver-risk boundary candidate, $J_{flux}$, lowers the best-aiming proxy peak-to-active-mean ratio by 7.22\%, but it also reduces the optical proxy by 0.20\%. This is useful as a Pareto boundary, not as a headline improvement. The more publishable story is the no-energy-loss part of the queue: $J_{bal}$ gives a nearly neutral optical-proxy change (+0.002\%) with a 4.32\% proxy receiver reduction, while $J_{gain}$ gives a +0.091\% optical-proxy change with a 3.47\% proxy receiver reduction. These two candidates are not yet direct-ray results; they are stronger hypotheses for the next verification layer because layout and aiming were selected together.
+
+\begin{table}[t]
+\centering
+\caption{Joint layout--aiming screening representatives. The changes are proxy-level values from the integrated search loop and are normalized to the same baseline and best searched baseline aiming strategy. Negative $\Delta R_{aim}$ indicates lower proxy peak-to-active-mean receiver concentration.}
+\label{tab:joint-optimizer}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrr@{}}
+\toprule
+Label & Candidate & Role & $\Delta E_{proxy}$ (\%) & $\Delta R_{aim}$ (\%) & $\Delta S_{spill}$ (pct-pt) & Quality \\
+\midrule
+$J_{flux}$ & \texttt{joint\_g04\_0478} & receiver-risk boundary & -0.195 & -7.222 & +0.002 & 0.991 \\
+$J_{bal}$ & \texttt{joint\_g02\_0333} & no-energy-loss balance & +0.002 & -4.316 & -0.024 & 0.973 \\
+$J_{gain}$ & \texttt{joint\_g02\_0303} & energy-gated receiver candidate & +0.091 & -3.468 & -0.010 & 0.965 \\
+$J_{Emax}$ & \texttt{joint\_g00\_0097} & maximum energy with receiver gate & +0.134 & -0.075 & +0.000 & 0.970 \\
+$J_{spill}$ & \texttt{joint\_g01\_0254} & minimum spillage diagnostic & -0.091 & +0.930 & -0.037 & 1.000 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.88\textwidth]{figures/fig_joint_optimizer_pareto.png}
+\caption{Joint layout--aiming screening surface. Each point is a full-field layout deformation evaluated with its best searched aiming strategy. The highlighted representatives separate receiver-risk boundary, no-energy-loss balance, and energy-gated receiver candidates. The figure is used as a screening result; the selected representatives are being promoted to reduced direct ray-tracing checks before any direct receiver-risk claim is made.}
+\label{fig:joint-optimizer}
+\end{figure}
+
+Figure~\ref{fig:joint-optimizer-convergence} shows that the elite-mutation search improved the best joint-loss and receiver proxy over successive generations. This convergence is useful evidence that the joint layer is doing more than replaying the original representative table. However, the loss function is still a screening device. The paper therefore treats $J_{bal}$ and $J_{gain}$ as candidates to be audited with reduced direct ray tracing, not as final plant-design recommendations.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.82\textwidth]{figures/fig_joint_optimizer_convergence.png}
+\caption{Convergence of the joint layout--aiming screening run. The best joint-loss and best receiver-proxy reduction improve after the seeded initial population, indicating that the elite-mutation loop is exploring useful local deformations.}
+\label{fig:joint-optimizer-convergence}
+\end{figure}
+
+\subsection{Joint SolarPILOT bridge}
+The joint candidates were also imported into the same PySAM/SolarPILOT default-aiming bridge used for the earlier representatives. This bridge does not test custom aimpoints; it tests whether the joint layouts remain optically plausible under the common SolarPILOT settings before the direct custom-aimpoint promotion layer. Table~\ref{tab:joint-system-evidence} combines the three useful evidence layers for the joint representatives: proxy-level joint screening, SolarPILOT default-aiming layout checking, and reduced PySolTrace direct promotion.
+
+The bridge adds an important nuance. $J_{bal}$ and $J_{gain}$ are not only proxy-energy artifacts: under SolarPILOT default aiming, they increase mean optical efficiency by +0.92\% and +1.64\%, respectively. They also increase the default peak-to-active-mean receiver ratio by +1.78\% and +2.40\%, so their publishable interpretation still depends on custom aiming and direct checking. $J_{flux}$ is the opposite boundary case. It reduces the receiver ratio in the direct audit but loses optical efficiency in both the proxy layer and the SolarPILOT bridge. This three-layer comparison is why the manuscript describes roles and promotion gates instead of declaring a single optimum.
+
+\begin{table}[t]
+\centering
+\caption{Joint layout--aiming evidence summary across proxy screening, SolarPILOT default-aiming bridge, and reduced direct promotion. SolarPILOT values are relative to the same baseline under default aiming; direct values are paired peak-to-active-mean changes with bootstrap intervals over 27 solar conditions.}
+\label{tab:joint-system-evidence}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrp{0.24\textwidth}@{}}
+\toprule
+Candidate & Role & Proxy $\Delta E$ (\%) & Proxy $\Delta R$ (\%) & SolarPILOT $\Delta\eta$ (\%) & SolarPILOT $\Delta R_{flux}$ (\%) & Direct-promotion interpretation \\
+\midrule
+$J_{bal}$ & balance & +0.002 & -4.32 & +0.92 & +1.78 & Directional: S9-p2 gives -1.98\% mean, 95\% CI [-6.55,+3.10]\%. \\
+$J_{gain}$ & energy-gated & +0.091 & -3.47 & +1.64 & +2.40 & Strategy-sensitive: proxy-selected S9-p3 is adverse; best-direct S9-p2 gives -2.49\% mean but CI crosses zero. \\
+$J_{flux}$ & receiver boundary & -0.195 & -7.22 & -0.69 & +1.01 & Promoted as receiver-boundary: S9-p5 gives -4.06\% mean, 95\% CI [-6.99,-0.94]\%. \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\subsection{Joint direct promotion audit}
+The joint representatives were then promoted to a reduced direct PySolTrace audit. This is the first place where the new joint layer is judged by an optical engine rather than by its internal proxy. The audit compares the baseline, $J_{bal}$, $J_{gain}$, and $J_{flux}$ over the same 27 representative solar conditions used in the baseline-control direct audit. Each condition uses 6,000 sampled heliostats per layout, 60,000 requested first-stage ray hits, an 18-panel receiver approximation, and 20 by 60 bins per panel. The tested strategies are visible-equator aiming, five-point aiming, and S9 phases p2, p3, and p5. This creates 540 direct layout--strategy--condition rows and is still a reduced promotion audit, not a full annual custom-aiming proof.
+
+Table~\ref{tab:joint-direct} gives the manuscript-facing result. The receiver-boundary candidate $J_{flux}$ is promoted by this direct layer: its proxy-selected S9-p5 row also gives the best direct row, with a -4.06\% mean peak-to-active-mean change, a 95\% bootstrap interval from -6.99\% to -0.94\%, and a lower-peak fraction of 0.74. This is not the final optimum because $J_{flux}$ had a small optical-proxy loss in Table~\ref{tab:joint-optimizer}, but it is a direct-supported boundary point. $J_{bal}$ remains directionally useful rather than confirmed: its S9-p2 row gives a -1.98\% mean direct change and a 0.70 lower-peak fraction, but the confidence interval crosses zero. $J_{gain}$ is the most instructive negative result. Its proxy-selected S9-p3 row is adverse in the direct audit (+2.58\% mean), while a different direct row, S9-p2, is directionally lower (-2.49\%) but uncertain. The joint layer therefore improves the system architecture, but it must be coupled to a direct promotion gate.
+
+\begin{table}[t]
+\centering
+\caption{Reduced direct promotion audit for the joint layout--aiming representatives. Negative values indicate lower peak-to-active-mean receiver concentration than the paired baseline under the same condition and strategy. Confidence intervals bootstrap the 27 condition-level deltas.}
+\label{tab:joint-direct}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrrp{0.22\textwidth}@{}}
+\toprule
+Candidate & View & Strategy & Cases & Mean $\Delta R$ (\%) & 95\% CI (\%) & Lower frac. & Interpretation \\
+\midrule
+$J_{bal}$ & proxy/best direct & S9-p2 & 27 & -1.98 & [-6.55, +3.10] & 0.70 & Directional balance candidate; not statistically promoted. \\
+$J_{gain}$ & proxy selected & S9-p3 & 27 & +2.58 & [-1.67, +6.66] & 0.48 & Proxy-selected phase fails the direct gate. \\
+$J_{gain}$ & best direct & S9-p2 & 27 & -2.49 & [-6.74, +2.04] & 0.63 & Directional but strategy-sensitive candidate. \\
+$J_{flux}$ & proxy/best direct & S9-p5 & 27 & -4.06 & [-6.99, -0.94] & 0.74 & Direct-supported receiver-boundary candidate. \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.86\textwidth]{figures/fig_joint_direct_summary.png}
+\caption{Reduced direct promotion audit for the joint layout--aiming representatives. Bars show mean paired changes in peak-to-active-mean receiver concentration, and whiskers show 95\% bootstrap confidence intervals over the 27 representative solar conditions. The plot separates proxy-selected rows from best-direct rows so that strategy mismatch is visible.}
+\label{fig:joint-direct}
+\end{figure}
+\FloatBarrier
+
 \subsection{SolarPILOT default-aiming trade-off}
-Table~\ref{tab:summary} and Fig.~\ref{fig:tradeoff} summarize the key result. The optical upper case is not automatically the safest receiver-flux layout. The optical-upper layout $L_{opt}$ improves SolarPILOT mean optical efficiency by 3.15\% but increases default peak-to-active-mean receiver flux by 4.69\%. The nominal proxy layout $L_{nom}$ gives a much smaller default optical gain of 0.24\% and still increases default flux concentration by 1.41\%, but it gives the strongest nominal proxy reduction under the initially searched staggered aiming strategy. The default-flux-control layout $L_{ctrl}$ is a conservative comparison case, with a 0.51\% optical gain and a 0.91\% default-flux increase. These results sharpen the manuscript's main point: layout-only gains remain coupled to receiver loading and must be evaluated with aiming.
+Table~\ref{tab:summary} and Fig.~\ref{fig:tradeoff} summarize the key result. The optical upper case is not automatically the safest receiver-flux layout. The optical-upper layout $L_{opt}$ improves SolarPILOT mean optical efficiency by 3.15\% but increases default peak-to-active-mean receiver flux by 4.68\%. The nominal proxy layout $L_{nom}$ gives a much smaller default optical gain of 0.24\% and still increases default flux concentration by 1.40\%, but it gives the strongest nominal proxy reduction under the initially searched staggered aiming strategy. The default-flux-control layout $L_{ctrl}$ is a conservative comparison case, with a 0.51\% optical gain and a 0.90\% default-flux increase. These results sharpen the manuscript's main point: layout-only gains remain coupled to receiver loading and must be evaluated with aiming.
 
 This is the main finding at the current verification level. The optical-upper layout cannot be interpreted as unconditionally superior because the optical-efficiency gain is accompanied by a receiver-flux penalty. Any operational value would depend on aimpoint redistribution and receiver thermal constraints. Conversely, the more balanced candidates are informative because their smaller optical gains define the cases where custom-aimpoint checking may be most useful. The result is therefore a documented trade-off rather than a single positive-performance claim.
 
 \begin{table}[t]
 \centering
-\caption{Integrated numerical-checking summary for representative layouts. Optical and default-flux changes are from PySAM/SolarPILOT. Aiming peak-to-mean change is proxy-screened and is not a final SolarPILOT custom-aimpoint claim. The screen score is retained only as an internal representative-selection score.}
+\caption{Integrated numerical-checking summary for representative layouts. Optical and default-flux changes are from PySAM/SolarPILOT. Aiming peak-to-mean change is proxy-screened and is not a final SolarPILOT custom-aimpoint claim. The internal triage score is shown only to disclose representative selection and is not used as a headline result.}
 \label{tab:summary}
 \scriptsize
 \begin{tabular}{lrrrrr}
 \toprule
-Layout & Role & $\Delta\eta_{opt}$ (\%) & $\Delta R_{flux}$ (\%) & $\Delta R_{aim}$ (\%) & Screen score \\
+Layout & Role & $\Delta\eta_{opt}$ (\%) & $\Delta R_{flux}$ (\%) & $\Delta R_{aim}$ (\%) & Triage score \\
 \midrule
-$L_{opt}$ & optical upper & +3.15 & +4.69 & -5.47 & 0.937 \\
-$L_{rob}$ & proxy flux-risk & +0.71 & +2.39 & -5.34 & 0.958 \\
-$L_{ctrl}$ & default-flux control & +0.51 & +0.91 & -3.33 & 0.992 \\
-$L_{nom}$ & nominal proxy & +0.24 & +1.41 & -6.22 & 1.000 \\
+$L_{opt}$ & optical upper & +3.15 & +4.68 & -5.48 & 0.937 \\
+$L_{rob}$ & proxy flux-risk & +0.71 & +2.38 & -5.34 & 0.958 \\
+$L_{ctrl}$ & default-flux control & +0.51 & +0.90 & -3.33 & 0.992 \\
+$L_{nom}$ & nominal proxy & +0.24 & +1.40 & -6.22 & 1.000 \\
 $L_0$ & baseline control & +0.00 & +0.00 & +0.00 & 1.000 \\
 \bottomrule
 \end{tabular}
@@ -512,6 +808,26 @@ $L_0$ & baseline control & +0.00 & +0.00 & +0.00 & 1.000 \\
 \includegraphics[width=0.78\textwidth]{figures/fig_journal_tradeoff_clean.png}
 \caption{SolarPILOT default-aiming trade-off between optical-efficiency change and peak-to-active-mean receiver-flux change. Optical gains are accompanied by higher default flux concentration for the strongest optical candidates.}
 \label{fig:tradeoff}
+\end{figure}
+
+\subsection{Fast annual proxy and public plant sanity check}
+The default-aiming SolarPILOT tables were annualized with a conservative proxy to address whether the representative-condition optical signal is consistent with the public weather year and with the reported Dunhuang plant scale. The proxy interpolates each \path{opteff_*.csv} table over the 8760-hour NASA POWER 2023 weather file, weights daylight hours by DNI, and computes an aperture-based annual thermal input
+\begin{equation}
+E_{th,proxy}=\sum_t \frac{\mathrm{DNI}_t A_{ap}\eta_{opt}(\alpha_t,\zeta_t)}{10^6},
+\end{equation}
+where $A_{ap}=11915\times115.72$ m\textsuperscript{2}, $\alpha_t$ and $\zeta_t$ are the approximate solar azimuth and zenith at hour $t$, and the annual DNI is uniformly scaled from the public NASA POWER value of 1842.4 kWh m\textsuperscript{-2} y\textsuperscript{-1} to the 1883 kWh m\textsuperscript{-2} y\textsuperscript{-1} corrected typical-year DNI reported for Dunhuang. This is not a dispatch model, SAM annual simulation, or custom-aimpoint annual ray trace. Its role is to test whether the default optical ranking is an artifact of a few representative SolarPILOT positions.
+
+The fast annual proxy preserves the main optical ranking. The optical-upper case $L_{opt}$ remains the strongest annualized optical row, with a +3.36\% annual thermal-proxy change relative to $L_0$. The strongest same-anchor hybrid energy row gives +1.85\%, and $J_{bal}$ gives +0.97\%. The baseline annual thermal proxy is 945.9 GWh\textsubscript{th} under the corrected-DNI scaling. Matching the 351.6 GWh design annual generation reported in the public plant paper requires a net electric conversion factor of 0.372, while the same reference corresponds to a 40.14\% capacity factor for a 100 MW plant. This places the proxy in the right plant-scale order, but it does not make any candidate a bankable annual-yield result.
+
+A multi-year weather-robustness gate then repeated the same annualization over the available 2020--2025 NASA POWER SAM files. Annual DNI varied from 1694.9 to 2012.4 kWh m\textsuperscript{-2} y\textsuperscript{-1}, but the selected role signs did not change. $L_{opt}$ stayed rank 1 in all six years, $B_{hy,E}$ stayed rank 2, and the annual-positive rows $J_{bal}$, $L_{rob}$, and $L_{nom}$ remained positive in every year. The receiver-pressure rows $J_{flux}$, $B_{pf,R}$, and $B_{hs,R}$ remained negative annual-proxy rows, so they were not promoted into annual headline candidates. This audit is included in \path{supplementary_data/multiyear_annual_proxy_gate/}; it supports weather-year sign and rank stability, not annual custom-aimpoint validation. The annualized proxy therefore reinforces the existing conclusion: the best optical rows should remain stress cases because their receiver-flux penalties persist in the default-aiming and AFD-style audits.
+
+An additional interpolation-robustness gate tested whether this annual-proxy ranking depends on the single inverse-distance interpolation used in the first annualization. The audit repeated the 2020--2025 public-weather calculation with nearest-neighbour, IDW-3, IDW-6, IDW-12, and linear interpolation with nearest fallback. Across all tested method-year pairs, $L_{opt}$ remained rank 1, $B_{hy,E}$ remained rank 2, $J_{bal}$, $L_{rob}$, and $L_{nom}$ remained positive, and the receiver-pressure rows remained non-headline annual rows. The largest selected annual-delta spread was 0.197 percentage points, just below the pre-set 0.20 percentage-point gate. The result is stored in \path{supplementary_data/annual_interpolation_robustness_gate/}; it supports interpolation robustness of the annual proxy, not measured annual operation.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/fig_fast_annual_proxy_sanity.png}
+\caption{Fast annual proxy and public plant sanity check. Panel (a) annualizes the SolarPILOT optical-efficiency tables over the 8760-hour public weather file after DNI scaling to the reported Dunhuang corrected typical-year value. Panel (b) compares the NASA POWER monthly DNI profile with the uniformly scaled profile. Panel (c) checks the baseline proxy against the public 351.6 GWh design-generation reference through a calibrated net electric conversion factor. The figure is an annualization and plant-scale sanity bridge, not a full annual custom-aimpoint or dispatch validation.}
+\label{fig:fast-annual-proxy}
 \end{figure}
 
 \subsection{Deformation-component ablation}
@@ -543,12 +859,16 @@ Variant & Proxy $E/E_0$ & Proxy flux & Quick $\Delta\eta_{opt}$ (\%) & Quick $\D
 \end{table}
 
 \subsection{Resolution stability of SolarPILOT numerical verification}
-The quick and high-resolution SolarPILOT runs lead to the same qualitative ranking for the main candidates. $L_{opt}$ remains the optical upper case in both settings; $L_{ctrl}$ remains the lowest default-flux-penalty non-baseline candidate among the high-resolution set; and $L_{nom}$ remains a small-gain layout whose main value is the custom-aimpoint queue. The high-resolution run increases the measured optical gain of $L_{opt}$ from 2.80\% to 3.15\% and increases its default-flux penalty from 3.90\% to 4.69\%. These differences are not large enough to change the interpretation, but they justify using the high-resolution run for all headline claims.
+The quick and high-resolution SolarPILOT runs lead to the same qualitative ranking for the main candidates. $L_{opt}$ remains the optical upper case in both settings; $L_{ctrl}$ remains the lowest default-flux-penalty non-baseline candidate among the high-resolution set; and $L_{nom}$ remains a small-gain layout whose main value is the custom-aimpoint queue. The high-resolution run increases the measured optical gain of $L_{opt}$ from 2.80\% to 3.15\% and increases its default-flux penalty from 3.90\% to 4.68\%. These differences are not large enough to change the interpretation, but they justify using the high-resolution run for all headline claims.
+
+A second discretization gate compared the existing 24 by 24 SolarPILOT receiver-flux tables with a 36 by 36 rerun for the direct-promotion queue layouts. The high-resolution rerun preserved the default-flux role labels. The maximum absolute shift in peak-to-active-mean delta was 0.43 percentage points, and the maximum absolute shift in p99-to-active-mean delta was 0.18 percentage points. $L_{opt}$ still carried a positive high-resolution flux penalty (+5.00\% peak-to-active-mean and +0.36\% p99-to-active-mean), while the receiver-pressure rows did not become annual or default-flux headline winners. The detailed comparison is stored in \path{supplementary_data/flux_resolution_gate/}. This gate reduces the risk that the receiver-flux interpretation is an artifact of one coarse receiver-map discretization, but it remains a SolarPILOT default-aiming check rather than receiver thermal certification.
+
+A third SolarPILOT sampling gate enlarged the flux-map sampling from the original 8 flux days to 12 flux days for the same selected direct-promotion layouts. The rerun produced 130 default receiver maps per layout and again preserved the role interpretation. Relative to the original 8-day tables, the maximum absolute shift in peak-to-active-mean delta was 0.008 percentage points and the maximum p99-to-active-mean shift was 0.073 percentage points. $L_{opt}$ still carried a 12-day default-flux penalty (+4.69\% peak-to-active-mean), and the receiver-pressure rows did not become optical headline rows. The result is stored in \path{supplementary_data/flux_day_sampling_gate/}. Like the receiver-bin gate, it is a default-aiming robustness check, not annual custom aiming or receiver thermal certification.
 
 \subsection{Weather and DNI anchoring}
 The SolarPILOT numerical check uses a public NASA POWER 2023 weather file because it is reproducible. This choice is checked against the public Dunhuang plant report rather than left implicit. The NASA POWER file gives an annual DNI of 1842.4 kWh m\textsuperscript{-2} y\textsuperscript{-1}, while the reported corrected typical-year DNI for the plant is 1883 kWh m\textsuperscript{-2} y\textsuperscript{-1}. The corresponding uniform scale factor is 1.022. This difference is small enough that the relative optical-efficiency and peak-to-active-mean rankings are not an artifact of an obviously mismatched weather file.
 
-Uniform DNI scaling does not change the relative SolarPILOT optical-efficiency changes or the peak-to-active-mean receiver-flux ratios in Table~\ref{tab:summary}; it changes only the absolute flux scale under the same optical geometry. For example, the high-resolution $L_0$ peak value scales from 0.003200 to 0.003271 in the exported flux-table units, while $L_{opt}$ scales from 0.003362 to 0.003436. The flux-ratio penalty of $L_{opt}$ therefore remains 4.69\%. The weather check supports the robustness of the relative trade-off interpretation, but it is not a substitute for a measured TMY or plant-grade weather file.
+Uniform DNI scaling does not change the relative SolarPILOT optical-efficiency changes or the peak-to-active-mean receiver-flux ratios in Table~\ref{tab:summary}; it changes only the absolute flux scale under the same optical geometry. For example, the high-resolution $L_0$ peak value scales from 0.003200 to 0.003271 in the exported flux-table units, while $L_{opt}$ scales from 0.003362 to 0.003436. The flux-ratio penalty of $L_{opt}$ therefore remains approximately 4.68\%. The weather check supports the robustness of the relative trade-off interpretation, but it is not a substitute for a measured TMY or plant-grade weather file.
 
 \subsection{Receiver-flux normalization and thermal-safety interpretation}
 The receiver-flux evidence in this manuscript is intentionally reported as a relative numerical-checking metric. SolarPILOT exports flux tables under a common receiver discretization, weather file, heliostat area, optical-error setting, and default-aiming policy; within that common setup, the peak-to-active-mean ratio is useful because it shows whether a layout concentrates power more strongly on the receiver than the baseline. It is not, by itself, a certified molten-salt receiver heat-flux limit.
@@ -560,11 +880,13 @@ q''_{mean,active}=\frac{\sum_{j\in\mathcal{A}}P_j}{\sum_{j\in\mathcal{A}}A_j},
 \end{equation}
 where $P_j$ is absorbed thermal power assigned to receiver cell $j$, $A_j$ is the corresponding cell area, and $\mathcal{A}$ is the active illuminated receiver set. Converting the current exported flux-table values into publishable kW m\textsuperscript{-2} or MW m\textsuperscript{-2} limits would require plant-specific absorptance, tube-panel thermal limits, receiver-control policy, defocus rules, measured or plant-grade DNI, heliostat optical calibration, and a consistent receiver thermal model. Those data are not available in the public package. The manuscript therefore uses $R_{flux}=q''_{peak}/q''_{mean,active}$ as a conservative screening ratio and treats absolute receiver heat-flux certification as a required next-stage experiment, not as a hidden assumption.
 
+To reduce the risk of relying on one peak/mean number, the SolarPILOT flux tables were also converted into a relative AFD-style proxy audit. The audit keeps the same default-aiming bridge and computes active-zone p95 and p99 concentration, the fraction of active receiver cells above the baseline p99 threshold, and mean excess above baseline high-percentile thresholds. It is still a relative screening layer, because the thresholds come from the baseline numerical flux table rather than from an allowable tube-flux standard. The useful result is that it agrees with the main trade-off without overstating thermal safety. $L_{opt}$ improves default optical efficiency by 3.15\% but increases the active p99 hotspot-area proxy by 0.38 percentage points. In contrast, $L_{rob}$ and $L_{ctrl}$ reduce that default-aiming hotspot-area proxy by 0.23 and 0.16 percentage points, respectively, while the joint default-aiming bridge gives -0.27 percentage points for $J_{flux}$ and -0.13 percentage points for $J_{bal}$. These values support the receiver-risk screening interpretation, but they do not replace the reduced direct custom-aimpoint audits or a future receiver thermal model.
+
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.72\textwidth]{figures/monthly_dni_sensitivity.png}
-\caption{Monthly DNI in the public NASA POWER 2023 file and the uniformly scaled profile matching the reported Dunhuang corrected TMY annual DNI. Uniform scaling affects absolute flux magnitude but not the relative optical-efficiency or peak-to-active-mean comparisons reported in the main numerical-checking table.}
-\label{fig:dni-sensitivity}
+\includegraphics[width=0.94\textwidth]{figures/fig_afd_style_flux_proxy.png}
+\caption{Relative AFD-style receiver-flux proxy audit derived from the SolarPILOT default-aiming flux tables. Panel (a) reports changes in active-zone p99 concentration. Panel (b) reports the fraction of active cells above the baseline p99 threshold. Panel (c) compares mean optical-efficiency change with the active p99 hotspot-area proxy. The thresholds are baseline-relative numerical thresholds, not allowable receiver-tube heat-flux limits.}
+\label{fig:afd-proxy}
 \end{figure}
 
 \subsection{Receiver-flux maps}
@@ -760,6 +1082,78 @@ $L_{opt}$ & Optical-upper & -0.82 & -0.40 & -0.31 & 0.51 & Yes, but weak \\
 \caption{Reduced PySolTrace convergence and uncertainty audit. Panel (a) tracks each layout role's best-row mean peak-to-active-mean change across V8, V9, and V10. Panel (b) ranks the four non-baseline roles within each audit layer. Panel (c) shows the V10--V9 matched-strategy shifts; red points indicate rows whose mean-change sign flips under the independent seed. The figure supports a stable receiver-risk queue but not a final single aiming phase.}
 \label{fig:v11-convergence}
 \end{figure}
+
+\subsection{V12 240k-ray follow-up audit}
+After the V11 consolidation, a higher-ray reduced audit was run to check whether the receiver-risk queue remains useful when the high-sample matrix is enlarged from 180,000 to 240,000 requested first-stage ray hits per case. The V12 follow-up uses the same five layouts, 27 solar conditions, 9,000 sampled heliostats per layout, 24 receiver panels, and 24 by 72 receiver grid as the V9/V10 scale, but tests five verification-relevant strategies: visible-equator, five-point, and S9 phases p0--p2. It produces 675 layout--strategy--condition rows and keeps receiver intercept ratios within the same physically bounded range, approximately 0.636--0.744.
+
+The useful result is narrower than a new optimum. $L_{nom}$ becomes the strongest V12 direct-check candidate under S9-p1, with a mean peak-to-active-mean change of -3.41\%, a median change of -5.48\%, and a lower-peak fraction of 0.56. $L_{ctrl}$ is also supported: its proxy-selected S9-p1 row gives a mean change of -2.13\%, a median change of -4.86\%, and the highest lower-peak fraction among the proxy-selected rows, 0.74. $L_{opt}$ has only a weak best V12 reduction (-0.39\% mean under S9-p2), and its proxy-selected S9-p0 row is unfavourable (+3.40\% mean). $L_{rob}$ is nearly neutral in this follow-up (-0.04\% mean under S9-p1). The V12 layer is therefore written into the paper as a strengthening of the role-level screening interpretation, especially for $L_{nom}$ and $L_{ctrl}$, not as evidence that every previously named receiver-risk candidate improves under all higher-ray checks.
+
+\begin{table}[t]
+\centering
+\caption{V12 240k-ray reduced PySolTrace follow-up. Negative values indicate lower peak-to-active-mean receiver concentration than the paired baseline under the same day, hour, and aiming strategy. The table reports the best direct row for each non-baseline layout at the V12 scale.}
+\label{tab:v12-followup}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Layout & V12 best strategy & Cases & Mean $\Delta R$ (\%) & Median $\Delta R$ (\%) & Lower frac. \\
+\midrule
+$L_{nom}$ & S9-p1 & 27 & -3.41 & -5.48 & 0.56 \\
+$L_{ctrl}$ & S9-p1 & 27 & -2.13 & -4.86 & 0.74 \\
+$L_{opt}$ & S9-p2 & 27 & -0.39 & -0.45 & 0.70 \\
+$L_{rob}$ & S9-p1 & 27 & -0.04 & -0.25 & 0.63 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+To address uncertainty explicitly, the V12 condition-level rows were also bootstrapped with replacement within each layout--strategy row. The bootstrap uses the 27 representative solar conditions as the resampling unit and 10,000 replicates. Table~\ref{tab:v12-bootstrap} reports the best direct V12 row for each non-baseline layout. Only $L_{nom}$ has a best-row mean confidence interval that remains below zero, although its lower-peak fraction is modest. $L_{ctrl}$ has a stronger lower-peak fraction, but its bootstrap interval crosses zero. $L_{opt}$ and $L_{rob}$ should therefore remain bounded evidence cases rather than headline improvements. This is a useful negative result: the larger ray count strengthens the case for a receiver-risk screening queue, but it does not justify a final custom-aiming optimum.
+
+\begin{table}[t]
+\centering
+\caption{Bootstrap confidence audit for the V12 240k-ray reduced PySolTrace layer. Confidence intervals resample the 27 representative solar conditions within each layout--strategy row. Negative values indicate lower peak-to-active-mean concentration than the paired baseline under the same strategy and condition.}
+\label{tab:v12-bootstrap}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrr@{}}
+\toprule
+Layout & Role & V12 best strategy & Mean $\Delta R$ (\%) & 95\% bootstrap CI (\%) & Lower frac. \\
+\midrule
+$L_{nom}$ & nominal-proxy & S9-p1 & -3.41 & [-6.48, -0.35] & 0.56 \\
+$L_{ctrl}$ & default-flux-control & S9-p1 & -2.13 & [-5.46, +1.46] & 0.74 \\
+$L_{opt}$ & optical-upper & S9-p2 & -0.39 & [-3.70, +3.13] & 0.70 \\
+$L_{rob}$ & receiver-risk & S9-p1 & -0.04 & [-2.96, +3.27] & 0.63 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+\FloatBarrier
+
+\subsection{Formal paired-statistics audit}
+The reduced direct matrices were finally recast as paired condition-level experiments, because mean changes alone can make weak rows look stronger than they are. For each selected layout--strategy row, the paired sample is the 27-condition vector of peak-to-active-mean changes against the same baseline, day, hour, and aiming strategy. The audit reports bootstrap 95\% confidence intervals for the mean, Hodges--Lehmann median shifts, one-sided sign tests, one-sided Wilcoxon signed-rank tests, and a deliberately conservative $\pm$1 percentage-point practical-indistinguishability band. The full table is included in \path{supplementary_data/formal_paired_statistics/}; Table~\ref{tab:formal-paired} reports the rows that matter most for the manuscript claim.
+
+\begin{table}[t]
+\centering
+\caption{Formal paired-statistics summary for the key reduced direct rows. Confidence intervals bootstrap the 27 paired solar-condition deltas. The Wilcoxon test uses the one-sided alternative that the candidate has lower peak-to-active-mean concentration than the paired baseline.}
+\label{tab:formal-paired}
+\scriptsize
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llllrrrr@{}}
+\toprule
+Matrix & Candidate & View & Strategy & Mean $\Delta R$ (\%) & 95\% CI (\%) & HL shift (\%) & Wilcoxon $p$ \\
+\midrule
+Baseline-control direct & $L_{rob}$ & best direct & S9-p2 & -3.61 & [-6.17, -0.97] & -4.49 & 0.035 \\
+Joint direct promotion & $J_{flux}$ & proxy/best direct & S9-p5 & -4.06 & [-6.99, -0.93] & -4.64 & 0.006 \\
+V12 240k direct & $L_{nom}$ & best direct & S9-p1 & -3.41 & [-6.48, -0.35] & -2.77 & 0.089 \\
+Joint direct promotion & $J_{bal}$ & proxy/best direct & S9-p2 & -1.98 & [-6.59, +2.98] & -4.45 & 0.053 \\
+Joint direct promotion & $J_{gain}$ & proxy selected & S9-p3 & +2.58 & [-1.54, +6.67] & +1.88 & 0.907 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The statistical audit does not create a new positive headline. It narrows the claim in a useful way. $L_{rob}$ in the baseline-control direct matrix, $J_{flux}$ in the joint direct matrix, and $L_{nom}$ in the V12 240k-ray follow-up have bootstrap mean intervals below zero. $J_{bal}$ remains directional and close to a one-sided Wilcoxon threshold, but its confidence interval crosses zero. The proxy-selected $J_{gain}$ row is adverse. No row has its entire 95\% confidence interval below the -1\% practical threshold, so the manuscript should continue to use the phrase ``screening queue'' rather than ``engineering superiority'' or ``final optimum.''
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig_formal_paired_statistics.png}
+\caption{Formal paired-statistics audit for selected reduced direct rows. Points show mean paired changes in peak-to-active-mean receiver concentration, whiskers show 95\% bootstrap confidence intervals over the 27 representative solar conditions, and the grey band marks the $\pm$1\% practical-indistinguishability threshold.}
+\label{fig:formal-paired}
+\end{figure}
 \FloatBarrier
 
 \section{Discussion}
@@ -767,38 +1161,99 @@ $L_{opt}$ & Optical-upper & -0.82 & -0.40 & -0.31 & 0.51 & Yes, but weak \\
 The current field shape is consistent with the logic of large surround solar tower fields. It preserves plant scale, keeps field coverage continuous, and avoids the collapse produced by mirror deletion. Because access roads, foundations, blocked land parcels, heliostat calibration, and survey-grade terrain are not represented, the layout is best interpreted as a computational benchmark for layout and receiver-flux method development rather than as an industrial redesign.
 
 \subsection{Why the result is more than a module}
-The contribution is an algorithmic workflow rather than a layout preview. It connects plant audit, full-field deformation, feasibility filtering, proxy screening, SolarPILOT numerical checking, and aimpoint candidate selection. This chain is useful because many layout studies optimize one scalar and then present a final field. Here, the workflow makes the trade-off visible and leaves a reproducible queue for higher-fidelity checking. In practical terms, $L_{opt}$ defines an optical upper case and its receiver-flux cost; $L_{nom}$ tests whether a nominal proxy leader transfers to direct tracing; and $L_{rob}$ and $L_{ctrl}$ test whether receiver-risk candidates remain informative when the sampling and receiver grid change. The lack of a single final winner follows from the numerical evidence.
+The contribution is a benchmark workflow rather than a layout preview. It connects plant audit, full-field deformation, feasibility filtering, geometry-explainability auditing, proxy screening, SolarPILOT numerical checking, relative AFD-style hotspot-area auditing, baseline-control testing, strong-baseline pressure testing, joint layout--aiming screening, direct promotion auditing, and formal paired statistics. This chain is useful because many layout studies optimize one scalar and then present a final field. Here, the workflow makes the trade-off visible and leaves a reproducible queue for higher-fidelity checking. In practical terms, $L_{opt}$ defines an optical upper case and its receiver-flux cost; $L_{nom}$ tests whether a nominal proxy leader transfers to direct tracing; and $L_{rob}$ and $L_{ctrl}$ test whether receiver-risk candidates remain informative when the sampling and receiver grid change. The geometry audit explains how these rows move: the largest selected p95 displacement is 107.5 m for $L_{opt}$, while several strong-baseline receiver-pressure rows stay below 46 m. The simple controls test whether those signals are merely radial expansion, compaction, or wave effects. The same-anchor strong-baseline pressure test then asks a harder question: whether pattern-free-, slider-like-, terrain-aware-, and hybrid-deformation approximations can explain the queue. They can explain part of it, especially through the hybrid and slider-like rows, which is why the manuscript avoids method-superiority language. The joint run then tests whether layout deformation and aiming can be selected together rather than in separated modules. Its direct promotion audit is the most useful new result: $J_{flux}$ survives as a direct-supported receiver-boundary candidate, while $J_{bal}$ and $J_{gain}$ show why proxy-selected phases must pass a direct optical-engine gate. The formal paired-statistics audit is the final gate in the current package: it supports $J_{flux}$, $L_{rob}$, and the V12 $L_{nom}$ row as the clearest receiver-risk candidates, but it also confirms that no row should be written as final engineering superiority. The lack of a single final winner follows from the numerical evidence.
 
 \subsection{Frontier fit}
-The topic remains current, but the novelty threshold has increased. A study that only perturbs heliostat coordinates is unlikely to be sufficient because recent work already includes deformable petal layouts, uneven-terrain field tools, collision-analysis-based layouts, reinforcement-learning aiming, closed-loop flux control, neural surrogates, and differentiable ray tracing. The present contribution is narrower and more testable: it combines a public 100 MW plant anchor with full-field preservation, terrain audit, receiver-flux reporting, and a reproducible screening queue that advanced aiming methods can reuse.
+The topic remains current, but the novelty threshold has increased. A study that only perturbs heliostat coordinates is unlikely to be sufficient because recent work already includes deformable petal layouts, uneven-terrain field tools, collision-analysis-based layouts, reinforcement-learning aiming, closed-loop flux control, neural surrogates, and differentiable ray tracing. The same-anchor strong-baseline pressure test is therefore important: it shows that hybrid and pattern-free approximation families can produce competitive local signals, so the manuscript should not be read as a standalone state-of-the-art layout optimizer. The present contribution is narrower and more testable: it combines a public 100 MW plant anchor with full-field preservation, terrain audit, receiver-flux reporting, baseline pressure testing, and a reproducible screening queue that advanced aiming methods can reuse.
 
 \subsection{Practical value}
-The immediate practical value is upstream and computational rather than direct retrofit. Existing foundations, roads, wiring, calibration, and land agreements make physical relocation unrealistic for an operating field. The benchmark helps researchers test whether layout-level changes, receiver aiming, and optical verification methods agree on the same candidate. It can also inform new-field preliminary design, repowering studies, and algorithm comparisons without implying that the operating Dunhuang field should be physically rearranged.
+The immediate practical value is upstream and computational rather than direct retrofit. Existing foundations, roads, wiring, calibration, and land agreements make physical relocation unrealistic for an operating field. The benchmark helps researchers test whether layout-level changes, receiver aiming, and optical verification methods agree on the same candidate. It also gives future optimization methods a more informative target than one final coordinate file: the geometry-explainability table states how far each candidate moves, the annual proxy states whether an optical signal survives a public weather year, and the direct-promotion rows state which receiver-risk hypotheses deserve more expensive checking. It can therefore inform new-field preliminary design, repowering studies, and algorithm comparisons without implying that the operating Dunhuang field should be physically rearranged.
 
 \subsection{Negative results as evidence}
-The flux penalty in the optical winner is central to the result. It demonstrates that the algorithm is not tuned only to produce favorable optical-efficiency outcomes. The proxy sensitivity sweep adds a second negative result: the optical upper case $L_{opt}$ is not robustly favoured by the aiming proxy. The all-phase reduced SolTrace matrix with verified stage ordering adds the most useful direct check: all non-baseline candidates can reduce mean peak-to-active-mean concentration under at least one directly traced staggered row, but the reductions are modest, condition-dependent, and not aligned with the SolarPILOT optical ranking. The V9/V10/V11 audit sharpens this point. It preserves the receiver-risk queue around $L_{rob}$, $L_{nom}$, and $L_{ctrl}$, but it also shows that exact strategy rows can change sign under higher sampling or an independent seed. The verification question is therefore not whether one layout and one aiming phase are universally superior, but whether each candidate role remains useful under the verification layer being used.
+The flux penalty in the optical winner is central to the result. It demonstrates that the algorithm is not tuned only to produce favorable optical-efficiency outcomes. The proxy sensitivity sweep adds a second negative result: the optical upper case $L_{opt}$ is not robustly favoured by the aiming proxy. The same-condition controls add a third boundary: simple radial expansion and radial-wave controls can reduce direct peak-to-active-mean concentration under some strategies, so the paper cannot attribute every receiver-risk signal to TS-FPDA. The all-phase reduced SolTrace matrix with verified stage ordering adds the first direct check for the TS-FPDA queue: all non-baseline candidates can reduce mean peak-to-active-mean concentration under at least one directly traced row, but the reductions are modest, condition-dependent, and not aligned with the SolarPILOT optical ranking. The baseline-control direct audit then shows that $L_{rob}$ is the only tested best-direct row with a bootstrap interval below zero, while $L_{nom}$ is close and the simple controls remain meaningful but uncertain. The V9/V10/V11 audit sharpens this point. It preserves the receiver-risk queue around $L_{rob}$, $L_{nom}$, and $L_{ctrl}$, but it also shows that exact strategy rows can change sign under higher sampling or an independent seed. The V12 follow-up further supports $L_{nom}$ as a useful next-stage candidate, while weakening any blanket claim that $L_{rob}$ or the optical upper case is consistently safer under enlarged reduced tracing. The joint direct audit adds a fourth boundary: integrated layout--aiming search can generate a stronger receiver-boundary candidate, but proxy-selected phases do not always transfer to direct tracing. The formal paired-statistics layer then turns these observations into an explicit evidence grade: $J_{flux}$, $L_{rob}$, and V12 $L_{nom}$ have intervals below zero, $J_{bal}$ and $L_{ctrl}$ are directional, and proxy-selected $J_{gain}$ is adverse. The verification question is therefore not whether one layout and one aiming phase are universally superior, but whether each candidate role remains useful under the verification layer being used.
 
 \subsection{Remaining verification need}
-The current evidence supports a reproducible benchmark and workflow claim, but not certification of a final plant redesign. The all-phase and high-sample reduced SolTrace layers are direct custom-aimpoint evidence, but they are still sampled, use faceted receiver approximations, and cover representative solar conditions rather than an annual full-field campaign. The V11 audit reinforces the same message: the queue is useful, but exact best rows shift under grid, sampling, and seed changes. The next verification layer should therefore be a full-field or statistically enlarged CoPylot/SolarPILOT, SolTrace, or Solstice study with annual weather sampling, receiver thermal constraints, and a consistent treatment of heliostat canting and focus. The minimum queue should still include the optical upper case $L_{opt}$, the nominal proxy leader $L_{nom}$, and the sensitivity-relevant receiver-risk candidates $L_{rob}$ and $L_{ctrl}$; however, the aiming strategies should not be fixed to a single proxy-selected phase because the reduced direct matrices show material phase and discretization sensitivity, and V11 shows that the exact best row remains seed-sensitive.
+The current evidence supports a reproducible benchmark and workflow claim, but not certification of a final plant redesign. The baseline-control, all-phase, high-sample, and joint-promotion reduced SolTrace layers are direct custom-aimpoint evidence, but they are still sampled, use faceted receiver approximations, and cover representative solar conditions rather than an annual full-field campaign. The relative AFD-style proxy closes one smaller gap by showing that high-percentile and hotspot-area metrics can be reconstructed from the default SolarPILOT flux tables; it does not close the larger receiver-thermal gap because the thresholds are baseline-relative rather than allowable-flux limits. The new 36 by 36 receiver-bin and 12-flux-day SolarPILOT reruns close narrower numerical-stability gaps by showing that the default-flux role labels do not depend on one receiver grid or one flux-day sample, but both checks remain default aiming. The geometry-explainability audit closes another presentation gap by showing that the candidate rows are local, count-preserving field redistributions with bounded spacing and sector shifts; it does not replace optical-engine verification. The direct baseline-control audit reinforces a useful but conservative message: low-complexity controls should remain in the benchmark, and TS-FPDA should be judged by role-level queue behaviour rather than by a single claimed winner. The new strong-baseline pressure test reinforces the same caution at a higher baseline level: hybrid, pattern-free, and slider-like approximation rows should enter the next promotion queue, because they can approach the TS-FPDA representatives under the same default bridge. The multi-year annual-proxy and interpolation-robustness gates add weather-year and numerical-mapping robustness to the annualized optical story, but they still annualize default-aiming optical tables rather than custom aiming. The V11, V12, and formal paired-statistics audits reinforce the same message: the queue is useful, but exact best rows shift under grid, sampling, seed, and ray-count changes. The joint direct promotion audit adds a next-stage queue rather than ending the study: $J_{flux}$ should be carried forward as a receiver-boundary case, $J_{bal}$ as a balance hypothesis, and $J_{gain}$ as a strategy-sensitivity case. The present SolarPILOT bridge and PySolTrace direct gate form a cross-engine evidence ladder, but not a true same-aimpoint cross-code round robin. The next verification layer should therefore be a full-field or statistically enlarged CoPylot/SolarPILOT, SolTrace, or Solstice study with annual weather sampling, receiver thermal constraints, and a consistent treatment of heliostat canting and focus. The minimum queue should include the optical upper case $L_{opt}$, the nominal proxy leader $L_{nom}$, the sensitivity-relevant receiver-risk candidates $L_{rob}$ and $L_{ctrl}$, the simple radial and wave controls, the strongest same-anchor pressure rows $B_{hy,E}$, $B_{pf,R}$, and $B_{hs,R}$, and the joint candidates $J_{flux}$, $J_{bal}$, and $J_{gain}$; however, the aiming strategies should not be fixed to a single proxy-selected phase because the reduced direct matrices show material phase and discretization sensitivity, and the exact best row remains seed- and ray-count-sensitive.
+
+\subsection{Domain of validity}
+Table~\ref{tab:domain-validity} states the domain of validity used when interpreting the results. This table is intentionally conservative. It prevents the paper from sounding like an operating-plant redesign while preserving the part that is still useful to the research community: a transparent large-field case for testing layout generation, aiming strategies, receiver-flux metrics, and verification pipelines.
+
+\begin{table}[t]
+\centering
+\caption{Domain of validity and claim boundary for the benchmark.}
+\label{tab:domain-validity}
+\small
+\begin{tabular}{p{0.26\textwidth}p{0.32\textwidth}p{0.32\textwidth}}
+\toprule
+Question & Supported interpretation & Not supported by the current evidence \\
+\midrule
+Layout realism & Full-field, ellipse-like surround candidates near the public Dunhuang coordinate envelope & Official as-built survey or civil construction layout \\
+Optimization claim & Candidate queue and trade-off benchmark under common assumptions & Globally optimal heliostat field or final plant redesign \\
+Receiver-flux claim & Relative peak-to-active-mean screening under default SolarPILOT and reduced PySolTrace direct checks & Certified absolute receiver heat-flux safety or tube-temperature compliance \\
+Terrain claim & Reproducible SRTM90m public-terrain screening & Survey-grade grading, drainage, foundation, or road-access design \\
+Weather and annual claim & Public-weather relative comparison, uniform DNI scaling, fast annual optical proxy, and public design-generation sanity check & Bankable annual yield, dispatch model, or plant-grade TMY validation \\
+Aiming claim & Candidate roles for future custom-aimpoint verification; exact phases are not stable enough to prescribe & Final annual custom-aimpoint schedule \\
+Economic claim & No LCOE or retrofit economics claim; cost score is a triage indicator only & Commercial repowering or retrofit recommendation \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Limitations}
-The limitations are material. The available coordinate pool contains 11,915 non-origin heliostats rather than the reported 11,935. SRTM90m terrain is public and reproducible but not survey-grade. NASA POWER 2023 weather is reproducible but not the plant's corrected TMY. PySAM/SolarPILOT checks imported x/y positions under default aiming but not custom staggered aimpoints through the bridge used here. The reduced PySolTrace matrices check direct aimpoint logic only on stratified samples, faceted receiver approximations, and selected solar conditions. Proxy cost score is not sufficient for economic superiority claims.
+The limitations are material. The available coordinate pool contains 11,915 non-origin heliostats rather than the reported 11,935. SRTM90m terrain is public and reproducible but not survey-grade. NASA POWER weather is reproducible but not the plant's corrected TMY; the multi-year gate checks sign and rank stability over public weather years, not measured operation. The fast annual proxy is an interpolation of SolarPILOT default-aiming optical-efficiency tables over public weather years and is used only as an annualization and plant-scale sanity bridge; the interpolation-robustness gate tests numerical mapping choices for that proxy, not measured annual performance. The annual proxy is not a dispatch simulation, bankable annual-yield estimate, or full-field custom-aimpoint annual ray trace. PySAM/SolarPILOT checks imported x/y positions under default aiming but not custom staggered aimpoints through the bridge used here. The AFD-style hotspot-area audit is relative to numerical baseline thresholds and is not an allowable-flux-density or tube-temperature model. The 36 by 36 flux-resolution and 12-flux-day sampling checks reduce default-flux numerical-discretization concern, but they do not certify receiver thermal safety. The reduced PySolTrace matrices, including the baseline-control direct and leave-one-day-out audits, check direct aimpoint logic only on stratified samples, faceted receiver approximations, and selected solar conditions. The same-anchor strong baselines are literature-inspired approximation families rather than complete reproductions of named external optimizers, so they strengthen the pressure test but do not settle a field-wide optimizer ranking. Proxy cost score is not sufficient for economic superiority claims.
+\FloatBarrier
 
 \section{Declaration of Generative-AI and AI-Assisted Technologies}
 During the preparation of this work, the authors used ChatGPT and other AI-assisted writing tools to support literature organization, language polishing, figure-style iteration, and revision-risk checklist drafting. After using these tools, the authors reviewed and edited the manuscript, verified the scientific content, numerical results, citations, figures, and final claims, and take full responsibility for the content of the article.
 
 \section{Conclusions}
-This manuscript reconstructs the Dunhuang heliostat study as a layout algorithm and receiver-flux benchmark. The current full-field surround/ellipse-like layout is engineering-plausible because it preserves the commercial-scale field, avoids mirror-deletion collapse, and remains within conservative geometry bounds. The main checked result is a trade-off: small full-field geometric deformations can improve default SolarPILOT optical efficiency, but the optical upper case increases receiver-flux concentration. The nominal and sensitivity-tested aiming proxies further show that receiver-risk robustness is associated with different candidates than the optical upper case. The all-phase, high-sample, independent-seed, and consolidated V11 reduced PySolTrace audits confirm the same caution: candidate roles are more stable than exact custom-aiming phases. Neither $L_{opt}$, $L_{nom}$, $L_{rob}$, nor $L_{ctrl}$ is a final optimized plant. The scientific value is the reproducible algorithmic benchmark and screening queue.
+This manuscript reconstructs the Dunhuang heliostat study as a plant-anchored layout--aiming benchmark. The full-field surround/ellipse-like candidates are engineering-plausible because they preserve the available 11,915-heliostat coordinate pool, avoid mirror-deletion collapse, and remain within conservative geometry bounds. The geometry-explainability audit confirms that the representative rows are local count-preserving redistributions rather than new plant concepts: the largest selected p95 movement scale is 107.5 m for $L_{opt}$, while the receiver-pressure strong-baseline rows remain below 46 m and retain stable spacing and sector coverage.
+
+The central checked result is a trade-off. Small full-field geometric deformations can improve default SolarPILOT optical efficiency, but the optical upper case also increases receiver-flux concentration and the relative AFD-style active p99 hotspot-area proxy. A fast annual proxy keeps the optical ranking over public weather years and places the baseline proxy on the same order as the public 351.6 GWh design-generation reference, but it does not create a bankable annual-yield claim. The same-condition controls, direct baseline-control audit, and same-anchor strong-baseline pressure test show that simple and literature-inspired local deformations must remain in the comparison set. TS-FPDA is therefore useful as a conservative candidate-generation component inside the benchmark, not as a field-optimal layout method.
+
+The joint layout--aiming layer is the main system-level extension. It searches layout deformation and receiver-aiming choices together, then uses SolarPILOT default-aiming checks, reduced PySolTrace direct promotion, and paired statistics to decide which hypotheses survive. The reduced direct promotion audit supports $J_{flux}$ as a receiver-boundary candidate, keeps $J_{bal}$ as a directional balance candidate, and downgrades $J_{gain}$ to a strategy-sensitivity case. The formal paired-statistics audit gives the current evidence boundary: $J_{flux}$, $L_{rob}$, and the V12 $L_{nom}$ row have confidence intervals below zero, but none of the selected rows clears the stricter -1\% practical-threshold test. The scientific value is the reproducible benchmark, integrated screening system, and direct-promotion queue, not a certified redesign of the operating Dunhuang plant.
 
 \section{Data and Code Availability}
-The release-candidate submission workspace contains layout CSV files, the public weather input, the SRTM-derived terrain grid, deformation-candidate tables, aiming-proxy tables, PySAM/SolarPILOT optical-efficiency and receiver-flux tables, weather/DNI sensitivity tables, aiming-proxy sensitivity tables, all-phase, high-sample, independent-seed, and V11 consolidated reduced SolTrace custom-aimpoint outputs, journal figures, scripts, and checksum manifests. The streamed run used for the manuscript is recorded under \path{server_outputs/streamed_fullfield_20260511_205252}. The all-phase SolTrace matrix is recorded under \path{soltrace_allphase_27cond_20260512}; the high-sample confirmation matrix is recorded under \path{soltrace_v9_confirm_highsample_20260512}; the independent-seed replicate is recorded under \path{soltrace_v10_seed_replicate_20260513}; and the consolidated uncertainty audit is recorded under \path{soltrace_v11_convergence_audit_20260514}. The reproducibility manifest records the checked files in \path{reproducibility_manifest/manifest.json} and \path{reproducibility_manifest/MANIFEST.md}; copies are included in the submission workspace. The source coordinate archive is the Zenodo/GitHub package cited as \cite{zaihu2025dunhuangdataset}. The new layout-algorithm and receiver-flux screening package is released as a versioned GitHub record at \url{https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.0}. A Zenodo DOI should be minted from this GitHub release before final journal submission if the journal requires a DOI-bearing archival repository.
+The source coordinate archive used to define the baseline pool is cited as a Zenodo/GitHub dataset \cite{zaihu2025dunhuangdataset}. The manuscript-facing code and data package is organized as a versioned GitHub release:
+\begin{center}
+\small\url{https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.0}
+\end{center}
+The release contains the candidate layouts, public weather and terrain inputs, SolarPILOT optical and receiver-flux tables, reduced PySolTrace tables, joint layout--aiming screening outputs, formal paired statistics, figure-generation scripts, reproducibility configuration, and checksum manifests used for the present manuscript. A Zenodo DOI for this manuscript package will be minted from the GitHub release before final journal upload and should be cited as a dataset/software record in the final reference list.
 
-\appendix
+For review, the active submission workspace mirrors the release under \path{supplementary_data/}, \path{code/}, \path{reproducibility_config/}, and \path{reproducibility_manifest/}. Rather than reproducing a file-by-file data dictionary in the main text, Table~\ref{tab:supplement-index} lists the evidence groups needed to audit each major claim. The full machine-readable manifest is provided as \path{reproducibility_manifest/manifest.json}, with a human-readable checksum table in \path{reproducibility_manifest/MANIFEST.md}.
+
+\begin{table}[H]
+\centering
+\caption{Compact index of the review-facing data package. The complete file-level dictionary and checksums are provided in the supplementary manifest rather than in the main text.}
+\label{tab:supplement-index}
+\small
+\begin{tabular}{p{0.30\textwidth}p{0.58\textwidth}}
+\toprule
+Evidence group & Included artifacts and audit role \\
+\midrule
+Coordinate and layout package & Baseline and representative \path{layouts/*.csv}, missing-20 geometry audit, full-field candidate tables, and geometry-explainability summaries. \\
+SolarPILOT numerical checks & Optical-efficiency tables, receiver-flux tables, default-aiming summaries, 36-bin flux-resolution gate, and 12-flux-day sampling gate. \\
+Receiver-risk screening & Aiming-proxy tables, 81-assumption sensitivity audit, relative AFD-style p95/p99 and hotspot-area proxy tables. \\
+Direct reduced ray tracing & All-phase, high-sample, independent-seed, V12 240k-ray, baseline-control, hold-out, joint-promotion, and strong-baseline direct-gate tables. \\
+Joint and baseline-pressure runs & Joint layout--aiming optimizer tables, joint SolarPILOT bridge, joint system summary, same-anchor strong-baseline pressure-test tables, and no-promotion gate report. \\
+Reproducibility layer & Python scripts, \path{server_full.json}, environment files, figure-building scripts, GitHub release files, and SHA-256 manifests. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Supplementary Information Summary}
+The detailed audit material is supplied as supplementary data rather than expanded in the journal body. It includes the full data dictionary, checksum manifest, algorithm audit checklist, threats-to-validity table, extended literature matrix, and future verification roadmap. The main paper therefore keeps only the evidence needed to interpret the results, while the supplementary package preserves the rerun path for reviewers.
+
+Three points govern that supplementary material. First, the benchmark keeps the available field intact: the 11,915-coordinate pool is treated as invariant, and the 20-coordinate gap relative to the public plant count is disclosed rather than synthetically filled. Second, public SRTM90m terrain is used as a reproducible screening layer, not as survey-grade civil information. Third, the SolarPILOT bridge checks default-aiming layout behaviour, while the reduced PySolTrace layer checks selected custom aimpoints under representative conditions. The package therefore supports role-level candidate evidence and future promotion queues, not full-field annual custom-aimpoint certification.
+
+A next-stage community benchmark should pass the shared queue through CoPylot/SolarPILOT, SolTrace, Solstice, or related tools with matched solar conditions, receiver grids, aimpoint definitions, canting/focus assumptions, and normalization. The current release keeps the tables and scripts organized so that such a cross-code extension can reuse the same Dunhuang coordinate anchor.
+
+\iffalse
 \section{Algorithm Audit Checklist}
 \begin{enumerate}[leftmargin=*]
 \item Preserve the available full-field coordinate count.
 \item Reject candidates with incomplete sector or annular coverage.
 \item Reject candidates with implausible nearest-neighbor spacing or field extent.
+\item Compare representative layouts against low-complexity same-condition controls before presenting role-level improvements.
 \item Report terrain range and slope metrics for every representative.
 \item Check representatives under the same SolarPILOT settings.
 \item Keep aiming-proxy claims, reduced SolTrace custom-aimpoint claims, and full-field annual verification claims separate.
@@ -806,7 +1261,7 @@ The release-candidate submission workspace contains layout CSV files, the public
 \end{enumerate}
 
 \section{Reproducibility Package}
-The generated package contains layout CSV files, weather input, terrain input, SolarPILOT optical-efficiency tables, receiver-flux tables, aiming-proxy tables, aiming-sensitivity tables, all-phase reduced SolTrace custom-aimpoint tables, weather-sensitivity tables, journal figures, and checksum manifests. Readers can reproduce the main claims by checking that all reported tables are derived from the same audited run directory and that every figure corresponds to a table in the manifest.
+The generated package contains layout CSV files, weather input, terrain input, SolarPILOT optical-efficiency tables, receiver-flux tables, same-condition baseline-control tables, reduced direct baseline-control and hold-out tables, joint screening and joint direct-promotion tables, formal paired-statistics tables, aiming-proxy tables, aiming-sensitivity tables, all-phase reduced SolTrace custom-aimpoint tables, weather-sensitivity tables, journal figures, and checksum manifests. Readers can reproduce the main claims by checking that all reported tables are derived from the same audited run directory or documented strengthening run and that every figure corresponds to a table in the manifest.
 
 \section{Threats to Validity and Mitigations}
 \begin{longtable}{p{0.24\textwidth}p{0.32\textwidth}p{0.32\textwidth}}
@@ -863,7 +1318,7 @@ The full-field requirement also changes how the results are interpreted. Because
 \subsection{Coordinate audit and tower-origin filtering}
 The coordinate audit begins by separating heliostat records from tower-origin placeholders. A common failure mode in exported layout files is the inclusion of a coordinate at or near the origin, representing a tower or reference point rather than a heliostat. Retaining that row would distort nearest-neighbour statistics, field extent, and imported-layout verification. The audit therefore removes the origin placeholder before any candidate generation. The resulting available field contains 11,915 heliostats. This count is reported in every table and figure caption where field completeness matters.
 
-The 20-heliostat mismatch relative to the public plant count is not treated as an error to be patched. Synthetic completion would require knowing the missing heliostat positions, local roads, civil constraints, and commissioning state. Since these are unavailable, synthetic records would create false precision. The manuscript instead defines the benchmark on the available coordinate pool and treats the mismatch as a data-provenance limitation.
+The 20-heliostat mismatch relative to the public plant count is not treated as an error to be patched. Synthetic completion would require knowing the missing heliostat positions, local roads, civil constraints, and commissioning state. Since these are unavailable, synthetic records would create false precision. The manuscript instead defines the benchmark on the available coordinate pool and treats the mismatch as a data-provenance limitation. A seeded random-omission stress test was added to make this limitation auditable: removing 20 randomly selected heliostats from the available pool in 2000 replicates leaves sector and annular coverage complete in every replicate, with a 95th-percentile mean-radius perturbation of 0.33 m. This does not locate the missing records, but it shows that the count gap is small relative to the field-scale geometry metrics used by the benchmark.
 
 \subsection{Terrain-relative reconstruction}
 The terrain layer is designed for reproducibility rather than civil-engineering authority. Public SRTM90m elevation is interpolated to each heliostat location, and the tower-base elevation is subtracted to obtain a terrain-relative coordinate. This simple step prevents the benchmark from silently assuming a perfectly flat field. It also allows future work to test whether higher-resolution terrain changes the ranking of representative candidates. However, the method does not claim to reproduce grading, foundations, drainage, or survey-grade local slopes.
@@ -908,7 +1363,7 @@ The current weather file is reproducible, but the plant paper reports corrected 
 If higher-resolution terrain becomes available, the current SRTM layer should be replaced or compared. The key question is whether local elevation differences change blocking, aiming, or field-feasibility rankings. Stable rankings would support the public SRTM layer as an adequate benchmark input; unstable rankings would make terrain resolution a main research result.
 
 \subsection{Stage 5: cross-code verification}
-A mature benchmark should be portable across SolarPILOT, SolTrace, Solstice, and related tools. The current output format is designed for that. Cross-code verification would turn the Dunhuang package from a paper-specific experiment into a community benchmark, consistent with recent round-robin work on receiver-flux model comparison.
+A mature benchmark should be portable across SolarPILOT, SolTrace, Solstice, and related tools. The current package already contains a cross-engine evidence ladder: PySAM/SolarPILOT checks default-aiming optical and flux behaviour, while PySolTrace checks reduced custom-aimpoint receiver response. This is useful but should not be overstated as a true cross-code validation, because the same custom aimpoints are not yet passed through multiple optical engines. The next round should therefore use a shared queue, at minimum $L_{nom}$, $L_{rob}$, $C_{rad+}$, $J_{flux}$, $J_{bal}$, and $J_{gain}$, with matched solar conditions, aimpoint definitions, receiver grids, canting/focus assumptions, and normalization across SolarPILOT/CoPylot, SolTrace, and Solstice. Such a table would turn the Dunhuang package from a paper-specific experiment into a community benchmark, consistent with recent round-robin work on receiver-flux model comparison.
 
 \section{Detailed Data Dictionary}
 \begin{longtable}{p{0.24\textwidth}p{0.62\textwidth}}
@@ -927,6 +1382,37 @@ Artifact & Description \\
 \path{fullfield_candidates.csv} & Complete screened candidate table with geometry, terrain, proxy energy, cost, and flux-risk metrics. \\
 \path{fullfield_representatives.csv} & Representative candidates selected for visualization, aiming proxy, and SolarPILOT numerical checking. \\
 \path{best_aiming_by_layout.csv} & Best receiver-aiming proxy result for each representative layout. \\
+\path{same_anchor_strong_baseline_tables/tables/strong_baseline_all_candidates.csv} & Candidate-level table for the literature-inspired same-anchor strong-baseline pressure test, including pattern-free, slider-like, terrain-aware, and hybrid approximation families. \\
+\path{same_anchor_strong_baseline_tables/tables/strong_baseline_integrated.csv} & Integrated SolarPILOT default-aiming and aiming-proxy summary for the selected strong-baseline pressure rows and existing benchmark representatives. \\
+\path{same_anchor_strong_baseline_tables/SAME_ANCHOR_STRONG_BASELINE_REPORT.md} & Interpretation report for the strong-baseline pressure test and its claim boundary. \\
+\path{strong_baseline_promotion_gate/tables/strong_baseline_promotion_gate_summary.csv} & Conservative writeback gate for the prepared strong-baseline direct-promotion queue, merging annual, interpolation, default-flux, flux-day, aiming-proxy, geometry, and completed reduced-direct evidence. \\
+\path{strong_baseline_promotion_gate/STRONG_BASELINE_PROMOTION_GATE_REPORT.md} & Gate report stating that no undirect-tested strong-baseline row is promoted to a headline direct-supported claim; $B_{hy,E}$, $B_{pf,R}$, and $B_{hs,R}$ remain queue-only candidates. \\
+\path{strong_baseline_direct_soltrace_tables/analysis/gate_decision.json} & Completed 27-condition same-run reduced direct gate for the strong-baseline queue; no new strong-baseline row passes the proxy-selected bootstrap-CI promotion rule. \\
+\path{strong_baseline_direct_soltrace_tables/analysis/tables/strong_direct_gate_summary.csv} & Proxy-selected and best-direct bootstrap summary for $L_{nom}$, $L_{rob}$, $C_{rad+}$, $J_{flux}$, $J_{bal}$, $B_{hy,E}$, $B_{pf,R}$, and $B_{hs,R}$. \\
+\path{joint_layout_aiming_optimizer/joint_optimizer_all_candidates.csv} & Integrated layout--aiming screening table with geometry, optical-proxy, best aiming strategy, spillage, peak-to-mean, and joint-loss metrics for 489 candidates. \\
+\path{joint_layout_aiming_optimizer/joint_optimizer_representatives.csv} & Joint screening representative queue including receiver-risk boundary, no-energy-loss balance, and energy-gated receiver candidates. \\
+\path{joint_layout_aiming_optimizer/joint_optimizer_pareto.csv} & Joint Pareto subset used to inspect trade-offs between proxy optical contribution, receiver concentration, spillage, and geometry quality. \\
+\path{joint_solarpilot_default_tables/tables/solarpilot_summary.csv} & PySAM/SolarPILOT default-aiming bridge for the baseline and seven joint layouts, used to check optical plausibility before direct custom-aimpoint promotion. \\
+\path{joint_system_summary/tables/joint_system_evidence_summary.csv} & Merged proxy, SolarPILOT default-aiming, and reduced direct evidence table for $J_{bal}$, $J_{gain}$, and $J_{flux}$. \\
+\path{joint_direct_soltrace_tables/analysis/tables/joint_direct_bootstrap_ci.csv} & Bootstrap confidence summary for the reduced direct promotion audit of $J_{bal}$, $J_{gain}$, and $J_{flux}$. \\
+\path{joint_direct_soltrace_tables/tables/soltrace_sensitivity_relative.csv} & Condition-level paired direct-ray rows for the joint candidates, baseline, five strategies, and 27 representative solar conditions. \\
+\path{afd_style_flux_proxy/tables/afd_flux_proxy_selected.csv} & Relative AFD-style high-percentile and hotspot-area proxy summary derived from SolarPILOT default-aiming flux tables. \\
+\path{afd_style_flux_proxy/AFD_STYLE_FLUX_PROXY_REPORT.md} & Interpretation report for the baseline-relative p95/p99 concentration and active hotspot-area proxy audit. \\
+\path{fast_annual_proxy_sanity/tables/fast_annual_proxy_summary.csv} & Fast annual proxy table built by interpolating SolarPILOT optical-efficiency tables over the 8760-hour public weather file and scaling DNI to the reported Dunhuang corrected typical-year value. \\
+\path{fast_annual_proxy_sanity/FAST_ANNUAL_PROXY_AND_PLANT_SANITY_REPORT.md} & Interpretation report for the annualization bridge and public 351.6 GWh design-generation sanity check. \\
+\path{multiyear_annual_proxy_gate/tables/multiyear_annual_proxy_summary.csv} & Multi-year public-weather robustness summary for the annual proxy over NASA POWER 2020--2025 weather files. \\
+\path{multiyear_annual_proxy_gate/MULTIYEAR_ANNUAL_PROXY_GATE_REPORT.md} & Gate report stating whether annual-proxy role signs and ranks are stable enough for a short manuscript robustness statement. \\
+\path{annual_interpolation_robustness_gate/tables/annual_interpolation_robustness_summary.csv} & Annual-proxy interpolation-method robustness summary over five interpolation choices and NASA POWER 2020--2025 weather years. \\
+\path{annual_interpolation_robustness_gate/ANNUAL_INTERPOLATION_ROBUSTNESS_GATE_REPORT.md} & Gate report stating whether annual-proxy signs and ranks are stable enough against interpolation choices for a short robustness statement. \\
+\path{flux_resolution_gate/tables/flux_resolution_selected_comparison.csv} & SolarPILOT default-flux discretization comparison between the original 24 by 24 receiver maps and a 36 by 36 high-resolution rerun. \\
+\path{flux_resolution_gate/FLUX_RESOLUTION_GATE_REPORT.md} & Gate report stating whether receiver-flux role labels are stable enough against receiver-map bin resolution. \\
+\path{flux_day_sampling_gate/tables/flux_day_sampling_selected_comparison.csv} & SolarPILOT default-flux sampling comparison between the original 8-flux-day receiver maps and the 12-flux-day rerun. \\
+\path{flux_day_sampling_gate/FLUX_DAY_SAMPLING_GATE_REPORT.md} & Gate report stating whether receiver-flux role labels are stable enough against flux-day sampling density. \\
+\path{geometry_explainability_advantage/tables/geometry_explainability_summary.csv} & Movement-scale, nearest-neighbour, radial-shift, sector-shift, and radial-density-shift audit for selected TS-FPDA, joint, control, and strong-baseline rows. \\
+\path{geometry_explainability_advantage/tables/constrained_advantage_summary.csv} & Constrained evidence-role table combining annual optical proxy, SolarPILOT default-flux change, aiming-proxy change, AFD-style hotspot-area proxy, direct confidence intervals, and geometry movement metrics. \\
+\path{geometry_explainability_advantage/GEOMETRY_EXPLAINABILITY_ADVANTAGE_REPORT.md} & Interpretation report for the geometry-explainability and constrained-advantage audit; this file states that the result is a role-level benchmark and not a SOTA ranking. \\
+\path{formal_paired_statistics/tables/formal_paired_statistics_key_rows.csv} & Formal paired-statistics summary for selected baseline-control, joint-promotion, and V12 reduced direct rows, including bootstrap CI, Hodges--Lehmann shift, sign test, Wilcoxon test, and evidence grade. \\
+\path{formal_paired_statistics/tables/formal_paired_statistics_all_selected.csv} & Complete selected-row formal statistics table for best-direct and proxy-selected rows across the reduced direct matrices. \\
 \path{aiming_sensitivity_summary.csv} & Robustness summary for the aiming proxy under alternative grouping and spot-width assumptions. \\
 \path{solarpilot_dni_scaled_flux_summary.csv} & Uniform DNI scaling check from the NASA POWER weather file to the reported corrected TMY annual DNI. \\
 \path{solarpilot_summary.csv} & PySAM/SolarPILOT numerical checking summary for representative imported layouts under default aiming. \\
@@ -936,6 +1422,12 @@ Artifact & Description \\
 \path{soltrace_allphase_tables/allphase_median_intercept_by_strategy.csv} & Median receiver-intercept sanity table by layout and aiming strategy. \\
 \path{soltrace_v9_confirmation_tables/v8_v9_best_strategy_comparison.csv} & High-sample confirmation comparison between V8 all-phase best rows and V9 best rows. \\
 \path{soltrace_v9_confirmation_tables/v9_condition_level_relative.csv} & High-sample condition-level relative reduced PySolTrace table with 675 layout--strategy--condition rows. \\
+\path{soltrace_v12_seed240k_tables/soltrace_sensitivity_summary.csv} & V12 240k-ray reduced PySolTrace summary for the five verification-relevant strategies. \\
+\path{soltrace_v12_seed240k_tables/soltrace_proxy_strategy_summary.csv} & V12 direct check of proxy-selected staggered strategies, including best and worst condition-level changes. \\
+\path{baseline_direct_soltrace_tables/analysis/tables/baseline_direct_leave_one_day_holdout.csv} & Leave-one-day-out reduced direct strategy-selection summary for baseline-control candidates and TS-FPDA representatives. \\
+\path{baseline_direct_soltrace_tables/analysis/tables/baseline_direct_holdout_daily.csv} & Day-level held-out direct-ray rows used to compute the strategy-selection audit and bootstrap intervals. \\
+\path{missing20_geometry_sensitivity/MISSING20_GEOMETRY_SENSITIVITY.md} & Random-omission geometry audit for the 20-coordinate gap between the available coordinate pool and the public plant count. \\
+\path{missing20_geometry_sensitivity/missing20_geometry_sensitivity_summary.csv} & Summary of geometry-metric perturbations after removing 20 randomly selected heliostats over 2000 seeded replicates. \\
 \path{flux_table_*.csv} & SolarPILOT receiver-flux table outputs used to reconstruct peak-flux maps. \\
 \path{opteff_*.csv} & SolarPILOT optical-efficiency tables by solar position. \\
 \path{dunhuang_nasa_power_2023_sam.csv} & SAM-compatible public weather file generated from NASA POWER. \\
@@ -948,7 +1440,7 @@ Artifact & Description \\
 \end{longtable}
 
 \section{Detailed Claim Boundary}
-The manuscript makes four checked or directly tested claims and two screening-level claims. The first checked claim is that the available Dunhuang coordinate pool can be converted into a reproducible full-field benchmark anchored to public plant parameters. The second checked claim is that bounded full-field deformations can be generated without sector collapse, mirror deletion, or severe terrain outliers. The third checked claim is that SolarPILOT default-aiming verification shows an optical-efficiency versus receiver-flux-risk trade-off among representative layouts. The fourth directly tested claim is that reduced PySolTrace custom-aimpoint results do not select the same layout as the SolarPILOT optical upper case and that higher sampling preserves the receiver-risk queue while changing exact best strategies. The first screening-level claim is that nominal staggered aiming and aiming-proxy sensitivity identify different receiver-risk candidates. The second screening-level claim is that uniform DNI scaling does not change the relative SolarPILOT optical-efficiency or peak-to-active-mean flux-ratio interpretation. Full-field annual custom-aimpoint performance is not asserted as checked.
+The manuscript makes ten checked or directly tested claims, three screening-level claims, and one writeback guardrail. The first checked claim is that the available Dunhuang coordinate pool can be converted into a reproducible full-field benchmark anchored to public plant parameters. The second checked claim is that bounded full-field deformations can be generated without sector collapse, mirror deletion, or severe terrain outliers. The third checked claim is that selected rows are local count-preserving redistributions with auditable radial, sector, spacing, and movement-scale metrics, not mirror-deletion layouts or unrelated plant concepts. The fourth checked claim is that SolarPILOT default-aiming verification shows an optical-efficiency versus receiver-flux-risk trade-off among representative layouts. The fifth checked claim is that a fast annual proxy can connect the default-aiming optical tables to public weather years and to the public 351.6 GWh design-generation scale without changing the main optical ranking. The sixth checked claim is that the annual-proxy role signs and ranks remain stable across the NASA POWER 2020--2025 weather files. The seventh checked claim is that those annual-proxy signs and ranks remain stable across nearest-neighbour, IDW-3, IDW-6, IDW-12, and linear interpolation with nearest fallback. The eighth checked claim is that the SolarPILOT default-flux role labels remain stable when the receiver map is refined from 24 by 24 to 36 by 36 bins. The ninth checked claim is that the same default-flux role labels remain stable when the SolarPILOT flux-map sampling is enlarged from 8 to 12 flux days. The tenth directly tested claim is that reduced PySolTrace custom-aimpoint results do not select the same layout as the SolarPILOT optical upper case and that higher sampling preserves the receiver-risk queue while changing exact best strategies. The first screening-level claim is that nominal staggered aiming and aiming-proxy sensitivity identify different receiver-risk candidates. The second screening-level claim is that uniform DNI scaling does not change the relative SolarPILOT optical-efficiency or peak-to-active-mean flux-ratio interpretation. The third screening-level claim is that baseline-relative high-percentile and hotspot-area proxies can be reconstructed from SolarPILOT flux tables and reinforce the receiver-risk trade-off without becoming absolute AFD compliance metrics. The writeback guardrail is the strong-baseline promotion gate: the completed same-run direct matrix prevents $B_{hy,E}$, $B_{pf,R}$, and $B_{hs,R}$ from being written as direct-supported headline rows because their proxy-selected direct rows do not clear the bootstrap-CI promotion rule. Full-field annual custom-aimpoint performance and bankable annual yield are not asserted as checked.
 
 This boundary distinguishes screening evidence, reduced direct ray-tracing evidence, and full-field numerical evidence. The manuscript therefore avoids claiming final plant optimality from an unchecked proxy while still reporting the candidate queue needed for the next optical-engine verification layer.
 
@@ -965,15 +1457,26 @@ Table type & Data status & Purpose \\
 \midrule
 \endhead
 Weather sensitivity table & Completed for uniform NASA POWER to reported-TMY scaling & Shows that the relative trade-off is not a direct artifact of one public weather-file annual DNI. \\
+Fast annual proxy and plant sanity table & Completed by interpolating SolarPILOT default-aiming optical tables over the public 8760-hour weather year and calibrating the baseline proxy to the 351.6 GWh design-generation reference & Tests annualized optical ranking and plant-scale order without claiming dispatch, bankable yield, or annual custom-aimpoint validation. \\
+Multi-year annual-proxy robustness gate & Completed over NASA POWER 2020--2025 SAM weather files & Tests whether annual-proxy signs and role ranks survive public-weather-year variation without claiming measured annual operation. \\
+Annual-proxy interpolation robustness gate & Completed over nearest-neighbour, IDW-3, IDW-6, IDW-12, and linear interpolation with nearest fallback across NASA POWER 2020--2025 weather files & Tests whether annual-proxy signs and role ranks are artifacts of a single optical-table interpolation method. \\
 Aiming-proxy sensitivity table & Completed for 81 grouping, spot-width, and staggered-phase assumptions & Tests whether the receiver-risk queue depends on one arbitrary proxy discretization. \\
-Reduced custom aimpoint verification table & Completed with PySolTrace for five layouts, sampled heliostats, 27 solar conditions, visible-equator, five-point, and all nine S9 staggered strategies; high-sample confirmation completed for five verification-relevant strategies & Tests whether proxy candidate roles survive direct ray tracing and whether exact strategy rankings are sensitive to sampling and receiver discretization. \\
+Reduced custom aimpoint verification table & Completed with PySolTrace for five layouts, sampled heliostats, 27 solar conditions, visible-equator, five-point, and all nine S9 staggered strategies; high-sample, independent-seed, and V12 240k-ray follow-up checks completed for five verification-relevant strategies & Tests whether proxy candidate roles survive direct ray tracing and whether exact strategy rankings are sensitive to sampling, seed, receiver discretization, and ray count. \\
 Full-field custom aimpoint verification table & Future CoPylot/SolarPILOT, SolTrace, or Solstice flux metrics for five layouts and annual/custom aiming strategies & Converts the reduced evidence into stronger layout--aiming verification. \\
 Terrain sensitivity table & Candidate geometry and flux metrics under SRTM and any available higher-resolution terrain & Tests terrain robustness. \\
 Runtime table & Candidate generation, proxy screening, SolarPILOT numerical checking, and aimpoint verification time & Supports reproducibility and algorithm practicality. \\
-Cross-code table & SolarPILOT, SolTrace, and Solstice metrics for shared layouts if available & Positions the dataset as a benchmark. \\
+Cross-engine bridge & Completed as SolarPILOT default-aiming layout checks plus PySolTrace reduced direct promotion, but not a same-aimpoint round robin & Separates current cross-engine evidence from future true cross-code validation. \\
+Relative AFD-style flux proxy & Completed from SolarPILOT default-aiming flux tables for baseline/control and joint cohorts & Adds p95/p99 and hotspot-area screening metrics while keeping absolute allowable-flux and tube-temperature claims out of scope. \\
+SolarPILOT flux-resolution gate & Completed by rerunning selected direct-promotion layouts with 36 by 36 receiver-flux bins and comparing against the 24 by 24 tables & Tests whether default-flux role labels are receiver-bin-discretization artifacts. \\
+SolarPILOT flux-day sampling gate & Completed by rerunning selected direct-promotion layouts with 12 flux days and comparing against the original 8-flux-day tables & Tests whether default-flux role labels are artifacts of flux-day sampling density. \\
+Same-anchor strong-baseline pressure test & Completed for 168 literature-inspired approximation candidates and selected pressure rows under the same SolarPILOT and aiming-proxy pipeline & Tests whether stronger local pattern-free, slider-like, terrain-aware, or hybrid baselines can explain the queue before any method-superiority claim is made. \\
+Strong-baseline direct gate & Completed over 27 representative solar conditions for the prepared direct-promotion queue; no new strong-baseline row is direct-promoted by the proxy-selected bootstrap-CI rule & Prevents screening-only strong-baseline rows from becoming headline claims after direct follow-up failed to promote them. \\
+Geometry-explainability and constrained-advantage audit & Completed for TS-FPDA, joint, control, and strong-baseline selected rows & Quantifies how the full-field layouts move and maps annual, default-flux, aiming-proxy, AFD-style, direct, and geometry evidence into role-level candidates rather than a single SOTA ranking. \\
+Cross-code table & Future SolarPILOT/CoPylot custom-aiming, SolTrace, and Solstice metrics for shared layouts, strategies, and solar conditions & Positions the dataset as a benchmark. \\
 \bottomrule
 \end{longtable}
 
+\fi
 \bibliography{../citations/ref}
 
 \end{document}

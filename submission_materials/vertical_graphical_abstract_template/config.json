@@ -1,0 +1,58 @@
+{
+  "canvas": {
+    "width_px": 2048,
+    "height_px": 3072,
+    "dpi": 200
+  },
+  "title": "A Terrain-Aware Full-Field Layout Algorithm\nand Receiver-Flux Benchmark for the\nDunhuang 100 MW Solar Tower",
+  "authors": [
+    "Zengye Su",
+    "Yudan Nie"
+  ],
+  "affiliation": "Guangzhou College of Commerce, Guangzhou, China",
+  "hero_image": "latex/figures/fig1_author_aerial_fullframe.png",
+  "output_png": "submission_materials/graphical_abstract.png",
+  "output_pdf": "submission_materials/graphical_abstract.pdf",
+  "audit_summary": [
+    ["11935", "reported heliostats"],
+    ["11915", "available coordinates"],
+    ["115.72 m2", "per heliostat"],
+    ["1.381 million m2", "reflective area"],
+    ["260 m", "tower"],
+    ["229.3 m", "receiver optical height"],
+    ["15.13 m x 18.6 m", "receiver"],
+    ["11 h", "thermal storage"],
+    ["1883 kWh m-2 y-1", "corrected DNI"],
+    ["7.2 km2", "field area"],
+    ["~0.8%", "site slope"]
+  ],
+  "workflow": [
+    ["Audit", "plant anchors\n+ field count", "#12748F"],
+    ["Generate", "bounded full-field\nTFPDA variants", "#0E4A7A"],
+    ["Validate", "SolarPILOT optical\nand default flux", "#0E4A7A"],
+    ["Re-rank", "direct aimpoint\nPySolTrace queue", "#062D52"]
+  ],
+  "evidence_layouts": {
+    "optical_upper": "deform_0276",
+    "direct_reduction": "deform_1387",
+    "control": "deform_1822",
+    "comparison": ["deform_0276", "deform_0893", "deform_1387", "deform_1822"]
+  },
+  "data_sources": {
+    "solarpilot_summary": "supplementary_data/solarpilot_highres_tables/solarpilot_summary.csv",
+    "direct_best": "supplementary_data/soltrace_v9_confirmation_tables/v9_best_strategy_by_layout.csv"
+  },
+  "scope": [
+    ["11915", "heliostat coordinates\n(all retained)"],
+    ["1841", "full-field candidates\nscreened"],
+    ["8", "representative layouts\nexported"],
+    ["27", "solar conditions\n(all-phase)"],
+    ["11", "aiming strategies\nper layout"],
+    ["60000", "requested first-stage\nray hits per case"],
+    ["1485", "layout-strategy-condition\ncases"]
+  ],
+  "footer": {
+    "claim": "This study contributes a reproducible full-field layout algorithm,\nvalidation package, and receiver-flux-aware candidate queue-\nnot a final optimized Dunhuang redesign.",
+    "qr_label": "Reproducible benchmark\nand validation materials\n(available upon request)"
+  }
+}

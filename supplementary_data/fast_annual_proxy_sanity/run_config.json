@@ -1,0 +1,11 @@
+{
+  "weather": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/data/weather/dunhuang_nasa_power_2023_sam.csv",
+  "solarpilot_tables": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/solarpilot_strong_baseline/tables",
+  "reported_dni": 1883.0,
+  "heliostat_count": 11915,
+  "mirror_area_m2": 115.72,
+  "rated_power_mw": 100.0,
+  "reference_generation_mwh": 351600.0,
+  "aperture_energy_formula": "sum(DNI_hour * heliostat_count * mirror_area * interpolated_SolarPILOT_eta) / 1e6",
+  "claim_boundary": "fast annual proxy and public plant sanity check, not annual custom-aimpoint validation"
+}

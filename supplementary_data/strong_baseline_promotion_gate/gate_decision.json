@@ -1,0 +1,12 @@
+{
+  "overall_recommendation": "write_supplementary_gate_and_short_boundary_sentence_only",
+  "newly_promoted_strong_baseline_rows": [],
+  "queue_only_strong_baseline_rows": [
+    "sb_hy_energy",
+    "sb_hs_flux",
+    "sb_pf_flux"
+  ],
+  "server_direct_matrix_status": "not_completed_ssh_auth_failed_this_turn",
+  "write_main_text_new_positive_claim": false,
+  "safe_main_text_claim": "The strong-baseline rows remain screening and direct-promotion-queue candidates; no undirect-tested strong-baseline row should be promoted to a headline result."
+}

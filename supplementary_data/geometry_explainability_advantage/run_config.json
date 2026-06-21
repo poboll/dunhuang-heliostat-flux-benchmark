@@ -1,0 +1,84 @@
+{
+  "script": "build_geometry_explainability_and_advantage.py",
+  "layout_count": 11,
+  "layouts": [
+    {
+      "layout_id": "baseline_full",
+      "label": "L0",
+      "family": "reference",
+      "role": "baseline",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/baseline_full.csv"
+    },
+    {
+      "layout_id": "deform_0276",
+      "label": "L_opt",
+      "family": "TS-FPDA",
+      "role": "optical stress case",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/deform_0276.csv"
+    },
+    {
+      "layout_id": "deform_0893",
+      "label": "L_nom",
+      "family": "TS-FPDA",
+      "role": "nominal proxy leader",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/deform_0893.csv"
+    },
+    {
+      "layout_id": "deform_1387",
+      "label": "L_rob",
+      "family": "TS-FPDA",
+      "role": "receiver-risk candidate",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/deform_1387.csv"
+    },
+    {
+      "layout_id": "ctrl_radial_expand_015",
+      "label": "C_rad+",
+      "family": "control",
+      "role": "simple radial flux-control row",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/ctrl_radial_expand_015.csv"
+    },
+    {
+      "layout_id": "joint_g02_0333",
+      "label": "J_bal",
+      "family": "joint",
+      "role": "no-energy-loss balance candidate",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/joint_g02_0333.csv"
+    },
+    {
+      "layout_id": "joint_g04_0478",
+      "label": "J_flux",
+      "family": "joint",
+      "role": "receiver-boundary candidate",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/joint_g04_0478.csv"
+    },
+    {
+      "layout_id": "sb_hy_energy",
+      "label": "B_hy,E",
+      "family": "hybrid approximation",
+      "role": "annual-positive strong baseline",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/sb_hy_energy.csv"
+    },
+    {
+      "layout_id": "sb_pf_flux",
+      "label": "B_pf,R",
+      "family": "pattern-free approximation",
+      "role": "receiver-pressure strong baseline",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/sb_pf_flux.csv"
+    },
+    {
+      "layout_id": "sb_hs_flux",
+      "label": "B_hs,R",
+      "family": "slider-like approximation",
+      "role": "receiver-pressure strong baseline",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/layouts/sb_hs_flux.csv"
+    },
+    {
+      "layout_id": "deform_1822",
+      "label": "L_ctrl",
+      "family": "TS-FPDA",
+      "role": "default-flux-control representative",
+      "path": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/baseline_strengthening_20260522/layouts/deform_1822.csv"
+    }
+  ],
+  "claim_boundary": "geometry explainability and role-level constrained advantage audit; not SOTA ranking"
+}

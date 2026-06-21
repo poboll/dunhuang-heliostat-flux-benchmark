@@ -1,0 +1,17 @@
+{
+  "baseline_run": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523/solarpilot_strong_baseline",
+  "extended_run": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/flux_day_sampling_gate_20260524/solarpilot_fluxdays_12",
+  "selected_layouts": [
+    "baseline_full",
+    "deform_0276",
+    "deform_0893",
+    "deform_1387",
+    "joint_g02_0333",
+    "joint_g04_0478",
+    "sb_hy_energy",
+    "sb_pf_flux",
+    "sb_hs_flux"
+  ],
+  "shift_threshold_pctpt": 1.5,
+  "claim_boundary": "SolarPILOT default-flux sampling robustness only"
+}

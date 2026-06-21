@@ -1,0 +1,5 @@
+layout_id,role_label,role_name,v8_strategy,v8_mean_delta_pct,v9_strategy,v9_mean_delta_pct,v10_strategy,v10_mean_delta_pct,best_mean_range_pct,always_negative_best_row
+deform_1387,$L_{rob}$,receiver-risk,S9-p1,-2.9780597892218315,five-point,-3.414244651915336,S9-p1,-2.6933967591929275,0.7208478927224085,True
+deform_0893,$L_{nom}$,nominal-proxy,S9-p2,-2.7797164772878897,S9-p1,-3.0409839147296056,five-point,-2.33069943527397,0.7102844794556358,True
+deform_1822,$L_{ctrl}$,default-flux-control,S9-p0,-2.3212076086662186,five-point,-2.373042578075766,S9-p0,-2.476488947081819,0.15528133841560043,True
+deform_0276,$L_{opt}$,optical-upper,S9-p0,-0.817246252750809,S9-p1,-0.3984350745631397,five-point,-0.3057752022829927,0.5114710504678163,True

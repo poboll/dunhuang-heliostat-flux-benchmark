@@ -1,0 +1,51 @@
+{
+  "run": "/home/kk/projects/paper/dunhuang-heliostat-rebuild-sci2/server_outputs/baseline_strengthening_20260522",
+  "config": "/home/kk/projects/paper/dunhuang-heliostat-rebuild-sci2/configs/server_full.json",
+  "pysoltrace_dir": "/home/kk/projects/paper/tools/SolTrace/app/deploy/api",
+  "layout_ids": "baseline_full,ctrl_radial_compact_015,ctrl_radial_expand_015,ctrl_ring_wave_012,deform_0276,deform_0893,deform_1387,deform_1822",
+  "days": [
+    20,
+    80,
+    110,
+    140,
+    172,
+    200,
+    230,
+    266,
+    326
+  ],
+  "hours": [
+    10.0,
+    12.0,
+    14.0
+  ],
+  "strategies": [
+    "visible_equator",
+    "five_point",
+    "staggered_levels:9:0.380:0",
+    "staggered_levels:9:0.380:1",
+    "staggered_levels:9:0.380:2",
+    "staggered_levels:9:0.380:5",
+    "staggered_levels:9:0.380:8"
+  ],
+  "proxy_best": {
+    "baseline_full": "staggered_levels:9:0.380:0",
+    "ctrl_azimuth_stagger_018": "staggered_levels:9:0.380:5",
+    "ctrl_ellipse_xwide_015": "staggered_levels:9:0.380:8",
+    "ctrl_north_bias_012": "staggered_levels:9:0.380:0",
+    "ctrl_radial_compact_015": "staggered_levels:9:0.380:0",
+    "ctrl_radial_expand_015": "staggered_levels:9:0.380:0",
+    "ctrl_ring_wave_012": "staggered_levels:9:0.380:1",
+    "deform_0276": "staggered_levels:9:0.380:0",
+    "deform_0893": "staggered_levels:9:0.380:2",
+    "deform_1387": "staggered_levels:9:0.380:1",
+    "deform_1822": "staggered_levels:9:0.380:1"
+  },
+  "max_heliostats": 6000,
+  "rays": 60000,
+  "threads": 8,
+  "receiver_panels": 18,
+  "receiver_nx": 20,
+  "receiver_ny": 60,
+  "seed": 2026052301
+}

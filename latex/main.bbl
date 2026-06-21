@@ -129,6 +129,69 @@ X.~Lin, C.~Zheng, W.~Huang, Y.~Zhao, J.~Feng,
   {\path{doi:10.1016/j.apenergy.2025.125640}}.
 \newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2025.125640}
 
+\bibitem{collado2009surrounding}
+F.~J. Collado, \href{https://doi.org/10.1016/j.renene.2008.09.003}{Preliminary
+  design of surrounding heliostat fields}, Renewable Energy 34 (2009)
+  1359--1363.
+\newblock \href {https://doi.org/10.1016/j.renene.2008.09.003}
+  {\path{doi:10.1016/j.renene.2008.09.003}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2008.09.003}
+
+\bibitem{noone2019quick}
+F.~J. Collado, J.~Guallar,
+  \href{https://doi.org/10.1016/j.energy.2019.04.117}{Quick design of regular
+  heliostat fields for commercial solar tower power plants}, Energy 178 (2019)
+  115--125.
+\newblock \href {https://doi.org/10.1016/j.energy.2019.04.117}
+  {\path{doi:10.1016/j.energy.2019.04.117}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.energy.2019.04.117}
+
+\bibitem{li2022robust}
+Y.~Luo, Z.~Wang, J.~Zhu, T.~Lu, G.~Xiao, F.~Chu, R.~Wang,
+  \href{https://doi.org/10.1016/j.energy.2021.121716}{Multi-objective robust
+  optimization of a solar power tower plant under uncertainty}, Energy 238
+  (2022) 121716.
+\newblock \href {https://doi.org/10.1016/j.energy.2021.121716}
+  {\path{doi:10.1016/j.energy.2021.121716}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.energy.2021.121716}
+
+\bibitem{tang2025petal}
+X.-Y. Tang, W.-W. Yang, J.-C. Li, L.-X. Liang, Y.-W. Lin, Y.-L. He,
+  \href{https://doi.org/10.1016/j.renene.2025.122612}{A new heliostat field
+  optimal design strategy for deformable petal hybrid layout of concentrated
+  solar power via multi-algorithm filtering}, Renewable Energy 243 (2025)
+  122612.
+\newblock \href {https://doi.org/10.1016/j.renene.2025.122612}
+  {\path{doi:10.1016/j.renene.2025.122612}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2025.122612}
+
+\bibitem{ghazanfari2025hefaal}
+M.~Raj, J.~Bhattacharya,
+  \href{https://doi.org/10.1016/j.solener.2025.113915}{Hefaal: A tool to
+  design, analyze and optimize a solar heliostat field layout on a flat as well
+  as uneven terrain}, Solar Energy 301 (2025) 113915.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.113915}
+  {\path{doi:10.1016/j.solener.2025.113915}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113915}
+
+\bibitem{yu2026slopedterrain}
+M.~Yu, L.~Zhao, Z.~Xia, J.~Gong, G.~Li, P.~Hou, Z.~Chen, J.~Wu,
+  \href{https://doi.org/10.1016/j.solener.2026.114549}{Spatiotemporal
+  optimization of heliostat field layout on sloped terrain in solar power tower
+  plants}, Solar Energy 311 (2026) 114549.
+\newblock \href {https://doi.org/10.1016/j.solener.2026.114549}
+  {\path{doi:10.1016/j.solener.2026.114549}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2026.114549}
+
+\bibitem{schiricke2025fluxprediction}
+M.~Kuhl, M.~Pargmann, D.~M. Quinto, R.~Pitz-Paal,
+  \href{https://doi.org/10.1016/j.solener.2025.113631}{Accurate and scalable
+  receiver-level flux prediction: A fully data-driven solution}, Solar Energy
+  299 (2025) 113631.
+\newblock \href {https://doi.org/10.1016/j.solener.2025.113631}
+  {\path{doi:10.1016/j.solener.2025.113631}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113631}
+
 \bibitem{nrel2025pysam}
 N.~R.~E. Laboratory, \href{https://nrel-pysam.readthedocs.io/}{Pysam: Python
   wrapper for the system advisor model}, accessed 2026-05-11 (2025).
@@ -278,23 +341,6 @@ Y.~Yuan, X.~Lin, X.~Mi, J.~Feng, Y.~Zhao,
   {\path{doi:10.1016/j.solener.2025.113901}}.
 \newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113901}
 
-\bibitem{schiricke2025fluxprediction}
-M.~Kuhl, M.~Pargmann, D.~M. Quinto, R.~Pitz-Paal,
-  \href{https://doi.org/10.1016/j.solener.2025.113631}{Accurate and scalable
-  receiver-level flux prediction: A fully data-driven solution}, Solar Energy
-  299 (2025) 113631.
-\newblock \href {https://doi.org/10.1016/j.solener.2025.113631}
-  {\path{doi:10.1016/j.solener.2025.113631}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113631}
-
-\bibitem{collado2009surrounding}
-F.~J. Collado, \href{https://doi.org/10.1016/j.renene.2008.09.003}{Preliminary
-  design of surrounding heliostat fields}, Renewable Energy 34 (2009)
-  1359--1363.
-\newblock \href {https://doi.org/10.1016/j.renene.2008.09.003}
-  {\path{doi:10.1016/j.renene.2008.09.003}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2008.09.003}
-
 \bibitem{collado2012campo}
 F.~J. Collado, J.~Guallar,
   \href{https://doi.org/10.1016/j.renene.2012.03.011}{Campo: Generation of
@@ -311,15 +357,6 @@ R.~Pitz-Paal, N.~B. Botero, A.~Steinfeld,
 \newblock \href {https://doi.org/10.1016/j.solener.2010.11.018}
   {\path{doi:10.1016/j.solener.2010.11.018}}.
 \newline\urlprefix\url{https://doi.org/10.1016/j.solener.2010.11.018}
-
-\bibitem{noone2019quick}
-F.~J. Collado, J.~Guallar,
-  \href{https://doi.org/10.1016/j.energy.2019.04.117}{Quick design of regular
-  heliostat fields for commercial solar tower power plants}, Energy 178 (2019)
-  115--125.
-\newblock \href {https://doi.org/10.1016/j.energy.2019.04.117}
-  {\path{doi:10.1016/j.energy.2019.04.117}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.energy.2019.04.117}
 
 \bibitem{ghirardi2021loadfollowing}
 E.~Ghirardi, G.~Brumana, G.~Franchini, A.~Perdichizzi,
@@ -347,15 +384,6 @@ A.~B. Awan, K.~V.~C. Mouli, M.~Zubair,
   {\path{doi:10.1016/j.enconman.2020.113378}}.
 \newline\urlprefix\url{https://doi.org/10.1016/j.enconman.2020.113378}
 
-\bibitem{li2022robust}
-Y.~Luo, Z.~Wang, J.~Zhu, T.~Lu, G.~Xiao, F.~Chu, R.~Wang,
-  \href{https://doi.org/10.1016/j.energy.2021.121716}{Multi-objective robust
-  optimization of a solar power tower plant under uncertainty}, Energy 238
-  (2022) 121716.
-\newblock \href {https://doi.org/10.1016/j.energy.2021.121716}
-  {\path{doi:10.1016/j.energy.2021.121716}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.energy.2021.121716}
-
 \bibitem{chen2020shapes}
 A.~Belaid, A.~Filali, A.~Gama, B.~Bezza, T.~Arrif, M.~Bouakba,
   \href{https://doi.org/10.1002/er.5772}{Design optimization of a solar tower
@@ -373,34 +401,6 @@ S.-Y. Yang, Y.-K. Leng, Z.-D. Cheng, W.-Q. Wang, Y.-L. He,
 \newblock \href {https://doi.org/10.1016/j.solener.2024.112604}
   {\path{doi:10.1016/j.solener.2024.112604}}.
 \newline\urlprefix\url{https://doi.org/10.1016/j.solener.2024.112604}
-
-\bibitem{tang2025petal}
-X.-Y. Tang, W.-W. Yang, J.-C. Li, L.-X. Liang, Y.-W. Lin, Y.-L. He,
-  \href{https://doi.org/10.1016/j.renene.2025.122612}{A new heliostat field
-  optimal design strategy for deformable petal hybrid layout of concentrated
-  solar power via multi-algorithm filtering}, Renewable Energy 243 (2025)
-  122612.
-\newblock \href {https://doi.org/10.1016/j.renene.2025.122612}
-  {\path{doi:10.1016/j.renene.2025.122612}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2025.122612}
-
-\bibitem{ghazanfari2025hefaal}
-M.~Raj, J.~Bhattacharya,
-  \href{https://doi.org/10.1016/j.solener.2025.113915}{Hefaal: A tool to
-  design, analyze and optimize a solar heliostat field layout on a flat as well
-  as uneven terrain}, Solar Energy 301 (2025) 113915.
-\newblock \href {https://doi.org/10.1016/j.solener.2025.113915}
-  {\path{doi:10.1016/j.solener.2025.113915}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2025.113915}
-
-\bibitem{yu2026slopedterrain}
-M.~Yu, L.~Zhao, Z.~Xia, J.~Gong, G.~Li, P.~Hou, Z.~Chen, J.~Wu,
-  \href{https://doi.org/10.1016/j.solener.2026.114549}{Spatiotemporal
-  optimization of heliostat field layout on sloped terrain in solar power tower
-  plants}, Solar Energy 311 (2026) 114549.
-\newblock \href {https://doi.org/10.1016/j.solener.2026.114549}
-  {\path{doi:10.1016/j.solener.2026.114549}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.solener.2026.114549}
 
 \bibitem{adam2026heliosliders}
 P.~Schöttl, J.~K. Ishola, C.~Ganzer, M.~F. Eceiza, G.~Bern,

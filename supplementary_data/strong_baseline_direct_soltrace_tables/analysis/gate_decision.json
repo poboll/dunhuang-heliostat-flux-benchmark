@@ -1,0 +1,14 @@
+{
+  "expected_conditions": 27,
+  "completed_conditions": 27,
+  "missing_conditions": [],
+  "complete_matrix": true,
+  "newly_supported_strong_baseline_rows": [],
+  "nonpromoted_or_adverse_strong_baseline_rows": [
+    "sb_hy_energy",
+    "sb_pf_flux",
+    "sb_hs_flux"
+  ],
+  "main_text_writeback_allowed": false,
+  "safe_rule": "Write new strong-baseline claims only when the complete same-run direct matrix gives a proxy-selected 95% bootstrap CI below zero. Otherwise keep rows as supplementary or internal evidence."
+}

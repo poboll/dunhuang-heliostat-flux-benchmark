@@ -1,0 +1,10 @@
+{
+  "writeback_recommendation": "write_short_interpolation_robustness_sentence",
+  "positive_rows_all_methods_years_positive": true,
+  "receiver_pressure_rows_not_annual_headline": true,
+  "lopt_remains_top3_all_methods_years": true,
+  "max_selected_delta_spread_pctpt": 0.19673680062688437,
+  "spread_threshold_pctpt": 0.2,
+  "spread_within_threshold": true,
+  "interpretation": "Annual-proxy signs and role ranks are stable across tested interpolation methods and weather years."
+}

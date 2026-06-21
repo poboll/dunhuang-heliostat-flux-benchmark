@@ -1,0 +1,9 @@
+{
+  "run": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523",
+  "config": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/configs/server_full.json",
+  "weather": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/data/weather/dunhuang_nasa_power_2023_sam.csv",
+  "layout_ids": "baseline_full,deform_0276,deform_0893,deform_1387,ctrl_radial_expand_015,joint_g02_0333,joint_g04_0478,sb_pf_energy,sb_pf_flux,sb_hs_energy,sb_hs_flux,sb_ta_energy,sb_ta_flux,sb_hy_energy,sb_hy_flux,sb_balanced",
+  "flux_days": 8,
+  "flux_bins": 24,
+  "skip_fluxmaps": false
+}

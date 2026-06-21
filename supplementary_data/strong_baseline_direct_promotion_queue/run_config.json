@@ -1,0 +1,62 @@
+{
+  "run_id": "strong_baseline_direct_promotion_queue_20260523",
+  "purpose": "Next same-run reduced-direct promotion queue after the same-anchor strong-baseline pressure test.",
+  "strong_run": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523",
+  "joint_run": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/joint_layout_aiming_20260523",
+  "core_layout_ids": [
+    "baseline_full",
+    "deform_0893",
+    "deform_1387",
+    "ctrl_radial_expand_015",
+    "joint_g04_0478",
+    "joint_g02_0333",
+    "sb_hy_energy",
+    "sb_pf_flux",
+    "sb_hs_flux"
+  ],
+  "extended_layout_ids": [
+    "baseline_full",
+    "deform_0893",
+    "deform_1387",
+    "ctrl_radial_expand_015",
+    "joint_g04_0478",
+    "joint_g02_0333",
+    "sb_hy_energy",
+    "sb_pf_flux",
+    "sb_hs_flux",
+    "deform_0276",
+    "joint_g02_0303"
+  ],
+  "recommended_days": [
+    20,
+    80,
+    110,
+    140,
+    172,
+    200,
+    230,
+    266,
+    326
+  ],
+  "recommended_hours": [
+    10,
+    12,
+    14
+  ],
+  "recommended_base_strategies": [
+    "visible_equator",
+    "five_point"
+  ],
+  "include_proxy_union": true,
+  "recommended_reduced_direct_settings": {
+    "max_heliostats": 6000,
+    "rays": 60000,
+    "threads": 16,
+    "receiver_panels": 18,
+    "receiver_nx": 20,
+    "receiver_ny": 60,
+    "seed_core": 2026052311,
+    "seed_extended": 2026052312
+  },
+  "claim_boundary": "Runnable queue only; do not write as result until the direct matrix is complete."
+}

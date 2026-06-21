@@ -8,8 +8,30 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_PACKAGE = ROOT / "paper_submission" / "solar_energy_elsarticle_v5_soltrace_matrix"
+def find_project_root(script_dir: Path) -> Path:
+    for candidate in [script_dir, *script_dir.parents]:
+        if (
+            (candidate / "server_outputs").is_dir()
+            and (candidate / "paper_submission").is_dir()
+            and (candidate / "scripts").is_dir()
+        ):
+            return candidate
+    for candidate in [script_dir, *script_dir.parents]:
+        if (
+            (candidate / "supplementary_data").is_dir()
+            and (candidate / "latex").is_dir()
+            and (candidate / "code").is_dir()
+        ):
+            return candidate
+    return script_dir.parents[1]
+
+
+ROOT = find_project_root(Path(__file__).resolve().parent)
+DEFAULT_PACKAGE = (
+    ROOT / "paper_submission" / "solar_energy_elsarticle_v5_soltrace_matrix"
+    if (ROOT / "paper_submission").is_dir()
+    else ROOT
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -72,11 +94,27 @@ def collect_files(run: Path, package: Path) -> list[Path]:
         package / "supplementary_data" / "soltrace_v9_confirmation_tables",
         package / "supplementary_data" / "soltrace_v10_seed_replicate_tables",
         package / "supplementary_data" / "soltrace_v11_convergence_tables",
+        package / "supplementary_data" / "soltrace_v12_seed240k_tables",
         package / "supplementary_data" / "aiming_sensitivity_tables",
+        package / "supplementary_data" / "baseline_strengthening_tables",
+        package / "supplementary_data" / "same_anchor_strong_baseline_tables",
+        package / "supplementary_data" / "strong_baseline_direct_promotion_queue",
+        package / "supplementary_data" / "strong_baseline_direct_soltrace_tables",
+        package / "supplementary_data" / "geometry_explainability_advantage",
+        package / "supplementary_data" / "fast_annual_proxy_sanity",
+        package / "supplementary_data" / "multiyear_annual_proxy_gate",
+        package / "supplementary_data" / "flux_resolution_gate",
+        package / "supplementary_data" / "baseline_direct_soltrace_tables",
+        package / "supplementary_data" / "joint_layout_aiming_optimizer",
+        package / "supplementary_data" / "joint_solarpilot_default_tables",
+        package / "supplementary_data" / "joint_direct_soltrace_tables",
+        package / "supplementary_data" / "joint_system_summary",
+        package / "supplementary_data" / "missing20_geometry_sensitivity",
         package / "code",
         package / "latex" / "figures",
         package / "citations",
         package / "submission_materials",
+        package / "reproducibility_config",
         package / "output",
     ]
     include_dirs.extend(path for path in run.glob("solarpilot_*") if path.is_dir())
@@ -91,6 +129,20 @@ def collect_files(run: Path, package: Path) -> list[Path]:
         ROOT / "scripts" / "run_aiming_proxy.py",
         ROOT / "scripts" / "run_aiming_sensitivity.py",
         ROOT / "scripts" / "run_solarpilot_validation.py",
+        ROOT / "scripts" / "run_baseline_comparison.py",
+        ROOT / "scripts" / "build_same_anchor_strong_baselines.py",
+        ROOT / "scripts" / "build_strong_baseline_direct_queue.py",
+        ROOT / "scripts" / "build_geometry_explainability_and_advantage.py",
+        ROOT / "scripts" / "build_fast_annual_proxy_and_sanity.py",
+        ROOT / "scripts" / "build_multi_year_annual_proxy_gate.py",
+        ROOT / "scripts" / "build_flux_resolution_gate.py",
+        ROOT / "scripts" / "build_baseline_direct_soltrace_report.py",
+        ROOT / "scripts" / "build_baseline_direct_holdout_report.py",
+        ROOT / "scripts" / "build_missing20_geometry_sensitivity.py",
+        ROOT / "scripts" / "run_joint_layout_aiming_optimizer.py",
+        ROOT / "scripts" / "build_joint_system_summary.py",
+        ROOT / "scripts" / "build_joint_direct_soltrace_report.py",
+        ROOT / "scripts" / "run_soltrace_condition_worker.py",
         ROOT / "scripts" / "run_soltrace_aimpoint_pilot.py",
         ROOT / "scripts" / "run_soltrace_sensitivity_matrix.py",
         ROOT / "scripts" / "run_deformation_ablation.py",
@@ -105,11 +157,17 @@ def collect_files(run: Path, package: Path) -> list[Path]:
         ROOT / "data" / "terrain" / "dunhuang_srtm90m_grid.csv",
         ROOT / "data" / "terrain" / "dunhuang_srtm90m_metadata.json",
         ROOT / "data" / "weather" / "dunhuang_nasa_power_2023_sam.csv",
+        ROOT / "data" / "weather" / "dunhuang_nasa_power_2020_sam.csv",
+        ROOT / "data" / "weather" / "dunhuang_nasa_power_2021_sam.csv",
+        ROOT / "data" / "weather" / "dunhuang_nasa_power_2022_sam.csv",
+        ROOT / "data" / "weather" / "dunhuang_nasa_power_2024_sam.csv",
+        ROOT / "data" / "weather" / "dunhuang_nasa_power_2025_sam.csv",
         ROOT / "docs" / "STREAMED_FULLFIELD_HIGHRES_RUN_20260511.md",
         ROOT / "docs" / "V8_ALLPHASE_DIRECT_SOLTRACE_RUN_20260512.md",
         ROOT / "docs" / "V9_HIGHSAMPLE_CONFIRMATION_SOLTRACE_RUN_20260512.md",
         ROOT / "docs" / "V10_INDEPENDENT_SEED_SOLTRACE_RUN_20260513.md",
         ROOT / "docs" / "V11_SOLTRACE_CONVERGENCE_AUDIT_20260514.md",
+        ROOT / "docs" / "V12_SEED240K_SOLTRACE_RUN_20260516.md",
         ROOT / "docs" / "REVIEWER_RISK_MATRIX_AND_RESPONSE_PLAN_20260511.md",
         package / "README.md",
         package / "JOURNAL_SELECTION_CAS2_AUDIT_20260512.md",
@@ -119,6 +177,7 @@ def collect_files(run: Path, package: Path) -> list[Path]:
         package / "SUBMISSION_STRATEGY_AND_REVIEWER_AUDIT_20260512.md",
         package / "NEXT_STRENGTHENING_PLAN_20260512.md",
         package / "VERSION_RESTORATION_AUDIT_20260514.md",
+        package / "STRICT_REVIEW_RESPONSE_20260522.md",
         package / "latex" / "main.tex",
         package / "latex" / "main.pdf",
         package / "papers" / "paper_notes.jsonl",

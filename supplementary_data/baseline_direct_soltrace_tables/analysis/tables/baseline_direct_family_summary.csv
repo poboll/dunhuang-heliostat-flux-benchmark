@@ -1,0 +1,5 @@
+view,family,layout_count,best_layout,best_mean_delta_peak_pct,median_of_layout_means_pct,all_negative_mean_rows
+best-direct,control,3,ctrl_radial_expand_015,-2.433995629350954,-2.303358272645762,True
+best-direct,tsfpda,4,deform_1387,-3.605052345784554,-2.3440003449181206,True
+proxy-selected,control,3,ctrl_radial_expand_015,-1.1957071703725797,-0.6417161297691741,False
+proxy-selected,tsfpda,4,deform_1822,-0.7338651486848117,0.6066102068512057,False

@@ -1,0 +1,4 @@
+matrix,rows,layouts,strategies,conditions,sampled_heliostats,ray_hits,receiver_panels,receiver_grid,scope,intercept_min,intercept_max,mean_elapsed_s,max_elapsed_s,summary_rows
+V8,1485,5,11,27,6000,60000,18,20 x 60,all 11 S9/visible/five-point strategies,0.6388666666666667,0.7483166666666666,6.240933948895747,11.045922756195068,44
+V9,675,5,5,27,9000,180000,24,24 x 72,five verification-relevant strategies,0.6357166666666667,0.74495,12.107585520567717,15.128782987594604,20
+V10,675,5,5,27,9000,180000,24,24 x 72,V9 scale with independent stratified seed,0.6359944444444444,0.7448,8.320516892892343,13.725223064422607,20

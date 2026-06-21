@@ -1,0 +1,13 @@
+{
+  "config": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/configs/server_full.json",
+  "out": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/same_anchor_strong_baselines_20260523",
+  "random_per_family": 42,
+  "seed": 20260523,
+  "claim_boundary": "literature-inspired same-anchor approximations, not full reimplementations",
+  "families": [
+    "pattern-free approximation",
+    "slider-like approximation",
+    "terrain-aware approximation",
+    "hybrid pressure approximation"
+  ]
+}

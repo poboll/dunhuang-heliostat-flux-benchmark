@@ -1,0 +1,8 @@
+{
+  "writeback_recommendation": "write_short_resolution_robustness_sentence",
+  "max_abs_peak_ratio_delta_shift_pctpt": 0.42685357437870497,
+  "max_abs_p99_ratio_delta_shift_pctpt": 0.17580497777300863,
+  "lopt_still_flux_penalty": true,
+  "receiver_rows_not_annual_headline": true,
+  "interpretation": "High-resolution flux maps preserve the manuscript's default-flux role interpretation."
+}

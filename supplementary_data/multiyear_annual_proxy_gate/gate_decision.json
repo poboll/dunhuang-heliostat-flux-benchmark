@@ -1,0 +1,7 @@
+{
+  "writeback_recommendation": "write_short_robustness_sentence",
+  "positive_rows_all_years_positive": true,
+  "lopt_remains_top3_all_years": true,
+  "receiver_pressure_rows_not_annual_headline": true,
+  "interpretation": "Annual-proxy role signs are stable across the available NASA POWER weather years."
+}
