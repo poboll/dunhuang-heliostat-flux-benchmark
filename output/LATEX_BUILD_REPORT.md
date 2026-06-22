@@ -38,7 +38,7 @@ The current PDF compiles cleanly under the Solar Energy/Elsevier inspection form
 - Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` after the benchmark-wording cleanup.
 - Verified the current PDF with `pypdf`: 40 pages, 30,901,565 bytes.
 - Re-scanned the LaTeX log: no undefined citation/reference warnings were found; the remaining layout warnings are one minor overfull hbox and 28 underfull hboxes from narrow table cells.
-- Refreshed the reproducibility manifest after the PDF, report, Figure 1, and Zenodo-metadata updates; it now records 612 checked files after stale-preview pruning. The manuscript-facing public archive has been advanced to GitHub release `v0.1.4` for this exact local package.
+- Refreshed the reproducibility manifest after the PDF, report, Figure 1, and Zenodo-metadata updates; it now records 612 checked files after stale-preview pruning. The manuscript-facing public archive has been advanced to GitHub release `v0.1.5` for this exact local package.
 
 ## 2026-06-22 Journal-Style Cleanup
 
@@ -52,5 +52,5 @@ The current PDF compiles cleanly under the Solar Energy/Elsevier inspection form
 
 - Rebuilt the Figure 1 lower locator/geometry panel and kept the author-owned aerial photograph unedited, with the panel label handled by LaTeX rather than drawn into the photograph.
 - Verified the current PDF with `pypdf`: 40 pages, 30,901,565 bytes.
-- Refreshed the reproducibility manifest after adding DOI metadata files to the package inventory; it now records 612 checked files, including `.zenodo.json` and `submission_materials/zenodo_metadata_v014.json`.
-- The current local package is the `v0.1.4` release package. Mint the Zenodo DOI from that release before DOI-bearing journal upload.
+- Refreshed the reproducibility manifest after adding DOI metadata files to the package inventory; it now records 612 checked files, including `.zenodo.json` and `submission_materials/zenodo_metadata_v015.json`.
+- The current local package is the `v0.1.5` release package. Mint the Zenodo DOI from that release before DOI-bearing journal upload.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T04:50:55+00:00",
+  "generated_at": "2026-06-22T05:19:45+00:00",
   "run_directory": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/streamed_fullfield_20260511_205252",
   "submission_package": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue",
   "project_root": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server",
@@ -83,7 +83,7 @@
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/.zenodo.json",
       "bytes": 2121,
-      "sha256": "b09f1ef55491387e7f37804cb17de255f4683108cc0a580a92cb0f6f177deafe"
+      "sha256": "2b199ef512f9535325536db07cf284f154c431e025c71dcf510a697706284539"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/FIGURE_STYLE_GUIDE.md",
@@ -112,8 +112,8 @@
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/README.md",
-      "bytes": 16143,
-      "sha256": "33e31c75df5ebd6bc21552f6fdfb3ea60a982f1f02f793bbf97b524d97bcc4da"
+      "bytes": 16245,
+      "sha256": "db25e79f17103be3b94e2db5cc0f0559323ef25fbbb67e3caeeb70874ee8f8ac"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/STRICT_REVIEW_RESPONSE_20260522.md",
@@ -532,28 +532,28 @@
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.pdf",
-      "bytes": 30901565,
-      "sha256": "b129f4fb58612b74fc28f9aeecfdf8d006c464813197569fbef28e736d350f1e"
+      "bytes": 30901589,
+      "sha256": "d82c81c7aa4eb74c41fa88dd3e59469c3a01b33ea84a1699ef532260436f0e0f"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.tex",
       "bytes": 190103,
-      "sha256": "05a8e20d0e99a76a753d3a8baf6ef314910c7ec9fac197ec9b14658a8a38f06d"
+      "sha256": "75b2dfd5e0ccf14a46de6b8f8303b7d13df233592185da5405e2f43c97bf821c"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/EXPERIMENT_FIGURE_TABLE_LEDGER.md",
-      "bytes": 12223,
-      "sha256": "06827880dcdf779bd4adcd6d83ad8a1db8a5d2a43cefe28892d06954b78a5b0d"
+      "bytes": 12228,
+      "sha256": "746aec1650e95a74ba675f5e63f120126930003115c91202d0568d457350336c"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/LATEX_BUILD_REPORT.md",
       "bytes": 3498,
-      "sha256": "87fadc8973bba997fd2b37fb757d15dabf3a058314dcd7671b92dc1e88f3ca9e"
+      "sha256": "7431e12138d10c22b38a2b3250da391ec4f88dc9da5c142e98a2ac73b8753161"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/SUBMISSION_REPOSITORY_DOI_STATUS.md",
-      "bytes": 4781,
-      "sha256": "62f6606d3539a63b89e69a43c828c810e776f666a585271488616c88b2c9a08d"
+      "bytes": 4805,
+      "sha256": "09598af973b1d95c7a2373f86624d434313ff8504fe293c321dc85a2d1adbf51"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_005_fig1.png",
@@ -608,7 +608,7 @@
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/README.md",
       "bytes": 1409,
-      "sha256": "808ab406db49c27dae544c00386ee7c96249973ab17aa596dcd6137b1c34cd66"
+      "sha256": "727c5ee627744190c8f9bc4053c32fcfab633328226b7c8b3704d65dbfe94fee"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/author_contributions_credit.md",
@@ -623,7 +623,7 @@
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/data_availability_statement.md",
       "bytes": 2972,
-      "sha256": "ac4f23fa5c955bf4bdb8e78a0c684cb3127bd61fee41ec3fb2b4636aaec1c1f0"
+      "sha256": "278682bf42a66be72f4c7195172ac0103839c522ee574897143a1186b4aaf21f"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/declaration_of_interests.md",
@@ -681,14 +681,14 @@
       "sha256": "79fd9210be4dd3c0a593bf162bdc4d1ebeb2c0b9304d7e16696efcae35017f5d"
     },
     {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_doi_runbook_v014.md",
+      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_doi_runbook_v015.md",
       "bytes": 1627,
-      "sha256": "417e8c8fe05c131be5559ce102033be45509412948fbc62a8e25664ac35a565c"
+      "sha256": "825f69b4f0bd3b03a74905cb3aca94b3851107699c4a7734f902ed0d1c0b470c"
     },
     {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_metadata_v014.json",
+      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_metadata_v015.json",
       "bytes": 2121,
-      "sha256": "b09f1ef55491387e7f37804cb17de255f4683108cc0a580a92cb0f6f177deafe"
+      "sha256": "2b199ef512f9535325536db07cf284f154c431e025c71dcf510a697706284539"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/supplementary_data/aiming_sensitivity_tables/AIMING_SENSITIVITY_REPORT.md",

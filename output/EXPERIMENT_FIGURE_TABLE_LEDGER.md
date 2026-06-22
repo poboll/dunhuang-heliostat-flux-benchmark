@@ -95,11 +95,11 @@ The following source labels remain in `main.tex` after `\iffalse` or are represe
 
 ## Package and DOI State
 
-- The current manuscript-facing cleanup archive is prepared as release `v0.1.4` (`fix: 同步v0.1.4清单与发布状态`; release commit to be recorded after the clean-clone publish step).
+- The current manuscript-facing cleanup archive is GitHub release `v0.1.5` (`fix: 同步v0.1.5清单与发布状态`), with the archive SHA-256 recorded in the companion `.sha256` release asset.
 - This release contains the post-`v0.1.2` Figure 1 cleanup, DOI metadata, updated PDF, and refreshed checksum manifest. It should be used as the source archive for Zenodo DOI minting.
 - The older `v0.1.1` archive remains a historical package and should not be used as the final DOI-bearing upload if the submitted PDF is the current 2026-06-22 cleanup build.
 - The older Zenodo DOI `10.5281/zenodo.16957381` is the coordinate-source DOI only. A new Zenodo DOI for the full V8 benchmark package should be minted from the final GitHub release before DOI-bearing journal submission.
-- Current checksum manifest: 612 files, including `.zenodo.json`, `submission_materials/zenodo_metadata_v014.json`, the latest 40-page `latex/main.pdf`, and the four verified QA preview pages.
+- Current checksum manifest: 612 files, including `.zenodo.json`, `submission_materials/zenodo_metadata_v015.json`, the latest 40-page `latex/main.pdf`, and the four verified QA preview pages.
 
 ## Claim Boundary Summary
 
