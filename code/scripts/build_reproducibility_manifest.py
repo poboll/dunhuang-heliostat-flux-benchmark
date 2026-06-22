@@ -73,6 +73,17 @@ def file_record(path: Path, root: Path) -> dict[str, object]:
     }
 
 
+def keep_file(path: Path) -> bool:
+    parts = set(path.parts)
+    if "__pycache__" in parts:
+        return False
+    if path.name == ".DS_Store":
+        return False
+    if path.suffix == ".pyc":
+        return False
+    return True
+
+
 def collect_files(run: Path, package: Path) -> list[Path]:
     include_dirs = [
         run / "layouts",
@@ -170,6 +181,9 @@ def collect_files(run: Path, package: Path) -> list[Path]:
         ROOT / "docs" / "V12_SEED240K_SOLTRACE_RUN_20260516.md",
         ROOT / "docs" / "REVIEWER_RISK_MATRIX_AND_RESPONSE_PLAN_20260511.md",
         package / "README.md",
+        package / ".zenodo.json",
+        package / "JOURNAL_TARGET_REASSESSMENT_20260622.md",
+        package / "JOURNAL_TARGET_REASSESSMENT_20260622_CURRENT.md",
         package / "JOURNAL_SELECTION_CAS2_AUDIT_20260512.md",
         package / "JOURNAL_TARGET_AND_TEMPLATE.md",
         package / "FIGURE_STYLE_GUIDE.md",
@@ -186,8 +200,8 @@ def collect_files(run: Path, package: Path) -> list[Path]:
     files: list[Path] = []
     for directory in include_dirs:
         if directory.is_dir():
-            files.extend(path for path in directory.rglob("*") if path.is_file())
-    files.extend(path for path in include_files if path.is_file())
+            files.extend(path for path in directory.rglob("*") if path.is_file() and keep_file(path))
+    files.extend(path for path in include_files if path.is_file() and keep_file(path))
     return sorted(set(files))
 
 

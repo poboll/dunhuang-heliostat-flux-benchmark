@@ -21,10 +21,11 @@ From the package root:
 python submission_materials/vertical_graphical_abstract_template/build_vertical_graphical_abstract.py
 ```
 
-Or from any directory:
+Or from any directory after changing to the package root:
 
 ```bash
-python /Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/vertical_graphical_abstract_template/build_vertical_graphical_abstract.py
+cd /path/to/dunhuang-heliostat-flux-benchmark
+python submission_materials/vertical_graphical_abstract_template/build_vertical_graphical_abstract.py
 ```
 
 The current template outputs a vertical 2:3 image at `2048 x 3072 px`, plus a

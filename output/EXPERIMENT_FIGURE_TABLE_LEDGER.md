@@ -1,6 +1,6 @@
 # Experiment, Figure, and Table Ledger for Solar Energy V8
 
-Updated: 2026-06-22 CST after the journal-style data-availability, Figure 1, Zenodo-metadata, README-version, journal-target reassessment, benchmark-wording guardrail, and v0.1.6 release-candidate cleanup. Generated against the latest compiled `latex/main.aux`, so this ledger reflects the rendered PDF rather than hidden `\iffalse` supplementary blocks.
+Updated: 2026-06-22 CST after the post-`v0.1.6` Figure 1/Figure 2 journal-layout polish and `v0.1.7` candidate metadata refresh. Generated against the latest compiled `latex/main.aux`, so this ledger reflects the rendered PDF rather than hidden `\iffalse` supplementary blocks.
 
 ## Rendered Inventory
 
@@ -10,7 +10,7 @@ Updated: 2026-06-22 CST after the journal-style data-availability, Figure 1, Zen
 
 - Hidden/supplementary labels in `main.tex` but absent from the compiled `.aux`: 12. These are retained as supplementary evidence and are not counted as main-article pages.
 
-- The main paper keeps the evidence ladder visible, but file-level data dictionaries, long run logs, V9/V10/V11/V12 expanded tables, threats-to-validity matrices, future-verification roadmaps, and the former package-index table stay outside the rendered journal body. The rendered Data and Code Availability section now cites the `v0.1.6` release candidate and manifest in prose rather than displaying a directory-style table.
+- The main paper keeps the evidence ladder visible, but file-level data dictionaries, long run logs, V9/V10/V11/V12 expanded tables, threats-to-validity matrices, future-verification roadmaps, and the former package-index table stay outside the rendered journal body. The rendered Data and Code Availability section now cites the intended `v0.1.7` release and manifest in prose rather than displaying a directory-style table.
 
 ## Experiment Evidence Ladder
 
@@ -95,12 +95,14 @@ The following source labels remain in `main.tex` after `\iffalse` or are represe
 
 ## Package and DOI State
 
-- The current manuscript-facing release candidate is GitHub release `v0.1.6` (`fix: 更新v0.1.6投稿包口径与DOI元数据`). Build the archive and companion `.sha256` from this package before DOI deposition.
-- The previous already-published cleanup archive is `v0.1.5`; it remains a historical checkpoint and should not be treated as identical to the current PDF after the journal-target, wording, and DOI-metadata consistency pass.
+- The previous verified manuscript-facing release is GitHub release `v0.1.6` (`fix: 更新v0.1.6投稿包口径与DOI元数据`), target commit `bded4aa827ed8070fb95305fafd433b0d614231d`.
+- The current PDF has changed after post-release Figure 1/Figure 2 polish and should be published as `v0.1.7` before DOI deposition. Current clean release-clone PDF after the final verification compile: 40 pages, 30,905,489 bytes, SHA-256 `9b5b2cdbd283a08d525d1439bb60d75b7e431a78cfedbe0c5201668c920861e5`.
+- The previous `v0.1.6` release archive is `solar_energy_elsarticle_v8_strict_review_rescue_20260622_v016.zip`, SHA-256 `017641e0623397f3c166888b236a9b0841bf642a9b46c950e68601095dc84c8a`, with a companion `.sha256` asset.
+- The previous already-published cleanup archives `v0.1.5` and `v0.1.6` remain historical checkpoints and should not be treated as identical to the current PDF after the final Figure 1/Figure 2 polish.
 - The older `v0.1.1` archive remains a historical package and should not be used as the final DOI-bearing upload if the submitted PDF is the current 2026-06-22 cleanup build.
 - The older Zenodo DOI `10.5281/zenodo.16957381` is the coordinate-source DOI only. A new Zenodo DOI for the full V8 benchmark package should be minted from the final GitHub release before DOI-bearing journal submission.
-- Current checksum manifest should include `.zenodo.json`, `submission_materials/zenodo_metadata_v016.json`, the latest 40-page `latex/main.pdf`, refreshed QA preview pages, README/status reports, and figure/data/code artifacts.
-- Root `README.md`, package `README.md`, manuscript Data/Code Availability, and `submission_materials/data_availability_statement.md` now agree that `v0.1.6` is the current release candidate for DOI deposition.
+- Current checksum manifest should include `.zenodo.json`, `submission_materials/zenodo_metadata_v017.json`, `submission_materials/zenodo_doi_runbook_v017.md`, the latest 40-page `latex/main.pdf`, refreshed QA preview pages, README/status reports, and figure/data/code artifacts.
+- Root `README.md`, package `README.md`, manuscript Data/Code Availability, and `submission_materials/data_availability_statement.md` now agree that `v0.1.7` is the intended release for DOI deposition if this current PDF is submitted.
 
 ## Claim Boundary Summary
 

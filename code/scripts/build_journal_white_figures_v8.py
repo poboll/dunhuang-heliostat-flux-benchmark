@@ -345,7 +345,7 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
                     float(lx_arr),
                     float(ly_arr),
                     label,
-                    fontsize=5.4,
+                    fontsize=6.4,
                     color=color,
                     ha="center",
                     va="center",
@@ -357,7 +357,7 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
                         "alpha": 0.78,
                     },
                 )
-            inset = ax.inset_axes([0.650, 0.040, 0.330, 0.390])
+            inset = ax.inset_axes([0.640, 0.038, 0.340, 0.405])
             inset.set_facecolor("#FFFFFF")
             inset.set_xticks([])
             inset.set_yticks([])
@@ -383,13 +383,13 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
             island_lats = [16.8, 14.7, 12.2, 10.4, 8.8, 6.6]
             inset.scatter(island_lons, island_lats, s=8.0, color="#2563EB", alpha=0.88, zorder=3)
             inset.scatter([121.0, 110.0], [23.7, 19.2], s=13.0, color="#2563EB", alpha=0.96, zorder=4)
-            inset.text(121.35, 23.25, "Taiwan", fontsize=5.4, color="#334155", ha="left", va="center")
-            inset.text(110.35, 18.85, "Hainan", fontsize=5.4, color="#334155", ha="left", va="center")
+            inset.text(121.35, 23.25, "Taiwan", fontsize=6.2, color="#334155", ha="left", va="center")
+            inset.text(110.35, 18.85, "Hainan", fontsize=6.2, color="#334155", ha="left", va="center")
             inset.text(
                 105.6,
                 4.4,
                 "South China Sea\nisland inset",
-                fontsize=5.0,
+                fontsize=5.7,
                 color=PALETTE["muted"],
                 ha="left",
                 va="bottom",
@@ -412,7 +412,7 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
             xy=(site_x, site_y),
             xytext=(10, 8),
             textcoords="offset points",
-            fontsize=7.6 if expanded else 5.1,
+            fontsize=8.4 if expanded else 5.1,
             color=PALETTE["ink"],
             ha="left",
             va="bottom",
@@ -693,9 +693,9 @@ def figure_layout_panel(run: Path, out: Path) -> None:
     ax_c.set_aspect("equal", adjustable="box")
     ax_c.set_xlim(-2050, 2050)
     ax_c.set_ylim(-2050, 2050)
-    ax_c.set_xlabel("x coordinate (m)", fontsize=8.0, labelpad=2)
-    ax_c.set_ylabel("y coordinate (m)", fontsize=8.0, labelpad=2)
-    ax_c.tick_params(axis="both", labelsize=7.2, length=2.4, width=0.65)
+    ax_c.set_xlabel("x coordinate (m)", fontsize=8.7, labelpad=2)
+    ax_c.set_ylabel("y coordinate (m)", fontsize=8.7, labelpad=2)
+    ax_c.tick_params(axis="both", labelsize=7.8, length=2.4, width=0.65)
     ax_c.grid(True)
     ax_c.spines["top"].set_visible(False)
     ax_c.spines["right"].set_visible(False)
@@ -707,7 +707,7 @@ def figure_layout_panel(run: Path, out: Path) -> None:
         loc="lower center",
         bbox_to_anchor=(0.55, 0.035),
         ncol=5,
-        fontsize=7.4,
+        fontsize=7.9,
         handletextpad=0.28,
         columnspacing=0.95,
     )

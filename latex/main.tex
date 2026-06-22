@@ -141,19 +141,18 @@ The current layout is more credible than the deleted-mirror alternative for four
 
 This morphology check does not turn the layout into a final plant design. The source coordinate pool still lacks 20 reported heliostats. SRTM90m terrain is not a civil survey. PySAM/SolarPILOT imports the x/y coordinates used here, but the current bridge does not pass custom terrain-relative z values or custom aimpoints into SolarPILOT. The reduced SolTrace layer tests direct aimpoints only on stratified field samples and representative solar conditions. These limitations set the interpretation of the workflow: it is a candidate-generation and numerical-checking benchmark, not an industrial redesign recommendation.
 
-Figure~\ref{fig:layout-realism} separates site context from geometry audit. The upper photograph is a real aerial photograph of the Dunhuang heliostat field taken by co-author Zengye Su using a DJI Mavic 3 Pro drone, and it is shown at its original full-frame aspect ratio. For LaTeX compatibility, the source WebP is also exported as a PNG with no crop, annotation, colour adjustment, or resampling; the original WebP is retained in the figure package. The photograph is used only as qualitative site context, not as a quantitative coordinate, DNI, or performance measurement. The enlarged locator panel identifies the site within China with Taiwan, Hainan, Hong Kong, Macau, and a South China Sea island inset retained for map completeness. The geometry panel overlays the audited baseline coordinate pool and representative full-field candidates under common axis limits. The red triangle marks the tower, while the outline markers are diagnostic samples of representative deformations.
+Figure~\ref{fig:layout-realism} separates site context from geometry audit. The upper photograph is a real aerial photograph of the Dunhuang heliostat field taken by co-author Zengye Su using a DJI Mavic 3 Pro drone, and it is shown at its original full-frame aspect ratio. For LaTeX compatibility, the source WebP is also exported as a PNG with no crop, annotation, colour adjustment, or resampling; the original WebP is retained in the figure package. The photograph is used only as qualitative site context, not as a quantitative coordinate, DNI, or performance measurement. The enlarged locator panel identifies the site within China with Taiwan, Hainan, Hong Kong, Macau, and a South China Sea island inset retained for map completeness. The geometry panel overlays the audited baseline coordinate pool and representative full-field candidates under common axis limits. The red triangle marks the tower, while the outline markers are diagnostic samples of representative deformations. This figure is intentionally contextual: the quantitative geometry-explainability audit appears later in Fig.~\ref{fig:geometry-advantage}, where radial redistribution, nearest-neighbour spacing, movement directions, and constrained advantage roles are reported.
 
 \begin{figure}[!t]
 \centering
-\noindent\textbf{(a)}\\[-0.15em]
-\includegraphics[width=0.96\textwidth]{figures/fig1_author_aerial_fullframe.png}\\[0.25em]
-\includegraphics[width=0.98\textwidth]{figures/fig1_locator_geometry_audit.png}
+\makebox[0.94\textwidth][l]{\small\bfseries (a) Author-owned aerial field context}\\[-0.1em]
+\includegraphics[width=0.94\textwidth]{figures/fig1_author_aerial_fullframe.png}\\[0.35em]
+\makebox[0.94\textwidth][l]{\small\bfseries (b) China-wide locator and (c) full-field coordinate audit}\\[-0.1em]
+\includegraphics[width=0.94\textwidth]{figures/fig1_locator_geometry_audit.png}
 \caption{Field context and full-field geometry audit. Panel (a) is a real Dunhuang heliostat-field aerial photograph taken by co-author Zengye Su using a DJI Mavic 3 Pro drone and is used as qualitative site context only. Panel (b) gives a China-wide projected locator with Gansu highlighted, the Dunhuang site marked, and the Taiwan, Hainan, Hong Kong/Macau-region, and South China Sea island context retained for map completeness. Panel (c) overlays the available 11,915-coordinate heliostat pool and diagnostic samples from representative full-field candidates.}
 \label{fig:layout-realism}
 \end{figure}
 \FloatBarrier
-
-The preview in Fig.~\ref{fig:layout-realism} is intentionally not the main evidence that the deformations are realistic. A separate geometry-explainability audit, reported later in Fig.~\ref{fig:geometry-advantage}, quantifies radial redistribution, nearest-neighbour spacing, movement directions, and constrained advantage roles. This separation keeps the field photograph and locator map from becoming a quantitative claim while still answering the practical question of how the full-field layouts actually move.
 
 \section{Related Work and Research Gap}
 \subsection{Solar tower field modeling and verification tools}
@@ -403,41 +402,37 @@ A schematic summary of this funnel is shown in Fig.~\ref{fig:workflow}. The diag
 \resizebox{0.98\textwidth}{!}{%
 \begin{tikzpicture}[
   font=\rmfamily\footnotesize,
-  input/.style={rectangle,rounded corners=1.0pt,draw=DHFLine,line width=0.50pt,fill=white,text width=25mm,minimum height=10.5mm,align=center,inner sep=3pt},
-  process/.style={rectangle,rounded corners=1.0pt,draw=DHFLine,line width=0.50pt,fill=white,text width=26mm,minimum height=11.2mm,align=center,inner sep=3pt},
-  report/.style={rectangle,draw=DHFLine,line width=0.50pt,fill=DHFFill,text width=26mm,minimum height=11.2mm,align=center,inner sep=3pt},
-  flow/.style={-Latex,line width=0.62pt,draw=DHFMuted,shorten >=2pt,shorten <=2pt},
-  feedback/.style={-Latex,line width=0.62pt,draw=DHFPurple,shorten >=2pt,shorten <=2pt},
-  group/.style={rounded corners=2pt,draw=DHFLine,line width=0.40pt,fill=DHFFill}
+  stage/.style={rectangle,rounded corners=2.5pt,draw=DHFLine,line width=0.55pt,fill=white,text width=25mm,minimum height=13.5mm,align=center,inner sep=3.5pt},
+  verify/.style={rectangle,rounded corners=2.5pt,draw=DHFBlue!55,line width=0.55pt,fill=DHFBlue!5,text width=25mm,minimum height=10.5mm,align=center,inner sep=3pt},
+  final/.style={rectangle,rounded corners=2.5pt,draw=DHFInk!45,line width=0.65pt,fill=DHFFill,text width=25mm,minimum height=13.5mm,align=center,inner sep=3.5pt},
+  dot/.style={circle,draw=none,fill=DHFBlue,text=white,font=\bfseries\scriptsize,inner sep=1.4pt},
+  flow/.style={-Latex,line width=0.70pt,draw=DHFMuted,shorten >=2pt,shorten <=2pt},
+  feedback/.style={-Latex,line width=0.70pt,draw=DHFPurple,shorten >=2pt,shorten <=2pt}
 ]
-\node[input] (plant) at (0,1.30) {Public plant\\anchors};
-\node[input] (coord) at (0,0) {Coordinate\\audit};
-\node[input] (terrain) at (0,-1.30) {Terrain and\\geometry gates};
-\node[process] (gen) at (3.45,0) {TS-FPDA\\candidate workflow};
-\node[report] (queue) at (6.55,0) {Candidate\\queue};
-\node[process] (proxy) at (9.75,1.30) {Aiming proxy\\sensitivity sweep};
-\node[process] (solar) at (9.75,0) {SolarPILOT\\default aiming};
-\node[process] (trace) at (9.75,-1.30) {Reduced PySolTrace\\direct checks};
-\node[report] (claim) at (12.95,0) {Bounded\\benchmark claims};
+\node[stage] (audit) at (0,0) {Plant anchor\\coordinate audit\\terrain gates};
+\node[stage] (gen) at (3.10,0) {Bounded\\TS-FPDA\\candidate workflow};
+\node[stage] (queue) at (6.20,0) {Role-based\\candidate\\queue};
+\node[verify] (proxy) at (9.25,1.25) {Aiming-proxy\\triage};
+\node[verify] (solar) at (9.25,0) {SolarPILOT\\default aiming};
+\node[verify] (trace) at (9.25,-1.25) {Reduced\\PySolTrace\\direct checks};
+\node[final] (claim) at (12.35,0) {Bounded\\benchmark\\claims};
 
-\begin{scope}[on background layer]
-  \node[group,fit=(proxy)(solar)(trace),inner sep=4.5pt] (verifybox) {};
-\end{scope}
+\foreach \n/\p in {1/audit,2/gen,3/queue,4/solar,5/claim} {
+  \node[dot,anchor=north west] at ($(\p.north west)+(-0.06,0.06)$) {\n};
+}
 
-\draw[flow] (plant.east) -- (gen.west);
-\draw[flow] (coord.east) -- (gen.west);
-\draw[flow] (terrain.east) -- (gen.west);
+\draw[flow] (audit.east) -- (gen.west);
 \draw[flow] (gen.east) -- (queue.west);
-\draw[flow] (queue.east) -- ++(0.35,0) |- (proxy.west);
+\draw[flow] (queue.east) -- ++(0.28,0) |- (proxy.west);
 \draw[flow] (queue.east) -- (solar.west);
-\draw[flow] (queue.east) -- ++(0.35,0) |- (trace.west);
-\draw[flow] (proxy.east) -- ++(0.35,0) |- (claim.north west);
+\draw[flow] (queue.east) -- ++(0.28,0) |- (trace.west);
+\draw[flow] (proxy.east) -- ++(0.28,0) |- (claim.north west);
 \draw[flow] (solar.east) -- (claim.west);
-\draw[flow] (trace.east) -- ++(0.35,0) |- (claim.south west);
-\draw[feedback] ($(trace.south)+(0,-0.7mm)$) to[out=-100,in=-80,looseness=1.18]
-  ($(queue.south)+(0,-0.7mm)$);
+\draw[flow] (trace.east) -- ++(0.28,0) |- (claim.south west);
+\draw[feedback] ($(trace.south)+(0,-0.5mm)$) to[out=-95,in=-85,looseness=1.12]
+  ($(queue.south)+(0,-0.5mm)$);
 
-\node[font=\scriptsize,text=DHFMuted,anchor=south west] at ($(verifybox.north west)+(0.1,0.03)$) {verification layers};
+\node[font=\scriptsize,text=DHFMuted,anchor=south] at (9.25,2.05) {verification ladder};
 \end{tikzpicture}%
 }
 \caption{Benchmark and numerical-checking workflow as a native TikZ vector schematic. Public plant anchors, coordinate auditing, and terrain/geometry gates feed the bounded TS-FPDA candidate-generation workflow. The candidate queue is then checked through fast aiming-proxy triage, SolarPILOT default-aiming numerical verification, and reduced PySolTrace direct-aimpoint checks before the claim boundary is set. The feedback arrow records that later evidence can reorder the queue, so the output is a reproducible benchmark and screening queue rather than a final commercial redesign.}
@@ -1148,7 +1143,7 @@ The joint layout--aiming layer is the main system-level extension. It searches l
 \section{Data and Code Availability}
 The source coordinate archive used to define the baseline pool is cited as a Zenodo/GitHub dataset \cite{zaihu2025dunhuangdataset}. That DOI is a source-coordinate record only. The manuscript-facing code and data package is organized as a separate versioned GitHub release:
 \begin{center}
-\small\url{https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.6}
+\small\url{https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.7}
 \end{center}
 The release contains the candidate layouts, public weather and terrain inputs, SolarPILOT optical and receiver-flux tables, reduced PySolTrace tables, joint layout--aiming screening outputs, formal paired statistics, figure-generation scripts, reproducibility configuration, and checksum manifests used for the present manuscript. A Zenodo DOI for this manuscript package will be minted from the GitHub release before final journal upload and should be cited as a dataset/software record in the final reference list; until then, the GitHub release and checksum manifest are the authoritative package record.
 
