@@ -38,7 +38,7 @@ The current PDF compiles cleanly under the Solar Energy/Elsevier inspection form
 - Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` after the benchmark-wording cleanup.
 - Verified the current PDF with `pypdf`: 40 pages, 30,834,421 bytes.
 - Re-scanned the LaTeX log: no undefined citation/reference warnings were found; the remaining layout warnings are one minor overfull hbox and 28 underfull hboxes from narrow table cells.
-- Refreshed the reproducibility manifest after the PDF and report updates; it now records 650 checked files. The manuscript-facing public archive is being advanced to GitHub release `v0.1.2` so the public package can match this journal-style cleanup.
+- Refreshed the reproducibility manifest after the PDF and report updates; it now records 609 checked files after stale-preview pruning. The manuscript-facing public archive is being advanced to GitHub release `v0.1.2` so the public package can match this journal-style cleanup.
 
 ## 2026-06-22 Journal-Style Cleanup
 

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-22T03:25:37+00:00",
+  "generated_at": "2026-06-22T03:29:54+00:00",
   "run_directory": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/streamed_fullfield_20260511_205252",
   "submission_package": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue",
   "project_root": "/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server",
-  "file_count": 650,
+  "file_count": 609,
   "files": [
     {
       "path": "configs/server_full.json",
@@ -107,8 +107,8 @@
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/README.md",
-      "bytes": 15510,
-      "sha256": "2bd2bf5eef9aa3f8e3ca52f576a9e8ea28c72f80f1a28ef67634706bd92972ef"
+      "bytes": 15538,
+      "sha256": "4eecc4404edc0990b29c7d41f03e0c26fb7a4766381355585838d6383fa583a2"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/STRICT_REVIEW_RESPONSE_20260522.md",
@@ -542,238 +542,33 @@
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/LATEX_BUILD_REPORT.md",
-      "bytes": 2821,
-      "sha256": "0a3da7a1776a14d80431e60449d9f8e2ce887432cc2f5233eae7b50402d0b4de"
+      "bytes": 2849,
+      "sha256": "116d6e487da7c2c6aea995069063fe1c770fc466d1a5065f50bce8cecf55021d"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/SUBMISSION_REPOSITORY_DOI_STATUS.md",
-      "bytes": 3984,
-      "sha256": "294f8e97d01c129e5d5fc52d293619e21e4a691e140f24f7441bb581993f8586"
+      "bytes": 4010,
+      "sha256": "f1de8138515b3299f0589a7f6d639d9af22ba3528f1cfd3281d81308b1f32e84"
     },
     {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_001-01.png",
-      "bytes": 364968,
-      "sha256": "6413918f903a6cd561c3b46c10514446e9ebbc15deba654527cf078fd00333df"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_005-05.png",
+      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_005_fig1.png",
       "bytes": 932389,
       "sha256": "9754259708f4777e044569edbc2b7f69022756f33c635e7a57aed30557d09e81"
     },
     {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_014-14.png",
+      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_014_workflow_table.png",
       "bytes": 283798,
       "sha256": "319f304962d516e03c534d56c71fcf003e854e133aa4ab0b76106be1f01bf5f7"
     },
     {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_014_after-14.png",
-      "bytes": 283798,
-      "sha256": "319f304962d516e03c534d56c71fcf003e854e133aa4ab0b76106be1f01bf5f7"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_031-31.png",
+      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_031_direct_audit.png",
       "bytes": 322684,
       "sha256": "d3f70a8f131d3ab8da3500ee4df654675f2e64874956792274ab8e12d1759f28"
     },
     {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_031_033-31.png",
-      "bytes": 317086,
-      "sha256": "88c74b311e539a268c239428c62ba69f2271b3bf6546fb41bfe99eff499c1f4b"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_031_033-32.png",
-      "bytes": 191498,
-      "sha256": "5ea81fa83895d1eebd9c0da770dcf97c37e3e5f0a2d95a84d34df2ff9f22e631"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_031_033-33.png",
-      "bytes": 236754,
-      "sha256": "8aee851df4f349ec8eafacffa17d1f244e5d5ba43e0c36913fc4b30421fa3eb0"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_031_after-31.png",
-      "bytes": 322684,
-      "sha256": "d3f70a8f131d3ab8da3500ee4df654675f2e64874956792274ab8e12d1759f28"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_037-37.png",
+      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_037_data_code.png",
       "bytes": 376833,
       "sha256": "80581081cc9174e59a85cb273fed70b5822b5623a44cffec639fc10cdfadd2f0"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_037_after-37.png",
-      "bytes": 376833,
-      "sha256": "80581081cc9174e59a85cb273fed70b5822b5623a44cffec639fc10cdfadd2f0"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_12-12.png",
-      "bytes": 378169,
-      "sha256": "ee87e8f7dfc62c4e10c4f4d1d86c3a089794a2bad60bc9e341503d855f6bcd78"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_14-14.png",
-      "bytes": 314192,
-      "sha256": "dde4e996389ba33e8cbad93da4ae7998a48c0dbb3ebf0085eb8fb39767957e63"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_31-31.png",
-      "bytes": 339548,
-      "sha256": "442b3b92ff972a63c15d6b48f289a8b2b3b51e23db0cfdbe2499d8b6bcb3c64a"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_32-32.png",
-      "bytes": 210962,
-      "sha256": "4b3216efb1dc8dde38e9241557d6cbbd465538a9339fefe61b45b65edba73907"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_33-33.png",
-      "bytes": 263267,
-      "sha256": "6d3ff5764664a7d1d9125706115b5486c0c8fde817cd4e5389978a8113c78079"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_37-37.png",
-      "bytes": 413846,
-      "sha256": "f9b41f5eae2a56b0bc4cb2c4fe8447856711219a4f30a531501d3acd5eece05e"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_40-40.png",
-      "bytes": 534363,
-      "sha256": "00a12bda665226745df9ce5c581a9b348aea4bf2b7a62778d0e8d226c811ff18"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_5-05.png",
-      "bytes": 1072149,
-      "sha256": "2bc1a9fcece75f29bd21613768abe39f16c726b5f2961ea895ebbdbb74d63b16"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_1.png",
-      "bytes": 60900,
-      "sha256": "f734b32a2e30a585847242287fd1b4dd2592071e15ca50ff062a57572a11b4bf"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_10.png",
-      "bytes": 51942,
-      "sha256": "3fc71f8ad64dfcb1982d6a2cfb7948f4b2d9a520d9818067e1c0336262b1c0af"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_12.png",
-      "bytes": 58918,
-      "sha256": "f1a507a7744ea4522d4ad5172900e9d94e6aa487758532eeebd23d3925b03dfa"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_18.png",
-      "bytes": 71753,
-      "sha256": "cfb48baec6a2066f013d38f06bcd98d7ad9a8ff239bfac129a424a569d21ce37"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_23.png",
-      "bytes": 106976,
-      "sha256": "c56963c54584f8a50065b2809406694ac78b8d899047fb01607ccb896577bac8"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_26.png",
-      "bytes": 68284,
-      "sha256": "6f249aba0fd641ab17daf90d9358376e0d076a77a44587f996aa679aa5e983b6"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_30.png",
-      "bytes": 72710,
-      "sha256": "14665aef52621c59bf0ec60abb0c20453753891a30055479c1be794bb0763d76"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_33.png",
-      "bytes": 81223,
-      "sha256": "76233e4c8ac66d33080570620e209d549a999712dc5640a972124d4d45cb7a6c"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_38.png",
-      "bytes": 74685,
-      "sha256": "383adf4bffdbe0a969041f17d0aec44b1104429632286f9576a57c347439c4fe"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_40.png",
-      "bytes": 71520,
-      "sha256": "9cd7ee9537f9d4d41a5cc5a88555b2ec735efdbeeb69edb939c5eede94aa1c71"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_42.png",
-      "bytes": 60992,
-      "sha256": "0e0d1febe5bbcc338740b4af82ddecf7eb03505176819347e163b6835a6d356a"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_46.png",
-      "bytes": 18490,
-      "sha256": "86adc7fb57475c447ef7fd3f84852c2192cd260426cc6950b90dbfc85180d0a0"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/latest/page_5.png",
-      "bytes": 834606,
-      "sha256": "635811cc9606ae0248b5104a9d8350b5636c8d5dedc2fe0771f30771ef609954"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p005_fig1-05.png",
-      "bytes": 1072149,
-      "sha256": "2bc1a9fcece75f29bd21613768abe39f16c726b5f2961ea895ebbdbb74d63b16"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p005_fig1.png",
-      "bytes": 854254,
-      "sha256": "9ffb835167a79b8f421a7bdf9bf6b9cf3fa282a6e50eb178762bae6d3bff5b29"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p012_workflow-12.png",
-      "bytes": 378169,
-      "sha256": "ee87e8f7dfc62c4e10c4f4d1d86c3a089794a2bad60bc9e341503d855f6bcd78"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p031_033_direct-31.png",
-      "bytes": 339548,
-      "sha256": "442b3b92ff972a63c15d6b48f289a8b2b3b51e23db0cfdbe2499d8b6bcb3c64a"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p031_033_direct-32.png",
-      "bytes": 210962,
-      "sha256": "4b3216efb1dc8dde38e9241557d6cbbd465538a9339fefe61b45b65edba73907"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p031_033_direct-33.png",
-      "bytes": 263267,
-      "sha256": "6d3ff5764664a7d1d9125706115b5486c0c8fde817cd4e5389978a8113c78079"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p045_data_availability.png",
-      "bytes": 71672,
-      "sha256": "50447c8507cc52bb1b4880d814aa53b1a4539c4fbf77b2b4fadc420812e27d46"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/p049_refs_end.png",
-      "bytes": 53764,
-      "sha256": "154d204ae4a915158458694e83a68209d7c2cc782568b441c85ab9d010542375"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/page_01.png",
-      "bytes": 71672,
-      "sha256": "50447c8507cc52bb1b4880d814aa53b1a4539c4fbf77b2b4fadc420812e27d46"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/page_02.png",
-      "bytes": 74701,
-      "sha256": "dbb9c6ab6ad178496a785763d8c5c0431d31c50813c71ec738791c758f6e3a86"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/page_03.png",
-      "bytes": 87060,
-      "sha256": "dcfa02580429f78b91c76f24e6a6a47144600f5227dc0fd6fb08e86adb99c244"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/page_04.png",
-      "bytes": 84831,
-      "sha256": "2ecdd11253b790714a8e7af7332f60a5af731b4536c107156a2fb709ce508885"
-    },
-    {
-      "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/page_05.png",
-      "bytes": 854254,
-      "sha256": "afdafa60dad577a1d3e097fc3540fc5547721915c5a2e9f684b9d6a35648234b"
     },
     {
       "path": "paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/papers/paper_notes.jsonl",

@@ -24,7 +24,7 @@ Updated: 2026-06-22 CST
 - Current formal inspection PDF: 40 pages, 30,834,421 bytes (about 29.4 MiB).
 - Active figure assets in `latex/figures`: 33 files.
 - Supplementary-data file count: 390 under `supplementary_data/`.
-- Reproducibility manifest file count: 650 checked files after the 2026-06-22 journal-style cleanup; see `reproducibility_manifest/manifest.json` for the authoritative count and checksums.
+- Reproducibility manifest file count: 609 checked files after the 2026-06-22 journal-style cleanup and stale-preview pruning; see `reproducibility_manifest/manifest.json` for the authoritative count and checksums.
 - Manifest present: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/reproducibility_manifest/MANIFEST.md` (yes).
 - README present: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/README.md` (yes).
 
