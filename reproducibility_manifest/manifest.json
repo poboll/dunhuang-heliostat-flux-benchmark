@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T09:21:21+00:00",
+  "generated_at": "2026-06-22T09:27:32+00:00",
   "run_directory": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release/server_outputs/streamed_fullfield_20260511_205252",
   "submission_package": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release",
   "project_root": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release",
@@ -7,8 +7,8 @@
   "files": [
     {
       "path": ".zenodo.json",
-      "bytes": 2296,
-      "sha256": "8025911059e70a27b7df291aa86eb498479ff0e7b5817d2aa98cd918f1274a2a"
+      "bytes": 2300,
+      "sha256": "f56baa6f168a246debfb4eed9ce990c52d640f573996efe87702f11bb5144908"
     },
     {
       "path": "FIGURE_STYLE_GUIDE.md",
@@ -47,8 +47,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 17003,
-      "sha256": "7beffe3973b4365fd74c989198924ead0c149511fdbc9cd8361c7a2e4133c71c"
+      "bytes": 17006,
+      "sha256": "48b899716928a0d06df8bc19ea26de0deee826674e440b8264918dd7871a2bc9"
     },
     {
       "path": "STRICT_REVIEW_RESPONSE_20260522.md",
@@ -447,28 +447,28 @@
     },
     {
       "path": "latex/main.pdf",
-      "bytes": 30907906,
-      "sha256": "4b5aaa74d4e37bf755e25fc2f10cf44f67edf5e0f228456f722373b855852a89"
+      "bytes": 30905358,
+      "sha256": "367d1a731b589bd455e6a47e9ad47a0e79550f8e8a9b4578ea19a2754403981a"
     },
     {
       "path": "latex/main.tex",
-      "bytes": 190063,
-      "sha256": "c1f36a3bb2720d5e394f79fa80550b6ac1f777111d65872bf90aed8a4ccd6ea4"
+      "bytes": 190064,
+      "sha256": "4d305261162d5e11e99942b7f39141af284b07ee15424c6bbf689d2de1c634f6"
     },
     {
       "path": "output/EXPERIMENT_FIGURE_TABLE_LEDGER.md",
-      "bytes": 13057,
-      "sha256": "4bd1f35e63903532673d80ccee759d8155679c9762f6d141d24fc8ae983d2d50"
+      "bytes": 13062,
+      "sha256": "04bb6b007c5d168ac5b51b8f3054470cdb387eb5874076cd41144dd64ae9e374"
     },
     {
       "path": "output/LATEX_BUILD_REPORT.md",
-      "bytes": 13474,
-      "sha256": "d332f41dd517f2590afe5d61410a756bfb0b973c05491f5f8d3eeeda0bf3f292"
+      "bytes": 13480,
+      "sha256": "9b3dffa7db6cbe1dea3266881bee29243772ffee1b65bb73d80b7a2c946d516f"
     },
     {
       "path": "output/SUBMISSION_REPOSITORY_DOI_STATUS.md",
-      "bytes": 5653,
-      "sha256": "2dba65704d650012d92d137b92e24cbb803c304eb89229e1e84c72696c01e8ba"
+      "bytes": 5108,
+      "sha256": "52437534b4c8ca29482121f320786999aeddbb27a2d7c8b3c187eb4bef04f244"
     },
     {
       "path": "output/pdf_previews/current_goal_qa/page_001_method_tables.png",
@@ -612,8 +612,8 @@
     },
     {
       "path": "submission_materials/README.md",
-      "bytes": 1409,
-      "sha256": "67a1b8e4fb7b4c962e39dfbed67873d61f6691cd158326adef9638f3fba4741e"
+      "bytes": 1411,
+      "sha256": "dfa9aa016c43f4f830f8d8d2882a10b10e7eea64c41d38b668e44a2dc24fabd6"
     },
     {
       "path": "submission_materials/author_contributions_credit.md",
@@ -622,13 +622,13 @@
     },
     {
       "path": "submission_materials/cover_letter.md",
-      "bytes": 4431,
-      "sha256": "eb9769e1246e9d74f448b0135c9210bbfb1b9a77651a91b85e3f7813b710d618"
+      "bytes": 4432,
+      "sha256": "11e34916df4341e83ebc83ba1b62e64d5ba3dabdf78c7c39a95a719e8d918191"
     },
     {
       "path": "submission_materials/data_availability_statement.md",
-      "bytes": 2480,
-      "sha256": "56c876bd9b378f2d44b4ef452b812ffbbf4e0043db72f7fb7325877ab38fecec"
+      "bytes": 2482,
+      "sha256": "5ea9f600bfa82e13f912476b71a3ce295c6570fb6f95234170f2e2bf3ca5a901"
     },
     {
       "path": "submission_materials/declaration_of_interests.md",
@@ -681,14 +681,14 @@
       "sha256": "79fd9210be4dd3c0a593bf162bdc4d1ebeb2c0b9304d7e16696efcae35017f5d"
     },
     {
-      "path": "submission_materials/zenodo_doi_runbook_v019.md",
-      "bytes": 1881,
-      "sha256": "03601ea81b252ce49e2cc98c2bcd8f84ed1be11986c35574e412064938a88b3c"
+      "path": "submission_materials/zenodo_doi_runbook_v010.md",
+      "bytes": 1887,
+      "sha256": "74410ac10fec633c8ac17a4b3a4596ceba70d5f801a24747a62745c662d67dc2"
     },
     {
-      "path": "submission_materials/zenodo_metadata_v019.json",
-      "bytes": 2296,
-      "sha256": "8025911059e70a27b7df291aa86eb498479ff0e7b5817d2aa98cd918f1274a2a"
+      "path": "submission_materials/zenodo_metadata_v010.json",
+      "bytes": 2300,
+      "sha256": "f56baa6f168a246debfb4eed9ce990c52d640f573996efe87702f11bb5144908"
     },
     {
       "path": "supplementary_data/aiming_sensitivity_tables/AIMING_SENSITIVITY_REPORT.md",

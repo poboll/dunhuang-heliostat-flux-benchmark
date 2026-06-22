@@ -34,12 +34,12 @@ Rendered preview pages are stored in `output/pdf_previews/`. The current QA pass
 
 The current PDF compiles cleanly under the Solar Energy/Elsevier inspection format. The manuscript now uses a compact Nomenclature section rather than a numbered long table, keeps the detailed data dictionary and extended audit tables suppressed after `\iffalse`, and replaces the former Data/Code Availability package-index table with concise prose. Remaining underfull warnings come from narrow table cells and wrapped technical terms; they are layout polish items rather than build blockers.
 
-## 2026-06-22 v0.1.9 Status-Cleanup Package Build
+## 2026-06-22 v0.1.10 Status-Cleanup Package Build
 
-- Updated the manuscript-facing release URL and package-status files from `v0.1.8` to `v0.1.9` for a metadata-only DOI-deposition cleanup release.
+- Updated the manuscript-facing release URL and package-status files from `v0.1.8` to `v0.1.10` for a metadata-only DOI-deposition cleanup release.
 - No experiment, figure data, table data, or scientific claim boundary was broadened.
 - Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`: success.
-- Current PDF: 40 pages, 30,907,906 bytes, SHA-256 `4b5aaa74d4e37bf755e25fc2f10cf44f67edf5e0f228456f722373b855852a89`.
+- Current PDF: 40 pages, 30,905,358 bytes, SHA-256 `367d1a731b589bd455e6a47e9ad47a0e79550f8e8a9b4578ea19a2754403981a`.
 - Log QA: 0 undefined citations/references, 0 rerun warnings, one minor overfull hbox, and 28 underfull hboxes from narrow table cells.
 - Extracted-PDF wording scan with `pypdf`: `Detailed Data Dictionary`, `Completed and Future Verification`, `The generated package contains`, `field planning`, `site planning`, `SOTA`, `state-of-the-art optimizer`, `no copyright`, and `release-candidate` all have 0 hits.
 
@@ -51,14 +51,14 @@ The current PDF compiles cleanly under the Solar Energy/Elsevier inspection form
 - Log QA: 0 undefined citations, 0 undefined references, 0 rerun warnings, 20 `\includegraphics` references with 0 missing files, 17 rendered figure labels, and 23 rendered table/algorithm labels.
 - Hidden technical-report sections remain suppressed from the PDF text: `Detailed Data Dictionary`, `Completed and Future Verification Tables`, and `The generated package contains` all have 0 extracted-text hits.
 - Dangerous framing terms remain absent from the rendered PDF text: `field planning`, `site planning`, `SOTA`, `state-of-the-art optimizer`, and `no copyright` all have 0 extracted-text hits.
-- GitHub release `v0.1.7` was published and verified. It remains a public checkpoint, but the DOI-deposition package is advanced to `v0.1.9` to remove pre-release wording from archival metadata and submission-status files.
+- GitHub release `v0.1.7` was published and verified. It remains a public checkpoint, but the DOI-deposition package is advanced to `v0.1.10` to remove pre-release wording from archival metadata and submission-status files.
 
-## 2026-06-22 v0.1.9 Metadata and DOI-Status Correction
+## 2026-06-22 v0.1.10 Metadata and DOI-Status Correction
 
-- Updated manuscript Data/Code Availability, `.zenodo.json`, `submission_materials/zenodo_metadata_v019.json`, `submission_materials/zenodo_doi_runbook_v019.md`, the standalone data-availability statement, the cover letter, README, CITATION.cff, and status reports so the DOI-deposition package is consistently identified as `v0.1.9`.
+- Updated manuscript Data/Code Availability, `.zenodo.json`, `submission_materials/zenodo_metadata_v010.json`, `submission_materials/zenodo_doi_runbook_v010.md`, the standalone data-availability statement, the cover letter, README, CITATION.cff, and status reports so the DOI-deposition package is consistently identified as `v0.1.10`.
 - No experimental results, figures, tables, or claim boundaries were broadened in this pass.
 - Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`: success.
-- Current PDF: 40 pages, 30,907,906 bytes, SHA-256 `4b5aaa74d4e37bf755e25fc2f10cf44f67edf5e0f228456f722373b855852a89`.
+- Current PDF: 40 pages, 30,905,358 bytes, SHA-256 `367d1a731b589bd455e6a47e9ad47a0e79550f8e8a9b4578ea19a2754403981a`.
 - Log QA: 0 undefined citations/references, 0 rerun warnings, 20 `\includegraphics` references with 0 missing files, one minor overfull hbox, and 28 underfull hboxes from narrow table cells.
 - Extracted-PDF wording scan: `field planning`, `site planning`, `SOTA`, `state-of-the-art optimizer`, `no copyright`, and `release-candidate` all have 0 hits.
 
@@ -124,7 +124,7 @@ The current PDF compiles cleanly under the Solar Energy/Elsevier inspection form
 - Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`: success.
 - Current PDF: 40 pages, 30,901,688 bytes, SHA-256 `d0ea90a580fe7cf68c229d1e12f9999f2fbeebb2db4626e03134b4e31ab590af`.
 - Log QA: 0 undefined citations, 0 undefined references, no rerun warning, 20 `\includegraphics` references with 0 missing files, one minor overfull hbox, and 28 underfull hboxes from narrow table cells.
-- Historical checkpoint: at the `v0.1.6` stage, the active package manifest recorded 618 checked files and included the then-current `v016` Zenodo metadata/runbook plus the current PDF hash. The active DOI-deposition package has since advanced to `v0.1.9`.
+- Historical checkpoint: at the `v0.1.6` stage, the active package manifest recorded 618 checked files and included the then-current `v016` Zenodo metadata/runbook plus the current PDF hash. The active DOI-deposition package has since advanced to `v0.1.10`.
 
 ## 2026-06-22 v0.1.6 Release Publication Check
 

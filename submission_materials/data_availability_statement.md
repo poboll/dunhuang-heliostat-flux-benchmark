@@ -6,8 +6,8 @@ The supplementary tables are grouped by evidence role rather than by manuscript 
 
 The source coordinate pool is derived from the MIT-licensed Zenodo/GitHub archive `10.5281/zenodo.16957381`, after audit and removal of the origin placeholder. That DOI is used only as the coordinate-source citation for the older dataset package. The new layout-algorithm and receiver-flux screening package is publicly available as a versioned GitHub release:
 
-https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.9
+https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.10
 
-The manuscript-facing `v0.1.9` release is the version intended for Zenodo DOI deposition. It supersedes `v0.1.7` only as a metadata and submission-status correction: no additional experiments are added, and the same evidence boundary is preserved. A machine-readable Zenodo metadata file is included as `.zenodo.json`, and `submission_materials/zenodo_doi_runbook_v019.md` lists the required release-to-DOI steps. Until the new DOI is issued, the matching GitHub release is the public versioned package record and the older Zenodo DOI remains only the source-coordinate citation.
+The manuscript-facing `v0.1.10` release is the version intended for Zenodo DOI deposition. It supersedes `v0.1.7` only as a metadata and submission-status correction: no additional experiments are added, and the same evidence boundary is preserved. A machine-readable Zenodo metadata file is included as `.zenodo.json`, and `submission_materials/zenodo_doi_runbook_v010.md` lists the required release-to-DOI steps. Until the new DOI is issued, the matching GitHub release is the public versioned package record and the older Zenodo DOI remains only the source-coordinate citation.
 
 The package supports rerunning and auditing the numerical benchmark. It does not include plant SCADA, survey-grade terrain, plant-grade TMY files, calibrated receiver tube-temperature limits, or commercial retrofit data.
