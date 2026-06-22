@@ -6,8 +6,8 @@ The supplementary tables are grouped by evidence role rather than by manuscript 
 
 The source coordinate pool is derived from the MIT-licensed Zenodo/GitHub archive `10.5281/zenodo.16957381`, after audit and removal of the origin placeholder. That DOI is used only as the coordinate-source citation for the older dataset package. The new layout-algorithm and receiver-flux screening package is publicly available as a versioned GitHub release:
 
-https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.7
+https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.8
 
-The verified v0.1.6 release remains the previous public package. The current manuscript-facing package should be released as v0.1.7 because the PDF has since received Figure 1/Figure 2 journal-layout polishing and the final clean release-clone PDF now has SHA-256 `9b5b2cdbd283a08d525d1439bb60d75b7e431a78cfedbe0c5201668c920861e5`. A machine-readable Zenodo metadata file is included as `.zenodo.json`, and `submission_materials/zenodo_doi_runbook_v017.md` lists the required release-to-DOI steps. Until the new DOI is issued, the matching GitHub release is the public versioned package record and the older Zenodo DOI remains only the source-coordinate citation.
+The manuscript-facing `v0.1.8` release is the version intended for Zenodo DOI deposition. It supersedes `v0.1.7` only as a metadata and submission-status correction: no additional experiments are added, and the same evidence boundary is preserved. A machine-readable Zenodo metadata file is included as `.zenodo.json`, and `submission_materials/zenodo_doi_runbook_v018.md` lists the required release-to-DOI steps. Until the new DOI is issued, the matching GitHub release is the public versioned package record and the older Zenodo DOI remains only the source-coordinate citation.
 
 The package supports rerunning and auditing the numerical benchmark. It does not include plant SCADA, survey-grade terrain, plant-grade TMY files, calibrated receiver tube-temperature limits, or commercial retrofit data.

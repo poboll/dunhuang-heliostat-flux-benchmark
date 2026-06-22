@@ -10,7 +10,7 @@ The central result is intentionally not a single over-optimized layout. Instead,
 
 The manuscript should be of interest to readers working on concentrating solar power, heliostat-field optimization, solar-tower receiver-flux modeling, aiming strategies, and reproducible benchmark design. It is aligned with *Solar Energy* because it combines solar-tower layout methodology, optical-performance numerical verification, receiver-flux analysis, and data/code reproducibility while clearly stating the domain of validity and the remaining verification needs.
 
-All authors have approved the manuscript. The authors declare no competing interests. The manuscript is original, is not under consideration elsewhere, and will be accompanied by the layout files, scripts, figures, numerical-checking tables, and checksum manifest needed to reproduce the reported results. The previous manuscript-facing GitHub release has been published and verified as `v0.1.6`; the present polished submission package should be released as `v0.1.7` before the final DOI-bearing version cites the corresponding Zenodo DOI.
+All authors have approved the manuscript. The authors declare no competing interests. The manuscript is original, is not under consideration elsewhere, and will be accompanied by the layout files, scripts, figures, numerical-checking tables, and checksum manifest needed to reproduce the reported results. The manuscript-facing GitHub package is versioned as `v0.1.8`; after Zenodo deposition, the final DOI-bearing submission will cite the corresponding Zenodo DOI for that package.
 
 Sincerely,
 

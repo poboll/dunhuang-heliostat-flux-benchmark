@@ -34,7 +34,7 @@ Rendered preview pages are stored in `output/pdf_previews/`. The current QA pass
 
 The current PDF compiles cleanly under the Solar Energy/Elsevier inspection format. The manuscript now uses a compact Nomenclature section rather than a numbered long table, keeps the detailed data dictionary and extended audit tables suppressed after `\iffalse`, and replaces the former Data/Code Availability package-index table with concise prose. Remaining underfull warnings come from narrow table cells and wrapped technical terms; they are layout polish items rather than build blockers.
 
-## 2026-06-22 v0.1.7 Candidate Check
+## 2026-06-22 v0.1.7 Release Check
 
 - The current local PDF is newer than the verified `v0.1.6` GitHub release because it includes the post-release Figure 1/Figure 2 journal-layout polish and the manuscript Data/Code Availability URL has been advanced to `v0.1.7`.
 - Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`: success.
@@ -42,7 +42,16 @@ The current PDF compiles cleanly under the Solar Energy/Elsevier inspection form
 - Log QA: 0 undefined citations, 0 undefined references, 0 rerun warnings, 20 `\includegraphics` references with 0 missing files, 17 rendered figure labels, and 23 rendered table/algorithm labels.
 - Hidden technical-report sections remain suppressed from the PDF text: `Detailed Data Dictionary`, `Completed and Future Verification Tables`, and `The generated package contains` all have 0 extracted-text hits.
 - Dangerous framing terms remain absent from the rendered PDF text: `field planning`, `site planning`, `SOTA`, `state-of-the-art optimizer`, and `no copyright` all have 0 extracted-text hits.
-- Before DOI-bearing submission, publish this exact release-clone package as GitHub release `v0.1.7` and mint the new Zenodo DOI from that release. The verified `v0.1.6` release remains a public checkpoint, but it no longer matches the current PDF.
+- GitHub release `v0.1.7` was published and verified. It remains a public checkpoint, but the DOI-deposition package is advanced to `v0.1.8` to remove pre-release wording from archival metadata and submission-status files.
+
+## 2026-06-22 v0.1.8 Metadata and DOI-Status Correction
+
+- Updated manuscript Data/Code Availability, `.zenodo.json`, `submission_materials/zenodo_metadata_v018.json`, `submission_materials/zenodo_doi_runbook_v018.md`, the standalone data-availability statement, the cover letter, README, CITATION.cff, and status reports so the DOI-deposition package is consistently identified as `v0.1.8`.
+- No experimental results, figures, tables, or claim boundaries were broadened in this pass.
+- Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`: success.
+- Current PDF: 40 pages, 30,907,849 bytes, SHA-256 `c442e6aa489a7564158bcc91bc941c6a3d0c87a325b6d4543ac327b2dbba5207`.
+- Log QA: 0 undefined citations/references, 0 rerun warnings, 20 `\includegraphics` references with 0 missing files, one minor overfull hbox, and 28 underfull hboxes from narrow table cells.
+- Extracted-PDF wording scan: `field planning`, `site planning`, `SOTA`, `state-of-the-art optimizer`, `no copyright`, and `release-candidate` all have 0 hits.
 
 ## 2026-06-21 Consistency Pass
 
@@ -106,7 +115,7 @@ The current PDF compiles cleanly under the Solar Energy/Elsevier inspection form
 - Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`: success.
 - Current PDF: 40 pages, 30,901,688 bytes, SHA-256 `d0ea90a580fe7cf68c229d1e12f9999f2fbeebb2db4626e03134b4e31ab590af`.
 - Log QA: 0 undefined citations, 0 undefined references, no rerun warning, 20 `\includegraphics` references with 0 missing files, one minor overfull hbox, and 28 underfull hboxes from narrow table cells.
-- Refreshed the active package manifest in `reproducibility_manifest/`; it records 618 checked files and includes `.zenodo.json`, `submission_materials/zenodo_metadata_v016.json`, `submission_materials/zenodo_doi_runbook_v016.md`, and the current PDF hash.
+- Historical checkpoint: at the `v0.1.6` stage, the active package manifest recorded 618 checked files and included the then-current `v016` Zenodo metadata/runbook plus the current PDF hash. The active DOI-deposition package has since advanced to `v0.1.8`.
 
 ## 2026-06-22 v0.1.6 Release Publication Check
 

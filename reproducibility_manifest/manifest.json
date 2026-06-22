@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-22T08:17:38+00:00",
+  "generated_at": "2026-06-22T08:47:37+00:00",
   "run_directory": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release/server_outputs/streamed_fullfield_20260511_205252",
   "submission_package": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release",
   "project_root": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release",
-  "file_count": 432,
+  "file_count": 430,
   "files": [
     {
       "path": ".zenodo.json",
-      "bytes": 2249,
-      "sha256": "261119597ce3b2b2705d2b6b468657194c969921121a158b60602bcd4c394c02"
+      "bytes": 2296,
+      "sha256": "a482b989fc264eaa895034aaf31095cd8b5bada085f571c18cc4196dc0b309da"
     },
     {
       "path": "FIGURE_STYLE_GUIDE.md",
@@ -47,8 +47,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 16934,
-      "sha256": "c7442574335e6aa7f093a42563b4cd2a8bfc91c814a5da7fa2fe8d89327a0cd1"
+      "bytes": 17003,
+      "sha256": "5b6ad0e25e10ab5bc9baede10bbc073d9ad2ed7555c251a15e35803697ef91f4"
     },
     {
       "path": "STRICT_REVIEW_RESPONSE_20260522.md",
@@ -447,28 +447,28 @@
     },
     {
       "path": "latex/main.pdf",
-      "bytes": 30905489,
-      "sha256": "9b5b2cdbd283a08d525d1439bb60d75b7e431a78cfedbe0c5201668c920861e5"
+      "bytes": 30907849,
+      "sha256": "c442e6aa489a7564158bcc91bc941c6a3d0c87a325b6d4543ac327b2dbba5207"
     },
     {
       "path": "latex/main.tex",
       "bytes": 190063,
-      "sha256": "7d8db7e18ae0570c1b136702961139504b06913e2dd67232668968297f981fcf"
+      "sha256": "bf51057806261cefc563da67c3d3e8d1d7372a5d30ca6fae787779fd1a78b837"
     },
     {
       "path": "output/EXPERIMENT_FIGURE_TABLE_LEDGER.md",
-      "bytes": 13277,
-      "sha256": "55acecc0d39cd936700e583c9c883d35604a56e3e559a00d01c5ed43c2d10d57"
+      "bytes": 13057,
+      "sha256": "022a6197344c01387f8bdffe1edff88ea40ca86e1be5e72f8f03b0cdb7b6aa94"
     },
     {
       "path": "output/LATEX_BUILD_REPORT.md",
-      "bytes": 11568,
-      "sha256": "0637192fa0aad0c71a036e2820c73b05ff4f6d493e946929d8598d196b89db29"
+      "bytes": 12579,
+      "sha256": "86dc35564201c5454b2753eb1c3e2b42e95cbe208c5c772ea5f91886e0772620"
     },
     {
       "path": "output/SUBMISSION_REPOSITORY_DOI_STATUS.md",
-      "bytes": 5691,
-      "sha256": "f251ff84fddc121697ebb2beafd865c049e6b53cb0a23cc40f03e304e9d419f7"
+      "bytes": 5667,
+      "sha256": "9b065aae953bd65e7cd559ac684e52da7a2ae0377e0d0e60fd0dca4db3f42849"
     },
     {
       "path": "output/pdf_previews/current_goal_qa/page_001_method_tables.png",
@@ -577,8 +577,8 @@
     },
     {
       "path": "output/pdf_text_current.txt",
-      "bytes": 137393,
-      "sha256": "3a763ba6d6e45a52190aa022f5bc00a8b9c06b60c9c0de9f725c0f7b048fcb63"
+      "bytes": 137630,
+      "sha256": "91c4c584660c85c85df5f77ca536c86f91f12afe2c8029b35b3ea7df14db8cc5"
     },
     {
       "path": "papers/paper_notes.jsonl",
@@ -613,7 +613,7 @@
     {
       "path": "submission_materials/README.md",
       "bytes": 1409,
-      "sha256": "eb0f91cb0c52604a48443ac246c16aec73f3a430fc8f5b0fb429257189021c24"
+      "sha256": "345ce117ec1e40135d765afca9ce69035fa94e73d546dc25e699853b5632d836"
     },
     {
       "path": "submission_materials/author_contributions_credit.md",
@@ -622,13 +622,13 @@
     },
     {
       "path": "submission_materials/cover_letter.md",
-      "bytes": 4488,
-      "sha256": "f441f178a2c3b12fd8a80ffb9326556930e15c88b597a80f834e92e7fc2315eb"
+      "bytes": 4431,
+      "sha256": "df8eeb0fe06eb5cecdc36c56861a637eba40775d0fb46c5ce3b14806138c5e37"
     },
     {
       "path": "submission_materials/data_availability_statement.md",
-      "bytes": 2564,
-      "sha256": "5a0fc27a2941c7305fd774e24e8cdbad97ac7ba4ed61a33ab3144d8a8583e586"
+      "bytes": 2480,
+      "sha256": "7fbaf155dc257a2ff5c1a0491acd5f192652ccc4659dc511abf0538e0edb726b"
     },
     {
       "path": "submission_materials/declaration_of_interests.md",
@@ -681,24 +681,14 @@
       "sha256": "79fd9210be4dd3c0a593bf162bdc4d1ebeb2c0b9304d7e16696efcae35017f5d"
     },
     {
-      "path": "submission_materials/zenodo_doi_runbook_v016.md",
-      "bytes": 1627,
-      "sha256": "f3ebad2e4b247725e642bcc675b99fe771aa2e3375140ab3561c2680fa91e3e1"
+      "path": "submission_materials/zenodo_doi_runbook_v018.md",
+      "bytes": 1881,
+      "sha256": "75fac8b6524385ee66d4bd364de6b838f81c690bfa06e695fff1b8bd7e99cb14"
     },
     {
-      "path": "submission_materials/zenodo_doi_runbook_v017.md",
-      "bytes": 1722,
-      "sha256": "6b3f24a44461e4047b59bbf7a44901b1d7faf8974023f74557e0400b56008be7"
-    },
-    {
-      "path": "submission_materials/zenodo_metadata_v016.json",
-      "bytes": 2121,
-      "sha256": "9bc5500e59e41594c97e25682708faecb453c10387ffac19e1df2acadd1873fb"
-    },
-    {
-      "path": "submission_materials/zenodo_metadata_v017.json",
-      "bytes": 2249,
-      "sha256": "261119597ce3b2b2705d2b6b468657194c969921121a158b60602bcd4c394c02"
+      "path": "submission_materials/zenodo_metadata_v018.json",
+      "bytes": 2296,
+      "sha256": "a482b989fc264eaa895034aaf31095cd8b5bada085f571c18cc4196dc0b309da"
     },
     {
       "path": "supplementary_data/aiming_sensitivity_tables/AIMING_SENSITIVITY_REPORT.md",

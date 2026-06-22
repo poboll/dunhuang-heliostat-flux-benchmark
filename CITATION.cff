@@ -10,5 +10,5 @@ authors:
   - family-names: Li
     given-names: Changlong
 repository-code: https://github.com/poboll/dunhuang-heliostat-flux-benchmark
-version: v0.1.5
+version: v0.1.8
 date-released: '2026-06-22'

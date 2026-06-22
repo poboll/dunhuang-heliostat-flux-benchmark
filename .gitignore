@@ -5,5 +5,9 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.spl
 __pycache__/
 .pytest_cache/
+
+# Release zip files are uploaded as GitHub Release assets, not committed.
+release_artifacts/*.zip

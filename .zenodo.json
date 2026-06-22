@@ -1,7 +1,7 @@
 {
   "title": "Dunhuang 100 MW Solar Tower Receiver-Flux-Aware Layout-Aiming Benchmark",
   "upload_type": "dataset",
-  "description": "Release-candidate data and code package for a Solar Energy manuscript on a plant-anchored, receiver-flux-aware, reproducible layout-aiming benchmark for the Shouhang Dunhuang 100 MW molten-salt solar tower. The package preserves the audited 11,915-heliostat coordinate pool, candidate layouts, public weather and terrain inputs, PySAM/SolarPILOT default-aiming tables, reduced PySolTrace direct-audit tables, joint layout-aiming screening outputs, formal paired statistics, manuscript figures, reproducibility configuration, and checksum manifests. It supports numerical benchmark and screening-queue claims only; it is not an as-built plant survey, a certified commercial redesign, a receiver thermal-safety certification, or a bankable annual-yield estimate.",
+  "description": "Data and code package for a Solar Energy manuscript on a plant-anchored, receiver-flux-aware, reproducible layout-aiming benchmark for the Shouhang Dunhuang 100 MW molten-salt solar tower. The package preserves the audited 11,915-heliostat coordinate pool, candidate layouts, public weather and terrain inputs, PySAM/SolarPILOT default-aiming tables, reduced PySolTrace direct-audit tables, joint layout-aiming screening outputs, formal paired statistics, manuscript figures, reproducibility configuration, and checksum manifests. It supports numerical benchmark and screening-queue claims only; it is not an as-built plant survey, a certified commercial redesign, a receiver thermal-safety certification, or a bankable annual-yield estimate.",
   "creators": [
     {
       "name": "Li, Changlong",
@@ -32,11 +32,11 @@
     "Dunhuang"
   ],
   "license": "MIT",
-  "version": "v0.1.7",
+  "version": "v0.1.8",
   "language": "eng",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.7",
+      "identifier": "https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.8",
       "relation": "isSupplementTo",
       "resource_type": "software",
       "scheme": "url"
@@ -48,5 +48,5 @@
       "scheme": "doi"
     }
   ],
-  "notes": "Prepared for the manuscript-facing GitHub release v0.1.7. The DOI 10.5281/zenodo.16957381 is retained only as the source-coordinate archive DOI. The previous v0.1.6 release remains a verified public checkpoint, but the current PDF has post-v0.1.6 Figure 1/Figure 2 polish."
+  "notes": "Manuscript-facing metadata and submission-status correction release v0.1.8. It supersedes v0.1.7 for Zenodo DOI deposition because v0.1.8 removes pre-release wording from the archival metadata while preserving the same experimental evidence boundary. The DOI 10.5281/zenodo.16957381 is retained only as the source-coordinate archive DOI."
 }

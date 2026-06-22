@@ -108,14 +108,14 @@ Portable full-field cases and checksum-style
 packages are still needed for independent
 comparisons.
 Classical and robust layout opti-
-mization [15–17]
+mization [15, 16, 17]
 Field geometry, blocking/cosine trade-
 offs, robust objective design.
 These studies usually do not combine a pub-
 lic commercial coordinate anchor with a
 receiver-risk queue.
 Recent petal, hybrid, and terrain
-layout studies [18–20]
+layout studies [18, 19, 20]
 Search-family design, uneven-terrain
 feasibility, and terrain-aware candidate
 generation.
@@ -123,8 +123,8 @@ They motivate the deformation family, but
 petal deformation alone is not treated here
 as sufficient novelty.
 Modern aiming, learning, and
-differentiable-flux methods [6, 13,
-14, 21]
+differentiable-flux methods [6, 21,
+14, 13]
 Flux control, data-driven receiver pre-
 diction, and gradient-aware optical
 models.
@@ -142,14 +142,14 @@ receiver, tower, dispatch, land, and economics are redesigned together. The pres
 as a plant-anchored benchmark and numerical-verification workflow. The candidate-generation layer preserves the
 full available coordinate pool and applies bounded sector/petal deformations to search realistic full-field variants. The
 verification package then tests whether optical gains are accompanied by receiver-flux penalties.
-The central premise follows current research. SolarPILOT remains a standard tool for solar tower field characteri-
-zation [2, 3], while CoPylot exposes SolarPILOT functionality through a Python API for detailed aimpoint studies [4].
-Round-robin receiver-flux comparisons with SolTrace, Solstice, and TieSOL show that commercial-scale flux maps
-require explicit treatment of heliostat geometry, aiming, canting, and focusing [5]. Recent aiming research includes
-deterministic experimental verification, flux feedback, closed-loop control, reinforcement learning, neural surrogates,
-cloud-aware model-predictive control, differentiable rasterization, and differentiable Monte Carlo ray tracing [6–14].
-This context motivates a Dunhuang benchmark that couples full-field layout generation with receiver-flux-aware nu-
-merical checking instead of treating the coordinate set as an isolated geometry artifact.
+The central premise follows current research. SolarPILOT remains a standard tool for solar tower field character-
+ization [2, 3], while CoPylot exposes SolarPILOT functionality through a Python API for detailed aimpoint studies
+[4]. Round-robin receiver-flux comparisons with SolTrace, Solstice, and TieSOL show that commercial-scale flux
+maps require explicit treatment of heliostat geometry, aiming, canting, and focusing [5]. Recent aiming research in-
+cludes deterministic experimental verification, flux feedback, closed-loop control, reinforcement learning, neural sur-
+rogates, cloud-aware model-predictive control, differentiable rasterization, and differentiable Monte Carlo ray tracing
+[6, 7, 8, 9, 10, 11, 12, 13, 14]. This context motivates a Dunhuang benchmark that couples full-field layout generation
+with receiver-flux-aware numerical checking instead of treating the coordinate set as an isolated geometry artifact.
 This paper makes five contributions. First, it audits the source Dunhuang coordinate package and discloses that
 the available non-origin coordinate pool contains 11,915 heliostats, 20 fewer than the reported plant count. Second,
 it defines a terrain-screened full-field sector/petal candidate-generation workflow that preserves that coordinate pool
@@ -213,19 +213,19 @@ recent SolTrace–Solstice–TieSOL round-robin study further shows that commerc
 depends on heliostat geometry, focus, canting, and aimpoints, not merely on field coordinates [5].
 5.2. Aiming strategy and receiver-flux control
 Receiver aiming has a long line of work. Early optimized aiming for THEMIS, uniform flux strategies, multi-
-objective cavity-receiver aiming, multi-focal cavity receivers, external receiver aiming, and ant-colony aimpoint opti-
-mization established that flux distribution and spillage must be optimized together [24–29]. Molten-salt receiver work
-introduced allowable flux-density constraints and translated thermal safety into aiming input [30–32]. A recent review
-of heliostat aiming strategies confirms that the field is now judged by the joint treatment of optical gain, receiver uni-
-formity, dynamic operation, and verification realism rather than by one static flux map [33]. More recent work uses
-GPU acceleration, flux feedback, closed-loop management, dynamic aiming, model-predictive control under clouds,
-machine-learning MPC, and real-time swarm methods [7, 8, 12, 34–37].
+objective cavity-receiver aiming, multi-focal cavity receivers, external receiver aiming, and ant-colony aimpoint
+optimization established that flux distribution and spillage must be optimized together [24, 25, 26, 27, 28, 29].
+Molten-salt receiver work introduced allowable flux-density constraints and translated thermal safety into aiming
+input [30, 31, 32]. A recent review of heliostat aiming strategies confirms that the field is now judged by the joint
+treatment of optical gain, receiver uniformity, dynamic operation, and verification realism rather than by one static
+flux map [33]. More recent work uses GPU acceleration, flux feedback, closed-loop management, dynamic aiming,
+model-predictive control under clouds, machine-learning MPC, and real-time swarm methods [34, 7, 8, 35, 36, 12, 37].
 5.3. Learning, di fferentiable optics, and data-driven receiver models
 Learning-based and di fferentiable methods are now changing the expectations for heliostat aiming papers.
 Reinforcement-learning aiming has been studied both as real-time strategy optimization and as performance-
 improving operational control [9, 10]. Neural surrogates learn heliostat-to-receiver flux interactions and support
 tractable optimization [11]. Di fferentiable rasterization, di fferentiable ray tracing for canting, and di fferentiable
-Monte Carlo ray tracing turn flux formation into a gradient-aware optimization problem [13, 14, 38]. Data-driven
+Monte Carlo ray tracing turn flux formation into a gradient-aware optimization problem [13, 38, 14]. Data-driven
 receiver-level flux prediction further suggests that operational calibration data may complement physics-based ray
 tracing [21]. These methods need realistic full-field test cases; they are not well served by small synthetic fields or
 mirror-deletion layouts.
@@ -233,13 +233,13 @@ mirror-deletion layouts.
 Classical field layout studies include preliminary surround-field design, regular field generation, thermochemical-
 field optimization, quick design of commercial regular fields, load-following layout optimization, no-blocking layouts,
 multi-objective plant enhancement, robust solar tower optimization under uncertainty, and heliostat-shape-aware field
-design [15–17, 39–44]. Recent studies add optical-thermal-mechanical coupling, deformable petal hybrid layouts,
-uneven-terrain layout tooling, sloped-terrain spatiotemporal optimization, collision-analysis-based field design, fast
-preliminary design tools, and fast annual-energy estimation through heliostat grouping and solar-position sampling
-[18–20, 45–48]. This literature justifies sector /petal deformation as a search family, but it also makes it di fficult to
-claim novelty from petal deformation alone. The research gap for the present manuscript is therefore more specific: a
-plant-anchored, full-field, terrain-audited, receiver-flux-aware candidate-generation benchmark for a public 100 MW
-surround field.
+design [15, 39, 40, 16, 41, 42, 43, 17, 44]. Recent studies add optical-thermal-mechanical coupling, deformable
+petal hybrid layouts, uneven-terrain layout tooling, sloped-terrain spatiotemporal optimization, collision-analysis-
+based field design, fast preliminary design tools, and fast annual-energy estimation through heliostat grouping and
+solar-position sampling [45, 18, 19, 20, 46, 47, 48]. This literature justifies sector /petal deformation as a search
+family, but it also makes it difficult to claim novelty from petal deformation alone. The research gap for the present
+manuscript is therefore more specific: a plant-anchored, full-field, terrain-audited, receiver-flux-aware candidate-
+generation benchmark for a public 100 MW surround field.
 The same literature also motivated an explicit strong-baseline pressure test in the revised experiment. The pressure
 test does not claim to reproduce HelioSliders, HeFAAL, modified artificial-bee-colony, or other named optimizers;
 doing so would require their full original objective functions, constraints, and implementation details. Instead, it
@@ -251,24 +251,24 @@ while keeping the method claim conservative.
 6
 Table 3. Literature map used to position the manuscript.
 Theme Representative references
-Solar tower tools and verification [2–5, 22, 23]
-Receiver aiming and flux control [24–33]
+Solar tower tools and verification [2, 4, 5, 23, 3, 22]
+Receiver aiming and flux control [33, 24, 25, 26, 27, 28, 29, 30, 31, 32]
 Online, robust, and data-driven aim-
 ing
-[6–14, 21, 34–38, 59]
+[7, 34, 8, 9, 35, 36, 12, 37, 59, 6, 10, 14, 13, 11, 21, 38]
 Field layout and candidate genera-
 tion
-[15–20, 39–48]
+[15, 39, 40, 16, 41, 42, 43, 17, 44, 18, 47, 19, 20, 46, 45, 48]
 Plant realism and technology con-
 text
-[1, 49–58]
+[1, 49, 50, 51, 52, 54, 53, 57, 58, 55, 56]
 5.5. Plant realism, heliostat technology, and benchmark need
 The broader CSP context also matters. Heliostat development roadmaps and HelioCon reports emphasize cost
-reduction, optical quality, calibration, and field performance as system-level challenges [49–52]. Gen3 CSP and
-solar-fuel work indicate that receiver thermal input and flux control remain central to high-temperature solar tower
-applications [53, 54]. New heliostat concepts and wind-induced slope-error studies remind us that layout interacts
-with structural and terrain effects [55, 56]. The Dunhuang plant report provides the public anchor for this benchmark
-[1], while NASA POWER and SRTM provide reproducible but imperfect public weather and terrain layers [57, 58].
+reduction, optical quality, calibration, and field performance as system-level challenges [49, 50, 51, 52]. Gen3 CSP
+and solar-fuel work indicate that receiver thermal input and flux control remain central to high-temperature solar tower
+applications [53, 54]. New heliostat concepts and wind-induced slope-error studies remind us that layout interacts with
+structural and terrain effects [55, 56]. The Dunhuang plant report provides the public anchor for this benchmark [1],
+while NASA POWER and SRTM provide reproducible but imperfect public weather and terrain layers [57, 58].
 6. Problem Definition
 The design task is to generate full-field Dunhuang-scale candidate layouts that remain physically plausible while
 revealing whether small geometric changes can improve optical performance without worsening receiver-flux concen-
@@ -1440,7 +1440,7 @@ of the operating Dunhuang plant.
 The source coordinate archive used to define the baseline pool is cited as a Zenodo/GitHub dataset [60]. That DOI
 is a source-coordinate record only. The manuscript-facing code and data package is organized as a separate versioned
 GitHub release:
-https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.7
+https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.8
 36
 The release contains the candidate layouts, public weather and terrain inputs, SolarPILOT optical and receiver-flux
 tables, reduced PySolTrace tables, joint layout–aiming screening outputs, formal paired statistics, figure-generation
