@@ -81,7 +81,7 @@ What changed in the current revision:
 - Added a 2026-06-22 Figure 1/DOI-metadata pass: rebuilt the lower locator/geometry panel while keeping the author-owned aerial photograph unedited, prepared Zenodo metadata, and refreshed the manifest so the DOI metadata is checksum-registered.
 - Added a 2026-06-22 wording/README consistency pass: root README, manuscript Data/Code Availability, and the standalone data-availability statement now separate the source-coordinate DOI from the pending V8 package DOI, and the main article uses benchmark/workflow/queue language instead of final-design or SOTA-optimizer language. This pass was published as GitHub release `v0.1.6` (`fix: 更新v0.1.6投稿包口径与DOI元数据`), target commit `bded4aa827ed8070fb95305fafd433b0d614231d`.
 - Added a post-`v0.1.6` polish pass for the Solar Energy author-review draft: Figure 1 keeps the author-owned DJI aerial photograph unedited, the China locator/geometry panel is cleaner, the TikZ workflow is more journal-like, and the clean release-clone PDF was published as GitHub release `v0.1.7`.
-- Added a `v0.1.8` metadata/status correction pass for DOI deposition. This pass removes pre-release wording from the archival metadata and points Data/Code Availability to `v0.1.8`; it does not add experiments or broaden claims.
+- Added a `v0.1.9` metadata/status correction pass for DOI deposition. This pass removes pre-release wording from the archival metadata and points Data/Code Availability to `v0.1.9`; it does not add experiments or broaden claims.
 
 Current submission stance:
 
@@ -91,4 +91,4 @@ Current submission stance:
 - Treat the joint layer as the active system contribution: layout deformation and aiming are selected together, then checked by a SolarPILOT default-aiming bridge and a reduced direct promotion audit.
 - Treat full-field annual custom-aimpoint verification with receiver thermal constraints as the next scientific upgrade rather than as a hidden completed claim.
 - Use this full-evidence v8 package as the current author-review draft. If a shorter Solar Energy main text is later required, use `SUBMISSION_MAIN_SI_TRANSFER_PLAN_20260523.md`; do not silently prune the workload, figures, or evidence chain back to the 17-page v6 short draft.
-- Treat GitHub `v0.1.7` as the previous verified public release, and treat the current metadata/status-corrected package as the `v0.1.8` release target. Mint the Zenodo DOI from the exact release that matches the submitted PDF.
+- Treat GitHub `v0.1.7` as the previous verified public release, and treat the current metadata/status-corrected package as the `v0.1.9` release target. Mint the Zenodo DOI from the exact release that matches the submitted PDF.

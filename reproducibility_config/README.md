@@ -36,7 +36,7 @@ conda activate dunhuang-heliostat-benchmark
 python -m pytest -q
 ```
 
-The submission package is a release-candidate archive. The GitHub release URL is listed in the manuscript data availability statement. Before journal submission, the author should mint a Zenodo DOI from the release if the target journal requires DOI-bearing code/data deposition.
+The manuscript-facing submission package is a verified GitHub release after publication. The GitHub release URL is listed in the manuscript data availability statement. Before DOI-bearing journal submission, the author should mint a Zenodo DOI from that exact release and then write the DOI back into the manuscript, bibliography, metadata, and standalone data-availability statement.
 
 The same-condition baseline-control tables are included under `../supplementary_data/baseline_strengthening_tables/`. They preserve the same 11,915-heliostat coordinate pool and compare six simple controls with the TS-FPDA representatives under the same SolarPILOT and aiming-proxy settings.
 
