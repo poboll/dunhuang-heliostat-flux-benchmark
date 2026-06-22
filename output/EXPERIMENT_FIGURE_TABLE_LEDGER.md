@@ -12,6 +12,19 @@ Updated: 2026-06-22 CST after the journal-style data-availability, Figure 1, Zen
 
 - The main paper keeps the evidence ladder visible, but file-level data dictionaries, long run logs, V9/V10/V11/V12 expanded tables, threats-to-validity matrices, future-verification roadmaps, and the former package-index table stay outside the rendered journal body.
 
+## Experiment Evidence Ladder
+
+| Layer | Evidence included in the paper/package | Main figures/tables | Claim level |
+|---|---|---|---|
+| Plant and coordinate audit | Public Dunhuang plant parameters, 11,915-coordinate audited pool, disclosed 20-record gap, random-omission geometry stress test in the supplement | `tab:plant-audit`, `fig:layout-realism` | Plant-anchored numerical benchmark, not as-built survey |
+| Candidate generation | Terrain-screened full-field petal/sector deformation, 1,841 screened candidates, count/sector/annulus/spacing/terrain gates | `alg:tfpda`, `tab:param-envelope`, `tab:gates` | Conservative candidate generator |
+| Receiver proxy screening | Aiming-proxy metrics, representative queue, aiming sensitivity over grouping/spot/phase assumptions | `tab:proxy-metrics`, `tab:representative-roles`, `fig:aimproxy`, `fig:aiming-sensitivity` | Screening-level receiver-risk evidence |
+| SolarPILOT default-aiming bridge | Common PySAM/SolarPILOT checks for representative layouts, optical efficiency, default receiver-flux maps, receiver-grid and flux-day robustness gates in the supplement | `tab:summary`, `fig:tradeoff`, `fig:fluxmaps` | Layout-level numerical checking under default aiming |
+| Baseline and ablation pressure | Same-condition low-complexity controls, literature-inspired same-anchor approximation families, component ablation | `tab:baseline-controls`, `fig:baseline-controls`, `tab:strong-baselines`, `fig:strong-baselines`, `tab:ablation` | Prevents single-method or SOTA-overclaim |
+| Annualized optical sanity | Fast annual proxy over public weather, multi-year and interpolation robustness gates, public 351.6 GWh design-generation sanity reference | `fig:fast-annual-proxy` plus supplementary annual-proxy tables | Relative annualized optical ranking only |
+| Reduced direct checks | Baseline-control, hold-out, all-phase, high-sample, independent-seed, V12, joint-promotion, and strong-baseline direct gates | `tab:baseline-direct`, `tab:joint-direct`, `tab:soltrace-corrected`, `fig:baseline-direct`, `fig:joint-direct`, `fig:soltrace-corrected` | Sampled direct custom-aimpoint evidence |
+| Formal statistics and boundary | Bootstrap confidence intervals, Wilcoxon/sign tests, practical-threshold gate, domain-of-validity table | `tab:formal-paired`, `fig:formal-paired`, `tab:domain-validity` | Candidate promotion queue; no final engineering superiority |
+
 ## Main Figures
 
 | No. | Label | Source / type | Evidence role | Keep in main? |
@@ -82,11 +95,11 @@ The following source labels remain in `main.tex` after `\iffalse` or are represe
 
 ## Package and DOI State
 
-- The current manuscript-facing cleanup archive is release `v0.1.3` (`fix: 优化图一与Zenodo元数据`, commit `386071d8b269338e0cb64c4c234ff5f0d977e2ec`).
+- The current manuscript-facing cleanup archive is prepared as release `v0.1.4` (`fix: 同步v0.1.4清单与发布状态`; release commit to be recorded after the clean-clone publish step).
 - This release contains the post-`v0.1.2` Figure 1 cleanup, DOI metadata, updated PDF, and refreshed checksum manifest. It should be used as the source archive for Zenodo DOI minting.
 - The older `v0.1.1` archive remains a historical package and should not be used as the final DOI-bearing upload if the submitted PDF is the current 2026-06-22 cleanup build.
 - The older Zenodo DOI `10.5281/zenodo.16957381` is the coordinate-source DOI only. A new Zenodo DOI for the full V8 benchmark package should be minted from the final GitHub release before DOI-bearing journal submission.
-- Current checksum manifest: 612 files, including `.zenodo.json`, `submission_materials/zenodo_metadata_v013.json`, the latest 40-page `latex/main.pdf`, and the four verified QA preview pages.
+- Current checksum manifest: 612 files, including `.zenodo.json`, `submission_materials/zenodo_metadata_v014.json`, the latest 40-page `latex/main.pdf`, and the four verified QA preview pages.
 
 ## Claim Boundary Summary
 

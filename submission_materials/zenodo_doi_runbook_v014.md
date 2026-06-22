@@ -1,18 +1,18 @@
 # Zenodo DOI Runbook for the V8 Solar Energy Package
 
-Status: prepared for the manuscript-facing `v0.1.3` package.
+Status: prepared for the manuscript-facing `v0.1.4` package.
 
 ## What this file is for
 
-The manuscript cites the coordinate-source DOI `10.5281/zenodo.16957381` and the manuscript-facing GitHub release `v0.1.3`. The next required external archival step is to mint a new Zenodo DOI from the `v0.1.3` release.
+The manuscript cites the coordinate-source DOI `10.5281/zenodo.16957381` and the manuscript-facing GitHub release `v0.1.4`. The next required external archival step is to mint a new Zenodo DOI from the `v0.1.4` release.
 
 ## Required order
 
 1. Build and verify the final PDF and manifest.
-2. Confirm the clean GitHub release `v0.1.3` is available from the final package.
+2. Confirm the clean GitHub release `v0.1.4` is available from the final package.
 3. Update `.zenodo.json`:
-   - confirm `version` is `v0.1.3`;
-   - confirm the GitHub `related_identifiers` URL points to release `v0.1.3`;
+   - confirm `version` is `v0.1.4`;
+   - confirm the GitHub `related_identifiers` URL points to release `v0.1.4`;
    - keep `10.5281/zenodo.16957381` only as `isDerivedFrom`.
 4. Upload the release archive to Zenodo or use GitHub-Zenodo integration.
 5. Copy the newly minted DOI into:
