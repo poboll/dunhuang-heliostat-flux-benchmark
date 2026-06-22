@@ -14,7 +14,7 @@ Updated: 2026-06-22 CST, post-Figure-1/Zenodo-metadata cleanup
 - GitHub release title: `fix: 更新Solar Energy V8投稿包排版与数据可用性`.
 - Release archive name: `solar_energy_elsarticle_v8_strict_review_rescue_20260622.zip`; the final SHA-256 is recorded on the GitHub release asset and companion `.sha256` file.
 - Source coordinate DOI already cited in the manuscript: `10.5281/zenodo.16957381` as the coordinate-source record only.
-- Current local package status: the working package has been prepared as the `v0.1.3` manuscript-facing release candidate, including Figure 1 lower-panel rebuild, LaTeX panel-label/caption cleanup, Zenodo metadata/runbook files, and a refreshed checksum manifest.
+- Current local package status: the working package has been published as the `v0.1.3` manuscript-facing release, including Figure 1 lower-panel rebuild, LaTeX panel-label/caption cleanup, Zenodo metadata/runbook files, and a refreshed checksum manifest.
 - Zenodo metadata draft: `.zenodo.json` has been prepared at the package root with `v0.1.3` metadata and the `v0.1.3` GitHub release URL. Add the minted DOI after Zenodo deposition.
 - DOI runbook: `submission_materials/zenodo_doi_runbook_v013.md`.
 - Required before final journal upload: mint a new Zenodo DOI from the final manuscript-facing release and cite it as the algorithm/data package DOI. Do not reuse the coordinate-source DOI for the full V8 benchmark package.
@@ -49,5 +49,5 @@ Updated: 2026-06-22 CST, post-Figure-1/Zenodo-metadata cleanup
 ## 2026-06-22 Repository Caution
 
 - The main worktree is intentionally not staged wholesale because it contains many historical, generated, and unrelated files. Do not use `git add .` from the dirty working copy.
-- The public GitHub repository is reachable as `poboll/dunhuang-heliostat-flux-benchmark`; `v0.1.3` is the intended manuscript-facing release for the current local package.
+- The public GitHub repository is reachable as `poboll/dunhuang-heliostat-flux-benchmark`; `v0.1.3` is the manuscript-facing release for the current local package.
 - The manuscript was rebuilt after `v0.1.1` to remove the rendered package-index table and improve page-level journal style. The `v0.1.3` package adds the Figure 1 and Zenodo-metadata cleanup on top of the earlier public release.
