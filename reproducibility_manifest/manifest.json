@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T09:27:32+00:00",
+  "generated_at": "2026-06-22T09:48:44+00:00",
   "run_directory": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release/server_outputs/streamed_fullfield_20260511_205252",
   "submission_package": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release",
   "project_root": "/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release",
@@ -47,8 +47,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 17006,
-      "sha256": "48b899716928a0d06df8bc19ea26de0deee826674e440b8264918dd7871a2bc9"
+      "bytes": 17316,
+      "sha256": "288eaed045668f550d3ace077122b5b3f31a7549b6ce428cae70c00316f749d4"
     },
     {
       "path": "STRICT_REVIEW_RESPONSE_20260522.md",
@@ -457,8 +457,8 @@
     },
     {
       "path": "output/EXPERIMENT_FIGURE_TABLE_LEDGER.md",
-      "bytes": 13062,
-      "sha256": "04bb6b007c5d168ac5b51b8f3054470cdb387eb5874076cd41144dd64ae9e374"
+      "bytes": 13189,
+      "sha256": "9275d48b0e9735bf534d6c1732c2ec1da8fa14e029a24a1c3e95ba4e880693cc"
     },
     {
       "path": "output/LATEX_BUILD_REPORT.md",
@@ -467,8 +467,8 @@
     },
     {
       "path": "output/SUBMISSION_REPOSITORY_DOI_STATUS.md",
-      "bytes": 5108,
-      "sha256": "52437534b4c8ca29482121f320786999aeddbb27a2d7c8b3c187eb4bef04f244"
+      "bytes": 5471,
+      "sha256": "16ef376289a0eaef700b5731e0224765c6aed6f197c7ed2f182030364be39fed"
     },
     {
       "path": "output/pdf_previews/current_goal_qa/page_001_method_tables.png",
@@ -577,8 +577,8 @@
     },
     {
       "path": "output/pdf_text_current.txt",
-      "bytes": 137630,
-      "sha256": "91c4c584660c85c85df5f77ca536c86f91f12afe2c8029b35b3ea7df14db8cc5"
+      "bytes": 203117,
+      "sha256": "99ec2cd024a936fc6c448dfb71467728a852a9ce4192643c71d9ce24c4467eb6"
     },
     {
       "path": "papers/paper_notes.jsonl",
@@ -682,8 +682,8 @@
     },
     {
       "path": "submission_materials/zenodo_doi_runbook_v010.md",
-      "bytes": 1887,
-      "sha256": "74410ac10fec633c8ac17a4b3a4596ceba70d5f801a24747a62745c662d67dc2"
+      "bytes": 2195,
+      "sha256": "7d3511e176ed55be882b2bd2a074664fce00d11042d7241048b9cdf3256e3fdd"
     },
     {
       "path": "submission_materials/zenodo_metadata_v010.json",

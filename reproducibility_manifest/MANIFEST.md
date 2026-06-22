@@ -1,6 +1,6 @@
 # Reproducibility Manifest
 
-Generated at: `2026-06-22T09:27:32+00:00`
+Generated at: `2026-06-22T09:48:44+00:00`
 Run directory: `/Users/Apple/Developer/paper/dunhuang-heliostat-flux-benchmark-release/server_outputs/streamed_fullfield_20260511_205252`
 
 This manifest is intended for reviewers. It records checksums for the layouts, terrain/weather inputs, SolarPILOT numerical-check tables, aiming-proxy tables, reduced SolTrace custom-aimpoint outputs, and manuscript-facing figures used in the current draft.
@@ -15,7 +15,7 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `JOURNAL_TARGET_REASSESSMENT_20260622.md` | 11378 | `7711ef75dc4b31c1a4ac11573c0a69b23feb1001ba02553f5a8b69e5268555c4` |
 | `JOURNAL_TARGET_REASSESSMENT_20260622_CURRENT.md` | 8456 | `b3533d3f081ae312cf3e3a2e3d4b13d2c1e0557fc3dca0577d0eb452e2ee188f` |
 | `NEXT_STRENGTHENING_PLAN_20260512.md` | 5479 | `778f39b75e9fa4f30b5f02cc6895c7c9a4b4fd80f151bcf196870c70e5e5bfde` |
-| `README.md` | 17006 | `48b899716928a0d06df8bc19ea26de0deee826674e440b8264918dd7871a2bc9` |
+| `README.md` | 17316 | `288eaed045668f550d3ace077122b5b3f31a7549b6ce428cae70c00316f749d4` |
 | `STRICT_REVIEW_RESPONSE_20260522.md` | 10770 | `1782d134aad901859fcfb250303f9d9667efb268ade20ba947dfcdcb6a8dea0a` |
 | `SUBMISSION_STRATEGY_AND_REVIEWER_AUDIT_20260512.md` | 6169 | `781b71ea13b5f143d9a5406c670b706b829b4148559f0714bfe3356361f18ab1` |
 | `VERSION_RESTORATION_AUDIT_20260514.md` | 4577 | `066136fa6ff8527913a7ad489b74a7bbfbfefbedf3f4f9d6fe3116298fa305b4` |
@@ -97,9 +97,9 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `latex/figures/monthly_dni_sensitivity.png` | 108824 | `f1e38f2fa67cb9f6b63523e4d631792a42688b2663cfc36c3d08ba1cf3f9fe52` |
 | `latex/main.pdf` | 30905358 | `367d1a731b589bd455e6a47e9ad47a0e79550f8e8a9b4578ea19a2754403981a` |
 | `latex/main.tex` | 190064 | `4d305261162d5e11e99942b7f39141af284b07ee15424c6bbf689d2de1c634f6` |
-| `output/EXPERIMENT_FIGURE_TABLE_LEDGER.md` | 13062 | `04bb6b007c5d168ac5b51b8f3054470cdb387eb5874076cd41144dd64ae9e374` |
+| `output/EXPERIMENT_FIGURE_TABLE_LEDGER.md` | 13189 | `9275d48b0e9735bf534d6c1732c2ec1da8fa14e029a24a1c3e95ba4e880693cc` |
 | `output/LATEX_BUILD_REPORT.md` | 13480 | `9b3dffa7db6cbe1dea3266881bee29243772ffee1b65bb73d80b7a2c946d516f` |
-| `output/SUBMISSION_REPOSITORY_DOI_STATUS.md` | 5108 | `52437534b4c8ca29482121f320786999aeddbb27a2d7c8b3c187eb4bef04f244` |
+| `output/SUBMISSION_REPOSITORY_DOI_STATUS.md` | 5471 | `16ef376289a0eaef700b5731e0224765c6aed6f197c7ed2f182030364be39fed` |
 | `output/pdf_previews/current_goal_qa/page_001_method_tables.png` | 67950 | `466471df87f8d7e4efbe75fa99ff3a4e21cd83f39ee69d2a1a6670d536e1cb63` |
 | `output/pdf_previews/current_goal_qa/page_002_method_tables.png` | 70654 | `1a92fb0de1a2667776a47d3a4291bb0207062300e628699bc084fc45bc76fe7c` |
 | `output/pdf_previews/current_goal_qa/page_003_method_tables.png` | 81560 | `efdd858bf7ceb6c7c5453ab4c9823bbdf94ad267c622322af642a63897619244` |
@@ -121,7 +121,7 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `output/pdf_previews/verified_pages/page_014_workflow_table.png` | 260467 | `a61b2e6d400524ce32604a65bcc602d344a81b203d0bcd46180c8551c1e11c1c` |
 | `output/pdf_previews/verified_pages/page_031_direct_audit.png` | 301960 | `d4044f6117ca0991996ffb70123f9825c5007f00148e8fe771f025d1ca1f8314` |
 | `output/pdf_previews/verified_pages/page_037_data_code.png` | 342226 | `f3f1716b8f91638deb8f4c6fba8e5530b7ab5c0adbfc23f6355b5df52a561a84` |
-| `output/pdf_text_current.txt` | 137630 | `91c4c584660c85c85df5f77ca536c86f91f12afe2c8029b35b3ea7df14db8cc5` |
+| `output/pdf_text_current.txt` | 203117 | `99ec2cd024a936fc6c448dfb71467728a852a9ce4192643c71d9ce24c4467eb6` |
 | `papers/paper_notes.jsonl` | 21398 | `f1a7b9b89ef96e2f1db538da24da148ac767809b5fbf0ed77f9d02d57276c9ea` |
 | `reproducibility_config/PARAMETER_REGISTRY.md` | 20006 | `78cf3e92d2c412c22d1dcfbf692d265db25578e4ae99523d996c28b9d354977e` |
 | `reproducibility_config/README.md` | 12019 | `67b8f7a4700b55900df6dd24dc996f281978df0d02f00003d73aa13ea6275462` |
@@ -142,7 +142,7 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `submission_materials/vertical_graphical_abstract_template/README.md` | 1529 | `b3a86a07ea1a2655361aeaf9e9c5ab0d73cd921a52715d6a085a09fdbeed3a57` |
 | `submission_materials/vertical_graphical_abstract_template/build_vertical_graphical_abstract.py` | 56260 | `c5a004489253692fa668ef50a85c62960a823bb6cb2cec0c48148117cbe7176e` |
 | `submission_materials/vertical_graphical_abstract_template/config.json` | 2329 | `79fd9210be4dd3c0a593bf162bdc4d1ebeb2c0b9304d7e16696efcae35017f5d` |
-| `submission_materials/zenodo_doi_runbook_v010.md` | 1887 | `74410ac10fec633c8ac17a4b3a4596ceba70d5f801a24747a62745c662d67dc2` |
+| `submission_materials/zenodo_doi_runbook_v010.md` | 2195 | `7d3511e176ed55be882b2bd2a074664fce00d11042d7241048b9cdf3256e3fdd` |
 | `submission_materials/zenodo_metadata_v010.json` | 2300 | `f56baa6f168a246debfb4eed9ce990c52d640f573996efe87702f11bb5144908` |
 | `supplementary_data/aiming_sensitivity_tables/AIMING_SENSITIVITY_REPORT.md` | 1234 | `eeacebd448732d5ce81feaf5788a1be74d89527ef869bb40b276bd335a68075d` |
 | `supplementary_data/aiming_sensitivity_tables/aiming_sensitivity_records.csv` | 121962 | `2dd72684dc747a823160ed767d46496eaf5bd29cb94f7c1122e4247ca8100d81` |

@@ -95,14 +95,14 @@ The following source labels remain in `main.tex` after `\iffalse` or are represe
 
 ## Package and DOI State
 
-- The previous verified manuscript-facing release is GitHub release `v0.1.7` (`fix: 发布v0.1.7图文润色投稿包`), target commit `d15f9ae3f1436227583414f57ec199621ad02c57`.
-- The current `v0.1.10` package is a metadata/status correction prepared for Zenodo DOI deposition. It does not add experiments or broaden the claim boundary.
-- The previous `v0.1.7` release archive is `solar_energy_elsarticle_v8_strict_review_rescue_20260622_v017.zip`, SHA-256 `9ee1eba84e36552035d73fa00817871aa7c074d644f99f5067277ff235dc3bf8`, with a companion `.sha256` asset.
-- The already-published cleanup archives `v0.1.5`, `v0.1.6`, and `v0.1.7` remain historical checkpoints and should not be treated as the final DOI-deposition package once `v0.1.10` is released.
+- The current verified manuscript-facing release is GitHub release `v0.1.10` (`fix: 发布v0.1.10投稿包最终归档源`), target commit `1239ae2a25869c0e127491aa1fd165b0a540599a`.
+- The current `v0.1.10` release archive is `solar_energy_elsarticle_v8_strict_review_rescue_20260622_v010.zip`, SHA-256 `b4c5b850ab7b212775d93570d91d8669ce524d904f525314f8d1de2bdd4f6d2d`, with a companion `.sha256` asset. The current PDF SHA-256 is `367d1a731b589bd455e6a47e9ad47a0e79550f8e8a9b4578ea19a2754403981a`.
+- The `v0.1.10` package is a metadata/status correction over the earlier author-review releases. It does not add experiments or broaden the claim boundary.
+- The already-published cleanup archives `v0.1.5`, `v0.1.6`, `v0.1.7`, `v0.1.8`, and `v0.1.9` remain historical checkpoints and should not be treated as the final DOI-deposition package now that `v0.1.10` is verified.
 - The older `v0.1.1` archive remains a historical package and should not be used as the final DOI-bearing upload if the submitted PDF is the current 2026-06-22 cleanup build.
 - The older Zenodo DOI `10.5281/zenodo.16957381` is the coordinate-source DOI only. A new Zenodo DOI for the full V8 benchmark package should be minted from the final GitHub release before DOI-bearing journal submission.
 - Current checksum manifest should include `.zenodo.json`, `submission_materials/zenodo_metadata_v010.json`, `submission_materials/zenodo_doi_runbook_v010.md`, the latest 40-page `latex/main.pdf`, refreshed QA preview pages, README/status reports, and figure/data/code artifacts.
-- Root `README.md`, package `README.md`, manuscript Data/Code Availability, and `submission_materials/data_availability_statement.md` now agree that `v0.1.10` is the intended release for DOI deposition if this current PDF is submitted.
+- Root `README.md`, package `README.md`, manuscript Data/Code Availability, and `submission_materials/data_availability_statement.md` now agree that the verified `v0.1.10` release is the DOI-deposition source if this current PDF is submitted.
 
 ## Claim Boundary Summary
 

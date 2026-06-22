@@ -11,9 +11,12 @@ Updated: 2026-06-22 CST, v0.1.10 metadata/status correction pass
 
 ## Repository / Release
 
-- Manuscript-facing GitHub release recorded in the current manuscript: <https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.10>.
+- Manuscript-facing GitHub release recorded in the current manuscript and verified online: <https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.10>.
+- Current `v0.1.10` release title: `fix: 发布v0.1.10投稿包最终归档源`.
+- Current `v0.1.10` target commit: `1239ae2a25869c0e127491aa1fd165b0a540599a`.
+- Current `v0.1.10` release archive: `solar_energy_elsarticle_v8_strict_review_rescue_20260622_v010.zip`, SHA-256 `b4c5b850ab7b212775d93570d91d8669ce524d904f525314f8d1de2bdd4f6d2d`.
 - Source coordinate DOI already cited in the manuscript: `10.5281/zenodo.16957381` as the coordinate-source record only.
-- Current clean package status: `v0.1.10` is the final metadata/status cleanup source for Zenodo DOI deposition. It does not add experiments or broaden claims; it removes pre-release wording from the archival metadata and points the manuscript Data/Code Availability to the DOI-deposition release.
+- Current clean package status: `v0.1.10` is a verified metadata/status cleanup source for Zenodo DOI deposition. It does not add experiments or broaden claims; it removes pre-release wording from the archival metadata and points the manuscript Data/Code Availability to the DOI-deposition release.
 - Zenodo metadata draft: `.zenodo.json` has been prepared at the package root with `v0.1.10` metadata and the `v0.1.10` GitHub release URL. Add the minted DOI after Zenodo deposition.
 - DOI runbook: `submission_materials/zenodo_doi_runbook_v010.md`. Superseded `v016/v017` Zenodo metadata and DOI-runbook files were removed from the active package to avoid stale DOI instructions.
 - Required before final DOI-bearing journal upload: mint a new Zenodo DOI from the verified GitHub `v0.1.10` release and cite it as the algorithm/data package DOI. Do not reuse the coordinate-source DOI for the full V8 benchmark package.
