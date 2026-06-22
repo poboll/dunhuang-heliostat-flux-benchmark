@@ -1,6 +1,6 @@
 # Experiment, Figure, and Table Ledger for Solar Energy V8
 
-Updated: 2026-06-22 CST after the journal-style data-availability cleanup. Generated against the latest compiled `latex/main.aux`, so this ledger reflects the rendered PDF rather than hidden `\iffalse` supplementary blocks.
+Updated: 2026-06-22 CST after the journal-style data-availability, Figure 1, Zenodo-metadata, and manifest cleanup. Generated against the latest compiled `latex/main.aux`, so this ledger reflects the rendered PDF rather than hidden `\iffalse` supplementary blocks.
 
 ## Rendered Inventory
 
@@ -82,9 +82,11 @@ The following source labels remain in `main.tex` after `\iffalse` or are represe
 
 ## Package and DOI State
 
-- The manuscript-facing public archive for the active journal-style package is release `v0.1.2` (`fix: 更新Solar Energy V8投稿包排版与数据可用性`).
+- The current manuscript-facing cleanup archive is release `v0.1.3` (`fix: 优化图一与Zenodo元数据`).
+- This release contains the post-`v0.1.2` Figure 1 cleanup, DOI metadata, updated PDF, and refreshed checksum manifest. It should be used as the source archive for Zenodo DOI minting.
 - The older `v0.1.1` archive remains a historical package and should not be used as the final DOI-bearing upload if the submitted PDF is the current 2026-06-22 cleanup build.
 - The older Zenodo DOI `10.5281/zenodo.16957381` is the coordinate-source DOI only. A new Zenodo DOI for the full V8 benchmark package should be minted from the final GitHub release before DOI-bearing journal submission.
+- Current checksum manifest: 612 files, including `.zenodo.json`, `submission_materials/zenodo_metadata_v013.json`, the latest 40-page `latex/main.pdf`, and the four verified QA preview pages.
 
 ## Claim Boundary Summary
 

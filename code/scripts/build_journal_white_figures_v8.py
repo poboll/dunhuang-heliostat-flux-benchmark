@@ -357,7 +357,7 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
                         "alpha": 0.78,
                     },
                 )
-            inset = ax.inset_axes([0.685, 0.045, 0.285, 0.330])
+            inset = ax.inset_axes([0.650, 0.040, 0.330, 0.390])
             inset.set_facecolor("#FFFFFF")
             inset.set_xticks([])
             inset.set_yticks([])
@@ -381,15 +381,15 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
                     )
             island_lons = [112.3, 114.1, 116.4, 118.8, 111.2, 119.5]
             island_lats = [16.8, 14.7, 12.2, 10.4, 8.8, 6.6]
-            inset.scatter(island_lons, island_lats, s=6.0, color="#2563EB", alpha=0.85, zorder=3)
-            inset.scatter([121.0, 110.0], [23.7, 19.2], s=10.0, color="#2563EB", alpha=0.95, zorder=4)
-            inset.text(121.3, 23.2, "Taiwan", fontsize=4.6, color="#334155", ha="left", va="center")
-            inset.text(110.3, 18.8, "Hainan", fontsize=4.6, color="#334155", ha="left", va="center")
+            inset.scatter(island_lons, island_lats, s=8.0, color="#2563EB", alpha=0.88, zorder=3)
+            inset.scatter([121.0, 110.0], [23.7, 19.2], s=13.0, color="#2563EB", alpha=0.96, zorder=4)
+            inset.text(121.35, 23.25, "Taiwan", fontsize=5.4, color="#334155", ha="left", va="center")
+            inset.text(110.35, 18.85, "Hainan", fontsize=5.4, color="#334155", ha="left", va="center")
             inset.text(
                 105.6,
                 4.4,
                 "South China Sea\nisland inset",
-                fontsize=4.4,
+                fontsize=5.0,
                 color=PALETTE["muted"],
                 ha="left",
                 va="bottom",
@@ -421,8 +421,8 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
             zorder=6,
         )
         x_min, x_max, y_min, y_max = projected_ring_extent(all_rings)
-        pad_x = (x_max - x_min) * (0.085 if expanded else 0.100)
-        pad_y = (y_max - y_min) * (0.090 if expanded else 0.120)
+        pad_x = (x_max - x_min) * (0.060 if expanded else 0.100)
+        pad_y = (y_max - y_min) * (0.060 if expanded else 0.120)
         ax.set_xlim(x_min - pad_x, x_max + pad_x)
         ax.set_ylim(y_min - pad_y, y_max + pad_y)
         ax.set_aspect("equal", adjustable="box")
@@ -649,16 +649,16 @@ def figure_layout_panel(run: Path, out: Path) -> None:
     fig.savefig(out / "fig_journal_layout_realism_panel.png", bbox_inches="tight")
     plt.close(fig)
 
-    bottom = plt.figure(figsize=(7.25, 3.85), dpi=360)
+    bottom = plt.figure(figsize=(7.25, 4.28), dpi=360)
     bgs = bottom.add_gridspec(
         1,
         2,
-        width_ratios=[1.10, 0.90],
-        left=0.026,
+        width_ratios=[1.05, 0.95],
+        left=0.020,
         right=0.992,
-        bottom=0.215,
+        bottom=0.155,
         top=0.975,
-        wspace=0.170,
+        wspace=0.145,
     )
     ax_b = bottom.add_subplot(bgs[0, 0])
     ax_c = bottom.add_subplot(bgs[0, 1])
@@ -682,9 +682,9 @@ def figure_layout_panel(run: Path, out: Path) -> None:
             subset["y_m"],
             facecolors="none",
             edgecolors=overlay_colors[layout_id],
-            s=4.5,
-            alpha=0.56,
-            linewidths=0.44,
+            s=5.2,
+            alpha=0.58,
+            linewidths=0.48,
             rasterized=True,
             label=role_marker_label(layout_id),
         )
@@ -693,9 +693,9 @@ def figure_layout_panel(run: Path, out: Path) -> None:
     ax_c.set_aspect("equal", adjustable="box")
     ax_c.set_xlim(-2050, 2050)
     ax_c.set_ylim(-2050, 2050)
-    ax_c.set_xlabel("x coordinate (m)", fontsize=7.4, labelpad=2)
-    ax_c.set_ylabel("y coordinate (m)", fontsize=7.4, labelpad=2)
-    ax_c.tick_params(axis="both", labelsize=6.8, length=2.2, width=0.65)
+    ax_c.set_xlabel("x coordinate (m)", fontsize=8.0, labelpad=2)
+    ax_c.set_ylabel("y coordinate (m)", fontsize=8.0, labelpad=2)
+    ax_c.tick_params(axis="both", labelsize=7.2, length=2.4, width=0.65)
     ax_c.grid(True)
     ax_c.spines["top"].set_visible(False)
     ax_c.spines["right"].set_visible(False)
@@ -705,11 +705,11 @@ def figure_layout_panel(run: Path, out: Path) -> None:
         labels,
         frameon=False,
         loc="lower center",
-        bbox_to_anchor=(0.52, 0.055),
+        bbox_to_anchor=(0.55, 0.035),
         ncol=5,
-        fontsize=7.0,
+        fontsize=7.4,
         handletextpad=0.28,
-        columnspacing=1.10,
+        columnspacing=0.95,
     )
     bottom.savefig(out / "fig1_locator_geometry_audit.png", bbox_inches="tight", pad_inches=0.03)
     plt.close(bottom)

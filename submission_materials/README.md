@@ -13,6 +13,10 @@ This directory contains editable files for an Elsevier-style submission package.
 - `funding_statement.md`: funding statement from the submission metadata.
 - `author_contributions_credit.md`: draft CRediT roles to confirm with coauthors.
 - `reviewer_risk_response_memo.md`: internal memo for revision, not a direct upload file.
+- `zenodo_doi_runbook_v013.md`: DOI minting checklist for the `v0.1.3` manuscript-facing package.
+
+The package root also contains `.zenodo.json`, a machine-readable Zenodo metadata
+draft for `v0.1.3`. Add the minted DOI after Zenodo deposition.
 
 The previous horizontal graphical abstract is archived under
 `archive/graphical_abstract_horizontal_replaced_20260611/`.
