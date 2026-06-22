@@ -32,11 +32,11 @@
     "Dunhuang"
   ],
   "license": "MIT",
-  "version": "v0.1.5",
+  "version": "v0.1.6",
   "language": "eng",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.5",
+      "identifier": "https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.6",
       "relation": "isSupplementTo",
       "resource_type": "software",
       "scheme": "url"
@@ -48,5 +48,5 @@
       "scheme": "doi"
     }
   ],
-  "notes": "Prepared for the manuscript-facing GitHub release v0.1.5. The DOI 10.5281/zenodo.16957381 is retained only as the source-coordinate archive DOI."
+  "notes": "Prepared for the manuscript-facing GitHub release v0.1.6. The DOI 10.5281/zenodo.16957381 is retained only as the source-coordinate archive DOI."
 }

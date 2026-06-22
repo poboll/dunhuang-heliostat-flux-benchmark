@@ -1,6 +1,6 @@
 # Reproducibility Manifest
 
-Generated at: `2026-06-22T05:19:45+00:00`
+Generated at: `2026-06-22T06:41:14+00:00`
 Run directory: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/server_outputs/streamed_fullfield_20260511_205252`
 
 This manifest is intended for reviewers. It records checksums for the layouts, terrain/weather inputs, SolarPILOT numerical-check tables, aiming-proxy tables, reduced SolTrace custom-aimpoint outputs, and manuscript-facing figures used in the current draft.
@@ -22,13 +22,13 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `docs/V11_SOLTRACE_CONVERGENCE_AUDIT_20260514.md` | 2535 | `0ae2850315572e1c8fa9fb4b8bd436b7dfe78b99db393530661e13636bcd1047` |
 | `docs/V8_ALLPHASE_DIRECT_SOLTRACE_RUN_20260512.md` | 2718 | `cf6d80cdff0b7a3cdfa68051944ac0ea69f566f5935ac038289ae8604201e3b6` |
 | `docs/V9_HIGHSAMPLE_CONFIRMATION_SOLTRACE_RUN_20260512.md` | 4401 | `e48e3be9bc630fca863010b81b63f597564ca0f138e2811373f93197708309d3` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/.zenodo.json` | 2121 | `2b199ef512f9535325536db07cf284f154c431e025c71dcf510a697706284539` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/.zenodo.json` | 2121 | `9bc5500e59e41594c97e25682708faecb453c10387ffac19e1df2acadd1873fb` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/FIGURE_STYLE_GUIDE.md` | 1656 | `d91d12b583fcc6521e59ff7a601fd0e83b94a8d243525dc913c58cf0146fc139` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/FIGURE_TABLE_FONT_REFERENCE_AUDIT_20260515.md` | 7674 | `a002e905b390b3ba933e02de91a0477e9e2e312dfc5be4e11ebdbc87af894ad6` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/JOURNAL_SELECTION_CAS2_AUDIT_20260512.md` | 5301 | `3abdcfa1096af81b61bddc91e102150dab4db329fc3c9b4ddef0ba63781f9e1d` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/JOURNAL_TARGET_AND_TEMPLATE.md` | 6295 | `a790dcd67f5f399609fe2c0dec5b6ac53f91c51ecf84ab26b1c8f153f70a1bc7` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/NEXT_STRENGTHENING_PLAN_20260512.md` | 5479 | `778f39b75e9fa4f30b5f02cc6895c7c9a4b4fd80f151bcf196870c70e5e5bfde` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/README.md` | 16245 | `db25e79f17103be3b94e2db5cc0f0559323ef25fbbb67e3caeeb70874ee8f8ac` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/README.md` | 16458 | `08c3a3d01bd7dae638db87af310be37ca54cf1203acd2a9d48080814901fae3c` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/STRICT_REVIEW_RESPONSE_20260522.md` | 10770 | `1782d134aad901859fcfb250303f9d9667efb268ade20ba947dfcdcb6a8dea0a` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/SUBMISSION_STRATEGY_AND_REVIEWER_AUDIT_20260512.md` | 6169 | `781b71ea13b5f143d9a5406c670b706b829b4148559f0714bfe3356361f18ab1` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/VERSION_RESTORATION_AUDIT_20260514.md` | 4577 | `066136fa6ff8527913a7ad489b74a7bbfbfefbedf3f4f9d6fe3116298fa305b4` |
@@ -112,11 +112,17 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/figures/fig_v11_soltrace_convergence_audit.png` | 236120 | `1af98cf7d3fe4c2dffba03b83a18b215e057926b27f1071f8c85fd7c9399ef2f` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/figures/fig_v9_highsample_confirmation.png` | 129216 | `17e5b215de408deaf29e1561b258ad7c6a957917b95fd5d222239d120bb21ae0` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/figures/monthly_dni_sensitivity.png` | 98857 | `3f1a1e409f91e314d4bcd0f9d87ce8f61f7f74282593b733b4fb27f84f4fb2ce` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.pdf` | 30901589 | `d82c81c7aa4eb74c41fa88dd3e59469c3a01b33ea84a1699ef532260436f0e0f` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.tex` | 190103 | `75b2dfd5e0ccf14a46de6b8f8303b7d13df233592185da5405e2f43c97bf821c` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/EXPERIMENT_FIGURE_TABLE_LEDGER.md` | 12228 | `746aec1650e95a74ba675f5e63f120126930003115c91202d0568d457350336c` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/LATEX_BUILD_REPORT.md` | 3498 | `7431e12138d10c22b38a2b3250da391ec4f88dc9da5c142e98a2ac73b8753161` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/SUBMISSION_REPOSITORY_DOI_STATUS.md` | 4805 | `09598af973b1d95c7a2373f86624d434313ff8504fe293c321dc85a2d1adbf51` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.pdf` | 30901688 | `d0ea90a580fe7cf68c229d1e12f9999f2fbeebb2db4626e03134b4e31ab590af` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.tex` | 190283 | `fc8a797e85dbc1d26e3b57b9c32e2d65edf8fff5ecd113a644e802b80ede5d3f` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/EXPERIMENT_FIGURE_TABLE_LEDGER.md` | 12799 | `a05722ebdd30ff3d0234e50984af803314e7468f356ede285bd6b67f011ca59c` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/LATEX_BUILD_REPORT.md` | 8517 | `486f090ce3325dab9b759ab081298b180473a06b994821e302e1578deba116fa` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/SUBMISSION_REPOSITORY_DOI_STATUS.md` | 5159 | `c03eca8e64171e34ec8dd8a5ca2d1171d15a0858b42a6b6f6057f3087a1c16c3` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_001.png` | 71803 | `b52dfc2db71785d4c346c5c0f9211c2ee07c725db26991fccb55411f6b06c883` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_005.png` | 1076071 | `121f7c9e70ae5bc14035c1158b77c87531f12d00ddfa57b377bd0edcd4232744` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_014.png` | 59330 | `a1d7e6984767dd78911ab1c8ca3827e114be39e2cafd1a9aea93af97f8ce9be0` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_031.png` | 99449 | `2c6166ab39958e576e917033715092517b1bbad0c6ccce8c8e586e7064fa6ec6` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_037.png` | 82354 | `75ab0bfb81c57afd4953228b3a1f0c0ac856409a3b195ffc735f9c3b4b502252` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/current_qa/page_040.png` | 45655 | `55c0616fdde4ed4eb3a1a54516a1ddc8161638a48134fbb536f5e6a60655c585` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_005_fig1.png` | 1084546 | `93d97ddd13b37a2f5544d8754c40656544376397932ec210ef8bd9428617f78c` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_014_workflow_table.png` | 260467 | `a61b2e6d400524ce32604a65bcc602d344a81b203d0bcd46180c8551c1e11c1c` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/output/pdf_previews/verified_pages/page_031_direct_audit.png` | 301960 | `d4044f6117ca0991996ffb70123f9825c5007f00148e8fe771f025d1ca1f8314` |
@@ -127,23 +133,23 @@ This manifest is intended for reviewers. It records checksums for the layouts, t
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/reproducibility_config/environment.yml` | 237 | `055ef624c3dd444b0c48f787949af92981c76b9b9ebe4e445e1d0cb9e429917e` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/reproducibility_config/requirements.txt` | 93 | `fa64d5e22ec373030ab0fce7e5e4df6c45968a82910efcebbfc0f9dc86715711` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/reproducibility_config/server_full.json` | 2209 | `d4a3a2313cdfb2dca2de44420af6e0d8580e067f51d6432d853134968df5e1cc` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/README.md` | 1409 | `727c5ee627744190c8f9bc4053c32fcfab633328226b7c8b3704d65dbfe94fee` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/README.md` | 1409 | `b2546d3dd28ec4600b6913f3c273225031f396d76f77e7a731a2f1e9292ad942` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/author_contributions_credit.md` | 499 | `d1183406d85c5b76e97fbc71216ef5fd451b727b56929c9164f4235134cf8578` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/cover_letter.md` | 4490 | `c0cab1098a7a80af9e96787d7aebd42b5324f6db6d0bfb99be8ae071083210cf` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/data_availability_statement.md` | 2972 | `278682bf42a66be72f4c7195172ac0103839c522ee574897143a1186b4aaf21f` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/data_availability_statement.md` | 2397 | `26602a422552bd205518d27afef58fb03a0a206da25850c53d1355bb58a6e367` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/declaration_of_interests.md` | 200 | `7639dca922a42ee7c2a7b8d23189c3b995537cef2b8cd3bd035c591cddcbb8a4` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/funding_statement.md` | 481 | `8cc2e0336324edc9e21aa089d651c4855cd8414cedef73497f7c72ed92776a98` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/graphical_abstract.pdf` | 665188 | `7f84cffdad235065ef51705a3b853e3de025350dc71bde72ba5009f1611968ed` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/graphical_abstract.png` | 3752200 | `6b85340895b4805953033772beb7eafff804da842113912e9790ffd463f79d50` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/graphical_abstract_note.md` | 2070 | `b0bf0e300e39a49ab1a0098d183446611696db0c7c108f95cabbbf74cfa3c89d` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/highlights.md` | 356 | `683eecb2ea66ea98c52f6286c7cc52478d721c577958c7de6cfc76bd99e37b0f` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/reviewer_risk_response_memo.md` | 7288 | `94a41744502e9b06d9a94b66862b22836db61dbfab4bd983f4bbc0bbbb1cb5c2` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/reviewer_risk_response_memo.md` | 7298 | `3c43f7c2f006ec5f2fb42d0919cabfabd9bdada8d895aade71dc1ecdf462feaf` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/vertical_graphical_abstract_template/README.md` | 1576 | `814cf102070e84762ac88e7785d9cdaf6b197be09dfbef7f25c3212fd349558e` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/vertical_graphical_abstract_template/__pycache__/build_vertical_graphical_abstract.cpython-313.pyc` | 85333 | `0f437ae6f1d0940fc803d7c0a2f2328a0c550a649893bcd7210446941dac5457` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/vertical_graphical_abstract_template/build_vertical_graphical_abstract.py` | 56260 | `c5a004489253692fa668ef50a85c62960a823bb6cb2cec0c48148117cbe7176e` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/vertical_graphical_abstract_template/config.json` | 2329 | `79fd9210be4dd3c0a593bf162bdc4d1ebeb2c0b9304d7e16696efcae35017f5d` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_doi_runbook_v015.md` | 1627 | `825f69b4f0bd3b03a74905cb3aca94b3851107699c4a7734f902ed0d1c0b470c` |
-| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_metadata_v015.json` | 2121 | `2b199ef512f9535325536db07cf284f154c431e025c71dcf510a697706284539` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_doi_runbook_v016.md` | 1627 | `f3ebad2e4b247725e642bcc675b99fe771aa2e3375140ab3561c2680fa91e3e1` |
+| `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/submission_materials/zenodo_metadata_v016.json` | 2121 | `9bc5500e59e41594c97e25682708faecb453c10387ffac19e1df2acadd1873fb` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/supplementary_data/aiming_sensitivity_tables/AIMING_SENSITIVITY_REPORT.md` | 1234 | `eeacebd448732d5ce81feaf5788a1be74d89527ef869bb40b276bd335a68075d` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/supplementary_data/aiming_sensitivity_tables/aiming_sensitivity_records.csv` | 121962 | `2dd72684dc747a823160ed767d46496eaf5bd29cb94f7c1122e4247ca8100d81` |
 | `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/supplementary_data/aiming_sensitivity_tables/aiming_sensitivity_summary.csv` | 842 | `07e09c45aa60881cf61f5dae54a4b67a7235bdff43c143dcbf86a4c5d105ec78` |

@@ -1,6 +1,6 @@
 # Experiment, Figure, and Table Ledger for Solar Energy V8
 
-Updated: 2026-06-22 CST after the journal-style data-availability, Figure 1, Zenodo-metadata, and manifest cleanup. Generated against the latest compiled `latex/main.aux`, so this ledger reflects the rendered PDF rather than hidden `\iffalse` supplementary blocks.
+Updated: 2026-06-22 CST after the journal-style data-availability, Figure 1, Zenodo-metadata, README-version, journal-target reassessment, benchmark-wording guardrail, and v0.1.6 release-candidate cleanup. Generated against the latest compiled `latex/main.aux`, so this ledger reflects the rendered PDF rather than hidden `\iffalse` supplementary blocks.
 
 ## Rendered Inventory
 
@@ -10,14 +10,14 @@ Updated: 2026-06-22 CST after the journal-style data-availability, Figure 1, Zen
 
 - Hidden/supplementary labels in `main.tex` but absent from the compiled `.aux`: 12. These are retained as supplementary evidence and are not counted as main-article pages.
 
-- The main paper keeps the evidence ladder visible, but file-level data dictionaries, long run logs, V9/V10/V11/V12 expanded tables, threats-to-validity matrices, future-verification roadmaps, and the former package-index table stay outside the rendered journal body.
+- The main paper keeps the evidence ladder visible, but file-level data dictionaries, long run logs, V9/V10/V11/V12 expanded tables, threats-to-validity matrices, future-verification roadmaps, and the former package-index table stay outside the rendered journal body. The rendered Data and Code Availability section now cites the `v0.1.6` release candidate and manifest in prose rather than displaying a directory-style table.
 
 ## Experiment Evidence Ladder
 
 | Layer | Evidence included in the paper/package | Main figures/tables | Claim level |
 |---|---|---|---|
 | Plant and coordinate audit | Public Dunhuang plant parameters, 11,915-coordinate audited pool, disclosed 20-record gap, random-omission geometry stress test in the supplement | `tab:plant-audit`, `fig:layout-realism` | Plant-anchored numerical benchmark, not as-built survey |
-| Candidate generation | Terrain-screened full-field petal/sector deformation, 1,841 screened candidates, count/sector/annulus/spacing/terrain gates | `alg:tfpda`, `tab:param-envelope`, `tab:gates` | Conservative candidate generator |
+| Candidate generation | Terrain-screened full-field petal/sector deformation, 1,841 screened candidates, count/sector/annulus/spacing/terrain gates | `alg:tfpda`, `tab:param-envelope`, `tab:gates` | Conservative candidate-generation workflow |
 | Receiver proxy screening | Aiming-proxy metrics, representative queue, aiming sensitivity over grouping/spot/phase assumptions | `tab:proxy-metrics`, `tab:representative-roles`, `fig:aimproxy`, `fig:aiming-sensitivity` | Screening-level receiver-risk evidence |
 | SolarPILOT default-aiming bridge | Common PySAM/SolarPILOT checks for representative layouts, optical efficiency, default receiver-flux maps, receiver-grid and flux-day robustness gates in the supplement | `tab:summary`, `fig:tradeoff`, `fig:fluxmaps` | Layout-level numerical checking under default aiming |
 | Baseline and ablation pressure | Same-condition low-complexity controls, literature-inspired same-anchor approximation families, component ablation | `tab:baseline-controls`, `fig:baseline-controls`, `tab:strong-baselines`, `fig:strong-baselines`, `tab:ablation` | Prevents single-method or SOTA-overclaim |
@@ -95,14 +95,15 @@ The following source labels remain in `main.tex` after `\iffalse` or are represe
 
 ## Package and DOI State
 
-- The current manuscript-facing cleanup archive is GitHub release `v0.1.5` (`fix: 同步v0.1.5清单与发布状态`), with the archive SHA-256 recorded in the companion `.sha256` release asset.
-- This release contains the post-`v0.1.2` Figure 1 cleanup, DOI metadata, updated PDF, and refreshed checksum manifest. It should be used as the source archive for Zenodo DOI minting.
+- The current manuscript-facing release candidate is GitHub release `v0.1.6` (`fix: 更新v0.1.6投稿包口径与DOI元数据`). Build the archive and companion `.sha256` from this package before DOI deposition.
+- The previous already-published cleanup archive is `v0.1.5`; it remains a historical checkpoint and should not be treated as identical to the current PDF after the journal-target, wording, and DOI-metadata consistency pass.
 - The older `v0.1.1` archive remains a historical package and should not be used as the final DOI-bearing upload if the submitted PDF is the current 2026-06-22 cleanup build.
 - The older Zenodo DOI `10.5281/zenodo.16957381` is the coordinate-source DOI only. A new Zenodo DOI for the full V8 benchmark package should be minted from the final GitHub release before DOI-bearing journal submission.
-- Current checksum manifest: 612 files, including `.zenodo.json`, `submission_materials/zenodo_metadata_v015.json`, the latest 40-page `latex/main.pdf`, and the four verified QA preview pages.
+- Current checksum manifest should include `.zenodo.json`, `submission_materials/zenodo_metadata_v016.json`, the latest 40-page `latex/main.pdf`, refreshed QA preview pages, README/status reports, and figure/data/code artifacts.
+- Root `README.md`, package `README.md`, manuscript Data/Code Availability, and `submission_materials/data_availability_statement.md` now agree that `v0.1.6` is the current release candidate for DOI deposition.
 
 ## Claim Boundary Summary
 
 - Main text claims a plant-anchored, receiver-flux-aware, reproducible layout-aiming benchmark and screening queue.
 - SolarPILOT/PySAM evidence is default-aiming layout-level evidence; reduced PySolTrace evidence is sampled direct-aimpoint evidence over representative conditions.
-- The paper does not claim a certified commercial redesign, field-optimal layout, receiver thermal certification, or bankable annual-yield estimate.
+- The paper does not claim a certified commercial redesign, final plant-optimal layout, receiver thermal certification, or bankable annual-yield estimate.

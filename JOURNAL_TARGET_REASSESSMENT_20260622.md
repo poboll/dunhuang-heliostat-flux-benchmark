@@ -2,6 +2,14 @@
 
 Updated: 2026-06-22 CST
 
+## 2026-06-22 live-check conclusion
+
+After a fresh XR Scholar and publisher-page check, the recommendation is still to submit first to *Solar Energy*, with a realistic risk label: high but defensible. The current manuscript is not a generic optimization note and is not a former *Scientific Data* descriptor anymore; it is now a plant-anchored heliostat layout--aiming benchmark and numerical-checking workflow with SolarPILOT, reduced PySolTrace, receiver-flux-risk, annual-proxy, strong-baseline, and reproducibility evidence. That is exactly the readership that *Solar Energy* can understand. The paper should not be sold as a state-of-the-art commercial field redesign, a bankable annual-yield study, or a receiver thermal-safety certification.
+
+The no-APC preference is also compatible with *Solar Energy*: the Elsevier journal page lists an open-access APC, but also lists a subscription route with no publication fee charged to authors. At submission, the authors should choose the subscription publication route unless the institution explicitly covers open access.
+
+The fallback ladder is: *Solar Energy* first; *Sustainable Energy Technologies and Assessments* if the story is reframed as a sustainable-energy technology assessment and reproducible decision workflow; *International Journal of Green Energy* if the priority becomes a more conservative SCI route with no mandatory APC. ASME *Journal of Solar Energy Engineering* is a solar-engineering fallback but falls below the Q2/Q3 target in the current XR Scholar signal. *Renewable Energy* and *Applied Thermal Engineering* should not be treated as easier alternatives: their metrics and validation expectations are at least as demanding, and their scope is less directly aligned with the current heliostat benchmark story.
+
 ## Executive recommendation
 
 The best first target remains *Solar Energy*. It is demanding, but it is still the most coherent first submission target for the current manuscript because the paper is about a plant-anchored heliostat-field layout--aiming benchmark, SolarPILOT/PySolTrace verification, receiver-flux risk, and solar-tower engineering practice. The manuscript should be submitted as a conservative benchmark and screening-evidence paper, not as a certified commercial plant redesign or state-of-the-art optimizer.
