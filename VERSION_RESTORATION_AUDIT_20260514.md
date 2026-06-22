@@ -41,8 +41,8 @@ The active manuscript is therefore restored to `solar_energy_elsarticle_v7_balan
 ## Current verification
 
 - Active PDF: `latex/main.pdf`
-- Page count: 34 pages
-- LaTeX status: successful `latexmk -g -pdf -bibtex -interaction=nonstopmode -halt-on-error main.tex`
+- Page count: 46 pages in the 2026-06-21 Elsevier `final,3p,times` inspection build.
+- LaTeX status: successful `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`
 - Undefined citations/references: none after final pass
 - Tests: `pytest -q` returned `4 passed`
 - Reproducibility manifest: 254 checked files

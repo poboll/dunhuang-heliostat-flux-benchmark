@@ -324,7 +324,7 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
             lw = 0.42 if expanded else 0.24
             z = 1
             if is_gansu:
-                face = "#FDBA74"
+                face = "#FED7AA"
                 edge = "#EA580C"
                 lw = 0.95 if expanded else 0.66
                 z = 3
@@ -337,13 +337,15 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
                 x, y = project_china_lambert(ring[:, 0], ring[:, 1])
                 ax.fill(x, y, facecolor=face, edgecolor=edge, linewidth=lw, zorder=z)
         if expanded:
-            for _, (label, lon, lat, color) in PROVINCE_LABELS.items():
+            for code, (label, lon, lat, color) in PROVINCE_LABELS.items():
+                if code != "620000":
+                    continue
                 lx_arr, ly_arr = project_china_lambert(lon, lat)
                 ax.text(
                     float(lx_arr),
                     float(ly_arr),
                     label,
-                    fontsize=5.6,
+                    fontsize=5.4,
                     color=color,
                     ha="center",
                     va="center",
@@ -355,15 +357,15 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
                         "alpha": 0.78,
                     },
                 )
-            inset = ax.inset_axes([0.765, 0.055, 0.185, 0.235])
+            inset = ax.inset_axes([0.685, 0.045, 0.285, 0.330])
             inset.set_facecolor("#FFFFFF")
             inset.set_xticks([])
             inset.set_yticks([])
             for spine in inset.spines.values():
                 spine.set_color("#CBD5E1")
                 spine.set_linewidth(0.55)
-            inset.set_xlim(105, 124)
-            inset.set_ylim(3, 24)
+            inset.set_xlim(105, 125)
+            inset.set_ylim(3, 25)
             for feature, rings in feature_rings:
                 props = feature.get("properties", {})
                 if props.get("id") not in {"460000", "710000", "810000", "820000"}:
@@ -379,12 +381,15 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
                     )
             island_lons = [112.3, 114.1, 116.4, 118.8, 111.2, 119.5]
             island_lats = [16.8, 14.7, 12.2, 10.4, 8.8, 6.6]
-            inset.scatter(island_lons, island_lats, s=4.0, color="#2563EB", alpha=0.85, zorder=3)
+            inset.scatter(island_lons, island_lats, s=6.0, color="#2563EB", alpha=0.85, zorder=3)
+            inset.scatter([121.0, 110.0], [23.7, 19.2], s=10.0, color="#2563EB", alpha=0.95, zorder=4)
+            inset.text(121.3, 23.2, "Taiwan", fontsize=4.6, color="#334155", ha="left", va="center")
+            inset.text(110.3, 18.8, "Hainan", fontsize=4.6, color="#334155", ha="left", va="center")
             inset.text(
                 105.6,
                 4.4,
-                "S. China Sea\nislands",
-                fontsize=4.6,
+                "South China Sea\nisland inset",
+                fontsize=4.4,
                 color=PALETTE["muted"],
                 ha="left",
                 va="bottom",
@@ -395,7 +400,7 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
         ax.scatter(
             [site_x],
             [site_y],
-            s=30 if expanded else 14,
+            s=32 if expanded else 14,
             marker="o",
             color="#B91C1C",
             edgecolor="white",
@@ -407,7 +412,7 @@ def draw_site_locator(ax: plt.Axes, expanded: bool = False) -> None:
             xy=(site_x, site_y),
             xytext=(10, 8),
             textcoords="offset points",
-            fontsize=8.0 if expanded else 5.1,
+            fontsize=7.6 if expanded else 5.1,
             color=PALETTE["ink"],
             ha="left",
             va="bottom",
@@ -644,16 +649,16 @@ def figure_layout_panel(run: Path, out: Path) -> None:
     fig.savefig(out / "fig_journal_layout_realism_panel.png", bbox_inches="tight")
     plt.close(fig)
 
-    bottom = plt.figure(figsize=(7.25, 4.05), dpi=340)
+    bottom = plt.figure(figsize=(7.25, 3.85), dpi=360)
     bgs = bottom.add_gridspec(
         1,
         2,
-        width_ratios=[1.03, 0.97],
-        left=0.030,
+        width_ratios=[1.10, 0.90],
+        left=0.026,
         right=0.992,
-        bottom=0.205,
+        bottom=0.215,
         top=0.975,
-        wspace=0.145,
+        wspace=0.170,
     )
     ax_b = bottom.add_subplot(bgs[0, 0])
     ax_c = bottom.add_subplot(bgs[0, 1])
@@ -663,9 +668,9 @@ def figure_layout_panel(run: Path, out: Path) -> None:
     ax_c.scatter(
         baseline.iloc[::stride]["x_m"],
         baseline.iloc[::stride]["y_m"],
-        color="#94A3B8",
-        s=0.34,
-        alpha=0.36,
+        color="#9AA8BB",
+        s=0.30,
+        alpha=0.30,
         linewidths=0,
         label="baseline",
         rasterized=True,
@@ -677,13 +682,13 @@ def figure_layout_panel(run: Path, out: Path) -> None:
             subset["y_m"],
             facecolors="none",
             edgecolors=overlay_colors[layout_id],
-            s=4.8,
-            alpha=0.58,
-            linewidths=0.46,
+            s=4.5,
+            alpha=0.56,
+            linewidths=0.44,
             rasterized=True,
             label=role_marker_label(layout_id),
         )
-    ax_c.scatter([0], [0], marker="^", s=54, color="#B91C1C", edgecolor="white", linewidth=0.58, zorder=5)
+    ax_c.scatter([0], [0], marker="^", s=52, color="#B91C1C", edgecolor="white", linewidth=0.58, zorder=5)
     panel_label(ax_c, "(c)")
     ax_c.set_aspect("equal", adjustable="box")
     ax_c.set_xlim(-2050, 2050)
@@ -700,9 +705,9 @@ def figure_layout_panel(run: Path, out: Path) -> None:
         labels,
         frameon=False,
         loc="lower center",
-        bbox_to_anchor=(0.52, 0.050),
+        bbox_to_anchor=(0.52, 0.055),
         ncol=5,
-        fontsize=7.2,
+        fontsize=7.0,
         handletextpad=0.28,
         columnspacing=1.10,
     )

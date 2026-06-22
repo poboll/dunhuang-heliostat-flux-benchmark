@@ -1,6 +1,6 @@
 # Submission Repository and DOI Status
 
-Updated: 2026-06-21 19:33:54 CST
+Updated: 2026-06-22 CST
 
 ## Current Target
 
@@ -10,18 +10,21 @@ Updated: 2026-06-21 19:33:54 CST
 
 ## Repository / Release
 
-- Manuscript-facing GitHub release recorded in the manuscript: <https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.0>.
+- Manuscript-facing GitHub release recorded in the manuscript: <https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.2>.
+- GitHub release title: `fix: 更新Solar Energy V8投稿包排版与数据可用性`.
+- Release archive name: `solar_energy_elsarticle_v8_strict_review_rescue_20260622.zip`; the final SHA-256 is recorded on the GitHub release asset and companion `.sha256` file.
 - Source coordinate DOI already cited in the manuscript: `10.5281/zenodo.16957381` as the coordinate-source record only.
-- Required before final journal upload: mint a new Zenodo DOI from the manuscript-facing GitHub release and cite it as the algorithm/data package DOI. Do not reuse the coordinate-source DOI for the full V8 benchmark package.
+- Required before final journal upload: create a follow-up release/tag if the final local package is used, mint a new Zenodo DOI from that manuscript-facing release, and cite it as the algorithm/data package DOI. Do not reuse the coordinate-source DOI for the full V8 benchmark package.
 
 ## Local Package Inventory
 
 - Active package: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue`
 - Main LaTeX source: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.tex`
 - Active PDF: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.pdf`
-- Current formal inspection PDF: 46 pages, about 30 MiB.
+- Current formal inspection PDF: 40 pages, 30,834,421 bytes (about 29.4 MiB).
 - Active figure assets in `latex/figures`: 33 files.
-- Supplementary-data file count: 390.
+- Supplementary-data file count: 390 under `supplementary_data/`.
+- Reproducibility manifest file count: 650 checked files after the 2026-06-22 journal-style cleanup; see `reproducibility_manifest/manifest.json` for the authoritative count and checksums.
 - Manifest present: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/reproducibility_manifest/MANIFEST.md` (yes).
 - README present: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/README.md` (yes).
 
@@ -34,8 +37,12 @@ Updated: 2026-06-21 19:33:54 CST
 
 ## Immediate Submission Tasks
 
-1. Refresh `reproducibility_manifest/manifest.json` and `MANIFEST.md` after final file changes.
-2. Push the final release branch/tag to GitHub if the local package has changed after `v0.1.0`.
-3. Mint a Zenodo DOI for the manuscript-facing release before final upload.
-4. Add the newly minted DOI to `Data and Code Availability` and `citations/ref.bib`.
-5. Keep the detailed data dictionary in supplementary files, not in the rendered journal article body.
+1. Mint a Zenodo DOI for the manuscript-facing `v0.1.2` release before final upload.
+2. Add the newly minted DOI to `Data and Code Availability` and `citations/ref.bib`.
+3. Keep the detailed data dictionary in supplementary files, not in the rendered journal article body.
+
+## 2026-06-22 Repository Caution
+
+- The main worktree is intentionally not staged wholesale because it contains many historical, generated, and unrelated files. Do not use `git add .` from the dirty working copy.
+- The public GitHub repository is reachable as `poboll/dunhuang-heliostat-flux-benchmark`; `v0.1.2` is the intended journal-style cleanup release for the active package.
+- The manuscript was rebuilt after `v0.1.1` to remove the rendered package-index table and improve page-level journal style. The `v0.1.2` release is intended to fix that version mismatch.

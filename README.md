@@ -1,87 +1,115 @@
-# Solar Energy CAS-Q2 Elsevier Submission Workspace
+# Dunhuang Heliostat Flux Benchmark
 
-This is the strict-review rescue submission workspace for the Dunhuang heliostat full-field layout algorithm and receiver-flux benchmark paper. The current v8 revision uses all-phase, high-sample, independent-seed, baseline-control direct, leave-one-day-out hold-out, missing-20 coordinate-provenance, relative AFD-style flux-proxy, and V12 240k-ray reduced PySolTrace/direct-audit layers on top of the full-field aiming/weather draft.
+Rebuild repository for the Dunhuang 100 MW heliostat-field manuscript targeted at *Solar Energy*.
 
-- `latex/main.tex`: Elsevier `elsarticle` manuscript using `final,3p,times`.
-- `latex/main.pdf`: compiled journal-style full-evidence inspection PDF, currently 46 pages in Elsevier `final,3p,times` mode with line numbers disabled for the formal inspection build. The detailed data dictionary and extended roadmap are kept in supplementary/manifest files rather than rendered as a technical-report appendix.
-- `citations/ref.bib`: generated bibliography with 59 cited entries in the compiled PDF.
-- `citations/verified.jsonl`: DOI/manual/source verification records.
-- `papers/paper_notes.jsonl`: citation metadata notes.
-- `template/`: local copy of the installed Elsevier sample template.
-- `code/`: key configuration and Python scripts needed to reproduce the candidate generation, numerical-checking summaries, and manuscript-facing figures.
-- `latex/figures/`: white-background journal figures rebuilt from the audited run tables.
-- `submission_materials/`: highlights, cover letter, declarations, graphical abstract, and reviewer-risk memo.
-- `supplementary_data/`: key layout, SolarPILOT, aiming, weather, coordinate-provenance, baseline-control, hold-out, and all-phase SolTrace CSV tables for review.
-- `supplementary_data/soltrace_v10_seed_replicate_tables/`: V10 independent-seed stability audit tables and report.
-- `supplementary_data/soltrace_v11_convergence_tables/`: consolidated V8/V9/V10 reduced PySolTrace convergence and uncertainty audit tables.
-- `supplementary_data/soltrace_v12_seed240k_tables/`: V12 240k-ray reduced PySolTrace follow-up tables and report.
-- `supplementary_data/joint_layout_aiming_optimizer/`: integrated joint layout--aiming screening tables for 489 full-field candidates and 121 Pareto rows.
-- `supplementary_data/joint_solarpilot_default_tables/`: PySAM/SolarPILOT default-aiming bridge for the baseline and seven joint layouts.
-- `supplementary_data/joint_direct_soltrace_tables/`: reduced PySolTrace direct promotion audit for `J_bal`, `J_gain`, and `J_flux`.
-- `supplementary_data/joint_system_summary/`: merged proxy, SolarPILOT, and direct-promotion evidence table for the joint representatives.
-- `supplementary_data/afd_style_flux_proxy/`: relative AFD-style p95/p99 and hotspot-area proxy audit derived from SolarPILOT default-aiming flux tables.
-- `supplementary_data/fast_annual_proxy_sanity/`: fast annual optical proxy and public plant design-generation sanity check built from hourly NASA POWER DNI and SolarPILOT optical-efficiency tables.
-- `supplementary_data/flux_resolution_gate/`: SolarPILOT default receiver-bin robustness gate comparing 24 x 24 and 36 x 36 receiver maps.
-- `supplementary_data/flux_day_sampling_gate/`: SolarPILOT default-flux sampling robustness gate comparing 8 and 12 flux days.
-- `supplementary_data/formal_paired_statistics/`: formal paired condition-level statistics for selected reduced direct rows.
-- `supplementary_data/same_anchor_strong_baseline_tables/`: literature-inspired same-anchor strong-baseline pressure test, including pattern-free-, slider-like-, terrain-aware-, and hybrid-approximation families.
-- `supplementary_data/strong_baseline_promotion_gate/`: conservative writeback gate for the strong-baseline direct-promotion queue; it keeps `B_hy,E`, `B_pf,R`, and `B_hs,R` out of headline direct-supported claims.
-- `supplementary_data/strong_baseline_direct_promotion_queue/`: queued layouts, runbook, and inputs used for the same-run reduced direct gate.
-- `supplementary_data/strong_baseline_direct_soltrace_tables/`: completed 27-condition same-run reduced direct gate; no new strong-baseline row passed the proxy-selected bootstrap-CI promotion rule.
-- `supplementary_data/geometry_explainability_advantage/`: radial-density, azimuth-sector, nearest-neighbour, movement-scale, and constrained-advantage audit showing how selected full-field layouts move and which role-level claims are supported.
-- `SUBMISSION_MAIN_SI_TRANSFER_PLAN_20260523.md`: main-text/Supplementary transfer plan for a future shorter Solar Energy submission package.
-- `POINT_BY_POINT_REVIEW_RESPONSE_20260523_FOCUSED_SECOND_REVISION.md`: point-by-point response to the focused second-revision review.
-- `VERSION_RESTORATION_AUDIT_20260514.md`: audit explaining why the 17-page v6 short draft was over-pruned and why the evidence-rich full manuscript remains the active author-review track.
-- `archive/superseded_v7_soltrace_20260512/`: old 270-case SolTrace figures and tables moved out of the active result set.
-- `output/LATEX_BUILD_REPORT.md`: build and QA report.
-- `reproducibility_manifest/`: SHA-256 manifest covering the audited run and active submission package.
+This repository rejects the earlier "PySAM default layout equals optimized benchmark" story. The current manuscript treats the exported layout as an audited reference coordinate pool, then builds a transparent, plant-anchored full-field layout--aiming benchmark:
 
-What changed in the current revision:
+- solar-geometry marginal contribution for each heliostat;
+- seasonal robustness;
+- calibrated energy and capital-cost proxies using audited Layout A/B summaries;
+- receiver flux-risk proxy based on angular clustering and optical contribution;
+- reproducible candidate generation and representative queueing;
+- PySAM/SolarPILOT default-aiming checks and reduced PySolTrace custom-aimpoint audits;
+- formal paired statistics, geometry explainability, and checksum-backed reproducibility manifests.
 
-- Confirmed the primary target as Solar Energy and documented the Elsevier `elsarticle` template choice.
-- Added a direct LetPub/New-Ranking check: `Solar Energy`, ISSN `0038-092X`, New-Ranking `2区`, large category `工程技术`, small category `能源与燃料`, SCI/SCIE signal. Automated `xr-scholar` access was blocked by Cloudflare, so manual browser confirmation remains on the final checklist.
-- Switched the active build from a loose review layout to a compact journal-style `final,3p,times` layout.
-- Rebuilt active figures with an Arial/Helvetica-first white-background style, clearer labels, larger receiver-map panels, and a non-compressed selected-row SolTrace heatmap.
-- Recompiled with `pdflatex+bibtex` to use the standard Elsevier/Times font stack and remove XeLaTeX font-substitution warnings.
-- Added a 2026 Solar Energy sloped-terrain/spatiotemporal layout reference to keep the research-gap discussion current.
-- Replaced the earlier SolTrace text with an all-phase direct-ray 1,485-case matrix with verified stage ordering: 6,000 sampled heliostats per layout, 60,000 requested first-stage ray hits per case, 27 solar conditions, and 11 aiming strategies.
-- Added the V9 high-sample reduced PySolTrace confirmation matrix: 9,000 sampled heliostats per layout, 180,000 requested first-stage ray hits per case, 27 solar conditions, five verification-relevant strategies, and a 24-panel receiver grid.
-- Added the V10 independent-seed reduced PySolTrace stability audit: same scale as V9, but with a fresh stratified sample to test whether the candidate queue is seed-stable.
-- Added the V11 reduced PySolTrace convergence and uncertainty audit, which consolidates V8, V9, and V10 to separate stable candidate roles from seed- and grid-sensitive exact aiming rows.
-- Added the V12 240k-ray reduced PySolTrace follow-up, which strengthens the evidence for `L_nom` and `L_ctrl` as next-stage candidates while keeping weak or inconsistent rows out of the headline claim.
-- Added a static regression test so the PySolTrace script keeps the heliostat reflector stage before the receiver absorber stage.
-- Added Elsevier submission materials and a graphical abstract draft that preserves the conservative claim boundary.
-- Added and redesigned `fig_soltrace_allphase_direct_panel.png` as a three-panel direct-row/proxy-transfer/response-surface figure, plus all-phase direct/proxy-selected strategy tables.
-- Updated the claim boundary: all-phase reduced direct ray tracing is now reported more strongly, but full-field annual custom-aimpoint verification remains future work.
-- Added a 2026 Renewable Energy reference on fast annual energy estimation through heliostat grouping and solar-position sampling.
-- Added component-ablation evidence for `deform_0276` and `deform_0893`.
-- Added quick SolarPILOT ablation numerical check (`flux-days=2`, `flux-bins=16`).
-- Corrected the high-resolution numerical-checking wording to five layouts total.
-- Removed internal rejection/journal-positioning language from the manuscript.
-- Added weather/DNI anchoring against the reported Dunhuang corrected TMY annual DNI.
-- Upgraded aiming-proxy sensitivity to 81 grouping, spot-width, and staggered-phase assumptions so the custom-aimpoint queue is not supported by one arbitrary proxy discretization.
-- Updated data/code availability language so the checksum manifest covers layouts, weather, terrain, SolarPILOT tables, proxy tables, sensitivity outputs, figures, and scripts.
-- Added a 2026-05-16 response pass: point-by-point P0/P1 review response, receiver-flux normalization and thermal-safety interpretation, DOI/release blocker wording, and a light prose polish pass to reduce repetitive defensive phrasing while preserving the claim boundary.
-- Added a final 2026-05-16 author-voice pass: tightened several abstract, introduction, results, discussion, and appendix sentences so the manuscript reads less like a defensive revision memo while keeping the same scientific claim boundary.
-- Added a 2026-05-16 late-result writeback: incorporated the completed V12 240k-ray audit into the results, data dictionary, Data and Code Availability statement, manifest, and review-response checklist.
-- Added a 2026-05-22/23 strict-review strengthening pass: same-condition low-complexity controls, a reduced direct baseline-control audit, leave-one-day-out strategy-selection audit, line numbers, hidden link boxes, and updated Solar Energy submission materials.
-- Added a 2026-05-23 coordinate-provenance hardening pass: a seeded missing-20 random-omission geometry sensitivity audit over 2000 replicates, copied to `supplementary_data/missing20_geometry_sensitivity/` and registered in the manifest.
-- Added a 2026-05-23 active system-design pass: a joint layout--aiming screening optimizer, a SolarPILOT default-aiming bridge for joint candidates, and a reduced direct promotion gate. The combined evidence promotes `J_flux` only as a receiver-boundary candidate, keeps `J_bal` as a directional balance candidate, and treats `J_gain` as a strategy-sensitivity case.
-- Added a 2026-05-23 focused second-revision pass: a hardened paper-alone Parameter Registry, formal paired statistics with bootstrap CI, Hodges--Lehmann shifts, sign/Wilcoxon tests, a +/-1% practical-indistinguishability threshold, and a main/SI transfer plan. This pass supports `J_flux`, `L_rob`, and V12 `L_nom` as the clearest current receiver-risk candidates, but keeps final engineering superiority out of the claims.
-- Added a 2026-05-23 AFD-style flux-proxy pass: SolarPILOT default-aiming flux tables are converted into baseline-relative p95/p99 concentration and active hotspot-area metrics. This strengthens receiver-risk reporting while explicitly avoiding absolute allowable-flux-density or tube-temperature claims.
-- Added a 2026-05-23 same-anchor strong-baseline pressure test: 168 literature-inspired approximation candidates are screened under the same Dunhuang coordinate pool, SolarPILOT default bridge, and aiming proxy. The strongest hybrid approximation gives +1.74% default SolarPILOT optical efficiency and -4.44% aiming-proxy concentration change, so the paper now treats TS-FPDA as a benchmark queue rather than a SOTA optimizer.
-- Added a 2026-05-23 direct-promotion runbook for the strong-baseline comparison and a 2026-05-24 completed 27-condition reduced direct gate. The gate is included as boundary evidence, not as a new main-text victory result.
-- Added a 2026-05-24 fast annual proxy and public plant sanity check: SolarPILOT optical-efficiency tables are interpolated over the 8760-hour public weather file, the annual DNI is scaled to the reported corrected TMY value, and the baseline annual thermal proxy is checked against the 351.6 GWh design-generation reference. This is annualized optical ranking and plant-scale sanity evidence, not bankable annual yield or full-field custom-aimpoint validation.
-- Added a 2026-05-24 geometry-explainability and constrained-advantage audit: selected TS-FPDA, joint, control, and strong-baseline rows are compared by radial-density shifts, sector-population shifts, nearest-neighbour spacing, movement-vector direction, annual proxy, default-flux penalty, aiming proxy, AFD-style proxy, and reduced-direct evidence. This audit makes the layout movement interpretable and keeps the conclusion at role-level queue strength rather than SOTA optimizer strength.
-- Added 2026-05-24 robustness gates for annual-proxy weather years, annual-proxy interpolation choices, SolarPILOT receiver-bin resolution, and SolarPILOT flux-day sampling density. These gates support short sanity-check statements only; they do not convert the manuscript into annual custom-aimpoint validation, thermal certification, cross-code validation, or a bankable annual-yield study.
-- Added a 2026-05-24 strong-baseline direct promotion gate. It merges annual, interpolation, 36-bin SolarPILOT default-flux, 12-flux-day sampling, aiming-proxy, geometry, and the completed same-run reduced direct matrix for the prepared queue. It promotes no new strong-baseline row to a direct-supported headline result, which is why the manuscript keeps `B_hy,E`, `B_pf,R`, and `B_hs,R` as screening or boundary rows rather than winners.
-- Added a 2026-06-21 journal-format polish pass: converted the Nomenclature from a numbered long table into compact prose, kept the detailed data dictionary suppressed after `\iffalse`, fixed the Data/Code Availability package-index table so it no longer floats into the Conclusions, and rebuilt the PDF successfully at 46 pages with no undefined references.
+The output is not a final plant redesign, a surveyed as-built model, or a bankable annual-yield estimate. It is a reproducible numerical benchmark and screening evidence ladder used to decide which layouts and aiming strategies deserve future full-field annual custom-aimpoint validation.
 
-Current submission stance:
+## Current Manuscript Package
 
-- Submit as an algorithmic benchmark and numerical-checking workflow, not as a final Dunhuang redesign.
-- Treat pattern-free, slider-like, terrain-aware, and hybrid strong baselines as pressure-test approximations, not as complete external optimizer reproductions.
-- Treat the all-phase reduced PySolTrace matrix as direct but reduced custom-aimpoint evidence.
-- Treat the joint layer as the active system contribution: layout deformation and aiming are selected together, then checked by a SolarPILOT default-aiming bridge and a reduced direct promotion audit.
-- Treat full-field annual custom-aimpoint verification with receiver thermal constraints as the next scientific upgrade rather than as a hidden completed claim.
-- Use this full-evidence v8 package as the current author-review draft. If a shorter Solar Energy main text is later required, use `SUBMISSION_MAIN_SI_TRANSFER_PLAN_20260523.md`; do not silently prune the workload, figures, or evidence chain back to the 17-page v6 short draft.
+- Active submission workspace: `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/`
+- Main PDF: `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.pdf`
+- Main source: `paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.tex`
+- Current build target: compact Elsevier `final,3p,times` inspection format.
+- References: verified records are stored under the package `citations/` directory.
+- Reproducibility manifest: rebuild with `scripts/build_reproducibility_manifest.py` after each manuscript/package edit.
+- Core historical server run: `server_outputs/streamed_fullfield_20260511_205252/`
+- Target journal: *Solar Energy* using the official Elsevier `elsarticle` template. Current XR Scholar inspection lists `Solar Energy` as Engineering `2区 Top` and JCR small-category Energy & Fuels `3区`; publisher pages should still be rechecked immediately before upload.
+
+Latest validation layer:
+
+- High-resolution PySAM/SolarPILOT validation for five key layouts under default aiming.
+- Aiming-proxy and 24-condition proxy sensitivity.
+- All-phase reduced PySolTrace strategy-union matrix, high-sample/independent-seed follow-up, V12 240k-ray selected audit, baseline-control direct audit, hold-out audit, and joint direct-promotion audit.
+- Strong-baseline pressure-test and direct-gate reports that keep unpromoted strong-baseline rows in the queue rather than in the headline claims.
+
+## Release and DOI Status
+
+- Source coordinate archive: Zenodo/GitHub dataset `10.5281/zenodo.16957381`, used only as the coordinate-source record.
+- Manuscript-facing release prepared for the final V8 package: <https://github.com/poboll/dunhuang-heliostat-flux-benchmark/releases/tag/v0.1.2>.
+- The older `v0.1.1` release remains a historical archive; the `v0.1.2` package should be used if the submitted PDF, manifest, and public archive need to match.
+- Final journal upload should mint a Zenodo DOI from the final GitHub release if the journal or authors require DOI-bearing archival data. Do not reuse the old coordinate-source DOI as the new algorithm/receiver-flux package DOI.
+
+## Quick Start
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python scripts/run_rebuild_experiment.py --config configs/default.json --out outputs/run_local
+```
+
+On the paper server:
+
+```bash
+cd /home/kk/projects/paper/dunhuang-heliostat-rebuild
+source .venv/bin/activate
+python scripts/run_rebuild_experiment.py --config configs/default.json --out outputs/run_$(date +%Y%m%d_%H%M%S)
+```
+
+This workflow is CPU-first. GPU is only needed if a later neural surrogate is added.
+
+## Main Outputs
+
+- `candidate_metrics.csv`: all generated candidates.
+- `pareto_front.csv`: proxy non-dominated candidates.
+- `representatives.csv`: selected layouts for high-fidelity simulation.
+- `layouts/*.csv`: exported representative coordinate files.
+- `figures/*.png`: Pareto and layout diagnostics.
+- `EXPERIMENT_REPORT.md`: reviewer-facing run report.
+
+## Current SCI-Q2 Rebuild Route
+
+The active manuscript route is now full-field and receiver-aiming centered:
+
+```bash
+python scripts/build_dunhuang_power_weather.py --year 2023
+
+python scripts/run_fullfield_deformation.py \
+  --config configs/server_full.json \
+  --out outputs/fullfield_deformation \
+  --random-candidates 760
+
+python scripts/run_aiming_proxy.py \
+  --run outputs/fullfield_deformation \
+  --config configs/server_full.json \
+  --layout-ids baseline_full,deform_0276,deform_0893,deform_1387,deform_1822
+
+python scripts/run_solarpilot_validation.py \
+  --run outputs/fullfield_deformation \
+  --weather data/weather/dunhuang_nasa_power_2023_sam.csv \
+  --layout-ids baseline_full,deform_0276,deform_0893,deform_1387,deform_1822 \
+  --flux-days 8 \
+  --flux-bins 24
+
+python scripts/build_publication_summary.py \
+  --run outputs/fullfield_deformation \
+  --validation-dir solarpilot_validation
+```
+
+Important claim boundary: `run_solarpilot_validation.py` imports x/y coordinates through PySAM `Solarpilot`. It does not yet validate terrain-relative z coordinates or custom staggered aim points. Use it as a preliminary SolarPILOT bridge, not as the final SolTrace/SolarPILOT aiming validation.
+
+Reduced direct-aimpoint validation is now available through:
+
+```bash
+python scripts/run_soltrace_sensitivity_matrix.py \
+  --run server_outputs/streamed_fullfield_20260511_205252 \
+  --config configs/server_full.json \
+  --pysoltrace-dir /home/kk/projects/paper/tools/SolTrace/app/deploy/api \
+  --out server_outputs/streamed_fullfield_20260511_205252/soltrace_corrected_stage_order_matrix \
+  --include-proxy-union \
+  --max-heliostats 6000 \
+  --rays 60000 \
+  --threads 8
+```
+
+The server is the preferred experiment environment. The local SAM App can be used for manual inspection, but current reproducible runs use the server's project-local Python environment and PySAM.

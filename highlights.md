@@ -1,7 +1,7 @@
 # Highlights
 
-- Full-field Dunhuang layouts preserve the 11,915-heliostat audit set.
-- Terrain-screened deformations preserve the surround-field envelope.
-- SolarPILOT exposes optical gain with a receiver-flux penalty.
-- Reduced PySolTrace checks stabilize candidate roles, not phases.
-- The package supports reproducible layout--aiming benchmarking.
+- Full-field Dunhuang benchmark preserves the 11,915-coordinate audit set.
+- Receiver-flux risk is checked beside SolarPILOT optical efficiency.
+- Joint candidates are checked by SolarPILOT and direct promotion audit.
+- Strong local baselines pressure-test the role-based candidate queue.
+- Annual proxy sanity-checks the public plant scale.

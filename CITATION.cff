@@ -1,25 +1,14 @@
 cff-version: 1.2.0
-message: "If you use this benchmark package, please cite the accompanying manuscript and this software release."
-title: "Dunhuang heliostat full-field layout deformation and receiver-flux screening benchmark"
-type: software
+title: Dunhuang heliostat receiver-flux benchmark
+message: Please cite the manuscript-facing release and the associated Zenodo DOI when available.
+type: dataset
 authors:
-  - family-names: Li
-    given-names: Changlong
   - family-names: Su
     given-names: Zengye
   - family-names: Nie
     given-names: Yudan
-  - family-names: Liang
-    given-names: Sheng
-repository-code: "https://github.com/poboll/dunhuang-heliostat-flux-benchmark"
-abstract: "Release-candidate package for a terrain-screened full-field heliostat layout deformation and receiver-flux screening benchmark for the Dunhuang 100 MW solar tower."
-keywords:
-  - heliostat field
-  - solar tower
-  - receiver flux
-  - SolarPILOT
-  - PySolTrace
-  - benchmark
-license: MIT
-version: "v0.1.0"
-date-released: "2026-05-16"
+  - family-names: Li
+    given-names: Changlong
+repository-code: https://github.com/poboll/dunhuang-heliostat-flux-benchmark
+version: v0.1.2
+date-released: '2026-06-22'

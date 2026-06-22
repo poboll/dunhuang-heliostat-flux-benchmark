@@ -8,7 +8,7 @@ The rebuilt paper has a plausible SCI-Q2 route only if it is framed as an algori
 
 Solar Energy is the best first target because its scope explicitly covers solar energy research, development, application, and measurement, and it has a live CSP/heliostat audience. The paper's use of SolarPILOT, receiver flux, full-field layout, and aiming strategy matches that audience better than Scientific Data.
 
-The target is also consistent with the requested SCI/CAS-Q2-style screening. The accessible LetPub/New-Ranking search page lists `Solar Energy` as SCI/SCIE, New-Ranking `2区`, large category `工程技术`, and small category `能源与燃料`. Automated access to `xr-scholar.com/Journals/Search` returned a Cloudflare challenge, so the final administrative checklist still requires manual browser confirmation. This is a planning fact; it should not be written into the manuscript itself.
+The target is also consistent with the requested SCI/CAS-Q2-style screening. The accessible LetPub/New-Ranking search page lists `Solar Energy` as SCI/SCIE, New-Ranking `2区`, large category `工程技术`, and small category `能源与燃料`. A 2026-06-21 XR Scholar browser check confirmed `Solar Energy` as SCIE/Scopus, Engineering/工程技术 `2区 Top`, and JCR `ENERGY & FUELS` `3区`. This remains a submission-planning fact; it should not be written into the manuscript itself.
 
 ## Why the topic is still current
 
@@ -46,7 +46,7 @@ The practical value is preliminary-design and benchmark value, not retrofit valu
 - Replaced the 270-case SolTrace layer with a 1,485-case all-phase direct matrix covering five layouts, 27 solar conditions, visible-equator, five-point, and all nine S9 staggered phases.
 - Replaced the corrected SolTrace figure with an all-phase direct panel so the heatmap shows every tested layout--strategy row without compression.
 - Added an implementation-details table to make code paths, generated artifacts, and reviewer checks explicit.
-- Recompiled with the standard Elsevier `pdflatex+bibtex` path; the active compact PDF is 34 pages and has no undefined citations or references.
+- Recompiled with the standard Elsevier `pdflatex+bibtex` path; the active compact PDF is 46 pages and has no undefined citations or references.
 - Added recent aiming/layout references while keeping 59 cited entries in the compiled PDF and 63 verification records.
 - Added a direct journal-selection audit and tightened the submission claim boundary around the Solar Energy target.
 - Added a computational-workload paragraph/table to the manuscript so reviewers can see the scale and cost of the all-phase reduced SolTrace matrix rather than treating it as an opaque figure.

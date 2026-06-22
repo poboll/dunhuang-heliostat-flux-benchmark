@@ -1,6 +1,6 @@
 # LaTeX Build Report
 
-Updated: 2026-06-21 19:33:54 CST
+Updated: 2026-06-22 CST
 
 ## Build Command
 
@@ -10,8 +10,8 @@ Updated: 2026-06-21 19:33:54 CST
 
 - Status: success
 - Output PDF: `/Users/Apple/Developer/paper/dunhuang-heliostat-rebuild-server/paper_submission/solar_energy_elsarticle_v8_strict_review_rescue/latex/main.pdf`
-- Page count: 46
-- PDF size: 30 MiB
+- Page count: 40
+- PDF size: 30,834,421 bytes on disk, reported as about 29.4 MiB for submission planning.
 - Template/class: Elsevier `elsarticle`, `final,3p,times`
 - Line numbers: disabled for the formal inspection build
 
@@ -22,13 +22,28 @@ Updated: 2026-06-21 19:33:54 CST
 ## Box Warnings
 
 - Overfull hbox count: 1
-- Underfull hbox count: 54
+- Underfull hbox count: 28
 - Overfull details: one minor `1.90001pt` overfull while output is active
 
 ## Visual QA Render
 
-Rendered preview pages are stored in `output/pdf_previews/latest/` for pages 1, 5, 10, 12, 18, 23, 26, 30, 33, 38, 40, 42, and 46. The current pass specifically checked Figure 1, dense table pages, SolTrace heatmap pages, and the final Data/Code Availability region.
+Rendered preview pages are stored in `output/pdf_previews/` and `output/pdf_previews/latest/`. The current pass specifically checked Figure 1, the workflow region, direct/statistics pages, and the final Data/Code Availability region.
 
 ## Interpretation
 
-The current PDF compiles cleanly under the Solar Energy/Elsevier inspection format. The manuscript now uses a compact Nomenclature section rather than a numbered long table, keeps the detailed data dictionary suppressed after `\iffalse`, and fixes the Data/Code Availability package-index table so it no longer floats into the Conclusions. Remaining underfull warnings come from narrow table cells and wrapped technical terms; they are layout polish items rather than build blockers.
+The current PDF compiles cleanly under the Solar Energy/Elsevier inspection format. The manuscript now uses a compact Nomenclature section rather than a numbered long table, keeps the detailed data dictionary and extended audit tables suppressed after `\iffalse`, and replaces the former Data/Code Availability package-index table with concise prose. Remaining underfull warnings come from narrow table cells and wrapped technical terms; they are layout polish items rather than build blockers.
+
+## 2026-06-21 Consistency Pass
+
+- Re-ran `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` after the benchmark-wording cleanup.
+- Verified the current PDF with `pypdf`: 40 pages, 30,834,421 bytes.
+- Re-scanned the LaTeX log: no undefined citation/reference warnings were found; the remaining layout warnings are one minor overfull hbox and 28 underfull hboxes from narrow table cells.
+- Refreshed the reproducibility manifest after the PDF and report updates; it now records 650 checked files. The manuscript-facing public archive is being advanced to GitHub release `v0.1.2` so the public package can match this journal-style cleanup.
+
+## 2026-06-22 Journal-Style Cleanup
+
+- Replaced the rendered Data/Code Availability package-index table with prose, so the main article no longer shows a directory-style artifact inventory.
+- Simplified the representative-role table from three narrow columns to two wider columns to reduce broken words and improve page-14 readability.
+- Replaced an inline multi-path V9/V10/V11/V12 run-log sentence with a formal supplementary-package reference.
+- Rebuilt successfully with `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`.
+- Current rendered inventory after this cleanup: 17 main figures and 23 main tables/algorithm tables.
